@@ -127,6 +127,66 @@
                     ]
                 }
             ]
+        },
+        {
+            title: "🎀 Software Engineer",
+            path: "software-engineer",
+            summary: "Front End Engineers start their career with a knowledge of how to build basic web pages. As they advance, so will their knowledge of HTML, CSS and JavaScript. As technical skill develops, understanding of quality and delivery of value will also improve. A senior Front End Engineer will take responsibility for the web estate, seeking continuous improvement and setting out best practices for the rest of the Engineering team.            ",
+            levels: [
+                {
+                    title: "👩‍🎓 n00b",
+                    path: "n00b",
+                    summary: "",
+                    criteria: [
+                        "Provides regular status updates to their mentor/buddy",
+                        "Points out syntactical improvements in code reviews",
+                        "Writes PR descriptions that provide basic context for the change",
+                        "Seeks guidance from other engineers, rather than answers",
+                        "Delivers assigned tasks, working with a more senior team member, and able to take PR feedback to improve their work",
+                        "Improves documentation that is incorrect",
+                        "Learns to write correct code, following guidance and training materials",
+                        "Fixes simple bugs"
+                    ]
+                },
+                {
+                    title: "👨‍🔧 Play3r",
+                    path: "play3r",
+                    summary: "",
+                    criteria: [
+                        "Proactively communicates to their team what they are working on, why, how it's going and what help they need",
+                        "Accepts feedback graciously",
+                        "Gives feedback to peers when asked",
+                        "Delivers assigned tasks that meet expected criteria",
+                        "Works for the team, focuses on tasks that contribute to team goals",
+                        "Manages their own time effectively, prioritises their workload well, on time for meetings, aware when blocking others and unblocks",
+                        "Helps the team, does what needs doing",
+                        "Breaks down small/medium problems into iterative steps",
+                        "Proactively raises issues they spot in retrospectives",
+                        "Designs simple database tables",
+                        "Implements asynchronous messaging between services",
+                        "Deploys services to staging and production",
+                        "Handles simple error cases in RPC handlers and message consumers",
+                        "Fixes bugs involving a number of services and can investigate production issues",
+                        "Uses appropriate algorithms and data structures to solve problems",
+                        "Writes automated unit and acceptance tests",
+
+                    ]
+                },
+                {
+                    title: "👩‍🏫 Pr0",
+                    path: "pr0",
+                    summary: "",
+                    criteria: [
+                    ]
+                },
+                {
+                    title: "🧙 1337",
+                    path: "1337",
+                    summary: "",
+                    criteria: [
+                    ]
+                }
+            ]
         }
     ]
 })

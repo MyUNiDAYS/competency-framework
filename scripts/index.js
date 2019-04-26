@@ -20,20 +20,14 @@ function explodeCompetencies(node){
             };
         }
     }
-    
 }
 
-
+// explode role mappings into object references
+window.roles.forEach(role => {
+    explodeCompetencies(role);
+});
 
 window.addEventListener('load', function(){
-
-    // prepare content
-    var levels = [...new Set([].concat(...window.competencies.map(comp => [].concat(...comp.topics.map(topic => topic.levels.map(level => level.level))))))];
-    
-    // explode role mappings into object references
-    window.roles.forEach(role => {
-        explodeCompetencies(role);
-    });
 
     // compile all templates and partials
     var templates = {};
