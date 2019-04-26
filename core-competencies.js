@@ -106,6 +106,59 @@
             ]
         },
         {
+            title: "📅 Planning and Organisation",
+            path: "planning-and-organisation",
+            levels: [
+                {
+                    level: "n00b",
+                    criteria: [
+                        "Actively listens to identify and understand needs and objectives; asks questions to identify interests, views & motivations",
+                        "Consults stakeholders when exploring solution options.",
+                        "Undertakes appropriate research to build client knowledge & help inform discussions",
+                        "Fully competent with the day-to-day use of JIRA and other productivity tools",
+                        "Proactively uses knowledge of the business, needs & objectives to drive the development & delivery of appropriate solutions",
+                        "Successfully adapts service provision to reflect changes in requirements",
+                        "Ensures stakeholders are kept regularly informed regarding project progress; displays a highly proactive approach to providing updates"
+                    ]
+                },
+                {
+                    level: "Play3r",
+                    criteria: [
+                        "Develops clear, documented action plans, with realistic expectations & objectives",
+                        "Anticipates & realistically appraises potential problems or changes; develops contingency plans to ensure desired outcome is achieved effectively within agreed timelines",
+                        "Converts plans to task components for self and others, including timelines & targets",
+                        "Accurately tracks own development progress and effectively forecasts output",
+                        "Takes full responsibility for own productivity and output.",
+                        "Accurately identifies & secures required resources before implementing plans e.g. adequate capacity in team",
+                        "Able to balance time dedicated to maintaining existing business with business development"
+                    ]
+                },
+                {
+                    level: "Pr0",
+                    criteria: [
+                        "Manages multiple complex projects using established project management methodologies",
+                        "Integrates inputs from different sources/team members; optimises their contribution relevant to work programme",
+                        "Optimises the allocation of resources",
+                        "Assigns responsibilities and sets deadlines for tasks",
+                        "Identifies critical path activities from project plans; concentrates extra effort on tasks where any delays impact on overall deadline",
+                        "Sets/attends regular project meetings to assess progress against action plans and to ensure monitoring activity is routinely conducted",
+                        "Varies project plan activity sequencing and timelines according to available resource to avoid delays"
+                    ]
+                },
+                {
+                    level: "1337",
+                    criteria: [
+                        "Conducts a robust situational analysis – market/technology attractiveness & competitive position",
+                        "Devises strategies aligned to analysis of market/technology; aware of alternative strategic options ",
+                        "Segments the market to identify most value generating client groups or segments; positions company offer to satisfy needs of key user groups",
+                        "Sets SMART Strategic objectives/goals; devises critical success factors (CSFs) aligned to strategy; sets KPIs/performance metrics to track implementation",
+                        "Presents evidence (e.g. DAM, Verification, usage, impressions) to justify strategy adopted",
+                        "Outlines exactly how strategy will be delivered; clarifies accountabilities, workload, resources needed, milestones and expectations"
+                    ]
+                }
+            ]
+        },
+        {
             title: "",
             path: "",
             levels: [
@@ -116,19 +169,19 @@
                     ]
                 },
                 {
-                    level: "n00b",
+                    level: "Play3r",
                     criteria: [
                         
                     ]
                 },
                 {
-                    level: "n00b",
+                    level: "Pr0",
                     criteria: [
                         
                     ]
                 },
                 {
-                    level: "n00b",
+                    level: "1337",
                     criteria: [
                         
                     ]
@@ -146,49 +199,19 @@
                     ]
                 },
                 {
-                    level: "n00b",
+                    level: "Play3r",
                     criteria: [
                         
                     ]
                 },
                 {
-                    level: "n00b",
+                    level: "Pr0",
                     criteria: [
                         
                     ]
                 },
                 {
-                    level: "n00b",
-                    criteria: [
-                        
-                    ]
-                }
-            ]
-        },
-        {
-            title: "",
-            path: "",
-            levels: [
-                {
-                    level: "n00b",
-                    criteria: [
-
-                    ]
-                },
-                {
-                    level: "n00b",
-                    criteria: [
-                        
-                    ]
-                },
-                {
-                    level: "n00b",
-                    criteria: [
-                        
-                    ]
-                },
-                {
-                    level: "n00b",
+                    level: "1337",
                     criteria: [
                         
                     ]
@@ -206,49 +229,19 @@
                     ]
                 },
                 {
-                    level: "n00b",
+                    level: "Play3r",
                     criteria: [
                         
                     ]
                 },
                 {
-                    level: "n00b",
+                    level: "Pr0",
                     criteria: [
                         
                     ]
                 },
                 {
-                    level: "n00b",
-                    criteria: [
-                        
-                    ]
-                }
-            ]
-        },
-        {
-            title: "",
-            path: "",
-            levels: [
-                {
-                    level: "n00b",
-                    criteria: [
-
-                    ]
-                },
-                {
-                    level: "n00b",
-                    criteria: [
-                        
-                    ]
-                },
-                {
-                    level: "n00b",
-                    criteria: [
-                        
-                    ]
-                },
-                {
-                    level: "n00b",
+                    level: "1337",
                     criteria: [
                         
                     ]

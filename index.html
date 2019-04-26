@@ -7,12 +7,22 @@
     </head>
     <body>
         <nav>
-            <script id="nav" type="text/x-handlebars-template">
-                
-                {{title}}
-                {{#each topics}}
-                <a href="/{{../path}}/{{path}}">{{title}}</a>
-                {{/each}}
+            <script id="tmpl-nav-competencies" type="text/x-handlebars-template">
+                <section>
+                    <span class="title">Competencies</span>
+                    {{title}}
+                    {{#each topics}}
+                    <a href="/{{../path}}/{{path}}">{{title}}</a>
+                    {{/each}}
+                </section>
+            </script>
+            <script id="tmpl-nav-roles" type="text/x-handlebars-template">
+                <section>
+                    <span class="title">Roles</span>
+                    {{#each this}}
+                    <a href="/{{path}}">{{title}}</a>
+                    {{/each}}
+                </section>
             </script>
         </nav>
 
@@ -20,7 +30,7 @@
             Competency Framework, yo
         </section>
         <section id="content">
-            <script id="content" type="text/x-handlebars-template">
+            <script id="tmpl-competencies" type="text/x-handlebars-template">
                 <section class="competency" data-path="{{path}}">
                     <h1>{{title}}</h1>
                     {{#each topics}}
@@ -38,7 +48,24 @@
                         {{/each}}
                     </section>
                     {{/each}}
-                </div>
+                </section>
+            </script>
+            <script id="tmpl-roles" type="text/x-handlebars-template">
+                {{#each this}}
+                <section class="role" data-path="{{path}}">
+                    <h1>{{title}}</h1>
+                    {{#each competencies}}
+                    <section class="role-competency">
+                        <h2>{{competency.title}} - {{topic.title}} - {{level.level}}</h2>
+                        <ul>
+                            {{#each level.criteria}}
+                                <li>{{this}}</li>
+                            {{/each}}
+                        </ul>
+                    </section>
+                    {{/each}}
+                </section>
+                {{/each}}
             </script>
         </section>
 
@@ -47,6 +74,7 @@
 
     <script src="scripts/pubsub.js"></script>
     <script src="core-competencies.js"></script>
+    <script src="role-mappings.js"></script>
     <script src="scripts/handlebars-v4.1.2.js"></script>
     <script src="scripts/index.js"></script>
 </html>
