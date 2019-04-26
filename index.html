@@ -4,41 +4,85 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, shrink-to-fit=no">  
+        <link rel="stylesheet" type="text/css" href="/styles/index.css" />
+        <link rel="shortcut icon" href="https://images-1.unidays.world/favicons/set-a/favicon.ico" type="image/x-icon">
+        <title>UNiDAYS Competency and Progression Framework</title>
     </head>
     <body>
+        <section class="container">
         <nav>
             <script id="tmpl-nav-competencies" type="text/x-handlebars-template">
                 <section>
                     <span class="title">Competencies</span>
-                    {{title}}
+                    {{#each this}}
+                    <span class="competency">{{title}}</span>
+                    <ul>
                     {{#each topics}}
-                    <a href="/{{../path}}/{{path}}">{{title}}</a>
+                    <li><a href="/{{../path}}/{{path}}">{{title}}</a></li>
+                    {{/each}}
+                    </ul>
                     {{/each}}
                 </section>
             </script>
             <script id="tmpl-nav-roles" type="text/x-handlebars-template">
                 <section>
                     <span class="title">Roles</span>
+                    <ul>
                     {{#each this}}
-                    <a href="/{{path}}">{{title}}</a>
+                    {{> navroles}}
                     {{/each}}
+                    </ul>
                 </section>
+            </script>
+
+            <script id="tmpl-navroles" type="text/x-handlebars-template" class="partial">
+                <li>
+                    {{title}}
+                    {{#if departments}}
+                    <ul>
+                        {{#each departments}}
+                        {{> navroles}}
+                        {{/each}}
+                    </ul>
+                    {{/if}}
+                    {{#if roles}}
+                    <ul>
+                        {{#each roles}}
+                        <li><a href="/{{path}}">{{title}}</a></li>
+                        {{/each}}
+                    </ul>
+                    {{/if}}
+                </li>
             </script>
         </nav>
 
-        <section class="index" data-path="root">
-            Competency Framework, yo
-        </section>
         <section id="content">
             <script id="tmpl-competencies" type="text/x-handlebars-template">
+                <section class="content" data-path="root">
+                    <h1>UNiDAYS Competency and Progression Framework</h1>
+                </section>
+                <section class="content" data-path="usage">
+                    <h1>Usage</h1>
+                    <p>This document outlines examples of desirable behaviours and skills common to all roles</p>
+                    <p>Every role has a minimum level of expectation. This is outlined on the next slide, but definitely defined in your role’s Success Profile</p>
+                    <p>Ideally everyone would be 1337 at everything, strive for this. Being “above-level” does not automatically correlate to promotion, these behaviours and skills are only a part of your role’s requirements</p>
+                    <p>Where there is an expectation for your role to be at a certain level, you should have/practice all the skills/behaviours for that level and all lower levels</p>
+                    <p>The skills/behaviours listed are a guide. The list is not exhaustive. Use it to have a understanding of what’s expected of you currently and what you can do to advance yourself.</p>
+                    <p>In reviews with your line manager, both of you should review the skills/behaviours expected of you and identify missing/weaker areas to work on</p>
+                    <p>The expected skills/behaviours form part of your performance reviews. It is expected within reviews that you can provide evidence/commentary (where not already implicit) for each skill/behaviour. You should certainly do this for the skills/behaviours you’ve been working on</p>
+                    <p>You should reflect on this document regularly and track your skills/ behaviours</p>
+                </section>
+                {{#each this}}
                 <section class="competency" data-path="{{path}}">
                     <h1>{{title}}</h1>
                     {{#each topics}}
                     <section class="topic" data-path="{{path}}">
                         <h2>{{title}}</h2>
+                        <p>{{summary}}</p>
+                        <h3>Levels</h3>
                         {{#each levels}}
-                            <section class="level">
-                                <h3>{{level}}</h3>
+                            <section class="level box">
+                                <h3>{{title}}</h3>
                                 <ul>
                                     {{#each criteria}}
                                         <li>{{this}}</li>
@@ -49,14 +93,27 @@
                     </section>
                     {{/each}}
                 </section>
+                {{/each}}
             </script>
             <script id="tmpl-roles" type="text/x-handlebars-template">
                 {{#each this}}
+                {{> rolesPartial}}
+                {{/each}}
+            </script>
+            <script id="tmpl-rolesPartial" type="text/x-handlebars-template" class="partial">
+                {{#if departments}}
+                {{#each departments}}
+                {{> rolesPartial}}
+                {{/each}}
+                {{/if}}
+                {{#if roles}}
+                {{#each roles}}
                 <section class="role" data-path="{{path}}">
                     <h1>{{title}}</h1>
                     {{#each competencies}}
-                    <section class="role-competency">
-                        <h2>{{competency.title}} - {{topic.title}} - {{level.level}}</h2>
+                    <section class="role-competency box">
+                        <h2>{{competency.title}} - {{topic.title}}</h2>
+                        <h3>{{level.title}}</h3>
                         <ul>
                             {{#each level.criteria}}
                                 <li>{{this}}</li>
@@ -66,15 +123,17 @@
                     {{/each}}
                 </section>
                 {{/each}}
+                {{/if}}
             </script>
         </section>
 
-        
+    </section>
     </body>
 
-    <script src="scripts/pubsub.js"></script>
-    <script src="core-competencies.js"></script>
-    <script src="role-mappings.js"></script>
-    <script src="scripts/handlebars-v4.1.2.js"></script>
-    <script src="scripts/index.js"></script>
+    <script src="/scripts/pubsub.js"></script>
+    <script src="/core-competencies.js"></script>
+    <script src="/engineering-competencies.js"></script>
+    <script src="/role-mappings.js"></script>
+    <script src="/scripts/handlebars-v4.1.2.js"></script>
+    <script src="/scripts/index.js"></script>
 </html>

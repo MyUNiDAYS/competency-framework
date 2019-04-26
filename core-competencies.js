@@ -1,13 +1,16 @@
 (window.competencies = window.competencies || []).push({
-    title: "Core Competencies",
+    title: "🍏 Core Competencies",
     path: "core-competencies",
     topics: [
         {
             title: "📯 Delivering Value",
             path: "delivering-value",
+            summary: "Delivery of value is a key component in the success of your career. Being commercially aware, understanding costs around work and the impact of those costs on the business are all important.",
             levels: [
                 {
-                    level: "n00b",
+                    title: "👩‍🎓 n00b",
+                    path: "n00b",
+                    summary: "Commercially Aware",
                     criteria: [
                           "Actively contributes to the design of products and solutions"
                         , "Aware of the value of providing outstanding client service and what can be done on a day-to-day basis to deliver this"
@@ -18,7 +21,9 @@
                     ]
                 },
                 {
-                    level: "Play3r",
+                    title: "👨‍🔧 Play3r",
+                    path: "play3r",
+                    summary: "Improved Profitability",
                     criteria: [
                         "Bases recommendations on citable, sound analysis of risks, benefits and value"
                         , "Considers and discusses alternative ways of performing tasks to enhance productivity and delivery of value"
@@ -31,7 +36,9 @@
                     ]
                 },
                 {
-                    level: "Pr0",
+                    title: "👩‍🏫 Pr0",
+                    path: "pr0",
+                    summary: "Delivers ROI",
                     criteria: [
                         "Tracks and proactively reports team/project feature/value deliverance",
                         "Monitors expenditure against budgets and initiates corrective action as required",
@@ -43,7 +50,9 @@
                     ]
                 },
                 {
-                    level: "1337",
+                    title: "🧙 1337",
+                    path: "1337",
+                    summary: "Optimises Corporate Value",
                     criteria: [
                         "Tracks team / department / company KPIs and maintains robust forecasts",
                         "Conducts detailed planning/modelling of new proposals to comprehensively evaluate the value/RoI impact of options.",
@@ -58,9 +67,12 @@
         {
             title: "🎯 Client Focus",
             path: "client-focus",
+            summary: "Delivering good service to clients (members, partners and internal customers) is a baseline we should all be adhering to. These activities include understanding client requirements, remaining client focused and being a visible point of contact for a client. As you develop skills, you're expected to be more consultative, spending more time with clients, gathering requirements and proactively seeking feedback. The final level of mastery sees you proactively providing updates to clients, asking probing questions to really get to the root of the problem the client is looking to solve.",            
             levels: [
                 {
-                    level: "n00b",
+                    title: "👩‍🎓 n00b",
+                    path: "n00b",
+                    summary: "Good Client Service",
                     criteria: [
                         "Work activities are directed by, or focused on client needs; client remains primary focus",
                         "Demonstrates a genuine interest in clients and visibly acts in their best interests",
@@ -72,7 +84,9 @@
                     ]
                 },
                 {
-                    level: "Play3r",
+                    title: "👨‍🔧 Play3r",
+                    path: "play3r",
+                    summary: "Meets Clients Needs",
                     criteria: [
                         "Actively listens to clients to identify and understand their needs and objectives; asks questions to identify client interests, views & motivations",
                         "Consults clients when exploring solution options",
@@ -84,7 +98,9 @@
                     ]
                 },
                 {
-                    level: "Pr0",
+                    title: "👩‍🏫 Pr0",
+                    path: "pr0",
+                    summary: "Adds Value For the Client",
                     criteria: [
                         "Utilises broad domain knowledge to recommend improved solutions",
                         "Ability to deal with changing requirements from clients and changes in focus",
@@ -94,7 +110,9 @@
                     ]
                 },
                 {
-                    level: "1337",
+                    title: "🧙 1337",
+                    path: "1337",
+                    summary: "Works in Partnership with the Client",
                     criteria: [
                         "Conceives and drives the development of solutions that anticipate impending client needs",
                         "Ability to read clients and agree desired outcomes that are mutually beneficial i.e. win/win outcomes",
@@ -108,9 +126,12 @@
         {
             title: "📅 Planning and Organisation",
             path: "planning-and-organisation",
+            summary: "A baseline organiser is self organised, consistently communicating and consulting with stakeholders when required. As this skill develops, the expectation is that you'll begin to create action plans, set expectation with stakeholders and meet those expectations. Once you've levelled up this skill, you'll be conducting analysis of markets, setting SMART objectives and creating KPIs/performance metrics to track implementation. You'll be making decisions based on evidence and scientific methods. It's key that as a master of this skill you set expectation for both stakeholders and the delivery teams around you.",
             levels: [
                 {
-                    level: "n00b",
+                    title: "👩‍🎓 n00b",
+                    path: "n00b",
+                    summary: "Organised",
                     criteria: [
                         "Actively listens to identify and understand needs and objectives; asks questions to identify interests, views & motivations",
                         "Consults stakeholders when exploring solution options.",
@@ -122,7 +143,9 @@
                     ]
                 },
                 {
-                    level: "Play3r",
+                    title: "👨‍🔧 Play3r",
+                    path: "play3r",
+                    summary: "Forward Thinking",
                     criteria: [
                         "Develops clear, documented action plans, with realistic expectations & objectives",
                         "Anticipates & realistically appraises potential problems or changes; develops contingency plans to ensure desired outcome is achieved effectively within agreed timelines",
@@ -134,7 +157,9 @@
                     ]
                 },
                 {
-                    level: "Pr0",
+                    title: "👩‍🏫 Pr0",
+                    path: "pr0",
+                    summary: "Project Planning",
                     criteria: [
                         "Manages multiple complex projects using established project management methodologies",
                         "Integrates inputs from different sources/team members; optimises their contribution relevant to work programme",
@@ -146,7 +171,9 @@
                     ]
                 },
                 {
-                    level: "1337",
+                    title: "🧙 1337",
+                    path: "1337",
+                    summary: "Strategic Planning",
                     criteria: [
                         "Conducts a robust situational analysis – market/technology attractiveness & competitive position",
                         "Devises strategies aligned to analysis of market/technology; aware of alternative strategic options ",
@@ -159,91 +186,231 @@
             ]
         },
         {
-            title: "",
-            path: "",
+            title: "🤹 Problem Solving",
+            path: "problem-solving",
+            summary: "A solution focused approach is a good foundation to build this skill on. You should be presenting solutions to decision makers, as opposed to presenting the problem. Impediments or blockers don't exist- everybody should refuse to become blocked. You should always see that there is always a way to move things forwards, and you do. Further understanding of this skill involves you developing and actually resolving the problems, making recommendations where necessary, based on evidence and analysis. You'll be using your judgement to quickly make good decisions based on limited evidence.",
             levels: [
                 {
-                    level: "n00b",
+                    title: "👩‍🎓 n00b",
+                    path: "n00b",
+                    summary: "Solution Focused",
                     criteria: [
-
+                        "Takes immediate action or initiative to resolve issues preventing satisfactory work completion; including seeking help from others",
+                        "Comes to line manager with potential solutions to problems rather than just presenting the issue",
+                        "Considers past experience of similar situations & existing procedures to think through potential approaches to addressing problems",
+                        "Records solutions appropriately, with concise and complete explanations and justifications",
+                        "When asked can suggest some improvements to work processes to prevent future problems",
+                        "Refuses to become blocked",
+                        "Distinguishes between relevant and irrelevant information in order to make logical decisions",
+                        "Openly acknowledge mistakes & takes action to rectify them"
                     ]
                 },
                 {
-                    level: "Play3r",
+                    title: "👨‍🔧 Play3r",
+                    path: "play3r",
+                    summary: "Structured Problem Solving",
                     criteria: [
-                        
+                        "Uses research to better understand an issue and come to reasoned decisions about how to resolve a problem",
+                        "Identifies the root causes of blockers",
+                        "Uses visualisation tools (SWOT, brainstorming, cause-effect diagrams) to gain fuller understanding of issues",
+                        "Analytical; deduces meaning from numerical & verbal data sources & uses such data to generate solutions to current problems or future changes",
+                        "Where relevant develops tools or models to further analyse data sources e.g. to test assumptions or develop scenarios"
                     ]
                 },
                 {
-                    level: "Pr0",
+                    title: "👩‍🏫 Pr0",
+                    path: "pr0",
+                    summary: "Looks for Optimum Solutions",
                     criteria: [
-                        
+                        "Ensures recommendations are evidence based. Bases decisions on robust analysis of the situation",
+                        "Conducts option appraisal: systematically compares a number of approaches, weighs up relevant data before applying judgement; then makes recommendations.",
+                        "Considers financial, technical, security and other risks before taking action or making decisions",
+                        "Able to effectively and logically defend judgements if challenged"
                     ]
                 },
                 {
-                    level: "1337",
+                    title: "🧙 1337",
+                    path: "1337",
+                    summary: "Exercises Sound Judgement",
                     criteria: [
-                        
+                        "Makes sound judgement even when making complex or difficult decisions or when under time pressures.",
+                        "Sets processes for managing business risk",
+                        "Takes full accountability for implementing resultant decisions",
+                        "Identifies potential blockers before they occur, and prevents them"
                     ]
                 }
             ]
         },
         {
-            title: "",
-            path: "",
+            title: "💬 Communication",
+            path: "communication",
+            summary: "All n00bs should be able to listen, communicate and set the expectation for communication to their clients. Advancement comes in the form of the creation of consumable technical specifications. Translation of technical jargon into understandable language for others is a critical skill as a communicator. When you've made 1337 communicator, you'll be consistently communicating. You'll build trust by autonomously communicating effectively. You'll produce business plans and use communication to gather buy-in for your solutions from teams.",
             levels: [
                 {
-                    level: "n00b",
+                    title: "👩‍🎓 n00b",
+                    path: "n00b",
+                    summary: "Communicated Clearly",
                     criteria: [
-
+                        "Actively listens to project briefs and asks questions where necessary to clarify understanding of own role and the project as a whole",
+                        "Where unsure checks what the expectations are for the delivery of tasks",
+                        "Asks for feedback and advice where necessary to enable successful completion of delegated work",
+                        "Shows interpersonal sensitivity",
+                        "Communicates concisely and clearly, sticking to facts and avoiding jargon, acronyms or abbreviations where appropriate",
+                        "Treats all interactions with respect and compassion",
+                        "Establishes the quality and frequency of feedback required by manager / client and routinely meets these requirements",
+                        "Acts as a role model for corporate standards of integrity both within the business and externally"
                     ]
                 },
                 {
-                    level: "Play3r",
+                    title: "👨‍🔧 Play3r",
+                    path: "play3r",
+                    summary: "Excellent Technical Communication",
                     criteria: [
-                        
+                        "Maintains a constant dialogue with all project stakeholders to ensure a clear and joint understanding of project direction and progress",
+                        "Translates complex issues into simple terms and manageable chunks for others to understand",
+                        "Verifies that others have received, consumed and understood presented information during discussions",
+                        "Produces reports which are accurate, easily understood, succinct and worded appropriately for target audience"
                     ]
                 },
                 {
-                    level: "Pr0",
+                    title: "👩‍🏫 Pr0",
+                    path: "pr0",
+                    summary: "Establishes Shared Understanding",
                     criteria: [
-                        
+                        "Provides clear and easily understood briefs to others, making clear expected outcomes and which tasks are to be completed by whom",
+                        "Displays strong presentation/writing skills",
+                        "Ensures all relevant information is communicated to others to enable them to successfully execute delegated tasks",
+                        "Presents proposals in a clear and structured manner",
+                        "Produces and maintains clear & concise technical specifications throughout the project"
                     ]
                 },
                 {
-                    level: "1337",
+                    title: "🧙 1337",
+                    path: "1337",
+                    summary: "Inspires",
                     criteria: [
-                        
+                        "Consistently and frequently communicates / demonstrates organisational values, expectations and boundaries",
+                        "Communicates business needs to others, conveying the importance of these needs from all perspectives",
+                        "Produces detailed and accurate delivery plans, presenting them objectively and transparently",
+                        "Motivates and engages employees through communication"
                     ]
                 }
             ]
         },
         {
-            title: "",
-            path: "",
+            title: "🥇 Striving For Success",
+            path: "striving-for-success",
+            summary: "This skill is all about attitude and reflection. As a n00b you should be generally enthusiastic and have a can do attitude when faced with problems. You should be receptive to feedback and new ideas, reflecting on your own skills and areas you may need to improve. As you develop this skill, you should be seeking continuous improvement and looking to constantly exceed expectation. You should be monitoring key business metrics and be seeking ways to help improve those. You're emotionally intelligent. You should be able to provide constructive feedback and potential improvements to solutions/business processes.",
             levels: [
                 {
-                    level: "n00b",
+                    title: "👩‍🎓 n00b",
+                    path: "n00b",
+                    summary: "Committed",
                     criteria: [
-
+                        "Tackles work with enthusiasm, and takes a positive outlook when things are difficult",
+                        "Shows commitment to work objectives & underlying tasks",
+                        "Willing to accept advice from others regarding how objectives could be achieved",
+                        "Sets deadlines and strives to meet them",
+                        "Gains a sense of achievement and self-satisfaction from successfully meeting targets and business needs",
+                        "Prepared to examine own skills and abilities to identify ways of improving performance e.g. discusses personal development with line manager"
                     ]
                 },
                 {
-                    level: "Play3r",
+                    title: "👨‍🔧 Play3r",
+                    path: "play3r",
+                    summary: "Self Motivated",
                     criteria: [
-                        
+                        "Perseveres to overcome obstacles / resistance until objectives are fully met and tasks completed",
+                        "Proactive in taking on extra tasks or responsibility",
+                        "Prepared to work flexibly, including working beyond standard hours in order to finish tasks to meet project deadlines",
+                        "Actively seeks out work and maintains to-do lists for personal peeves",
+                        "Self-motivated to achieve; shows initiative and performs to a high level with low levels of supervision",
+                        "Adopts good practice or new techniques from others."
                     ]
                 },
                 {
-                    level: "Pr0",
+                    title: "👩‍🏫 Pr0",
+                    path: "pr0",
+                    summary: "Raising The Bar",
                     criteria: [
-                        
+                        "Consistently reflects on own performance & seeks continuous improvement",
+                        "Seeks to exceed expectations",
+                        "Demonstrates an attention to detail and quality, and looks to evaluate solutions as part of a desire to drive quality improvement",
+                        "Aware of own credibility. Actively seeks to reinforce and enhance this",
+                        "Devotes time to expand technical expertise to inform and improve client solutions & work processes",
+                        "Seeks views of others and accepts constructive criticism"
                     ]
                 },
                 {
-                    level: "1337",
+                    title: "🧙 1337",
+                    path: "1337",
+                    summary: "Seeks Perfection",
                     criteria: [
-                        
+                        "Consistently strives to achieve targets or goals at a team/departmental/company level",
+                        "Prepared to take calculated risks to improve performance/delivery",
+                        "Is never satisfied with current business performance; continually seeks to improve business performance & drive the organisation forward",
+                        "Monitors business performance",
+                        "Seeks ways to enhance team performance; reinforces and rewards positive achievements to encourage further improvement",
+                        "Pursues potential business opportunity leads, or creates openings for others",
+                        "Prepared to constructively challenge the practices or rationale of others in order to improve client solutions or work processes"
+                    ]
+                }
+            ]
+        },
+        {
+            title: "👨‍👨‍👧 Team Orientation",
+            path: "team-orientation",
+            summary: "We're looking for people who are team players, who seek to foster positive relationships with the people they work with around a shared goal. Show trust by delegating tasks and defending colleagues if required. Once you've mastered this skill, you'll be a shining beacon, focused on delivery by creating a cohesive environment, where everybody shares the same values and goals. You will be a cheerleader for your team, celebrating success and instilling positivity within the team. You're a teacher, and share you experience with the team. You lead by example and identify areas the team needs to improve.",
+            levels: [
+                {
+                    title: "👩‍🎓 n00b",
+                    path: "n00b",
+                    summary: "Team Player",
+                    criteria: [
+                        "Shows genuine commitment to the team and company",
+                        "Prepared to compromise or go with team decision",
+                        "Easily and quickly adapts to new challenges and ways of working",
+                        "Takes responsibility for own actions",
+                        "Has positive relationships with team members displaying high levels of reliability and responsibility",
+                        "Always ready and available to help others"
+                    ]
+                },
+                {
+                    title: "👨‍🔧 Play3r",
+                    path: "play3r",
+                    summary: "Proactive Colleague",
+                    criteria: [
+                        "Makes self available to others; proactively offers to assist others with activities to meet deadlines or manage short-term work pressures",
+                        "Regularly and pro-actively communicates with colleagues regarding project or task progress.",
+                        "Prepares for and actively participates in team meetings",
+                        "Willingly seeks input and ideas from colleagues"
+                    ]
+                },
+                {
+                    title: "👩‍🏫 Pr0",
+                    path: "pr0",
+                    summary: "Maximising The Team",
+                    criteria: [
+                        "Demonstrates awareness of different perspectives, working styles and preferences in team",
+                        "Organises social or more formal team activities",
+                        "Provides constructive feedback and suggestions, including to more senior colleagues",
+                        "Defends colleagues in the face of unwarranted criticism",
+                        "Encourages and assists with the personal development of others",
+                        "Puts systems in place to encourage team communication and shared learning",
+                        "Demonstrates trust of team members by fully delegating tasks or projects"
+                    ]
+                },
+                {
+                    title: "🧙 1337",
+                    path: "1337",
+                    summary: "Creates Team Culture",
+                    criteria: [
+                        "Seeks to understand team needs, motivations, strengths, dynamics to inform and optimise working arrangements and team performance",
+                        "Employs robust methods for selecting team members for job roles",
+                        "Strives to identify ways to improve team working processes and enhance team performance",
+                        "Able to have difficult conversations where required",
+                        "Shares team success internally and with other divisions; supportively encourages admission of collective mistakes, encouraging the team to learn from their experiences",
+                        "Identifies sources of conflict within the team and acts in a facilitative manner to resolve conflict or improve cohesion"
                     ]
                 }
             ]
