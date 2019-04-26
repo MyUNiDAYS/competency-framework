@@ -46,8 +46,8 @@ window.addEventListener('load', function(){
     });
 
     // Initialise content
-    document.querySelector('.container > nav').innerHTML = templates['nav-competencies'](window.competencies) + templates['nav-roles'](window.roles);
-    document.querySelector('#content').innerHTML = templates['competencies'](window.competencies) + templates['roles'](window.roles)
+    document.querySelector('.container > nav').innerHTML += templates['nav-competencies'](window.competencies) + templates['nav-roles'](window.roles);
+    document.querySelector('#content').innerHTML += templates['competencies'](window.competencies) + templates['roles'](window.roles)
 
     // Handle pushstate navigation
     window.addEventListener('popstate', function(e){
