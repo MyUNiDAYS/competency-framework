@@ -27,6 +27,18 @@ window.roles.forEach(role => {
     explodeCompetencies(role);
 });
 
+// Register service worker for offline operation
+if (('serviceWorker' in navigator))
+{
+    navigator.serviceWorker.register('/service-worker.js');
+
+    navigator.serviceWorker.ready.then(function (registration) {
+        registration.active.postMessage({
+            type: 'refresh'
+        });
+    }); 
+}
+
 window.addEventListener('load', function(){
 
     // compile all templates and partials
@@ -37,6 +49,7 @@ window.addEventListener('load', function(){
             Handlebars.registerPartial(template.id.substr(5), compiled);
         else 
             templates[template.id.substr(5)] = compiled;
+        template.parentElement.removeChild(template);
     });
 
     // Initialise content
@@ -75,10 +88,17 @@ window.addEventListener('load', function(){
             section.style.display = 'none';
         });
         
-        // Show this content
+        // Show content
         var segments = path === '/' ? ['root'] : path.substr(1).split('/');
         for(var i = 0; i < segments.length; i++)
             document.querySelector(`section[data-path="${segments[i]}"]`).style.display = 'block';
+
+        // highlight nav links
+        document.querySelectorAll('a.active').forEach(a => a.classList.remove('active'));
+        while(path !== ''){
+            document.querySelectorAll(`a[href="${path}"]`).forEach(a => a.classList.add('active'));
+            path = path.substr(0, path.lastIndexOf('/'));
+        }
     }
     
     // boot the page    

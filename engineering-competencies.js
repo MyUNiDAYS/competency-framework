@@ -1,5 +1,5 @@
 (window.competencies = window.competencies || []).push({
-    title: "🛠️ Engineering",
+    title: "🛠️ Engineering Competencies",
     path: "engineering-competencies",
     topics: [
         {
@@ -129,7 +129,7 @@
             ]
         },
         {
-            title: "🎀 Software Engineer",
+            title: "🔧 Software Engineer",
             path: "software-engineer",
             summary: "Front End Engineers start their career with a knowledge of how to build basic web pages. As they advance, so will their knowledge of HTML, CSS and JavaScript. As technical skill develops, understanding of quality and delivery of value will also improve. A senior Front End Engineer will take responsibility for the web estate, seeking continuous improvement and setting out best practices for the rest of the Engineering team.            ",
             levels: [

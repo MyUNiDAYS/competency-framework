@@ -1,20 +1,20 @@
 @font-face {
     font-family: 'UNiDAYSPro-Book';
-    src: url("https://fonts1.unidays.world/unidays/v1/all-book.woff2") format("woff2"),url("https://fonts1.unidays.world/unidays/v1/all-book.woff") format("woff");
+    src: url("https://fonts1.unidays.world/unidays/v1/all-book.woff2") format("woff2");
     font-weight: normal;
     font-style: normal
 }
 
 @font-face {
     font-family: 'UNiDAYSPro-Demi';
-    src: url("https://fonts1.unidays.world/unidays/v1/all-demi.woff2") format("woff2"),url("https://fonts1.unidays.world/unidays/v1/all-demi.woff") format("woff");
+    src: url("https://fonts1.unidays.world/unidays/v1/all-demi.woff2") format("woff2");
     font-weight: normal;
     font-style: normal
 }
 
 @font-face {
     font-family: 'UNiDAYSPro-Heavy';
-    src: url("https://fonts1.unidays.world/unidays/v1/all-heavy.woff2") format("woff2"),url("https://fonts1.unidays.world/unidays/v1/all-heavy.woff") format("woff");
+    src: url("https://fonts1.unidays.world/unidays/v1/all-heavy.woff2") format("woff2");
     font-weight: normal;
     font-style: normal
 }
@@ -105,7 +105,7 @@ body
 
 .container
 {
-    height: 100%;
+    min-height: 100%;
     display: -ms-flexbox;
     display: -webkit-box;
     display: -moz-box;
@@ -187,6 +187,10 @@ nav a
 {
     text-decoration: none;
     color: inherit;
+}
+nav a.active
+{
+    font-family: 'UNiDAYSPro-Demi';
 }
 
 #content

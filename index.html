@@ -5,14 +5,14 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, shrink-to-fit=no">  
         <link rel="stylesheet" type="text/css" href="/styles/index.css" />
-        <link rel="shortcut icon" href="https://images-1.unidays.world/favicons/set-a/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
         <title>UNiDAYS Competency and Progression Framework</title>
     </head>
     <body>
         <section class="container">
         <nav>
             <section>
-                <span class="logo"><img src="https://images-2.unidays.world/favicons/set-a/apple-touch-icon-152x152.png" alt="UNiDAYS Logo"/> UNiDAYS</span>
+                <span class="logo"><img src="/assets/logo.png" alt="UNiDAYS Logo"/> UNiDAYS</span>
                 <ul>
                     <li><a href="/">🏡 Home</a></li>
                 </ul>
@@ -102,7 +102,7 @@
                 {{#each topics}}
                     <section class="topic" data-path="{{path}}">
                         <h2>{{title}}</h2>
-                        <p>{{summary}}</p>
+                        <p class="box">{{summary}}</p>
                         <h3>Levels</h3>
                     {{#each levels}}
                         <section class="level box">
@@ -155,7 +155,6 @@
     </section>
     </body>
 
-    <script src="/scripts/pubsub.js"></script>
     <script src="/core-competencies.js"></script>
     <script src="/engineering-competencies.js"></script>
     <script src="/role-mappings.js"></script>
