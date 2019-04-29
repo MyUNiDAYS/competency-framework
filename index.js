@@ -5,19 +5,21 @@ function explodeCompetencies(node){
     for(var r = 0; r < (node.roles ? node.roles.length : 0); r++)
     {
         var role = node.roles[r];
-        for(var i = 0; i < role.competencies.length; i++){
-            var map = role.competencies[i];
+        for(var l = 0; l < role.levels.length; l++) {
+            for(var i = 0; i < role.levels[l].competencies.length; i++){
+                var map = role.levels[l].competencies[i];
 
-            var path = map.split('/');
-            var competency = window.competencies.filter(c => c.path === path[0])[0];
-            var topic = competency.topics.filter(t => t.path === path[1])[0];
-            var level = topic.levels.filter(l => l.path === path[2])[0];
+                var path = map.split('/');
+                var competency = window.competencies.filter(c => c.path === path[0])[0];
+                var topic = competency.topics.filter(t => t.path === path[1])[0];
+                var level = topic.levels.filter(l => l.path === path[2])[0];
 
-            role.competencies[i] = {
-                competency: competency,
-                topic: topic,
-                level: level
-            };
+                role.levels[l].competencies[i] = {
+                    competency: competency,
+                    topic: topic,
+                    level: level
+                };
+            }
         }
     }
 }

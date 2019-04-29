@@ -60,7 +60,14 @@
                 {{#if roles}}
                     <ul>
                     {{#each roles}}
-                        <li><a href="/{{path}}">{{title}}</a></li>
+                        <li>
+                            <a href="/{{path}}">{{title}}</a>
+                            <ul>
+                            {{#each levels}}
+                                <li><a href="/{{path}}">{{title}}</a></li>
+                            {{/each}}
+                            </ul>
+                        </li>
                     {{/each}}
                     </ul>
                 {{/if}}
@@ -139,6 +146,7 @@
             {{/if}}
             {{#if roles}}
                 {{#each roles}}
+                {{#each levels}}
                 <section class="role" data-path="{{path}}">
                     <h1>{{title}}</h1>
                 {{#each competencies}}
@@ -153,6 +161,7 @@
                     </section>
                 {{/each}}
                 </section>
+                {{/each}}
                 {{/each}}
             {{/if}}
             </script>
