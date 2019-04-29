@@ -200,7 +200,7 @@
                         "Considers past experience of similar situations & existing procedures to think through potential approaches to addressing problems",
                         "Records solutions appropriately, with concise and complete explanations and justifications",
                         "When asked can suggest some improvements to work processes to prevent future problems",
-                        "Refuses to become blocked",
+                        "Refuses to become blocked. Tries to unblock themselves first before seeking help",
                         "Distinguishes between relevant and irrelevant information in order to make logical decisions",
                         "Openly acknowledge mistakes & takes action to rectify them"
                     ]
