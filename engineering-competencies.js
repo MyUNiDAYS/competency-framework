@@ -190,6 +190,27 @@
                     ]
                 }
             ]
+        },
+        {
+            title: "🛂 Verification Engineer",
+            path: "verification-engineer",
+            summary: "TBC",
+            levels: [
+                {
+                    title: "👷 Single-Levelled",
+                    path: "single-levelled",
+                    summary: "",
+                    criteria: [
+                        "Maintains positive relationships with all identity management systems worldwide",
+                        "Keeps up to date with changes to identity management systems in the wild",
+                        "Proactively identifies relevant conferences and meetings",
+                        "Ensures maximum verification capability at all times",
+                        "Actively monitors verification rates and takes action to address issues",
+                        "Conducts analysis of and reports on threats to verification technologies",
+                        "Proactively identifies means of integration with additional verification data sources"
+                    ]
+                }
+            ]
         }
     ]
 })
