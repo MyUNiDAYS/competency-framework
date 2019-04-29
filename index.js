@@ -86,14 +86,14 @@ window.addEventListener('load', function(){
         var path = window.location.pathname;
         
         // Hide all content
-        document.querySelectorAll('section[data-path]').forEach(section =>{
+        document.querySelectorAll('[data-path]').forEach(section =>{
             section.style.display = 'none';
         });
         
         // Show content
         var segments = path === '/' ? ['root'] : path.substr(1).split('/');
         for(var i = 0; i < segments.length; i++)
-            document.querySelectorAll(`section[data-path="${segments[i]}"]`).forEach(s => s.style.display = 'block');
+            document.querySelectorAll(`[data-path="${segments[i]}"]`).forEach(s => s.style.display = 'block');
 
         // highlight nav links
         document.querySelectorAll('a.active').forEach(a => a.classList.remove('active'));

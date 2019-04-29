@@ -30,7 +30,7 @@
                     <span class="competency">{{title}}</span>
                     <ul>
                     {{#each topics}}
-                        <li><a href="/{{../path}}/{{path}}">{{title}}</a></li>
+                        <li><a href="/competencies/{{../path}}/{{path}}">{{title}}</a></li>
                     {{/each}}
                     </ul>
                 {{/each}}
@@ -61,10 +61,10 @@
                     <ul>
                     {{#each roles}}
                         <li>
-                            <a href="/{{path}}">{{title}}</a>
+                            <a href="/roles/{{path}}">{{title}}</a>
                             <ul>
                             {{#each levels}}
-                                <li><a href="/{{../path}}/{{path}}">{{title}}</a></li>
+                                <li><a href="/roles/{{../path}}/{{path}}">{{title}}</a></li>
                             {{/each}}
                             </ul>
                         </li>
@@ -109,35 +109,41 @@
             </section>
 
             <script id="tmpl-competencies" type="text/x-handlebars-template">
-            {{#each this}}
-                <section class="competency" data-path="{{path}}">
-                    <h1>{{title}}</h1>
-                {{#each topics}}
-                    <section class="topic" data-path="{{path}}">
-                        <h2>{{title}}</h2>
-                        <p class="box">{{summary}}</p>
-                        <h3>Levels</h3>
-                    {{#each levels}}
-                        <section class="level box">
-                            <h3>{{title}}</h3>
-                            <ul>
-                            {{#each criteria}}
-                                <li>{{this}}</li>
+                <div data-path="competencies">
+                {{#each this}}
+                    <section class="competency" data-path="{{path}}">
+                        <h1>{{title}}</h1>
+                    {{#each topics}}
+                        <section class="topic" data-path="{{path}}">
+                            <h2>{{title}}</h2>
+                            <p class="box">{{summary}}</p>
+                            <h3>Levels</h3>
+                            <div class="coltainer">
+                            {{#each levels}}
+                                <section class="level box item">
+                                    <h3>{{title}}</h3>
+                                    <ul>
+                                    {{#each criteria}}
+                                        <li>{{this}}</li>
+                                    {{/each}}
+                                    </ul>
+                                </section>
                             {{/each}}
-                            </ul>
+                        </div>
                         </section>
                     {{/each}}
                     </section>
                 {{/each}}
-                </section>
-            {{/each}}
+                </div>
             </script>
 
             <script id="tmpl-roles" type="text/x-handlebars-template">
+                <div class="roles" data-path="roles">
             {{#each this}}
                 {{> rolesPartial}}
             {{/each}}
             </script>
+                </div>
             <script id="tmpl-rolesPartial" type="text/x-handlebars-template" class="partial">
             {{#if departments}}
                 {{#each departments}}
@@ -152,10 +158,11 @@
                     {{#each levels}}
                         <section class="role-level" data-path="{{path}}">
                             <h1>{{title}}</h1>
+                            <div class="coltainer">
                         {{#each competencies}}
-                            <section class="role-competency box">
-                                <h2>{{competency.title}} - {{topic.title}}</h2>
-                                <h3>{{level.title}}</h3>
+                            <section class="role-competency box item">
+                                <h2>{{topic.title}} - {{level.title}}</h2>
+                                <span>{{competency.title}}</span>
                                 <ul>
                                 {{#each level.criteria}}
                                     <li>{{this}}</li>
@@ -163,6 +170,7 @@
                                 </ul>
                             </section>
                         {{/each}}
+                            </div>
                         </section>
                     {{/each}}
                 </section>

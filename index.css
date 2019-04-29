@@ -224,7 +224,7 @@ h2
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0,0,0, 0.2);
-    margin: 1em;
+    margin: 10px;
     padding: 15px;
 }
 
@@ -252,4 +252,20 @@ h2
 *:last-child
 {
     margin-bottom: 0;
+}
+
+section.role
+{
+    
+}
+
+.coltainer
+{
+    display: flex; 
+    flex-flow: row wrap;
+}
+
+.coltainer .item
+{
+    width: calc( (100% / 2) - 50px );
 }
