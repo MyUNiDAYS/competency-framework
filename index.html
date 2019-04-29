@@ -64,7 +64,7 @@
                             <a href="/{{path}}">{{title}}</a>
                             <ul>
                             {{#each levels}}
-                                <li><a href="/{{path}}">{{title}}</a></li>
+                                <li><a href="/{{../path}}/{{path}}">{{title}}</a></li>
                             {{/each}}
                             </ul>
                         </li>
@@ -145,24 +145,28 @@
                 {{/each}}
             {{/if}}
             {{#if roles}}
-                {{#each roles}}
-                {{#each levels}}
+            {{#each roles}}
                 <section class="role" data-path="{{path}}">
                     <h1>{{title}}</h1>
-                {{#each competencies}}
-                    <section class="role-competency box">
-                        <h2>{{competency.title}} - {{topic.title}}</h2>
-                        <h3>{{level.title}}</h3>
-                        <ul>
-                        {{#each level.criteria}}
-                            <li>{{this}}</li>
+                    <p>TBC</p>
+                    {{#each levels}}
+                        <section class="role-level" data-path="{{path}}">
+                            <h1>{{title}}</h1>
+                        {{#each competencies}}
+                            <section class="role-competency box">
+                                <h2>{{competency.title}} - {{topic.title}}</h2>
+                                <h3>{{level.title}}</h3>
+                                <ul>
+                                {{#each level.criteria}}
+                                    <li>{{this}}</li>
+                                {{/each}}
+                                </ul>
+                            </section>
                         {{/each}}
-                        </ul>
-                    </section>
-                {{/each}}
+                        </section>
+                    {{/each}}
                 </section>
-                {{/each}}
-                {{/each}}
+            {{/each}}
             {{/if}}
             </script>
         </section>

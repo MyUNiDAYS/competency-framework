@@ -93,7 +93,7 @@ window.addEventListener('load', function(){
         // Show content
         var segments = path === '/' ? ['root'] : path.substr(1).split('/');
         for(var i = 0; i < segments.length; i++)
-            document.querySelector(`section[data-path="${segments[i]}"]`).style.display = 'block';
+            document.querySelectorAll(`section[data-path="${segments[i]}"]`).forEach(s => s.style.display = 'block');
 
         // highlight nav links
         document.querySelectorAll('a.active').forEach(a => a.classList.remove('active'));
