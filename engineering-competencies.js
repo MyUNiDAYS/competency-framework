@@ -3,8 +3,8 @@
     path: "engineering-competencies",
     topics: [
         {
-            title: "📋 Test Engineer",
-            path: "test-engineer",
+            title: "📋 Testing",
+            path: "testing",
             summary: "Test Engineers are people with an analytical and logical mindset, who have an eye for detail and care about waste. The first step in a Test Engineers career is performing manual testing. They will build test plans, test scripts and discover bugs. Advancement is found through automation and continuous improvement. A Test Engineer will coach quality to those around them, calling out when standards are not met.",
             levels: [
                 {
@@ -64,8 +64,8 @@
             ]
         },
         {
-            title: "🎀 Front End Engineer",
-            path: "front-end-engineer",
+            title: "🎀 Front End Engineering",
+            path: "front-end-engineering",
             summary: "Front End Engineers start their career with a knowledge of how to build basic web pages. As they advance, so will their knowledge of HTML, CSS and JavaScript. As technical skill develops, understanding of quality and delivery of value will also improve. A senior Front End Engineer will take responsibility for the web estate, seeking continuous improvement and setting out best practices for the rest of the Engineering team.            ",
             levels: [
                 {
@@ -129,8 +129,8 @@
             ]
         },
         {
-            title: "🔧 Software Engineer",
-            path: "software-engineer",
+            title: "🔧 Software Engineering",
+            path: "software-engineering",
             summary: "Front End Engineers start their career with a knowledge of how to build basic web pages. As they advance, so will their knowledge of HTML, CSS and JavaScript. As technical skill develops, understanding of quality and delivery of value will also improve. A senior Front End Engineer will take responsibility for the web estate, seeking continuous improvement and setting out best practices for the rest of the Engineering team.            ",
             levels: [
                 {
@@ -192,8 +192,8 @@
             ]
         },
         {
-            title: "🛃 Verification Engineer",
-            path: "verification-engineer",
+            title: "🛃 Verification",
+            path: "verification",
             summary: "TBC",
             levels: [
                 {

@@ -98,7 +98,7 @@
                                     "core-competencies/team-orientation/play3r",
                                 ],
                                 optional: [
-                                    "engineering-competencies/software-engineer/n00b"
+                                    "engineering-competencies/software-engineering/n00b"
                                 ]
                             }
                         },
@@ -116,7 +116,7 @@
                                     "core-competencies/team-orientation/pr0",
                                 ],
                                 optional: [
-                                    "engineering-competencies/software-engineer/play3r"
+                                    "engineering-competencies/software-engineering/play3r"
                                 ]
                             }
                         },
@@ -134,7 +134,7 @@
                                     "core-competencies/team-orientation/1337",
                                 ],
                                 optional: [
-                                    "engineering-competencies/software-engineer/pr0"
+                                    "engineering-competencies/software-engineering/pr0"
                                 ]
                             }
                         },
@@ -152,7 +152,7 @@
                                     "core-competencies/team-orientation/1337",
                                 ],
                                 optional: [
-                                    "engineering-competencies/software-engineer/1337"
+                                    "engineering-competencies/software-engineering/1337"
                                 ]
                             }
                         }
@@ -176,7 +176,7 @@
                                     "core-competencies/team-orientation/play3r",
                                 ],
                                 optional: [
-                                    "engineering-competencies/front-end-engineer/n00b"
+                                    "engineering-competencies/front-end-engineering/n00b"
                                 ]
                             }
                         },
@@ -194,7 +194,7 @@
                                     "core-competencies/team-orientation/pr0",
                                 ],
                                 optional: [
-                                    "engineering-competencies/front-end-engineer/play3r"
+                                    "engineering-competencies/front-end-engineering/play3r"
                                 ]
                             }
                         },
@@ -212,7 +212,7 @@
                                     "core-competencies/team-orientation/1337",
                                 ],
                                 optional: [
-                                    "engineering-competencies/front-end-engineer/pr0"
+                                    "engineering-competencies/front-end-engineering/pr0"
                                 ]
                             }
                         },
@@ -230,7 +230,7 @@
                                     "core-competencies/team-orientation/1337",
                                 ],
                                 optional: [
-                                    "engineering-competencies/front-end-engineer/1337"
+                                    "engineering-competencies/front-end-engineering/1337"
                                 ]
                             }
                         }
@@ -254,7 +254,7 @@
                                     "core-competencies/team-orientation/play3r",
                                 ],
                                 optional: [
-                                    "engineering-competencies/test-engineer/n00b"
+                                    "engineering-competencies/testing/n00b"
                                 ]
                             }
                         },
@@ -272,7 +272,7 @@
                                     "core-competencies/team-orientation/pr0",
                                 ],
                                 optional: [
-                                    "engineering-competencies/test-engineer/play3r"
+                                    "engineering-competencies/testing/play3r"
                                 ]
                             }
                         },
@@ -290,7 +290,7 @@
                                     "core-competencies/team-orientation/1337",
                                 ],
                                 optional: [
-                                    "engineering-competencies/test-engineer/pr0"
+                                    "engineering-competencies/testing/pr0"
                                 ]
                             }
                         },
@@ -309,7 +309,7 @@
                                 ]
                             },
                             optional: [
-                                "engineering-competencies/test-engineer/1337"
+                                "engineering-competencies/test/1337"
                             ]
                         }
                     ]
@@ -434,7 +434,7 @@
                                     "core-competencies/team-orientation/1337"
                                 ],
                                 optional: [
-                                    "engineering-competencies/verification-engineer/pr0"
+                                    "engineering-competencies/verification/pr0"
                                 ]
                             }
                         },
