@@ -173,14 +173,30 @@ nav > section > ul
     margin-bottom: 15px;
 }
 
-nav li
+nav ul > li
 {
     margin: 0 0 10px 0;
+    display: none;
+}
+
+
+nav ul.active > li
+{
+    display: block;
 }
 
 nav li > ul
 {
     margin: 10px 0 0 15px;
+}
+
+nav li.active > ul
+{
+    display: block;
+}
+nav li.active > ul > li
+{
+    display: block;
 }
 
 nav a

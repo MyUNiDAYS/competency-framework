@@ -95,12 +95,22 @@ window.addEventListener('load', function(){
         for(var i = 0; i < segments.length; i++)
             document.querySelectorAll(`[data-path="${segments[i]}"]`).forEach(s => s.style.display = 'block');
 
-        // highlight nav links
+        // highlight links
         document.querySelectorAll('a.active').forEach(a => a.classList.remove('active'));
-        while(path !== ''){
-            document.querySelectorAll(`a[href="${path}"]`).forEach(a => a.classList.add('active'));
-            path = path.substr(0, path.lastIndexOf('/'));
+        let pathSegment = path
+        while(pathSegment !== ''){
+            document.querySelectorAll(`a[href="${pathSegment}"]`).forEach(a => a.classList.add('active'));
+            pathSegment = pathSegment.substr(0, pathSegment.lastIndexOf('/'));
         }
+
+        // highlight nav heirarchy
+        document.querySelectorAll('nav ul.active, nav li.active').forEach(a => a.classList.remove('active'));
+        var currentElem = document.querySelector(`nav a[href="${path}"]`);
+        do
+        {
+            currentElem.classList.add('active');
+            currentElem = currentElem.parentElement;
+        } while(currentElem.nodeName === 'LI' || currentElem.nodeName === 'UL');
     }
     
     // boot the page    
