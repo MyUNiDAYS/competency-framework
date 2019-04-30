@@ -16,5 +16,4 @@ jobs:
           from: ~/project
           to: 's3://progression.myunidays.com/'
           arguments: |
-            --acl public-read \
             --delete
