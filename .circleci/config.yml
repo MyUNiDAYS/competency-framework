@@ -5,10 +5,11 @@ jobs:
   build:
     docker:
       - image: 'circleci/python:2.7'
+    working_directory: ~/project
     steps:
       - checkout
       - aws-s3/sync:
-          from: $CIRCLE_WORKING_DIRECTORY
+          from: ~/project
           to: 's3://progression.myunidays.com'
           arguments: |
             --acl public-read \
