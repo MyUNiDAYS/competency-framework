@@ -160,8 +160,10 @@
             {{#each roles}}
                 <section class="role" data-path="{{path}}">
                     <h1>{{title}}</h1>
-                    <p class="box">TBC</p>
                     <section class="box">
+                        <h2>Summary</h2>
+                        <p>{{summary}}</p>
+                        <h2>Level Overview</h2>
                         <table>
                             <thead>
                                 <tr>
@@ -193,35 +195,35 @@
                             </tbody>
                         </table>
                     </section>
-                    {{#each levels}}
-                        <section class="role-level" data-path="{{path}}">
-                            <h1>{{title}}</h1>
-                            <div class="coltainer">
-                        {{#each competencies.required}}
-                            <section class="role-competency box item">
-                                <h2>{{topic.title}} - {{level.title}}</h2>
-                                <span>{{competency.title}}</span>
-                                <ul>
-                                {{#each level.criteria}}
-                                    <li>{{this}}</li>
-                                {{/each}}
-                                </ul>
-                            </section>
-                        {{/each}}
-                        {{#each competencies.optional}}
-                            <section class="role-competency box item">
-                                <h2>{{topic.title}} - {{level.title}}</h2>
-                                <span>{{competency.title}}</span>
-                                <ul>
-                                {{#each level.criteria}}
-                                    <li>{{this}}</li>
-                                {{/each}}
-                                </ul>
-                            </section>
-                        {{/each}}
-                            </div>
+                {{#each levels}}
+                    <section class="role-level" data-path="{{path}}">
+                        <h2>{{title}}</h1>
+                        <div class="coltainer">
+                    {{#each competencies.required}}
+                        <section class="role-competency box item">
+                            <h2><a href="/competencies/{{competency.path}}/{{topic.path}}">{{topic.title}}</a> - {{level.title}}</h2>
+                            <h3><a href="/competencies/{{competency.path}}">{{competency.title}}</a></h3>
+                            <ul>
+                            {{#each level.criteria}}
+                                <li>{{this}}</li>
+                            {{/each}}
+                            </ul>
                         </section>
                     {{/each}}
+                    {{#each competencies.optional}}
+                        <section class="role-competency box item">
+                            <h2><a href="/competencies/{{competency.path}}/{{topic.path}}">{{topic.title}}</a> - {{level.title}}</h2>
+                            <h3><a href="/competencies/{{competency.path}}">{{competency.title}}</a></h3>
+                            <ul>
+                            {{#each level.criteria}}
+                                <li>{{this}}</li>
+                            {{/each}}
+                            </ul>
+                        </section>
+                    {{/each}}
+                        </div>
+                    </section>
+                {{/each}}
                 </section>
             {{/each}}
             {{/if}}
