@@ -134,6 +134,7 @@
                     summary: "Organised",
                     criteria: [
                         "Actively listens to identify and understand needs and objectives; asks questions to identify interests, views & motivations",
+                        "Understands the objectives of and participates actively in team ceremonies. Prepared and organised to make the most of squad time.",
                         "Consults stakeholders when exploring solution options.",
                         "Undertakes appropriate research to build client knowledge & help inform discussions",
                         "Fully competent with the day-to-day use of JIRA and other productivity tools",
@@ -269,7 +270,9 @@
                         "Maintains a constant dialogue with all project stakeholders to ensure a clear and joint understanding of project direction and progress",
                         "Translates complex issues into simple terms and manageable chunks for others to understand",
                         "Verifies that others have received, consumed and understood presented information during discussions",
-                        "Produces reports which are accurate, easily understood, succinct and worded appropriately for target audience"
+                        "Produces reports which are accurate, easily understood, succinct and worded appropriately for target audience",
+                        "Identifies assumptions, shares direction and tailors communication to audience.",
+                        "Communicates effectively to a wide range of stakeholders, e.g. sharing updates at all hands"
                     ]
                 },
                 {
@@ -281,7 +284,10 @@
                         "Displays strong presentation/writing skills",
                         "Ensures all relevant information is communicated to others to enable them to successfully execute delegated tasks",
                         "Presents proposals in a clear and structured manner",
-                        "Produces and maintains clear & concise technical specifications throughout the project"
+                        "Produces and maintains clear & concise technical specifications throughout the project",
+                        "Seeks out and gives constructive, actionable feedback where valuable.",
+                        "Can gather influence and support for their work, confidently debating and defending their decisions and approach.",
+                        "Able to simply explain complex concepts and deliver difficult messages clearly."
                     ]
                 },
                 {
@@ -289,10 +295,12 @@
                     path: "1337",
                     summary: "Inspires",
                     criteria: [
+                        "Ensures the team has strong relationships with stakeholders, fully recognises their constraints and concerns and creates mutual recognition and trust.",
                         "Consistently and frequently communicates / demonstrates organisational values, expectations and boundaries",
                         "Communicates business needs to others, conveying the importance of these needs from all perspectives",
                         "Produces detailed and accurate delivery plans, presenting them objectively and transparently",
-                        "Motivates and engages employees through communication"
+                        "Motivates and engages employees through communication",
+                        "Articulates and unites a team behind a clear and compelling vision, mission and strategy, along multiple time horizons."
                     ]
                 }
             ]

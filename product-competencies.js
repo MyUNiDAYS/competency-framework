@@ -3,8 +3,8 @@
     path: "product-competencies",
     topics: [
         {
-            title: "🤹 Problem Solving",
-            path: "problem-solving",
+            title: "🤹 Opportunity Analysis",
+            path: "opportunity-analysis",
             summary: "",
             levels: [
                 {
@@ -220,58 +220,6 @@
                     criteria: [
                         "Makes successful trade offs in areas of extreme risk, complexity and uncertainty.",
                         "Coaches PMs in their area on effective and balanced prioritisation."
-                    ]
-                }
-            ]
-        },
-        {
-            title: "💬 Feedback",
-            path: "feedback",
-            summary: "",
-            levels: [
-                {
-                    title: "1",
-                    path: "1",
-                    summary: "",
-                    criteria: [
-                          "Collaborates daily with members of the product squad to ship and iterate.",
-                          "Understands the objectives of and participates actively in team ceremonies. Prepared and organised to make the most of squad time."
-                    ]
-                },
-                {
-                    title: "2",
-                    path: "2",
-                    summary: "",
-                    criteria: [
-                        "Proactively communicates with users, squads and stakeholders.",
-                        "Identifies assumptions, shares direction and tailors communication to audience.",
-                        "Seeks out and gives constructive, actionable feedback where valuable."
-                    ]
-                },
-                {
-                    title: "3",
-                    path: "3",
-                    summary: "",
-                    criteria: [
-                        "Can gather influence and support for their work, confidently debating and defending their decisions and approach.",
-                        "Communicates effectively to a wide range of stakeholders, e.g. sharing updates at all hands"
-                    ]
-                },
-                {
-                    title: "4",
-                    path: "4",
-                    summary: "",
-                    criteria: [
-                        "Ensures the team has strong relationships with stakeholders, fully recognises their constraints and concerns and creates mutual recognition and trust.",
-                        "Able to simply explain complex concepts and deliver difficult messages clearly."
-                    ]
-                },
-                {
-                    title: "5",
-                    path: "5",
-                    summary: "",
-                    criteria: [
-                        "Articulates and unites a team behind a clear and compelling product vision, mission and strategy, along multiple time horizons."
                     ]
                 }
             ]

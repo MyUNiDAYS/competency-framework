@@ -495,13 +495,19 @@
                     path: "product-owner",
                     competencies: {
                         required: [
-                            "product-competencies/problem-solving/3",
+                            "core-competencies/delivering-value/pr0",
+                            "core-competencies/client-focus/play3r",
+                            "core-competencies/planning-and-organisation/1337",
+                            "core-competencies/problem-solving/pr0",
+                            "core-competencies/communication/1337",
+                            "core-competencies/striving-for-success/pr0",
+                            "core-competencies/team-orientation/1337",
+                            "product-competencies/opportunity-analysis/3",
                             "product-competencies/user-centricity/3",
                             "product-competencies/domain-knowledge/3",
                             "product-competencies/data-skills/3",
                             "product-competencies/working-through-others/4",
-                            "product-competencies/execution/3",
-                            "product-competencies/feedback/3"
+                            "product-competencies/execution/3"
                         ]
                     }
                 }
@@ -516,13 +522,19 @@
                     path: "business-analyst",
                     competencies: {
                         required: [
-                            "product-competencies/problem-solving/4",
+                            "core-competencies/delivering-value/play3r",
+                            "core-competencies/client-focus/1337",
+                            "core-competencies/planning-and-organisation/pr0",
+                            "core-competencies/problem-solving/pr0",
+                            "core-competencies/communication/pr0",
+                            "core-competencies/striving-for-success/pr0",
+                            "core-competencies/team-orientation/play3r",
+                            "product-competencies/opportunity-analysis/4",
                             "product-competencies/user-centricity/3",
                             "product-competencies/domain-knowledge/3",
                             "product-competencies/data-skills/3",
                             "product-competencies/working-through-others/4",
-                            "product-competencies/execution/3",
-                            "product-competencies/feedback/4"
+                            "product-competencies/execution/3"
                         ]
                     }
                 }
@@ -537,13 +549,19 @@
                     path: "senior-product-manager",
                     competencies: {
                         required: [
-                            "product-competencies/problem-solving/4",
+                            "core-competencies/delivering-value/1337",
+                            "core-competencies/client-focus/1337",
+                            "core-competencies/planning-and-organisation/1337",
+                            "core-competencies/problem-solving/1337",
+                            "core-competencies/communication/1337",
+                            "core-competencies/striving-for-success/1337",
+                            "core-competencies/team-orientation/1337",
+                            "product-competencies/opportunity-analysis/4",
                             "product-competencies/user-centricity/4",
                             "product-competencies/domain-knowledge/4",
                             "product-competencies/data-skills/4",
                             "product-competencies/working-through-others/4",
-                            "product-competencies/execution/3",
-                            "product-competencies/feedback/4"
+                            "product-competencies/execution/3"
                         ]
                     }
                 }
@@ -558,13 +576,19 @@
                     path: "",
                     competencies: {
                         required: [
-                            "product-competencies/problem-solving/4",
+                            "core-competencies/delivering-value/1337",
+                            "core-competencies/client-focus/1337",
+                            "core-competencies/planning-and-organisation/1337",
+                            "core-competencies/problem-solving/1337",
+                            "core-competencies/communication/1337",
+                            "core-competencies/striving-for-success/1337",
+                            "core-competencies/team-orientation/1337",
+                            "product-competencies/opportunity-analysis/4",
                             "product-competencies/user-centricity/4",
                             "product-competencies/domain-knowledge/5",
                             "product-competencies/data-skills/4",
                             "product-competencies/working-through-others/4",
-                            "product-competencies/execution/5",
-                            "product-competencies/feedback/5"
+                            "product-competencies/execution/5"
                         ]
                     }
                 }
@@ -579,13 +603,17 @@
                     path: "vp-product-engineering",
                     competencies: {
                         required: [
-                            "product-competencies/problem-solving/5",
+                            "core-competencies/delivering-value/1337",
+                            "core-competencies/client-focus/1337",
+                            "core-competencies/planning-and-organisation/1337",
+                            "core-competencies/problem-solving/1337",
+                            "core-competencies/striving-for-success/1337",
+                            "product-competencies/opportunity-analysis/5",
                             "product-competencies/user-centricity/5",
                             "product-competencies/domain-knowledge/5",
                             "product-competencies/data-skills/5",
                             "product-competencies/working-through-others/5",
-                            "product-competencies/execution/5",
-                            "product-competencies/feedback/5"
+                            "product-competencies/execution/5"
                         ]
                     }
                 }
