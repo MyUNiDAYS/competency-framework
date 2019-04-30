@@ -1,9 +1,9 @@
 (window.competencies = window.competencies || []).push({
-    title: "🛠️ Engineering Competencies",
+    title: "🛠️ Engineering",
     path: "engineering-competencies",
     topics: [
         {
-            title: "🕵️ Test Engineer",
+            title: "📋 Test Engineer",
             path: "test-engineer",
             summary: "Test Engineers are people with an analytical and logical mindset, who have an eye for detail and care about waste. The first step in a Test Engineers career is performing manual testing. They will build test plans, test scripts and discover bugs. Advancement is found through automation and continuous improvement. A Test Engineer will coach quality to those around them, calling out when standards are not met.",
             levels: [
@@ -192,13 +192,13 @@
             ]
         },
         {
-            title: "👮 Verification Engineer",
+            title: "🛃 Verification Engineer",
             path: "verification-engineer",
             summary: "TBC",
             levels: [
                 {
-                    title: "👷 Single-Levelled",
-                    path: "single-levelled",
+                    title: "👩‍🏫 Pr0",
+                    path: "pr0",
                     summary: "",
                     criteria: [
                         "Maintains positive relationships with all identity management systems worldwide",

@@ -6,22 +6,26 @@ function explodeCompetencies(node){
     {
         var role = node.roles[r];
         for(var l = 0; l < role.levels.length; l++) {
-            for(var i = 0; i < role.levels[l].competencies.length; i++){
-                var map = role.levels[l].competencies[i];
-
-                var path = map.split('/');
-                var competency = window.competencies.filter(c => c.path === path[0])[0];
-                var topic = competency.topics.filter(t => t.path === path[1])[0];
-                var level = topic.levels.filter(l => l.path === path[2])[0];
-
-                role.levels[l].competencies[i] = {
-                    competency: competency,
-                    topic: topic,
-                    level: level
-                };
-            }
+            for(var i = 0; i < role.levels[l].competencies.required.length; i++)
+                role.levels[l].competencies.required[i] = referenceCompetencies(role.levels[l].competencies.required[i]);
+            
+            for(var i = 0; i < (role.levels[l].competencies.optional ? role.levels[l].competencies.optional.length : 0); i++)
+                role.levels[l].competencies.optional[i] = referenceCompetencies(role.levels[l].competencies.optional[i]);
         }
     }
+}
+
+function referenceCompetencies(map){
+    var path = map.split('/');
+    var competency = window.competencies.filter(c => c.path === path[0])[0];
+    var topic = competency.topics.filter(t => t.path === path[1])[0];
+    var level = topic.levels.filter(l => l.path === path[2])[0];
+
+    return {
+        competency: competency,
+        topic: topic,
+        level: level
+    };
 }
 
 // explode role mappings into object references

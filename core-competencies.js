@@ -1,5 +1,5 @@
 (window.competencies = window.competencies || []).push({
-    title: "🍏 Core Competencies",
+    title: "🍏 Core",
     path: "core-competencies",
     topics: [
         {
