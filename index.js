@@ -149,6 +149,8 @@ window.addEventListener('load', function(){
         for(var i = 0; i < segments.length; i++)
             document.querySelectorAll(`[data-path="${segments[i]}"]`).forEach(s => s.style.display = 'block');
 
+        // TODO: merge all the below code into one mechanism
+
         // highlight links
         document.querySelectorAll('a.active').forEach(a => a.classList.remove('active'));
         let pathSegment = path
@@ -165,6 +167,10 @@ window.addEventListener('load', function(){
             currentElem.classList.add('active');
             currentElem = currentElem.parentElement;
         } while(currentElem.nodeName === 'LI' || currentElem.nodeName === 'UL');
+
+        // highlight highlightables
+        document.querySelectorAll('[data-highlight]').forEach(a => a.classList.remove('active'));
+        document.querySelectorAll(`[data-highlight="${path}"]`).forEach(a => a.classList.add('active'));
     }
     
     // boot the page    

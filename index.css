@@ -257,6 +257,11 @@ h2
     font-size: 1.3em;
 }
 
+p, li
+{
+    line-height: 150%;
+}
+
 .box
 {
     background: #fff;
@@ -338,7 +343,6 @@ thead tr:nth-child(1) td
     border-bottom: solid 1px #fff;
 }
 
-
 tbody th
 {
     text-align: right;
@@ -347,4 +351,11 @@ tbody th
 tbody td
 {
     text-align: center;
+}
+
+
+tr.active td,
+tr.active th
+{
+    background-color: #1dd577;
 }
