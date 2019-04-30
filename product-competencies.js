@@ -12,7 +12,9 @@
                     path: "1",
                     summary: "",
                     criteria: [
-                          ""
+                          "Assesses if features they are involved with are needed, how it solves customer problems and how it contributes to a measurable business objective.",
+                          "Demonstrates enthusiasm to learn a range of problem-solving techniques and practices.",
+                          "Understands how product works in their squad, which problems it solves and how it is performing"
                     ]
                 },
                 {
@@ -20,7 +22,17 @@
                     path: "2",
                     summary: "",
                     criteria: [
-                        ""
+                        "Able to clarify the boundaries of a problem and how it applies to the work at hand",
+                        "Is able to break a problem down into manageable solveable chunks",
+                        "Able to incrementally apply solutions, learning and adjusting through measurement and insight",
+                        "Uses or fosters creativity and experimentation to find and solve problems.",
+                        "Uses visualisation tools (SWOT, brainstorming, cause-effect diagrams) to gain fuller understanding of issues",
+                        "Where relevant develops tools or models to further analyse data sources e.g. to test assumptions or develop scenarios",
+                        "Analytical; deduces meaning from numerical & verbal data sources & uses such data to generate solutions to current problems or future changes",
+                        "Considers which features to remove, as well as maintain.",
+                        "Learns from failure and success. Shares and builds on that learning.",
+                        "Asks good questions to get to the root of a problem or opportunity.",
+                        "Able to apply domain knowledge in order to solve a problem"
                     ]
                 },
                 {
@@ -28,7 +40,7 @@
                     path: "3",
                     summary: "",
                     criteria: [
-                        ""
+                        "Defines a clear, compelling and ambitious product vision and strategy for their remit. "
                     ]
                 },
                 {
@@ -36,7 +48,8 @@
                     path: "4",
                     summary: "",
                     criteria: [
-                        ""
+                        "Successfully leads initiatives with high levels of uncertainty, from discovery to successful adoption or retirement.",
+                        "Brings structure, clarity and new insights to ambiguous or complex problems. Can often find ways to make it possible to ‘do both’ by reframing problem or approach."
                     ]
                 },
                 {
@@ -44,7 +57,9 @@
                     path: "5",
                     summary: "",
                     criteria: [
-                        ""
+                        "Creates a clear, compelling and ambitious product vision and strategy for the group, drawing from a deep understanding of quantitative and quantitive insight, business objectives and potential.",
+                        "Creates coherence across their product area and the entire product, aligning and amplifying effort of their squads.",
+                        "Acknowledged as primary expert on product in their group or field. Expert on a number of frameworks, approaches and able to help PMs understand when and why to adopt certain techniques, their advantages and limitations."
                     ]
                 }
             ]
@@ -59,7 +74,9 @@
                     path: "1",
                     summary: "",
                     criteria: [
-                          ""
+                          "Seeks out the information they need to solve a problem.",
+                          "Keeps stakeholders updated on progress and ensures they have what they need.",
+                          "Able to clearly articulate what we’re working on and why."
                     ]
                 },
                 {
@@ -67,7 +84,8 @@
                     path: "2",
                     summary: "",
                     criteria: [
-                        ""
+                        "Collaborates with product analyst to set up the right things to track. Understand what a metric actually measures and how reliable/direct it is.",
+                        "Closely tracks performance of their squad, and how to influence it. Draws reliable conclusions from qualitative and quantitative data."
                     ]
                 },
                 {
@@ -75,7 +93,9 @@
                     path: "3",
                     summary: "",
                     criteria: [
-                        ""
+                        "Closely tracks and understands how metrics interact with and impact other group/business metrics.",
+                        "Identifies when and how to set experiments, supported by a product data analyst. Incorporates results into future iterations.",
+                        "Can assimilate new information easily, and can synthesise qualitative and quantitative inputs to form reliable insights into user needs and behaviour."
                     ]
                 },
                 {
@@ -83,7 +103,8 @@
                     path: "4",
                     summary: "",
                     criteria: [
-                        ""
+                        "Makes data-driven decisions based on a multitude of complex, interdependent factors.",
+                        "Can design and evaluate experiments, based on solid hypotheses. Proactively alters course when confidence of hitting goals is low."
                     ]
                 },
                 {
@@ -91,7 +112,8 @@
                     path: "5",
                     summary: "",
                     criteria: [
-                        ""
+                        "Connects squad and group numbers to success metrics of business, recognises and addresses gaps between the impact of individual KPIs and business goals.",
+                        "Deeply understands a range of research and analysis methods, identifies which are best for a given situation and can coach on their use."
                     ]
                 }
             ]
@@ -106,7 +128,7 @@
                     path: "1",
                     summary: "",
                     criteria: [
-                          ""
+                          "Can prioritise defined tasks based on effort, impact, user needs and business goals."
                     ]
                 },
                 {
@@ -114,7 +136,10 @@
                     path: "2",
                     summary: "",
                     criteria: [
-                        ""
+                        "Understands core principles of web technologies, including HTTP(S)-based interactions between front-end clients and back-end servers/functions and APIs.",
+                        "Understands the fundamentals of UNiDAYS Verification, the methods and their effectiveness",
+                        "Knowledge of dependent systems and infrastructure in UNiDAYS such as Bronto, Segment ",
+                        "Understands the need to consider, and takes, expert advice. Applies the concepts correctly and demonstrates a strong interest in their area."
                     ]
                 },
                 {
@@ -122,7 +147,8 @@
                     path: "3",
                     summary: "",
                     criteria: [
-                        ""
+                        "Understands how code is tested, deployed and version-controlled for native apps and web interfaces (sites / api)",
+                        "Develops and maintains solid foundation of market knowledge in their area, proactively identifies potential issues/risks."
                     ]
                 },
                 {
@@ -130,7 +156,8 @@
                     path: "4",
                     summary: "",
                     criteria: [
-                        ""
+                        "Conversant with overall UNiDAYS architecture, and highly knowledgeable about specific elements and services that are relevant to their area of responsibility.",
+                        "Develops and maintains an in-depth market knowledge in at least one area and is able to challenge experts. Identifies market opportunities or product gaps."
                     ]
                 },
                 {
@@ -138,7 +165,8 @@
                     path: "5",
                     summary: "",
                     criteria: [
-                        ""
+                        "Well-informed about relevant technology advances, and how newer approaches/interfaces could be used to solve specific user problems.",
+                        "Deep market knowledge within several key areas related to their group and wider business."
                     ]
                 }
             ]
