@@ -5,7 +5,6 @@ jobs:
   build:
     docker:
       - image: 'circleci/python:3.7.3'
-    working_directory: ~/project
     steps:
       - checkout
       - run: rm -rf .git 
@@ -13,11 +12,8 @@ jobs:
       - run: rm -f web.config
       - run: ls
       - aws-s3/sync:
-          from: ~/project
+          from: $CIRCLE_WORKING_DIRECTORY
           to: 's3://progression.myunidays.com/'
-          aws-access-key-id: AWS_ACCESS_KEY_ID
-          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
-          aws-region: AWS_REGION
           arguments: |
             --acl public-read \
             --cache-control "max-age=86400" \
