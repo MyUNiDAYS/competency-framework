@@ -166,8 +166,16 @@
                             <thead>
                                 <tr>
                                     <td></td>
-                                {{#each allRequiredTopics}}
-                                    <th><a href="/competencies/{{competency.path}}/{{topic.path}}">{{topic.title}}</a></th>
+                                {{#each allCompetencies}}
+                                    <th colspan="{{topics.length}}"><a href="/competencies/{{competency.path}}">{{competency.title}}</a></th>
+                                {{/each}}
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                {{#each allCompetencies}}
+                                {{#each topics}}
+                                    <th><a href="/competencies/{{../competency.path}}/{{path}}">{{title}}</a></th>
+                                {{/each}}
                                 {{/each}}
                             </tr>
                             </thead>
@@ -175,8 +183,10 @@
                                 {{#each levels}}
                                     <tr>
                                         <th><a href="/roles/{{../path}}/{{path}}">{{this.title}}</a></th>
-                                    {{#each ../allRequiredTopics}}
-                                        <td>{{getRoleTopicLevel ../this this}}</td>
+                                    {{#each ../allCompetencies}}
+                                    {{#each topics}}
+                                        <td>{{getRoleTopicLevel ../../this this}}</td>
+                                    {{/each}}
                                     {{/each}}
                                     </tr>
                                 {{/each}}

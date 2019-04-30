@@ -6,8 +6,7 @@ function explodeCompetencies(node){
     {
         var role = node.roles[r];
 
-        role.allRequiredTopics = [];
-        role.allOptionalTopics = [];
+        role.allCompetencies = [];
 
         // replace string addresses with actual references
         for(var l = 0; l < role.levels.length; l++) {
@@ -15,16 +14,39 @@ function explodeCompetencies(node){
             {
                 role.levels[l].competencies.required[i] = referenceCompetencies(role.levels[l].competencies.required[i]);
 
-                if(role.allRequiredTopics.filter(c => c.topic === role.levels[l].competencies.required[i].topic).length === 0)
-                    role.allRequiredTopics.push(role.levels[l].competencies.required[i]);
+                var requiredCompetency;
+                if((requiredCompetency = role.allCompetencies.filter(c => c.competency == role.levels[l].competencies.required[i].competency)).length === 1)
+                    requiredCompetency = requiredCompetency[0];
+                else
+                    role.allCompetencies.push(requiredCompetency = { 
+                        competency: role.levels[l].competencies.required[i].competency, 
+                        topics: [],
+                        type: 'Required'
+                    });
+
+                if(requiredCompetency.topics.filter(t => t === role.levels[l].competencies.required[i].topic).length === 0)
+                    requiredCompetency.topics.push(role.levels[l].competencies.required[i].topic);
             }
 
-            for(var i = 0; i < (role.levels[l].competencies.optional ? role.levels[l].competencies.optional.length : 0); i++)
+            if(!role.levels[l].competencies.optional)
+                role.levels[l].competencies.optional = [];
+
+            for(var i = 0; i < role.levels[l].competencies.optional.length; i++)
             {
                 role.levels[l].competencies.optional[i] = referenceCompetencies(role.levels[l].competencies.optional[i]);
 
-                if(role.allOptionalTopics.filter(c => c.topic === role.levels[l].competencies.optional[i].topic).length === 0)
-                    role.allOptionalTopics.push(role.levels[l].competencies.optional[i]);
+                var optionalCompetency;
+                if((optionalCompetency = role.allCompetencies.filter(c => c.competency == role.levels[l].competencies.optional[i].competency)).length === 1)
+                    optionalCompetency = optionalCompetency[0];
+                else
+                    role.allCompetencies.push(optionalCompetency = { 
+                        competency: role.levels[l].competencies.optional[i].competency, 
+                        topics: [],
+                        type: 'Optional'
+                    });
+
+                if(optionalCompetency.topics.filter(t => t === role.levels[l].competencies.optional[i].topic).length === 0)
+                    optionalCompetency.topics.push(role.levels[l].competencies.optional[i].topic);
             }
         }
     }
@@ -74,7 +96,11 @@ window.addEventListener('load', function(){
     });
 
     Handlebars.registerHelper('getRoleTopicLevel', function (role, topic) {
-        var competencies = role.competencies.required.filter(c => c.topic === topic.topic);
+        var competencies = role.competencies.required.filter(c => c.topic === topic);
+        
+        if(competencies.length == 0)
+            competencies = role.competencies.optional.filter(c => c.topic === topic);
+
         if(competencies.length == 0)
             return "N/A";
 
