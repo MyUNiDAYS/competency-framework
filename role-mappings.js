@@ -189,11 +189,11 @@
                     ]
                 },
                 {
-                    title: "👩‍💻 Infrastructure Engineer",
+                    title: "👨‍⚕️ Infrastructure Engineer",
                     path: "infrastructure-engineer",
                     levels: [
                         {
-                            title: "👩‍💻 Junior Infrastructure Engineer",
+                            title: "👨‍⚕️ Junior Infrastructure Engineer",
                             path: "junior-infrastructure-engineer",
                             competencies: [
                                 "core-competencies/delivering-value/n00b",
@@ -206,7 +206,7 @@
                             ]
                         },
                                         {
-                            title: "👩‍💻 Mid-Level Infrastructure Engineer",
+                            title: "👨‍⚕️ Mid-Level Infrastructure Engineer",
                             path: "mid-level-infrastructure-engineer",
                             competencies: [
                                 "core-competencies/delivering-value/play3r",
@@ -219,7 +219,7 @@
                             ]
                         },
                         {
-                            title: "👩‍💻 Senior Infrastructure Engineer",
+                            title: "👨‍⚕️ Senior Infrastructure Engineer",
                             path: "senior-infrastructure-engineer",
                             competencies: [
                                 "core-competencies/delivering-value/pr0",
@@ -232,7 +232,7 @@
                             ]
                         },
                         {
-                            title: "👩‍💻 Lead Infrastructure Engineer",
+                            title: "👨‍⚕️ Lead Infrastructure Engineer",
                             path: "lead-infrastructure-engineer",
                             competencies: [
                                 "core-competencies/delivering-value/1337",
@@ -260,7 +260,7 @@
                                 "core-competencies/problem-solving/1337",
                                 "core-competencies/communication/1337",
                                 "core-competencies/striving-for-success/1337",
-                                "core-competencies/team-orientation/1337",
+                                "core-competencies/team-orientation/1337"
                             ]
                         },
                         {
@@ -273,7 +273,7 @@
                                 "core-competencies/problem-solving/1337",
                                 "core-competencies/communication/1337",
                                 "core-competencies/striving-for-success/1337",
-                                "core-competencies/team-orientation/1337",
+                                "core-competencies/team-orientation/1337"
                             ]
                         }
                     ]
@@ -292,7 +292,45 @@
                                 "core-competencies/problem-solving/pr0",
                                 "core-competencies/communication/pr0",
                                 "core-competencies/striving-for-success/pr0",
-                                "core-competencies/team-orientation/1337",
+                                "core-competencies/team-orientation/1337"
+                            ]
+                        },
+                    ]
+                },
+                {
+                    title: "👨‍💻 Solutions Engineer",
+                    path: "solutions-architect",
+                    levels: [
+                        {
+                            title: "👨‍💻 Solutions Engineer",
+                            path: "solutions-engineer",
+                            competencies: [
+                                "core-competencies/delivering-value/play3r",
+                                "core-competencies/client-focus/play3r",
+                                "core-competencies/planning-and-organisation/play3r",
+                                "core-competencies/problem-solving/play3r",
+                                "core-competencies/communication/pr0",
+                                "core-competencies/striving-for-success/pr0",
+                                "core-competencies/team-orientation/pr0"
+                            ]
+                        },
+                    ]
+                },
+                {
+                    title: "🧜 Engineering Operations",
+                    path: "engineering-operations",
+                    levels: [
+                        {
+                            title: "🧜 Engineering Operations Manager",
+                            path: "engineering-operations-manager",
+                            competencies: [
+                                "core-competencies/delivering-value/1337",
+                                "core-competencies/client-focus/1337",
+                                "core-competencies/planning-and-organisation/1337",
+                                "core-competencies/problem-solving/1337",
+                                "core-competencies/communication/1337",
+                                "core-competencies/striving-for-success/1337",
+                                "core-competencies/team-orientation/1337"
                             ]
                         },
                     ]
