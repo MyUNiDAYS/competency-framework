@@ -569,11 +569,11 @@
         },
         {
             title: "🧝‍♀️ Head of Product",
-            path: "",
+            path: "head-of-product",
             levels: [
                 {
                     title: "🧝‍♀️ Head of Product",
-                    path: "",
+                    path: "head-of-product",
                     competencies: {
                         required: [
                             "core-competencies/delivering-value/1337",
@@ -614,6 +614,39 @@
                             "product-competencies/data-skills/5",
                             "product-competencies/working-through-others/5",
                             "product-competencies/execution/5"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            title: "👩‍🎨 Design",
+            path: "design",
+            levels: [{
+                    title: "👩‍🎨 Creative Strategist",
+                    path: "creative-strategist",
+                    competencies: {
+                        required: [
+                            "core-competencies/delivering-value/play3r",
+                            "core-competencies/client-focus/1337",
+                            "core-competencies/planning-and-organisation/pr0",
+                            "core-competencies/problem-solving/pr0",
+                            "core-competencies/striving-for-success/pr0",
+                            "product-competencies/user-centricity/5"
+                        ]
+                    }
+                },
+                {
+                    title: "👩‍🎨 Lead UX Designer",
+                    path: "lead-ux-designer",
+                    competencies: {
+                        required: [
+                            "core-competencies/delivering-value/play3r",
+                            "core-competencies/client-focus/1337",
+                            "core-competencies/planning-and-organisation/pr0",
+                            "core-competencies/problem-solving/pr0",
+                            "core-competencies/striving-for-success/pr0",
+                            "product-competencies/user-centricity/5"
                         ]
                     }
                 }
