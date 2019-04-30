@@ -8,7 +8,7 @@ jobs:
     working_directory: ~/project
     steps:
       - checkout
-      - run: rm -r .git 
+      - run: rm -rf .git 
       - run: ls
       - aws-s3/sync:
           from: ~/project
