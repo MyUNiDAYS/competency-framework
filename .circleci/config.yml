@@ -19,7 +19,5 @@ jobs:
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
           aws-region: AWS_REGION
           arguments: |
-            --acl public-read \
-            --cache-control "max-age=86400" \
-            --dryrun
+            --cache-control "max-age=86400"
           overwrite: true
