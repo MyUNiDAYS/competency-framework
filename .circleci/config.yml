@@ -8,8 +8,8 @@ jobs:
     working_directory: ~/project
     steps:
       - checkout
-      - run rm -r .git 
-      - run ls
+      - run: rm -r .git 
+      - run: ls
       - aws-s3/sync:
           from: ~/project
           to: 's3://progression.myunidays.com'
