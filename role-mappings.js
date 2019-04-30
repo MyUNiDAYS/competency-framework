@@ -277,6 +277,25 @@
                             ]
                         }
                     ]
+                },
+                {
+                    title: "👮 Verification Engineer",
+                    path: "verification-architect",
+                    levels: [
+                        {
+                            title: "👮 Senior Verification Engineer",
+                            path: "senior-verification-engineer",
+                            competencies: [
+                                "core-competencies/delivering-value/pr0",
+                                "core-competencies/client-focus/pr0",
+                                "core-competencies/planning-and-organisation/pr0",
+                                "core-competencies/problem-solving/pr0",
+                                "core-competencies/communication/pr0",
+                                "core-competencies/striving-for-success/pr0",
+                                "core-competencies/team-orientation/1337",
+                            ]
+                        },
+                    ]
                 }
             ]
         }

@@ -172,6 +172,22 @@ nav ul > li
 {
     margin: 0 0 10px 0;
     display: none;
+    position: relative;
+}
+
+nav ul > li > a + ul:before
+{
+    content: '➕';
+    display: block;
+    position: absolute;
+    right: -10px;
+    top: 9px;
+    font-size: 10px;
+}
+
+nav ul > li.active > a + ul:before
+{
+    content: '➖';
 }
 
 nav > ul > li

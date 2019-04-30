@@ -192,7 +192,7 @@
             ]
         },
         {
-            title: "🛂 Verification Engineer",
+            title: "👮 Verification Engineer",
             path: "verification-engineer",
             summary: "TBC",
             levels: [
