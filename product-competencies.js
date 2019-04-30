@@ -3,7 +3,7 @@
     path: "product-competencies",
     topics: [
         {
-            title: "Problem Solving",
+            title: "🤹 Problem Solving",
             path: "problem-solving",
             summary: "",
             levels: [
@@ -50,7 +50,7 @@
             ]
         },
         {
-            title: "Data Skills",
+            title: "📊 Data Skills",
             path: "data-skills",
             summary: "",
             levels: [
@@ -97,7 +97,7 @@
             ]
         },
         {
-            title: "Domain Knowledge",
+            title: "🗃️ Domain Knowledge",
             path: "domain-knowledge",
             summary: "",
             levels: [
@@ -144,7 +144,7 @@
             ]
         },
         {
-            title: "Execution",
+            title: "👔 Execution",
             path: "execution",
             summary: "",
             levels: [
@@ -191,7 +191,7 @@
             ]
         },
         {
-            title: "Feedback",
+            title: "💬 Feedback",
             path: "feedback",
             summary: "",
             levels: [
@@ -238,7 +238,7 @@
             ]
         },
         {
-            title: "User Centricity",
+            title: "👩‍🎓 User Centricity",
             path: "user-centricity",
             summary: "",
             levels: [
@@ -285,7 +285,7 @@
             ]
         },
         {
-            title: "Working Through Others",
+            title: "🎎 Working Through Others",
             path: "working-through-others",
             summary: "",
             levels: [
