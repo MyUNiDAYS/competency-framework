@@ -20,5 +20,6 @@ jobs:
           aws-region: AWS_REGION
           arguments: |
             --acl public-read \
-            --cache-control "max-age=86400"
+            --cache-control "max-age=86400" \
+            --dryrun
           overwrite: true
