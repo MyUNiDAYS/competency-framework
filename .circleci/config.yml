@@ -8,7 +8,7 @@ jobs:
     steps:
       - checkout
       - aws-s3/sync:
-          from: /
+          from: $CIRCLE_WORKING_DIRECTORY
           to: 's3://progression.myunidays.com'
           arguments: |
             --acl public-read \
