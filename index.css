@@ -216,11 +216,16 @@ nav li.active > ul > li
 
 
 
-nav a
+a
 {
     text-decoration: none;
     color: inherit;
 }
+a:hover
+{
+    text-decoration: underline;
+}
+
 nav a.active
 {
     font-family: 'UNiDAYSPro-Demi';
@@ -301,4 +306,39 @@ section.role
 .coltainer .item
 {
     width: calc( (100% / 2) - 50px );
+}
+
+/* TABLES */
+
+table
+{
+    border: solid 1px #ccc;
+}
+
+th
+{
+    font-family: 'UNiDAYSPro-Demi';
+}
+
+td, th
+{
+    border: solid 1px #ccc;
+    padding: 5px;
+    vertical-align: middle;
+}
+
+thead td
+{
+    border-top: solid 1px #fff;
+    border-left: solid 1px #fff;
+}
+
+tbody th
+{
+    text-align: right;
+}
+
+tbody td
+{
+    text-align: center;
 }

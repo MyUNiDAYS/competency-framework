@@ -5,12 +5,27 @@ function explodeCompetencies(node){
     for(var r = 0; r < (node.roles ? node.roles.length : 0); r++)
     {
         var role = node.roles[r];
+
+        role.allRequiredTopics = [];
+        role.allOptionalTopics = [];
+
+        // replace string addresses with actual references
         for(var l = 0; l < role.levels.length; l++) {
             for(var i = 0; i < role.levels[l].competencies.required.length; i++)
+            {
                 role.levels[l].competencies.required[i] = referenceCompetencies(role.levels[l].competencies.required[i]);
-            
+
+                if(role.allRequiredTopics.filter(c => c.topic === role.levels[l].competencies.required[i].topic).length === 0)
+                    role.allRequiredTopics.push(role.levels[l].competencies.required[i]);
+            }
+
             for(var i = 0; i < (role.levels[l].competencies.optional ? role.levels[l].competencies.optional.length : 0); i++)
+            {
                 role.levels[l].competencies.optional[i] = referenceCompetencies(role.levels[l].competencies.optional[i]);
+
+                if(role.allOptionalTopics.filter(c => c.topic === role.levels[l].competencies.optional[i].topic).length === 0)
+                    role.allOptionalTopics.push(role.levels[l].competencies.optional[i]);
+            }
         }
     }
 }
@@ -57,6 +72,15 @@ window.addEventListener('load', function(){
             templates[template.id.substr(5)] = compiled;
         template.parentElement.removeChild(template);
     });
+
+    Handlebars.registerHelper('getRoleTopicLevel', function (role, topic) {
+        var competencies = role.competencies.required.filter(c => c.topic === topic.topic);
+        if(competencies.length == 0)
+            return "N/A";
+
+        return competencies[0].level.title;
+    });
+
 
     // Initialise content
     document.querySelector('.container > nav').innerHTML += templates['nav-competencies'](window.competencies) + templates['nav-roles'](window.roles);

@@ -161,6 +161,28 @@
                 <section class="role" data-path="{{path}}">
                     <h1>{{title}}</h1>
                     <p class="box">TBC</p>
+                    <section class="box">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                {{#each allRequiredTopics}}
+                                    <th><a href="/competencies/{{competency.path}}/{{topic.path}}">{{topic.title}}</a></th>
+                                {{/each}}
+                            </tr>
+                            </thead>
+                            <tbody>
+                                {{#each levels}}
+                                    <tr>
+                                        <th><a href="/roles/{{../path}}/{{path}}">{{this.title}}</a></th>
+                                    {{#each ../allRequiredTopics}}
+                                        <td>{{getRoleTopicLevel ../this this}}</td>
+                                    {{/each}}
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </section>
                     {{#each levels}}
                         <section class="role-level" data-path="{{path}}">
                             <h1>{{title}}</h1>
