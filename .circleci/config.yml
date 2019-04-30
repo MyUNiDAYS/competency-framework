@@ -9,10 +9,12 @@ jobs:
     steps:
       - checkout
       - run: rm -rf .git 
+      - run: rm -rf .circleci 
+      - run: rm -f web.config
       - run: ls
       - aws-s3/sync:
           from: ~/project
-          to: 's3://progression.myunidays.com'
+          to: 's3://progression.myunidays.com/'
           aws-access-key-id: AWS_ACCESS_KEY_ID
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
           aws-region: AWS_REGION
