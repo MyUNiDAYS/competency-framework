@@ -13,6 +13,9 @@ jobs:
       - aws-s3/sync:
           from: ~/project
           to: 's3://progression.myunidays.com'
+          aws-access-key-id: AWS_ACCESS_KEY_ID
+          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
+          aws-region: AWS_REGION
           arguments: |
             --acl public-read \
             --cache-control "max-age=86400"
