@@ -5,6 +5,7 @@ jobs:
   build:
     docker:
       - image: 'circleci/python:3.7.3'
+    working_directory: $CIRCLE_WORKING_DIRECTORY
     steps:
       - checkout
       - run: rm -rf .git 
