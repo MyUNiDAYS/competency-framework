@@ -11,7 +11,7 @@
                     path: "end-user-technology",
                     roles: [
                         {
-                            title: "IT Support Analyst",
+                            title: "👩‍🔧 IT Support Analyst",
                             path: "it-support-analyst",
                             levels: [
                                 {

@@ -163,12 +163,7 @@ nav .competency
     margin: 0 0 10px 0;
 }
 
-nav > section
-{
-    margin: 0 0 20px 0;
-}
-
-nav > section > ul
+nav ul
 {
     margin-bottom: 15px;
 }
@@ -179,6 +174,10 @@ nav ul > li
     display: none;
 }
 
+nav > ul > li
+{
+    display: block;
+}
 
 nav ul.active > li
 {
@@ -198,6 +197,8 @@ nav li.active > ul > li
 {
     display: block;
 }
+
+
 
 nav a
 {

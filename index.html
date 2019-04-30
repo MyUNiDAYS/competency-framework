@@ -24,32 +24,32 @@
                 </ul>
             </section>
             <script id="tmpl-nav-competencies" type="text/x-handlebars-template">
-                <section>
-                    <span class="title">Competencies</span>
+                <ul>
+                    <li>Competencies</li>
                 {{#each this}}
-                    <span class="competency">{{title}}</span>
-                    <ul>
-                    {{#each topics}}
-                        <li><a href="/competencies/{{../path}}/{{path}}">{{title}}</a></li>
-                    {{/each}}
-                    </ul>
+                    <li>
+                        <a href="/competencies/{{path}}">{{title}}</a>
+                        <ul>
+                        {{#each topics}}
+                            <li><a href="/competencies/{{../path}}/{{path}}">{{title}}</a></li>
+                        {{/each}}
+                        </ul>
+                    </li>
                 {{/each}}
-                </section>
+                </ul>
             </script>
             <script id="tmpl-nav-roles" type="text/x-handlebars-template">
-                <section>
-                    <span class="title">Roles</span>
-                    <ul>
+                <ul>
+                    <li>Roles</li>
                     {{#each this}}
                         {{> navroles}}
                     {{/each}}
-                    </ul>
-                </section>
+                </ul>
             </script>
 
             <script id="tmpl-navroles" type="text/x-handlebars-template" class="partial">
                 <li>
-                    {{title}}
+                    <a href="/roles/{{path}}">{{title}}</a>
                 {{#if departments}}
                     <ul>
                     {{#each departments}}
