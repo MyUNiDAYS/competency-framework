@@ -145,7 +145,7 @@
         },
         {
             title: "Execution",
-            path: "Execution",
+            path: "execution",
             summary: "",
             levels: [
                 {
@@ -285,8 +285,8 @@
             ]
         },
         {
-            title: "Works Through Others",
-            path: "works-through-others",
+            title: "Working Through Others",
+            path: "working-through-others",
             summary: "",
             levels: [
                 {

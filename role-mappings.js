@@ -337,6 +337,102 @@
                 }
             ]
         }
+    ],
+    roles: [
+        {
+            title: "🤵 Product Owner",
+            path: "product-owner",
+            levels: [
+                {
+                    title: "🤵 Product Owner",
+                    path: "product-owner",
+                    competencies: [
+                        "product-competencies/problem-solving/3",
+                        "product-competencies/user-centricity/3",
+                        "product-competencies/domain-knowledge/3",
+                        "product-competencies/data-skills/3",
+                        "product-competencies/working-through-others/4",
+                        "product-competencies/execution/3",
+                        "product-competencies/feedback/3"
+                    ]
+                }
+            ]
+        },
+        {
+            title: "🕵️‍♀️ Business Analyst",
+            path: "business-analyst",
+            levels: [
+                {
+                    title: "🕵️‍♀️ Business Analyst",
+                    path: "business-analyst",
+                    competencies: [
+                        "product-competencies/problem-solving/4",
+                        "product-competencies/user-centricity/3",
+                        "product-competencies/domain-knowledge/3",
+                        "product-competencies/data-skills/3",
+                        "product-competencies/working-through-others/4",
+                        "product-competencies/execution/3",
+                        "product-competencies/feedback/4"
+                    ]
+                }
+            ]
+        },
+        {
+            title: "👨‍💼 Product Manager",
+            path: "product-manager",
+            levels: [
+                {
+                    title: "👨‍💼 Senior Product Manager",
+                    path: "senior-product-manager",
+                    competencies: [
+                        "product-competencies/problem-solving/4",
+                        "product-competencies/user-centricity/4",
+                        "product-competencies/domain-knowledge/4",
+                        "product-competencies/data-skills/4",
+                        "product-competencies/working-through-others/4",
+                        "product-competencies/execution/3",
+                        "product-competencies/feedback/4"
+                    ]
+                }
+            ]
+        },
+        {
+            title: "🧝‍♀️ Head of Product",
+            path: "",
+            levels: [
+                {
+                    title: "🧝‍♀️ Head of Product",
+                    path: "",
+                    competencies: [
+                        "product-competencies/problem-solving/4",
+                        "product-competencies/user-centricity/4",
+                        "product-competencies/domain-knowledge/5",
+                        "product-competencies/data-skills/4",
+                        "product-competencies/working-through-others/4",
+                        "product-competencies/execution/5",
+                        "product-competencies/feedback/5"
+                    ]
+                }
+            ]
+        },
+        {
+            title: "🧞 VP Product and Engineering",
+            path: "vp-product-engineering",
+            levels: [
+                {
+                    title: "🧞 VP Product and Engineering",
+                    path: "vp-product-engineering",
+                    competencies: [
+                        "product-competencies/problem-solving/5",
+                        "product-competencies/user-centricity/5",
+                        "product-competencies/domain-knowledge/5",
+                        "product-competencies/data-skills/5",
+                        "product-competencies/working-through-others/5",
+                        "product-competencies/execution/5",
+                        "product-competencies/feedback/5"
+                    ]
+                }
+            ]
+        }
     ]
-
 });
