@@ -1,6 +1,7 @@
 (window.competencies = window.competencies || []).push({
     title: "🍏 Values",
     path: "core-values",
+    summary: "Our shared mission at UNiDAYS is 'Giving students the power to make every experience more valuable and rewarding'. In order to achieve this mission, we all share a set of core values, which fuel our culture and are embedded in our every day lives. They are 'Everyone is important', 'No BS, no jerks', 'Jump into the unknown', 'Be clear on your purpose' and 'Be a builder'. Adherence to these values ensures that the correct behaviours are demonstrated, and those behaviours, are the key to our shared success.",
     topics: [
         {
             title: "🙋‍♀️ Everyone is important",
