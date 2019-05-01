@@ -159,11 +159,11 @@
                     ]
                 },
                 {
-                    title: "👨‍🎨 Font End Engineer",
+                    title: "👨‍🎨 Front End Engineer",
                     path: "front-end-engineer",
                     levels: [
                         {
-                            title: "👨‍🎨 Junior Font End Engineer",
+                            title: "👨‍🎨 Junior Front End Engineer",
                             path: "junior-front-end-engineer",
                             competencies: {
                                 required: [
@@ -181,7 +181,7 @@
                             }
                         },
                         {
-                            title: "👨‍🎨 Mid-Level Font End Engineer",
+                            title: "👨‍🎨 Mid-Level Front End Engineer",
                             path: "mid-level-front-end-engineer",
                             competencies: {
                                 required: [
@@ -199,7 +199,7 @@
                             }
                         },
                         {
-                            title: "👨‍🎨 Senior Font End Engineer",
+                            title: "👨‍🎨 Senior Front End Engineer",
                             path: "senior-front-end-engineer",
                             competencies: {
                                 required: [
@@ -217,7 +217,7 @@
                             }
                         },
                         {
-                            title: "👨‍🎨 Lead Font End Engineer",
+                            title: "👨‍🎨 Lead Front End Engineer",
                             path: "lead-front-end-engineer",
                             competencies: {
                                 required: [
