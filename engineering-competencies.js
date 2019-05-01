@@ -1,7 +1,7 @@
 (window.competencies = window.competencies || []).push({
     title: "🛠️ Engineering",
     path: "engineering-competencies",
-    summary: "As well as the shared core competencies, each Engineering role also has a specific set of role competencies. These competencies should be utilised to understand current skill levels, as well as, identifying areas of development to attain career advancement.", 
+    summary:  "The Engineering team are responsible for building and maintaining the solutions that members and partners use. Each Engineering role also has a specific set of role competencies, unique to each area of specialisation. Utilise this information to understand current skill levels, as well as identifying areas for development.", 
     topics: [
         {
             title: "📋 Testing",

@@ -1,6 +1,7 @@
 (window.competencies = window.competencies || []).push({
     title: "🚀 Product",
     path: "product-competencies",
+    sumamry: "The product team are responsible the strategy of the business, ensuring that the right thing is being built at the right time. Product skills are broken down into various categories and areas of progression measure in levels. Use these definitions to measure where you are right now, and identify what the next steps that you need to take are.",
     topics: [
         {
             title: "🤹 Opportunity Analysis",
