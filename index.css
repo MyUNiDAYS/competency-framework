@@ -92,6 +92,7 @@ article, aside, footer, header, hgroup, main, nav, section
 html
 {
     height: 100%;
+    overflow-y: scroll;
 }
 
 body
@@ -181,7 +182,7 @@ nav ul > li > a + ul:before
     display: block;
     position: absolute;
     right: -10px;
-    top: 9px;
+    top: 0;
     font-size: 10px;
 }
 

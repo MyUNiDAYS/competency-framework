@@ -137,6 +137,8 @@ window.addEventListener('load', function(){
 
     // Handle navigation to show content
     function handleNavigation(){
+        document.body.scrollTo({ y: 0 });
+
         var path = window.location.pathname;
         
         // Hide all content
