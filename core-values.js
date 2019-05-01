@@ -6,7 +6,7 @@
         {
             title: "🙋‍♀️ Everyone is important",
             path: "everyone-is-important",
-            summary: "",
+            summary: "Demonstrating this value means treating everybody fairly and equally. We promote a high challenge and high support environment, where we hold each other accountable but don't blame others. We're fair, everybody gets the same opportunities and we don't accept favouritism of any type.",
             levels: [
                 {
                     title: "Participant",
