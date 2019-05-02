@@ -87,6 +87,7 @@
                         {
                             title: "👷 Junior Software Engineer",
                             path: "junior-software-engineer",
+                            summary: "The Junior Engineer is responsible for working with the team around them to both deliver solutions and hone their craft. You’ll be open-minded and sponge-like in your willingness to soak up knowledge. You’ll enjoy solving complex problems, utilising those around you to help where required. You need to be tenacious, sticking with problems and completing tasks to a good standard.",
                             competencies: {
                                 required: [
                                     "core-competencies/delivering-value/n00b",
@@ -105,6 +106,7 @@
                         {
                             title: "👷 Mid-Level Software Engineer",
                             path: "mid-level-software-engineer",
+                            summary: "As an engineer, you'll work in a constantly evolving environment, due to technological advances and the strategic direction of their organisation. You'll create, maintain, audit and improve systems to meet particular needs, testing systems to diagnose and resolve system faults. You’ll work to understand and deliver against the product roadmap, ensuring requirements are met to a good standard.",
                             competencies: {
                                 required: [
                                     "core-competencies/delivering-value/play3r",
@@ -123,6 +125,7 @@
                         {
                             title: "👷 Senior Software Engineer",
                             path: "senior-software-engineer",
+                            summary: "The senior engineer has a responsibility for the delivery of solutions throughout the software delivery cycle. The senior engineer is proactive, identifying bumps in the road before the team gets to them. You’ll coach and help develop the technical skills of the people around you, instilling your knowledge and experience. You’ll ensure that solutions meet the requirements set out by project sponsors, to the agreed timescales.",
                             competencies: {
                                 required: [
                                     "core-competencies/delivering-value/pr0",
@@ -141,6 +144,7 @@
                         {
                             title: "👷 Lead Software Engineer",
                             path: "lead-software-engineer",
+                            summary: "A lead engineer is responsible for the day to day running of an agile delivery team, overseeing the delivery of the project/product roadmap. The Lead Engineer cares about and upholds engineering practices, quickly identifying what is and isn’t working within their squad, and fixes those things. The lead has a deep understanding of the technologies their squad is responsible for, ensuring that the solutions the squad are building meet the standards required by the end user. Finally, the lead is a line-manager and motivator, bringing the best out of their team to ensure delivery with accuracy and pace.",
                             competencies: {
                                 required: [
                                     "core-competencies/delivering-value/1337",

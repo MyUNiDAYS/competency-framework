@@ -173,7 +173,6 @@
                         "Uses appropriate algorithms and data structures to solve problems",
                         "Aware of revelant Computer Science topics such as concurrency, efficient CPU usage and ",
                         "Writes automated unit and acceptance tests",
-
                     ]
                 },
                 {

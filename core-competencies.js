@@ -4,6 +4,63 @@
     summary: "The core competences enable UNiDAYS staff to align job profiles,  creating a shared understanding of how to attain career progression. Use the documentation of the core competencies to identify your current level, and identify the areas you'd like to improve in. Get started by selecting a core competency.",
     topics: [
         {
+            title: "Attitude",
+            path: "attitude",
+            summary: "",
+            levels: [
+                {
+                    title: "👩‍🎓 n00b",
+                    path: "n00b",
+                    summary: "",
+                    criteria: [
+                        "Enthusiasm for technology and a willingness to learn",
+                        "Passionate about your work and technology in general",
+                        "Happy working in a fast-paced and quickly evolving team",
+                        "Flexible and open to change",
+                        "An analytical mindset with a strong eye for detail",
+                        "A strong work ethic and professional attitude",
+                        "Understanding of how to prioritise work and what attributes to value",
+                        "Team player who enjoys collaborative problem solving",
+                    ]
+                },
+                {
+                    title: "👨‍🔧 Play3r",
+                    path: "play3r",
+                    summary: "",
+                    criteria: [
+                        "Fosters an appropriate sense of urgency to deliver results at pace",
+                        "Self-motivated to achieve; shows initiative and performs to a high level with low levels of supervision",
+                        "Willingly seeks input and ideas from colleagues",
+                        "Completes tasks and ensures they meet the original requirements",
+                        "Comes to line manager with potential solutions to problems rather than just presenting the issue",
+                        "Distinguishes between relevant and irrelevant information in order to make logical decisions",
+                        "Openly acknowledge mistakes & takes action to rectify them",
+                        "Asks for help when it’s required - doesn’t accept being Blocked on work",
+                        "Continuous self-improvement and a hunger to learn",
+                        "A self-motivator -  picks up the correct work without having to be asked",
+                        "Strong analytical and diagnostic skills, particularly with regard to technical issues and constraints"
+                        
+                    ]
+                },
+                {
+                    title: "👩‍🏫 Pr0",
+                    path: "pr0",
+                    summary: "",
+                    criteria: [
+                        ""
+                    ]
+                },
+                {
+                    title: "🧙 1337",
+                    path: "1337",
+                    summary: "",
+                    criteria: [
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
             title: "📯 Delivering Value",
             path: "delivering-value",
             summary: "Delivery of value is a key component in the success of your career. Being commercially aware, understanding costs around work and the impact of those costs on the business are all important.",
