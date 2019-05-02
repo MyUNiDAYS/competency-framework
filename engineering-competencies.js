@@ -181,6 +181,7 @@
                     path: "pr0",
                     summary: "",
                     criteria: [
+                        "Currently incomplete, please refer to lower levels in the short term"
                     ]
                 },
                 {
@@ -188,6 +189,7 @@
                     path: "1337",
                     summary: "",
                     criteria: [
+                        "Currently incomplete, please refer to lower levels in the short term"
                     ]
                 }
             ]
