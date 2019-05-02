@@ -22,7 +22,7 @@
         {
             title: "🙊 No BS, no jerks",
             path: "no-bs-no-jerks",
-            summary: "It should be a given that everybody at UNiDAYS is treated with decency and respect. We have honest and well-mannered conversations, we listen, providing constructive and useful feedback." 
+            summary: "It should be a given that everybody at UNiDAYS is treated with decency and respect. We have honest and well-mannered conversations, we listen, providing constructive and useful feedback.",
             levels: [
                 {
                     title: "Participant",

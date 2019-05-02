@@ -141,15 +141,9 @@ window.addEventListener('load', function(){
 
         var path = window.location.pathname;
         
-        // Hide all content
-        document.querySelectorAll('[data-path]').forEach(section =>{
-            section.style.display = 'none';
-        });
-        
         // Show content
-        var segments = path === '/' ? ['root'] : path.substr(1).split('/');
-        for(var i = 0; i < segments.length; i++)
-            document.querySelectorAll(`[data-path="${segments[i]}"]`).forEach(s => s.style.display = 'block');
+        document.querySelectorAll('[data-path]').forEach(section => section.style.display = 'none');
+        document.querySelectorAll(`[data-path="${path}"]`).forEach(s => s.style.display = 'block');
 
         // TODO: merge all the below code into one mechanism
 

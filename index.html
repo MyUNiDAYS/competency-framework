@@ -74,7 +74,7 @@
         </nav>
 
         <section id="content">
-            <section class="content" data-path="root">
+            <section class="content" data-path="/">
                 <h1>UNiDAYS Competency and Progression Framework</h1>
                 <section class="box">
                     <h2>🔮 Usage</h1>
@@ -113,43 +113,46 @@
                     <p>We're particularly keen to add as many examples to the behaviours as possible, to further clarify them.</p>
                 </section>
             </section>
+            <div data-path="/competencies">
+
+            </div>
 
             <script id="tmpl-competencies" type="text/x-handlebars-template">
-                <div data-path="competencies">
                 {{#each this}}
-                    <section class="competency" data-path="{{path}}">
+                    <section class="competency" data-path="/competencies/{{path}}">
                         <h1>{{title}}</h1>
-                    {{#each topics}}
-                        <section class="topic" data-path="{{path}}">
-                            <h2>{{title}}</h2>
-                            <p class="box">{{summary}}</p>
-                            <h3>Levels</h3>
-                            <div class="coltainer">
-                            {{#each levels}}
-                                <section class="level box item">
-                                    <h3>{{title}}</h3>
-                                    <ul>
-                                    {{#each criteria}}
-                                        <li>{{this}}</li>
-                                    {{/each}}
-                                    </ul>
-                                </section>
-                            {{/each}}
-                        </div>
-                        </section>
-                    {{/each}}
+                    </section>
+
+                {{#each topics}}
+                    <section class="topic" data-path="/competencies/{{../path}}/{{path}}">
+                        <h1>{{../title}}</h1>
+                        <h2>{{title}}</h2>
+                        <p class="box">{{summary}}</p>
+                        <h3>Levels</h3>
+                        <div class="coltainer">
+                        {{#each levels}}
+                            <section class="level box item">
+                                <h3>{{title}}</h3>
+                                <ul>
+                                {{#each criteria}}
+                                    <li>{{this}}</li>
+                                {{/each}}
+                                </ul>
+                            </section>
+                        {{/each}}
+                    </div>
                     </section>
                 {{/each}}
-                </div>
+                {{/each}}
             </script>
 
             <script id="tmpl-roles" type="text/x-handlebars-template">
-                <div class="roles" data-path="roles">
+                <div class="roles" data-path="/roles">
+                </div>
             {{#each this}}
                 {{> rolesPartial}}
             {{/each}}
             </script>
-                </div>
             <script id="tmpl-rolesPartial" type="text/x-handlebars-template" class="partial">
             {{#if departments}}
                 {{#each departments}}
@@ -158,7 +161,7 @@
             {{/if}}
             {{#if roles}}
             {{#each roles}}
-                <section class="role" data-path="{{path}}">
+                <section class="role" data-path="/roles/{{path}}">
                     <h1>{{title}}</h1>
                     <section class="box">
                         <h2>Summary</h2>
@@ -195,10 +198,16 @@
                             </tbody>
                         </table>
                     </section>
+                </section>
                 {{#each levels}}
-                    <section class="role-level" data-path="{{path}}">
+                    <section class="role-level" data-path="/roles/{{../path}}/{{path}}">
+                        <h1>{{../title}}</h1>
                         <h2>{{title}}</h1>
+                        <h3>Summary</h3>
                         <p class="box">{{summary}}</p>
+                        <h3>Actions</h3>
+                        <a href="/roles/{{../path}}/{{path}}/review" class="button">Start Review</a>
+                        <h3>Criteria</h3>
                         <div class="coltainer">
                     {{#each competencies.required}}
                         <section class="role-competency box item">
@@ -225,7 +234,6 @@
                         </div>
                     </section>
                 {{/each}}
-                </section>
             {{/each}}
             {{/if}}
             </script>
