@@ -13,8 +13,8 @@
                     path: "n00b",
                     summary: "",
                     criteria: [
-                        "Enthusiasm for technology and a willingness to learn",
-                        "Passionate about your work and technology in general",
+                        "Enthusiasm for subject and has a willingness to learn",
+                        "Passionate about your work and the subject in general",
                         "Happy working in a fast-paced and quickly evolving team",
                         "Flexible and open to change",
                         "An analytical mindset with a strong eye for detail",
@@ -37,9 +37,9 @@
                         "Openly acknowledge mistakes & takes action to rectify them",
                         "Asks for help when it’s required - doesn’t accept being Blocked on work",
                         "Continuous self-improvement and a hunger to learn",
-                        "A self-motivator -  picks up the correct work without having to be asked",
-                        "Strong analytical and diagnostic skills, particularly with regard to technical issues and constraints"
-                        
+                        "A self-motivator - picks up the correct work without having to be asked",
+                        "Strong analytical and diagnostic skills, particularly with regard to technical issues and constraints",
+                        "Help build a ‘delivery with high quality’ culture that is accountability and results orientated"
                     ]
                 },
                 {
@@ -47,7 +47,10 @@
                     path: "pr0",
                     summary: "",
                     criteria: [
-                        ""
+                        "Take responsibility for decisions, ensuring plans are followed and regularly reviewed and non-standard approaches are approved by leadership",
+                        "Responsible for delivery, serve as a liaison between the delivery team and stakeholders",
+                        "Drives the team to continuously improve the skills of everyone",
+                        "Be a leader within a multidisciplinary team"
                     ]
                 },
                 {
@@ -55,7 +58,8 @@
                     path: "1337",
                     summary: "",
                     criteria: [
-                        ""
+                        "Actively monitors and review employee engagement",
+                        "Maintain a constant appreciation of the bigger picture to understand intimately the dependencies between components and how they combine to deliver service to the end consumer and to the business"
                     ]
                 }
             ]

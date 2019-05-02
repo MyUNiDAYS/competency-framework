@@ -163,7 +163,7 @@
                         "Able to deliver most tasks without significant assistance",
                         "Has a good working knowledge of relevant areas of codebase and its dependencies",
                         "Submits PRs to OSS/internal dependency projects to improve functionality/fix bugs",
-                        "Understands and recognises common coding patterns and their understands their applicability",
+                        "Understands and recognises common coding patterns and understands their applicability",
                         "Able to disect and debug existing code",
                         "Familiar with and practices decompiling binaries and finding external sources to improve understanding",
                         "Champions the team, focuses on tasks that contribute to team goals",
@@ -171,7 +171,7 @@
                         "Competent at dividing problems into iterative steps",
                         "Fixes bugs involving a number of services and can investigate production issues",
                         "Uses appropriate algorithms and data structures to solve problems",
-                        "Aware of revelant Computer Science topics such as concurrency, efficient CPU usage and ",
+                        "Aware of revelant Computer Science topics such as concurrency, efficient CPU usage, caching and naming",
                         "Writes automated unit and acceptance tests",
                     ]
                 },
