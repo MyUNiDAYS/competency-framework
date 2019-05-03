@@ -6,7 +6,7 @@
         {
             title: "😀 Attitude",
             path: "attitude",
-            summary: "",
+            summary: "Attitude is everything. Attitude determines the success or failure of the thing we set out to do. We need to be adaptable and open to change, willing to listen to and take on new ideas. A good attitude enables and encourages cohesion and collaborative problem solving.",
             levels: [
                 {
                     title: "👩‍🎓 n00b",

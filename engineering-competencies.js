@@ -228,12 +228,12 @@
         {
             title: "🔧 Software Engineering",
             path: "software-engineering",
-            summary: "TBC",
+            summary: "A Software Engineer starts their career with a base level of understanding of software programming. A newbie should be able to build something from scratch and know how to integrate changes into existing software. As a Software Engineer’s career progresses skills such as database knowledge, architecture and scalability will begin to be considerations, as will UX and customer experience (where appropriate). A Software Engineer should work hard to stay up to date with industry standards and emerging technologies. When a Software Engineer becomes senior, behaviours like coaching others, mentoring and architectural design will be expected. ",
             levels: [
                 {
                     title: "👩‍🎓 n00b",
                     path: "n00b",
-                    summary: "",
+                    summary: "Capable",
                     criteria: [
                         "Understands the importance of version control and its best practices",
                         "Actively participates in and welcomes critical code review",
@@ -253,7 +253,7 @@
                 {
                     title: "👨‍🔧 Play3r",
                     path: "play3r",
-                    summary: "",
+                    summary: "Develops technical solutions",
                     criteria: [
                         "Appreciates and advocates the reasoning for coding standards",
                         "Able to deliver most tasks without significant assistance",
@@ -274,7 +274,7 @@
                 {
                     title: "👩‍🏫 Pr0",
                     path: "pr0",
-                    summary: "",
+                    summary: "Experienced",
                     criteria: [
                         "Currently incomplete, please refer to lower levels in the short term"
                     ]
@@ -282,7 +282,7 @@
                 {
                     title: "🧙 1337",
                     path: "1337",
-                    summary: "",
+                    summary: "Virtuoso",
                     criteria: [
                         "Currently incomplete, please refer to lower levels in the short term"
                     ]
