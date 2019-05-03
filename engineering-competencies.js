@@ -6,7 +6,7 @@
         {
             title: "💻 IT",
             path: "it",
-            summary: "A good IT team member has technical understanding and good problem solving skills. The technical skills are complimented by a customer centric attitude,  ",
+            summary: "An IT team member must have technical understanding and great problem solving skills. These skills should be complimented by a customer centric attitude, with an ability to communicate the status of work effectively. With seniority, comes further technical responsibility. An expectation to understand complex network design and configuration. Security should be built into everything the IT team implements. A senior IT team member will set the standard, be proactive and coach others.",
             levels: [
                 {
                     title: "👩‍🎓 n00b",
@@ -28,7 +28,7 @@
                 {
                     title: "👨‍🔧 Play3r",
                     path: "play3r",
-                    summary: "The Play3r Support Analyst is responsible for PC, Mac and server configuration, mobile device management and application support. Providing support to users whilst assisting with the configuration and administration of the EUT systems in support of on-going operations and projects. This role requires superb interpersonal skills.                    ",
+                    summary: "The Play3r Support Analyst is responsible for PC, Mac and server configuration, mobile device management and application support. Providing support to users whilst assisting with the configuration and administration of the EUT systems in support of on-going operations and projects. This role requires superb interpersonal skills.",
                     criteria: [
                         "Be a point of contact and support for our global user base",
                         "Assist in the development of the infrastructure by recommending and installing new products, by making use of the features already available from installed products, to enhance the flexibility and efficiency of UNiDAYS, whilst always keeping in mind the stability, security, resilience and disaster recovery needs.",
