@@ -4,6 +4,102 @@
     summary:  "The Engineering team are responsible for building and maintaining the solutions that members and partners use. Each Engineering role also has a specific set of role competencies, unique to each area of specialisation. Utilise this information to understand current skill levels, as well as identifying areas for development.", 
     topics: [
         {
+            title: "💻 IT",
+            path: "it",
+            summary: "",
+            levels: [
+                {
+                    title: "👩‍🎓 n00b",
+                    path: "n00b",
+                    summary: "The n00b Support Analyst is a hands-on member of the team, working within the Service Desk to provide assistance throughout the business. The support analyst is responsible for the configuration and administration of the EUT systems in support of on-going operations and projects. A capable 1st line analyst has excellent prioritisation skills, the ability to context switch and to work on various work items at the same time. The right person will ask for help when stuck and be keen to learn from the senior analysts within the team.",
+                    criteria: [
+                        "Be the first point of contact and support for a global user base",
+                        "Provide triage and incident classification",
+                        "Responding to incidents, problems and requests",
+                        "Diagnosing issues and resolution of those issues",
+                        "Documentation of platform configuration",
+                        "Provisioning and de-provisioning of user accounts in conjunction with policies",
+                        "Installation and deployment of endpoint devices (PC, Mac, Mobile)",
+                        "Maintaining and upgrading hardware",
+                        "Responding to alerts and notifications",
+                        "Ensuring that any new solutions have the appropriate documentation and are understood by the team"
+                    ]
+                },
+                {
+                    title: "👨‍🔧 Play3r",
+                    path: "play3r",
+                    summary: "The Play3r Support Analyst is responsible for PC, Mac and server configuration, mobile device management and application support. Providing support to users whilst assisting with the configuration and administration of the EUT systems in support of on-going operations and projects. This role requires superb interpersonal skills.                    ",
+                    criteria: [
+                        "Be a point of contact and support for our global user base",
+                        "Assist in the development of the infrastructure by recommending and installing new products, by making use of the features already available from installed products, to enhance the flexibility and efficiency of UNiDAYS, whilst always keeping in mind the stability, security, resilience and disaster recovery needs.",
+                        "Systems and platform administration and maintenance ",
+                        "Patch management via WSUS",
+                        "Updates and upgrades to various hardware and software",
+                        "Installation of software and hardware",
+                        "The configuration of network components", 
+                        "Understanding and configuration of communication tooling (Slack, Hangouts, VOIP)",
+                        "Understanding and documenting the detailed configuration of the platforms",
+                        "Provide fault diagnosis and treatment to address issues and problems",
+                        "Assisting with implementing and maintaining security principles, threat detection, vulnerability management",
+                        "Keeping up to date with industry trends, product lifecycles and roadmaps to provide appropriate recommendations",
+                        "Training of staff to ensure developed solutions can be maintained and supported by other staff"
+                    ]
+                },
+                {
+                    title: "👩‍🏫 Pr0",
+                    path: "pr0",
+                    summary: "The Pr0 Support Analyst is responsible for the maintenance, support and security of the UNiDAYS core server and desktop infrastructure. This includes all Microsoft Windows and Apple Mac operating systems and other infrastructure systems and applications, such as storage and virtualisation technologies. You’re a leader within the IT team, and possess effective management and prioritisation skills. You’ll create an environment built on trust, open communication, creative thinking, encouraging a cohesive team culture.",
+                    criteria: [
+                        "Developing the infrastructure by recommending and implementing new products",
+                        "Make use of and developing the features already available in existing products and services to enhance the flexibility and efficiency of the Group",
+                        "Identify current and future information security risks and vulnerabilities. Validate and implement new releases, features, patches and updates in line with information security policies and regulations",
+                        "Be mindful of stability, security, resilience and disaster recovery needs",
+                        "Understanding and documenting detailed configuration of all systems including information security processes and procedures",
+                        "Performing audits of internal processes and procedures to ensure compliance with regulatory requirements",
+                        "Effectively communicating concepts and ideas to different audience types and gain management buy-in",
+                        "Providing fault/threat diagnosis and treatment to address problems and security vulnerabilities",
+                        "Working with other disciplines and 3rd parties to ensure products are installed, configured, integrated and supported to ensure that the solution is appropriate, impartial and meets the needs of the group",
+                        "Being available to support systems and services outside of normal business hours",
+                        "Motivating and inspire fellow team members",
+                        "Setting a good example (role model) to other members of the team, being proactive in identifying, supporting, coaching and mentoring team members"
+                    ]
+                },
+                {
+                    title: "🧙 1337",
+                    path: "1337",
+                    summary: "The 1337 IT Analyst leads and manages the global IT team, oversee and manage IT service delivery and service support, ensure services are reliable, scalable, and secure, and control the IT budget for UNiDAYS.",
+                    criteria: [
+                        "Management, support, development and leadership of the IT team, including prioritising work, carrying out 1-1s and performance reviews, and managing the flow of work through the servicedesk.",
+                        "Oversight of the service lifecycle from service design and operation through to continuous improvement.",
+                        "Change management and chairing the weekly CAB meetings.",
+                        "Defining, creating and maintaining policies and procedures.",
+                        "Overall technical responsibility for the IT function across the globe, including:",
+                        "Infrastructure, networks, and supporting services.",
+                        "Endpoint deployment and management.",
+                        "Defining and managing the hardware life cycle.",
+                        "Business continuity, backup, disaster prevention, mitigation and recovery.",
+                        "Communication technologies (email and messaging).",
+                        "Voice communication technologies (telephony, fixed line, mobile and VOIP).",
+                        "Facilities (power, physical hardware, air conditioning, security, fire suppression, and others).",
+                        "Software applications and services.",
+                        "Print and copy technology.",
+                        "Other technologies not listed above.",
+                        "Maintaining IT security and legal/regulatory compliance including the Data Protection Act and other requirements.",
+                        "Recruiting, interviewing and selecting IT staff",
+                        "Identifying risks, areas of improvement, weaknesses, and implementing control measures.",
+                        "Managing the IT budget, including staffing costs.",
+                        "Global supplier relationship management, setting SLAs, contract negotiation and dispute resolution.",
+                        "Maintaining accurate documentation of the IT estate",
+                        "Oversight and control of software licensing",
+                        "IT project management",
+                        "Reporting on headline IT team status",
+                        "Motivate and inspire fellow team members",
+                        "Set a good example (role model) to other members of the team, being proactive in identifying, supporting, coaching and mentoring team members"
+                    ]
+                }
+            ]
+        },
+        {
             title: "📋 Testing",
             path: "testing",
             summary: "Test Engineers are people with an analytical and logical mindset, who have an eye for detail and care about waste. The first step in a Test Engineers career is performing manual testing. They will build test plans, test scripts and discover bugs. Advancement is found through automation and continuous improvement. A Test Engineer will coach quality to those around them, calling out when standards are not met.",

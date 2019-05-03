@@ -17,6 +17,7 @@
                                 {
                                     title: "👩‍🔧 1st Line Analyst",
                                     path: "1st-line-analyst",
+                                    summary: "The 1st Line Support Analyst is a hands-on member of the team, working within the Service Desk to provide assistance throughout the business. The support analyst is responsible for the configuration and administration of the EUT systems in support of on-going operations and projects. A capable 1st line analyst has excellent prioritisation skills, the ability to context switch and to work on various work items at the same time. The right person will ask for help when stuck and be keen to learn from the senior analysts within the team.",
                                     competencies: {
                                         required: [
                                             "core-competencies/delivering-value/n00b",
@@ -32,6 +33,7 @@
                                 {
                                     title: "👩‍🔧 2nd Line Analyst",
                                     path: "2nd-line-analyst",
+                                    summary: "The 2nd Line Support Analyst is responsible for PC, Mac and server configuration, mobile device management and application support. Providing support to users whilst assisting with the configuration and administration of the EUT systems in support of on-going operations and projects. This role requires superb interpersonal skills.",
                                     competencies: {
                                         required: [
                                             "core-competencies/delivering-value/play3r",
@@ -47,6 +49,7 @@
                                 {
                                     title: "👩‍🔧 3rd Line Analyst",
                                     path: "3rd-line-analyst",
+                                    summary: "The 3rd Line Support Analyst role is responsible for the maintenance, support and security of the UNiDAYS core server and desktop infrastructure. This includes all Microsoft Windows and Apple Mac operating systems and other infrastructure systems and applications, such as storage and virtualisation technologies. You’re a leader within the IT team, and possess effective management and prioritisation skills. You’ll create an environment built on trust, open communication, creative thinking, encouraging a cohesive team culture.",
                                     competencies: {
                                         required: [
                                             "core-competencies/delivering-value/pr0",
@@ -62,6 +65,7 @@
                                 {
                                     title: "👩‍🔧 IT Manager",
                                     path: "it-manager",
+                                    summary: "The main focus of the IT Manager is to lead and manage the global IT team, oversee and manage IT service delivery and service support, ensure services are reliable, scalable, and secure, and control the IT budget for UNiDAYS.",
                                     competencies: {
                                         required: [
                                             "core-competencies/delivering-value/1337",
