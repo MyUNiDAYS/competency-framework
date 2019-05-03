@@ -182,7 +182,7 @@
                                     <th><a href="/competencies/{{../competency.path}}/{{path}}">{{title}}</a></th>
                                 {{/each}}
                                 {{/each}}
-                            </tr>
+                                </tr>
                             </thead>
                             <tbody>
                                 {{#each levels}}
@@ -197,6 +197,32 @@
                                 {{/each}}
                             </tbody>
                         </table>
+                        <!--
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td colspan="2"></td>
+                                {{#each levels}}
+                                    <th><a href="/roles/{{../path}}/{{path}}">{{title}}</a></th>
+                                {{/each}}
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {{#each allCompetencies}}
+                            {{#each topics}}
+                                <tr>
+                                    {{#unless @index}}
+                                    <th rowspan="{{../topics.length}}"><a href="/competencies/{{../competency.path}}">{{../competency.title}}</a></th>
+                                    {{/unless}}
+                                    <td><a href="/competencies/{{../competency.path}}/{{path}}">{{title}}</a></td>
+                                    {{#each ../../levels}}
+                                     <td>{{getRoleTopicLevel this ../this}}</th>
+                                    {{/each}}
+                                </tr>
+                            {{/each}}
+                            {{/each}}
+                            </tbody>
+                        </table>-->
                     </section>
                 </section>
                 {{#each levels}}
@@ -232,6 +258,50 @@
                         </section>
                     {{/each}}
                         </div>
+                    </section>
+                    <section class="role-level-review" data-path="/roles/{{../path}}/{{path}}/review">
+                        <h1>{{../title}}</h1>
+                        <h3>Summary</h3>
+                    {{#each competencies.required}}
+                        <section class="role-competency box">
+                            <h2><a href="/competencies/{{competency.path}}/{{topic.path}}">{{topic.title}}</a> - {{level.title}}</h2>
+                            <h3><a href="/competencies/{{competency.path}}">{{competency.title}}</a></h3>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Criteria</th>
+                                        <th>Strength</th>
+                                        <th>Weakness</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                {{#each topic.levels}}
+                                {{#each criteria}}
+                                    <tr>
+                                    {{#unless @index}}
+                                        <td rowspan="{{../criteria.length}}"><a href="/competencies/{{../competency.path}}">{{../title}}</a></th>
+                                    {{/unless}}
+                                        <td>{{this}}</th>
+                                        <td><input type="checkbox" /></td>
+                                        <td><input type="checkbox" /></td>
+                                    </tr>
+                                {{/each}}
+                                {{/each}}
+                                </tbody>
+                            </table>
+                        </section>
+                    {{/each}}
+                    {{#each competencies.optional}}
+                        <section class="role-competency box">
+                            <h2><a href="/competencies/{{competency.path}}/{{topic.path}}">{{topic.title}}</a> - {{level.title}}</h2>
+                            <h3><a href="/competencies/{{competency.path}}">{{competency.title}}</a></h3>
+                            <ul>
+                            {{#each level.criteria}}
+                                <li>{{this}}</li>
+                            {{/each}}
+                            </ul>
+                        </section>
+                    {{/each}}
                     </section>
                 {{/each}}
             {{/each}}
