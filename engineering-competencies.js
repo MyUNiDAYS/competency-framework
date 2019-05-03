@@ -6,7 +6,7 @@
         {
             title: "💻 IT",
             path: "it",
-            summary: "",
+            summary: "A good IT team member has technical understanding and good problem solving skills. The technical skills are complimented by a customer centric attitude,  ",
             levels: [
                 {
                     title: "👩‍🎓 n00b",
