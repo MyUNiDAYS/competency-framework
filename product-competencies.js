@@ -175,7 +175,7 @@
         {
             title: "👔 Execution",
             path: "execution",
-            summary: "",
+            summary: "A good Product Manager understands that execution is about getting the most value out of an idea. A mediocre idea with great execution has the potential to be valuable. A great idea with poor execution, is next to worthless. Being good at execution means understanding the concept of an MvP and getting something in front of users quickly. Understanding the priority of tasks and deliverables.",
             levels: [
                 {
                     title: "1",
