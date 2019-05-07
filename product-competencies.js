@@ -6,7 +6,7 @@
         {
             title: "🤹 Opportunity Analysis",
             path: "opportunity-analysis",
-            summary: "",
+            summary: "A good Product team member should be able to analyse products on offer in the current market. In turn, identifying areas for product growth. With seniority, this analysis will be turned into a Product vision and strategy. This vision and strategy will  create cohesion, and shared goal, agreed upon by both the Product and Engineering teams.",
             levels: [
                 {
                     title: "1",
