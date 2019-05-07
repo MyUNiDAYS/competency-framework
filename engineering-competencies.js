@@ -292,7 +292,7 @@
         {
             title: "🛃 Verification",
             path: "verification",
-            summary: "TBC",
+            summary: "A Verification Engineer, is an all round mid or senior level Engineer, who has specific expertise in identity and identity managment. The Verification Engineer takes responsibility for UNiDAYS ability to verify members. This means maintaining relationships with third parties, keeping abreast of changes to identity management systems. A Verification Engineer will also monitor verification rates, identifying issues and ensuring they are resolved promptly.",
             levels: [
                 {
                     title: "👩‍🏫 Pr0",
