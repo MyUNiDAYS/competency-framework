@@ -68,7 +68,7 @@
         {
             title: "📊 Data Skills",
             path: "data-skills",
-            summary: "",
+            summary: "Data lies at the very centre of everything the Product team does. If data doesn't exist, the Product team are responsible for ensuring the correct data is collated. The product team will create metrics, using data, driving business decisions and experimentation. The most senior of members of the Product team will use data to make complex business decisions, whilst taking into account a multitude of external factors. ",
             levels: [
                 {
                     title: "1",
