@@ -173,6 +173,7 @@
                         {
                             title: "👨‍🎨 Junior Front End Engineer",
                             path: "junior-front-end-engineer",
+                            summary: "Front End Engineers start their career with a knowledge of how to build basic web pages. As they advance, so will their knowledge of HTML, CSS and JavaScript. The Junior Front End Engineer will soak up knowledge from those around them, focusing on delivering value and consistent completion of squad work.",
                             competencies: {
                                 required: [
                                     "core-competencies/delivering-value/n00b",
@@ -191,6 +192,7 @@
                         {
                             title: "👨‍🎨 Mid-Level Front End Engineer",
                             path: "mid-level-front-end-engineer",
+                            summary: "As the technical skill of a Front End Engineer develops, understanding of quality and delivery of value will reflect this. Flexibility and willingness to work across teams is key, helping others understand the impact their changes have on user experience. Responsibilities will include creating and maintaining front end assets, considering testing and performance.",
                             competencies: {
                                 required: [
                                     "core-competencies/delivering-value/play3r",
@@ -209,6 +211,7 @@
                         {
                             title: "👨‍🎨 Senior Front End Engineer",
                             path: "senior-front-end-engineer",
+                            summary: "A senior Front End Engineer takes responsibility for the web estate, seeking continuous improvement and setting out best practices for the rest of the Engineering team. The senior engineer ensures that all front end assets are monitored and alerted against. The senior must also have great people skills, identifying potential and coaching opportunities within the Engineering team.",
                             competencies: {
                                 required: [
                                     "core-competencies/delivering-value/pr0",
@@ -227,6 +230,7 @@
                         {
                             title: "👨‍🎨 Lead Front End Engineer",
                             path: "lead-front-end-engineer",
+                            summary: "The lead Front End Engineer sets out the standard for the rest of the team. The lead ensures that the web estate is monitored, alerted against and thresholds are set. The lead is responsible for reporting on the performance of the front end, identifying and putting into action any required improvements. Line management of Front End Engineers in various teams, maintaining a consistent identity is important.",
                             competencies: {
                                 required: [
                                     "core-competencies/delivering-value/1337",
