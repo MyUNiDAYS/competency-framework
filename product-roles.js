@@ -476,6 +476,7 @@
                 {
                     title: "🧜 Engineering Operations",
                     path: "engineering-operations",
+                    summary: "The engineering operations manager is responsible for the smooth running of the Engineering Team. A great communicator, you'll help to remove impediments and keep the gears moving within the squads so that solutions are delivered effectively. You'll pro-actively identify process issues, suggest and implement improvements to those. You'll need to be a leader and coach team leads and engineers on what good looks like.",
                     levels: [
                         {
                             title: "🧜 Engineering Operations Manager",
