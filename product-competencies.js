@@ -228,7 +228,7 @@
         {
             title: "👩‍🎓 User Centricity",
             path: "user-centricity",
-            summary: "",
+            summary: "A user centric focus is a key skill in the Product team. This starts by understanding the users of the product being built, and presenting the needs of the users to the Engineering team. The Product team will track work, ensuring that it meets the requirements of users. As this skill develops, user requirements are mapped to metrics. Quality of the solution, via close Product management, will not only meet user requirements, but exceed and delight them.",
             levels: [
                 {
                     title: "1",
