@@ -122,7 +122,7 @@
         {
             title: "🗃️ Domain Knowledge",
             path: "domain-knowledge",
-            summary: "",
+            summary: "Domain knowledge is so important to the Product Team, to help teams plan, set expectation and generally understand delivery. A PM/PO will also need to understand the SDLC, which means, understanding how code is tested and deployed. A senior person in this position will have a deep market knowledge in the relevant Product area, able to challenge experts and identify market opportunities.",
             levels: [
                 {
                     title: "1",
