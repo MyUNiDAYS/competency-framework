@@ -280,7 +280,7 @@
         {
             title: "🎎 Working Through Others",
             path: "working-through-others",
-            summary: "TBC",
+            summary: "Working through others equates to influencing people, gathering buy-in, with the goal of delivering value to users. Collaboration and win/win scenarios are key tools a successful Product team member utilises. As this skill develops, the Product team will help squads understand the importance of their work to the 'bigger picture'. A senior Product Manager will plan work, considering dependencies, removing impediments and generally maintaining smooth delivery.",
             levels: [
                 {
                     title: "1",
