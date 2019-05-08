@@ -275,8 +275,15 @@
                                     <thead>
                                         <tr>
                                             <th colspan="2">Criteria</th>
-                                            <th>Strength</th>
-                                            <th>Weakness</th>
+                                            <th colspan="2">Strengths</th>
+                                            <th colspan="2">Weaknesss</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2"></th>
+                                            <th>Justification</th>
+                                            <th>Next Steps</th>
+                                            <th>Justification</th>
+                                            <th>Next Steps</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -288,8 +295,10 @@
                                             <td rowspan="{{../criteria.length}}"><a href="/competencies/{{../competency.path}}">{{../title}}</a></th>
                                         {{/unless}}
                                             <td>{{this}}</th>
-                                            <td><input type="checkbox" /></td>
-                                            <td><input type="checkbox" /></td>
+                                                <td><textarea cols="40" rows="8"></textarea></td>
+                                                <td><textarea cols="40" rows="8"></textarea></td>
+                                                <td><textarea cols="40" rows="8"></textarea></td>
+                                                <td><textarea cols="40" rows="8"></textarea></td>
                                         </tr>
                                     {{/each}}
                                     {{/ifLevelLowerOrEqual}}
