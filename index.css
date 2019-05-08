@@ -101,14 +101,20 @@ body
     font-size: 20px;
     height: 100%;
     background: #f4f4f4;
+    padding-top: 80px;
 }
 
 nav
 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #f4f4f4;
     box-sizing: border-box;
-    padding: 20px;
-    height: 60px;
-    margin-bottom: 20px;
+    padding: 10px;
+    height: 70px;
+    box-shadow: rgba(0,0,0,0.4) 0 0 5px;
 }
 
 nav .logo
