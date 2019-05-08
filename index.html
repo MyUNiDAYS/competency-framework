@@ -26,7 +26,7 @@
                     <li class="title">Competencies</li>
                 {{#each this}}
                     <li>
-                        <a href="/competencies/{{path}}">{{title}}</a>
+                        <a href="/competencies/{{path}}" class="nav-link">{{title}}</a>
                         <ul>
                         {{#each topics}}
                             <li><a href="/competencies/{{../path}}/{{path}}">{{title}}</a></li>
@@ -47,7 +47,7 @@
 
             <script id="tmpl-navroles" type="text/x-handlebars-template" class="partial">
                 <li>
-                    <a href="/roles/{{path}}">{{title}}</a>
+                    <a href="/roles/{{path}}" class="nav-link">{{title}}</a>
                 {{#if departments}}
                     <ul>
                     {{#each departments}}
