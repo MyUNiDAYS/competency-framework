@@ -276,8 +276,9 @@
                                 </thead>
                                 <tbody>
                                 {{#each topic.levels}}
+                                {{#ifLevelLowerOrEqual ../topic this ../level}}
                                 {{#each criteria}}
-                                    <tr>
+                                    <tr class="{{levelRequirementClass ../../topic ../this ../../level}}">
                                     {{#unless @index}}
                                         <td rowspan="{{../criteria.length}}"><a href="/competencies/{{../competency.path}}">{{../title}}</a></th>
                                     {{/unless}}
@@ -286,6 +287,7 @@
                                         <td><input type="checkbox" /></td>
                                     </tr>
                                 {{/each}}
+                                {{/ifLevelLowerOrEqual}}
                                 {{/each}}
                                 </tbody>
                             </table>
