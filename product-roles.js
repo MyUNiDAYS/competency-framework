@@ -562,6 +562,7 @@
                 {
                     title: "👨‍💼 Senior Product Manager",
                     path: "senior-product-manager",
+                    summary: "The Senior Product Manager translates our product vision into strategic goals for the Product and Engineering teams. Product Managers are responsible, end-to-end, for improving our product within the team’s mission. Working cross-functionally, with Researchers, Designers and Engineers to improve user experience and develop new features for millions of daily users.",
                     competencies: {
                         required: [
                             "core-competencies/delivering-value/1337",
