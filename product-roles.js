@@ -471,6 +471,7 @@
                         {
                             title: "👨‍💻 Solutions Engineer",
                             path: "solutions-engineer",
+                            summary: "The Solutions engineer is the first point of contact, for Engineering, Marketing and external marketing agencies, in relation to all things campaign related. People skills are a must in this role, coordinating multiple departments, implementing campaigns and tracking pixels. The Solutions Engineer will measure, and report on the effectiveness of the campaigns being ran, suggesting improvements.",
                             competencies: {
                                 required: [
                                     "core-competencies/delivering-value/play3r",
