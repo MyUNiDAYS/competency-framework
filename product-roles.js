@@ -618,6 +618,7 @@
                 {
                     title: "🧞 VP Product and Engineering",
                     path: "vp-product-engineering",
+                    summary: "The VP Product and Engineering is responsible for the innovation and delivery of all thiThe VP Product and Engineering takes responsibility for all things Product related. The right person reviews UNiDAYS approach to product development, setting a clear vision, motivating the team around a shared vision and goal. You'll coordinate and manage the Head of Product and Head of Engineering, ensuring that your vision is met through thoughtful leadership. The VP P&E will represent the departments to the rest of the business, presenting progress and updates regularly at a board level.",
                     competencies: {
                         required: [
                             "core-competencies/delivering-value/1337",
