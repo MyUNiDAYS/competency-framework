@@ -9,6 +9,7 @@
                 {
                     title: "🧙‍♀️ Change Project Manager",
                     path: "change-project-manager",
+                    summary: "The Change Project Manager provides project and change expertise to the business. They ensure that the appropriate methodologies and governance are applied for all projects and changes. The Change Project Manager ensures timely communication of project progress, motivating the team, encouraging cross team collaboration. A good person in this role will call out risks and dependencies early, creating mitigation plans, ensuring the risks are not realised.",
                     competencies: {
                         required: [
                             "core-competencies/delivering-value/pr0",
