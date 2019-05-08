@@ -100,47 +100,32 @@ body
     font-family: 'UNiDAYSPro-Book', sans-serif;
     font-size: 20px;
     height: 100%;
-
     background: #f4f4f4;
+    padding-top: 80px;
 }
 
-.container
+body > nav
 {
-    min-height: 100%;
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-box;
-    display: box;
-    
-    -ms-flex-direction: row;
-    -webkit-box-orient: horizontal;
-    -moz-box-orient: horizontal;
-    -ms-box-orient: horizontal;
-    box-orient: horizontal;
-}
-
-nav
-{
-    width: 300px;
-    -ms-flex: 0;
-    -webkit-box-flex: 0;
-    -moz-box-flex: 0;
-    -ms-box-flex: 0;
-    box-flex: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #f4f4f4;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 10px;
+    height: 70px;
+    box-shadow: rgba(0,0,0,0.4) 0 0 5px;
 }
 
-nav .logo
+body > nav .logo
 {
     font-family: 'UNiDAYSPro-Heavy';
     font-size: 24px;
     display: block;
-    margin: 0 0 15px 0;
+    margin-top: -12px;
 }
 
-nav .logo img
+body > nav .logo img
 {
     width: 50px;
     height: 50px;
@@ -148,84 +133,49 @@ nav .logo img
     margin: 0 0 8px 0;
 }
 
-nav .title
+body > nav > ul
 {
-    font-size: 18px;
-    font-family: 'UNiDAYSPro-Demi';
-    display: block;
-    margin: 0 0 15px 0;
+    width: 100%;
+    overflow: visible;
 }
 
-nav .competency
+body > nav > ul > li
 {
-    font-size: 16px;
-    font-family: 'UNiDAYSPro-Demi';
-    display: block;
-    margin: 0 0 10px 0;
-}
-
-nav ul
-{
-    margin-bottom: 15px;
-}
-
-nav ul > li
-{
-    margin: 0 0 10px 0;
-    display: none;
+    float: left;
     position: relative;
+    margin: 0 10px;
 }
-
-.nav-link {
-    display: block;
-}
-
-.nav-link:after
+body > nav > ul > li
 {
-    content: '➕';
+    padding-top: 12px;
+}
+
+body > nav li > ul
+{
+    width: 300px;
+    display: none;
     position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 10px;
+    left: 25px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.4) 0 0 5px;
 }
 
-.nav-link:not(.active):hover:after
+body > nav > ul > li > ul ul
 {
-    transition: all 1s;
-    transform: rotate(360deg);
+    left: 100px;
 }
 
-.nav-link.active:after
-{
-    content: '➖';
-    opacity: 0.4;
-}
-
-nav > ul > li
+body > nav li:hover > ul
 {
     display: block;
 }
 
-nav ul.active > li
+body > nav > ul > li li
 {
-    display: block;
+    padding: 5px;
 }
-
-nav li > ul
-{
-    margin: 10px 0 0 15px;
-}
-
-nav li.active > ul
-{
-    display: block;
-}
-nav li.active > ul > li
-{
-    display: block;
-}
-
-
 
 a
 {
@@ -237,19 +187,13 @@ a:hover
     text-decoration: underline;
 }
 
-nav a.active
+body > nav a.active
 {
     font-family: 'UNiDAYSPro-Demi';
 }
 
 #content
 {
-    -ms-flex: 1;
-    -webkit-box-flex: 1;
-    -moz-box-flex: 1;
-    -ms-box-flex: 1;
-    box-flex: 1;
-
     box-sizing: border-box;
     padding: 20px;
 }
@@ -297,7 +241,7 @@ p, li
 }
 
 
-#content ul li
+section ul li
 {
     list-style-type: lower-alpha;
     margin: 0 0 1em 1.5em;
@@ -329,6 +273,7 @@ section.role
 table
 {
     border: solid 1px #ccc;
+    width: 100%;
 }
 
 th
@@ -370,4 +315,34 @@ tr.level-above td,
 tr.level-above th
 {
     background-color: #fefefe;
+}
+
+
+
+a.button
+{
+    display: inline-block;
+    background: #1dd577;
+    border-radius: 3px;
+    padding: 5px 8px;
+}
+
+.tab-container > nav
+{
+    margin: 0 0 20px 0;
+}
+
+.tab-container > nav a
+{
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.tab-container > section
+{
+    display: none;
+}
+.tab-container > section.active
+{
+    display: block;
 }
