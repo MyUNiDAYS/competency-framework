@@ -408,6 +408,7 @@
                         {
                             title: "👨‍✈️ Software Architect",
                             path: "software-architect",
+                            summary: "A software architect needs to interact with users, Product Managers, and Engineers in order to envision, model and provide initial models and designs that can be built.  The role of a software architect includes collaborative working with humility and providing mentoring as required. The architect should sit across all squads, providing assistance and advice to all squad members, on system design best practices.",
                             competencies: {
                                 required: [
                                     "core-competencies/delivering-value/1337",
@@ -423,6 +424,7 @@
                         {
                             title: "👨‍✈️ Senior Software Architect",
                             path: "senior-software-architect",
+                            summary: "The senior Software Architect is responsible for leading other Software Architects, managing and coaching them.  The Senior Software Architect will work and collaborate with Engineering, Infrastructure and Product, ensuring solutions are built to meet business requirements. The senior will lead technical analysis and solution design of significant changes to the product direction. The senior will work with the CTO to set the direction of the Engineering team, and setting out an agreed technology strategy. ",
                             competencies: {
                                 required: [
                                     "core-competencies/delivering-value/1337",
