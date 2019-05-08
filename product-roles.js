@@ -658,6 +658,7 @@
                 {
                     title: "👩‍🎨 Lead UX Designer",
                     path: "lead-ux-designer",
+                    summary: "As Lead UX Designer, having the ability to match business objectives and requirements with users needs and create frictionless journeys is imperative. Leading, creating and mentoring a highly successful team is a key deliverable. Overseeing the creation and maintenance of wire-frames, prototypes, web analytics, digital assets and overall design.",
                     competencies: {
                         required: [
                             "core-competencies/delivering-value/play3r",
