@@ -255,6 +255,7 @@
                         {
                             title: "🕵️ Junior Test Engineer",
                             path: "junior-test-engineer",
+                            summary: "A Junior Test Engineer starts their career with an analytical and logical mindset. They generally have an eye for detail and care about reducing waste. The first step in a Test Engineers career is performing manual testing. They will build test plans, test scripts and discover bugs.",
                             competencies: {
                                 required: [
                                     "core-competencies/delivering-value/n00b",
@@ -273,6 +274,7 @@
                         {
                             title: "🕵️ Mid-Level Test Engineer",
                             path: "mid-level-test-engineer",
+                            summary: " The Mid-Level Test Engineer is the bastion for quality in each squad. They pro-actively take responsibility for ensuring every piece of work created by the team meets acceptable levels of usability before it's released to users. Test Engineers will spend time with other Engineers, inputting into how software is built, identifying risks and potential pitfalls before they're realised.",
                             competencies: {
                                 required: [
                                     "core-competencies/delivering-value/play3r",
@@ -291,6 +293,7 @@
                         {
                             title: "🕵️ Senior Test Engineer",
                             path: "senior-test-engineer",
+                            summary: "A Senior Test Engineer is interested in automation and continuous improvement. They will coach quality into those around them, calling out when standards are not met, setting out what good looks like. The senior will be a champion for excellence, encouraging TDD and shared responsibility for quality. The senior will be an active member of the Testing community, staying abreast of testing technologies and methodologies.",
                             competencies: {
                                 required: [
                                     "core-competencies/delivering-value/pr0",
@@ -309,6 +312,7 @@
                         {
                             title: "🕵️ Lead Test Engineer",
                             path: "lead-test-engineer",
+                            summary: "As a Lead Test Engineer, you’ll have had previous, strong QA experience throughout the full software development life-cycle. You'll take responsibility for testing strategy, presenting your ideas and suggestions to the wider Engineering team. You'll analyse the SDLC, identifying areas in which quality requires improvement, overseeing the implementation of those improvements. Management of the Testing Team, coaching of Testers and ensuring delivery of value, are all key activities in this role.",
                             competencies: {
                                 required: [
                                     "core-competencies/delivering-value/1337",
