@@ -505,7 +505,8 @@
             levels: [
                 {
                     title: "🤵 Product Owner",
-                    path: "product-owner",
+                    path: "product-owner"
+                    summary: "The Product Owner is a leader, responsible for maximising the value of the products created by the development team. A good Product Owner is able to influence those around them. They will manage the flow of work throughout it's various stages, ensuring delivery is as expected. The Product Owner will act as point person for all queries in relation to the product from stakeholders, enabling Engineers to focus purely on delivery.",
                     competencies: {
                         required: [
                             "core-competencies/delivering-value/pr0",
