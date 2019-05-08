@@ -104,7 +104,7 @@ body
     padding-top: 80px;
 }
 
-nav
+body > nav
 {
     position: fixed;
     top: 0;
@@ -117,7 +117,7 @@ nav
     box-shadow: rgba(0,0,0,0.4) 0 0 5px;
 }
 
-nav .logo
+body > nav .logo
 {
     font-family: 'UNiDAYSPro-Heavy';
     font-size: 24px;
@@ -125,7 +125,7 @@ nav .logo
     margin-top: -12px;
 }
 
-nav .logo img
+body > nav .logo img
 {
     width: 50px;
     height: 50px;
@@ -133,24 +133,24 @@ nav .logo img
     margin: 0 0 8px 0;
 }
 
-nav > ul
+body > nav > ul
 {
     width: 100%;
     overflow: visible;
 }
 
-nav > ul > li
+body > nav > ul > li
 {
     float: left;
     position: relative;
     margin: 0 10px;
 }
-nav > ul > li
+body > nav > ul > li
 {
     padding-top: 12px;
 }
 
-nav li > ul
+body > nav li > ul
 {
     width: 300px;
     display: none;
@@ -162,17 +162,17 @@ nav li > ul
     box-shadow: rgba(0,0,0,0.4) 0 0 5px;
 }
 
-nav > ul > li > ul ul
+body > nav > ul > li > ul ul
 {
     left: 100px;
 }
 
-nav li:hover > ul
+body > nav li:hover > ul
 {
     display: block;
 }
 
-nav > ul > li li
+body > nav > ul > li li
 {
     padding: 5px;
 }
@@ -187,7 +187,7 @@ a:hover
     text-decoration: underline;
 }
 
-nav a.active
+body > nav a.active
 {
     font-family: 'UNiDAYSPro-Demi';
 }
@@ -241,7 +241,7 @@ p, li
 }
 
 
-#content ul li
+section ul li
 {
     list-style-type: lower-alpha;
     margin: 0 0 1em 1.5em;
@@ -325,4 +325,24 @@ a.button
     background: #1dd577;
     border-radius: 3px;
     padding: 5px 8px;
+}
+
+.tab-container > nav
+{
+    margin: 0 0 20px 0;
+}
+
+.tab-container > nav a
+{
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.tab-container > section
+{
+    display: none;
+}
+.tab-container > section.active
+{
+    display: block;
 }

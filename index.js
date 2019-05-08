@@ -149,7 +149,6 @@ window.addEventListener('load', function(){
         return 'level-above'
     });
 
-
     // Initialise content
     document.querySelector('body > nav > ul').innerHTML += templates['nav-competencies'](window.competencies) + templates['nav-roles'](window.roles);
     document.querySelector('#content').innerHTML += templates['competencies'](window.competencies) + templates['roles'](window.roles)
@@ -182,10 +181,12 @@ window.addEventListener('load', function(){
         document.body.scrollTo({ y: 0 });
 
         var path = window.location.pathname;
+        var hash = window.location.hash ? window.location.hash.substr(1) : '';
         
         // Show content
-        document.querySelectorAll('[data-path]').forEach(section => section.style.display = 'none');
+        document.querySelectorAll('[data-path], [data-hash]').forEach(section => section.style.display = 'none');
         document.querySelectorAll(`[data-path="${path}"]`).forEach(s => s.style.display = 'block');
+        document.querySelectorAll(`[data-hash="${hash}"]`).forEach(s => s.style.display = 'block');
 
         // TODO: merge all the below code into one mechanism
 
