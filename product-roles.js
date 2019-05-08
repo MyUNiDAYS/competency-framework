@@ -643,6 +643,7 @@
             levels: [{
                     title: "👩‍🎨 Creative Strategist",
                     path: "creative-strategist",
+                    summary: "A Creative Strategist sits in the middle ground, between creative and delivery. The strategist can transform theory into reality. The goal of a strategist is to harness results from the grey area, between the underlying business strategy and creative concepts. ",
                     competencies: {
                         required: [
                             "core-competencies/delivering-value/play3r",
