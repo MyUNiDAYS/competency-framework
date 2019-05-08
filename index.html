@@ -224,12 +224,15 @@
                 </section>
                 {{#each levels}}
                     <section class="role-level" data-path="/roles/{{../path}}/{{path}}">
-                        <h1>{{../title}}</h1>
-                        <h2>{{title}}</h1>
-                        <h3>Summary</h3>
-                        <p class="box">{{summary}}</p>
-                        <h3>Actions</h3>
-                        <a href="/roles/{{../path}}/{{path}}/review" class="button">Start Review</a>
+                        <h1>{{title}} - <a href="/roles/{{../path}}">{{../title}}</a></h1>
+                        <div class="box">
+                            <h3>Actions - BETA</h3>
+                            <a href="/roles/{{../path}}/{{path}}/review" class="button">Start Review</a>
+                        </div>
+                        <div class="box">
+                            <h3>Summary</h3>
+                            <p>{{summary}}</p>
+                        </div>
                         <h3>Criteria</h3>
                         <div class="coltainer">
                     {{#each competencies.required}}
@@ -257,12 +260,11 @@
                         </div>
                     </section>
                     <section class="role-level-review" data-path="/roles/{{../path}}/{{path}}/review">
-                        <h1>{{../title}}</h1>
-                        <h3>Summary</h3>
+                        <h1>{{title}} - {{../title}}</h1>
                     {{#each competencies.required}}
                         <section class="role-competency box">
-                            <h2><a href="/competencies/{{competency.path}}/{{topic.path}}">{{topic.title}}</a> - {{level.title}}</h2>
-                            <h3><a href="/competencies/{{competency.path}}">{{competency.title}}</a></h3>
+                            <h2><a href="/competencies/{{competency.path}}">{{competency.title}}</a> - <a href="/competencies/{{competency.path}}/{{topic.path}}">{{topic.title}}</a></h2>
+                            <p>Your expected level is {{level.title}}</p>
                             <table>
                                 <thead>
                                     <tr>

@@ -267,6 +267,7 @@ section.role
 table
 {
     border: solid 1px #ccc;
+    width: 100%;
 }
 
 th
@@ -308,4 +309,14 @@ tr.level-above td,
 tr.level-above th
 {
     background-color: #fefefe;
+}
+
+
+
+a.button
+{
+    display: inline-block;
+    background: #1dd577;
+    border-radius: 3px;
+    padding: 5px 8px;
 }
