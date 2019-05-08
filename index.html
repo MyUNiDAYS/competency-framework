@@ -15,48 +15,46 @@
         <title>UNiDAYS Competency and Progression Framework</title>
     </head>
     <body>
-        <section class="container">
         <nav>
-            <span class="logo"><img src="/logo.png" alt="UNiDAYS Logo"/> UNiDAYS</span>
             <ul>
+                <li><a class="logo" href="https://www.myunidays.com" target="_blank"><img src="/logo.png" alt="UNiDAYS Logo"/> UNiDAYS</a></li>
                 <li><a href="/">🏡 Home</a></li>
             </ul>
             <script id="tmpl-nav-competencies" type="text/x-handlebars-template">
-                <ul>
-                    <li class="title">Competencies</li>
-                {{#each this}}
-                    <li>
-                        <a href="/competencies/{{path}}" class="nav-link">{{title}}</a>
-                        <ul>
-                        {{#each topics}}
-                            <li><a href="/competencies/{{../path}}/{{path}}">{{title}}</a></li>
-                        {{/each}}
-                        </ul>
-                    </li>
-                {{/each}}
-                </ul>
+                <li class="title">
+                    <span>🤹 Competencies</span>
+                    <ul>
+                    {{#each this}}
+                        <li>
+                            <a href="/competencies/{{path}}" class="nav-link">{{title}}</a>
+                            <ul>
+                            {{#each topics}}
+                                <li><a href="/competencies/{{../path}}/{{path}}">{{title}}</a></li>
+                            {{/each}}
+                            </ul>
+                        </li>
+                    {{/each}}
+                    </ul>
+                </li>
             </script>
             <script id="tmpl-nav-roles" type="text/x-handlebars-template">
-                <ul>
-                    <li class="title">Roles</li>
+                <li class="title">
+                    <span>👔 Roles</span>
+                    <ul>
                     {{#each this}}
                         {{> navroles}}
                     {{/each}}
-                </ul>
+                    </ul>
+                </li>
             </script>
 
             <script id="tmpl-navroles" type="text/x-handlebars-template" class="partial">
                 <li>
                     <a href="/roles/{{path}}" class="nav-link">{{title}}</a>
-                {{#if departments}}
                     <ul>
                     {{#each departments}}
                         {{> navroles}}
                     {{/each}}
-                    </ul>
-                {{/if}}
-                {{#if roles}}
-                    <ul>
                     {{#each roles}}
                         <li>
                             <a href="/roles/{{path}}">{{title}}</a>
@@ -68,7 +66,6 @@
                         </li>
                     {{/each}}
                     </ul>
-                {{/if}}
                 </li>
             </script>
         </nav>
@@ -310,8 +307,6 @@
             {{/if}}
             </script>
         </section>
-
-    </section>
     </body>
 
     <script src="/core-values.js"></script>
