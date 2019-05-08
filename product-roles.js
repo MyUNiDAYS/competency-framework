@@ -590,6 +590,7 @@
                 {
                     title: "🧝‍♀️ Head of Product",
                     path: "head-of-product",
+                    summary: "The Head of Product has responsibility for the overall direction of the product, innovation and delivery. The HoP will thoroughly understand the market, evaluating and identifying growth opportunities. Setting out a product Vision and Mission, setting the direction for the business. Recruitment and development is key in this position, helping members of the Product team to develop, and hiring exemplary candidates to fill any missing roles.",
                     competencies: {
                         required: [
                             "core-competencies/delivering-value/1337",
