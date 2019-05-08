@@ -308,6 +308,7 @@
                                     "engineering-competencies/testing/pr0"
                                 ]
                             }
+                            
                         },
                         {
                             title: "🕵️ Lead Test Engineer",
@@ -337,6 +338,7 @@
                         {
                             title: "👨‍⚕️ Junior Infrastructure Engineer",
                             path: "junior-infrastructure-engineer",
+                            summary: "The Junior Infrastructure Engineer starts their career with an enthusiasm and interest in server and network administration. Previous experience in an IT or desktop support role is beneficial. The junior is responsible for maintenance of cloud based infrastructure, troubleshooting OS and Network issues. They'll ensure that the Engineering team can release software by supporting the CI/CD pipelines. ",
                             competencies: {
                                 required: [
                                     "core-competencies/delivering-value/n00b",
@@ -352,6 +354,7 @@
                                         {
                             title: "👨‍⚕️ Mid-Level Infrastructure Engineer",
                             path: "mid-level-infrastructure-engineer",
+                            summary: "A good mid-level Infrastructure Engineer will take responsibility for maintenance and configuration of cloud based servers and networking. As part of this role, analysis of the current infrastructure real estate, and whether services currently implemented are still the best tools for the job. Monitoring and alerting is another aspect of responsiblity, and must be appropriate, alerting the correct parties.",
                             competencies: {
                                 required: [
                                     "core-competencies/delivering-value/play3r",
@@ -367,6 +370,7 @@
                         {
                             title: "👨‍⚕️ Senior Infrastructure Engineer",
                             path: "senior-infrastructure-engineer",
+                            summary: "A senior Infrastructure Engineer leads the design and implementation of infrastructure solutions. The senior understands the broader business goals, taking into account requirements from stakeholders throughout the build process. A senior will take responsibility for technical direction for the planning, designing, and execution of testing efforts. The senior will coach other team members, and members of the engineering team, handing responsibility of basic tasks over, freeing themselves up for wider ranging considerations.",
                             competencies: {
                                 required: [
                                     "core-competencies/delivering-value/pr0",
@@ -382,6 +386,7 @@
                         {
                             title: "👨‍⚕️ Lead Infrastructure Engineer",
                             path: "lead-infrastructure-engineer",
+                            summary: "The main focus of the Infrastructure Lead is to lead and manage the Infrastructure team. The lead handles oversees delivery of cloud services to the rest of the business, primarily Data and Engineering. Part of the role is ensuring that services are reliable, scalable, and secure. The lead takes control of costings, ensuring value for money and predictability via cost analysis. The development of the Infrastructure team, via thoughtful leadership and coaching is important. The team must keep up to date on the latest advancements in cloud technology, so that, the business can do the same.",
                             competencies: {
                                 required: [
                                     "core-competencies/delivering-value/1337",
