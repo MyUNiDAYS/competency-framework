@@ -505,7 +505,7 @@
             levels: [
                 {
                     title: "🤵 Product Owner",
-                    path: "product-owner"
+                    path: "product-owner",
                     summary: "The Product Owner is a leader, responsible for maximising the value of the products created by the development team. A good Product Owner is able to influence those around them. They will manage the flow of work throughout it's various stages, ensuring delivery is as expected. The Product Owner will act as point person for all queries in relation to the product from stakeholders, enabling Engineers to focus purely on delivery.",
                     competencies: {
                         required: [
@@ -534,6 +534,7 @@
                 {
                     title: "🕵️‍♀️ Business Analyst",
                     path: "business-analyst",
+                    summary: "The Business Analyst takes responsibility for identifying and solving key business problems. This is achieved by spending time with business stakeholders, gathering their needs and requirements.  These requirements are subsequently turned into discreet work items. The BA works closely with the Product Owner, overseeing the delivery of work, feeding progress updates back to stakeholders.",
                     competencies: {
                         required: [
                             "core-competencies/delivering-value/play3r",
