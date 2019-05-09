@@ -264,7 +264,7 @@
                         <section class="tab-container box">
                             <nav>
                             {{#each competencies.required}}
-                                <a href="#{{topic.path}}">{{topic.title}}</a>
+                                <a href="/roles/{{../../path}}/{{../path}}/review#{{topic.path}}">{{topic.title}}</a>
                             {{/each}}
                             </nav>
                         {{#each competencies.required}}
@@ -290,15 +290,15 @@
                                     {{#each topic.levels}}
                                     {{#ifLevelLowerOrEqual ../topic this ../level}}
                                     {{#each criteria}}
-                                        <tr class="{{levelRequirementClass ../../topic ../this ../../level}}">
+                                        <tr class="criteria-{{@index}} {{levelRequirementClass ../../topic ../this ../../level}}">
                                         {{#unless @index}}
                                             <td rowspan="{{../criteria.length}}"><a href="/competencies/{{../competency.path}}">{{../title}}</a></th>
                                         {{/unless}}
                                             <td>{{this}}</th>
-                                                <td><textarea cols="40" rows="8"></textarea></td>
-                                                <td><textarea cols="40" rows="8"></textarea></td>
-                                                <td><textarea cols="40" rows="8"></textarea></td>
-                                                <td><textarea cols="40" rows="8"></textarea></td>
+                                                <td class="input"><textarea cols="40" rows="8"></textarea></td>
+                                                <td class="input"><textarea cols="40" rows="8"></textarea></td>
+                                                <td class="input"><textarea cols="40" rows="8"></textarea></td>
+                                                <td class="input"><textarea cols="40" rows="8"></textarea></td>
                                         </tr>
                                     {{/each}}
                                     {{/ifLevelLowerOrEqual}}
