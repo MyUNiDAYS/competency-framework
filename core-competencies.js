@@ -180,7 +180,6 @@
                         "Ability to read clients and agree desired outcomes that are mutually beneficial i.e. win/win outcomes",
                         "Proactively uses knowledge of the client, their needs & objectives to drive the development & delivery of appropriate solutions that meet their needs",
                         "Ensures clients are kept regularly informed regarding project progress; displays a highly proactive approach to providing updates.",
-                        "Actively listens to clients to identify and understand their needs and objectives; asks questions to identify client interests, views and motivations."
                     ]
                 }
             ]
