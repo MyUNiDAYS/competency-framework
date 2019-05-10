@@ -192,17 +192,25 @@ window.addEventListener('load', function(){
 
         // highlight links
         document.querySelectorAll('a.active').forEach(a => a.classList.remove('active'));
-        let pathSegment = path
-        while(pathSegment !== ''){
-            document.querySelectorAll(`a[href="${pathSegment}"]`).forEach(a => a.classList.add('active'));
-            pathSegment = pathSegment.substr(0, pathSegment.lastIndexOf('/'));
-        }
+        if(hash)
+            document.querySelectorAll(`a[href="${path}#${hash}"]`).forEach(a => a.classList.add('active'));
+        else
+            document.querySelectorAll(`a[href="${path}"]`).forEach(a => a.classList.add('active'));
+            
+        //let pathSegment = path
+        //while(pathSegment !== ''){
+        //    document.querySelectorAll(`a[href="${pathSegment}"]`).forEach(a => a.classList.add('active'));
+        //    pathSegment = pathSegment.substr(0, pathSegment.lastIndexOf('/'));
+        //}
 
         // highlight nav heirarchy
         document.querySelectorAll('nav ul.active, nav li.active').forEach(a => a.classList.remove('active'));
         var currentElem = document.querySelector(`nav a[href="${path}"]`);
         do
         {
+            if(!currentElem)
+                break;
+
             currentElem.classList.add('active');
             currentElem = currentElem.parentElement;
         } while(currentElem.nodeName === 'LI' || currentElem.nodeName === 'UL');
@@ -210,6 +218,16 @@ window.addEventListener('load', function(){
         // highlight highlightables
         document.querySelectorAll('[data-highlight]').forEach(a => a.classList.remove('active'));
         document.querySelectorAll(`[data-highlight="${path}"]`).forEach(a => a.classList.add('active'));
+
+        
+        document.querySelectorAll('textarea').forEach(t => {
+            t.addEventListener('change', e => {
+                if(this.value === '')
+                    e.target.classList.remove('populated');
+                else
+                    e.target.classList.add('populated');
+            })
+        });
     }
     
     // boot the page    

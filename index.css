@@ -276,9 +276,16 @@ table
     width: 100%;
 }
 
+tr.criteria-0 td
+{
+    border-top-width: 2px;
+    border-top-color: #333;
+}
+
 th
 {
     font-family: 'UNiDAYSPro-Demi';
+    background: #eee;
 }
 
 td, th
@@ -302,6 +309,26 @@ tbody th
 tbody td
 {
     text-align: center;
+    font-size: 80%;
+}
+
+tbody td.input
+{
+    padding: 0px;
+}
+
+tbody td.input textarea
+{
+    display: block;
+    border: 0;
+    background: #f5f5f5;
+    font-family: 'UNiDAYSPro-Book';
+    padding: 5px;
+}
+tbody td.input textarea.populated,
+tbody td.input textarea:focus
+{
+    background: #fff;
 }
 
 
@@ -336,6 +363,14 @@ a.button
 {
     display: inline-block;
     margin: 0 5px;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    padding: 8px 10px;
+}
+
+.tab-container > nav a.active
+{
+    border-color: #333;
 }
 
 .tab-container > section
