@@ -10,6 +10,8 @@ function refresh(){
             cache.add('/handlebars-v4.1.2.js'),
 			cache.add('/index.js'),
 			cache.add('/logo.png'),
+			cache.add('/square.svg'),
+			cache.add('/arc.svg'),
             cache.add('/favicon.ico'),
             cache.add('/favicon-16x16.png'),
             cache.add('/favicon-32x32.png'),

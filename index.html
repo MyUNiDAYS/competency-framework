@@ -117,14 +117,22 @@
             <script id="tmpl-competencies" type="text/x-handlebars-template">
                 {{#each this}}
                     <section class="competency" data-path="/competencies/{{path}}">
-                        <h1>{{title}}</h1>
+                        <div class="box">
+                            <h1>{{title}}</h1>
+                            <ol>
+                            {{#each topics}}
+                                <li><a class="topic" href="/competencies/{{../path}}/{{path}}">{{title}}</a></li>
+                            {{/each}}
+                        </ol>
+                        </div>
                     </section>
 
                 {{#each topics}}
                     <section class="topic" data-path="/competencies/{{../path}}/{{path}}">
-                        <h1>{{../title}}</h1>
-                        <h2>{{title}}</h2>
-                        <p class="box">{{summary}}</p>
+                        <div class="box">
+                            <h1>{{../title}} - {{title}}</h1>
+                            <p>{{summary}}</p>        
+                        </div>
                         <h3>Levels</h3>
                         <div class="coltainer">
                         {{#each levels}}

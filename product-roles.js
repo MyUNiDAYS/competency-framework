@@ -27,6 +27,7 @@
                                             "core-competencies/communication/n00b",
                                             "core-competencies/striving-for-success/play3r",
                                             "core-competencies/team-orientation/play3r",
+                                            "engineering-competencies/it/n00b"
                                         ]
                                     }
                                 },
@@ -43,6 +44,7 @@
                                             "core-competencies/communication/pr0",
                                             "core-competencies/striving-for-success/pr0",
                                             "core-competencies/team-orientation/pr0",
+                                            "engineering-competencies/it/play3r"
                                         ]
                                     }
                                 },
@@ -59,6 +61,7 @@
                                             "core-competencies/communication/pr0",
                                             "core-competencies/striving-for-success/pr0",
                                             "core-competencies/team-orientation/1337",
+                                            "engineering-competencies/it/pr0"
                                         ]
                                     }
                                 },
@@ -75,6 +78,7 @@
                                             "core-competencies/communication/1337",
                                             "core-competencies/striving-for-success/1337",
                                             "core-competencies/team-orientation/1337",
+                                            "engineering-competencies/it/1337"
                                         ]
                                     }
                                 }
