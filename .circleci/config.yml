@@ -8,14 +8,17 @@ jobs:
     working_directory: ~/project
     steps:
       - checkout
-      - run: rm -rf .git 
-      - run: rm -rf .circleci 
-      - run: rm -f web.config
-      - run: ls
-      - run: npm install
-      - run: grunt
+      - run:
+          name: Compile sass
+          command: |
+            sudo npm install -g grunt
+            npm install
+            grunt
       - aws-s3/sync:
           from: ~/project
           to: 's3://progression.myunidays.com/'
           arguments: |
-            --delete
+            --delete \
+            --exclude ".*" \
+            --exclude "node_modules/*" \
+            --exclude "web.config"
