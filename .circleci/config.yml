@@ -4,7 +4,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: 'circleci/python:3.7.3'
+      - image: 'circleci/node:lts'
     working_directory: ~/project
     steps:
       - checkout
@@ -12,6 +12,8 @@ jobs:
       - run: rm -rf .circleci 
       - run: rm -f web.config
       - run: ls
+      - run: npm install
+      - run: grunt
       - aws-s3/sync:
           from: ~/project
           to: 's3://progression.myunidays.com/'
