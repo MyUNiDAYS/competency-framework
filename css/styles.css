@@ -1,21 +1,3 @@
-@font-face {
-  font-family: 'UNiDAYSPro-Book';
-  src: url("https://fonts1.unidays.world/unidays/v1/all-book.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'UNiDAYSPro-Demi';
-  src: url("https://fonts1.unidays.world/unidays/v1/all-demi.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'UNiDAYSPro-Heavy';
-  src: url("https://fonts1.unidays.world/unidays/v1/all-heavy.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal; }
-
 /* RESET */
 html, body, div, span, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -65,6 +47,24 @@ input
 
 article, aside, footer, header, hgroup, main, nav, section {
   display: block; }
+
+@font-face {
+  font-family: 'UNiDAYSPro-Book';
+  src: url("https://fonts1.unidays.world/unidays/v1/all-book.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'UNiDAYSPro-Demi';
+  src: url("https://fonts1.unidays.world/unidays/v1/all-demi.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'UNiDAYSPro-Heavy';
+  src: url("https://fonts1.unidays.world/unidays/v1/all-heavy.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
 
 /* Typography */
 html {
@@ -144,7 +144,10 @@ body > nav a.active {
 
 #content {
   box-sizing: border-box;
-  padding: 20px; }
+  padding: 10px; }
+  @media (min-width: 768px) {
+    #content {
+      padding: 20px; } }
 
 h1 {
   margin-bottom: 1em;
@@ -156,39 +159,56 @@ h2 {
   font-family: 'UNiDAYSPro-Demi';
   font-size: 1.3em; }
 
-p, li {
+p,
+li {
   line-height: 150%; }
 
 .box {
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  margin: 10px 10px 30px 10px;
-  padding: 15px; }
-
-.box h2 {
-  margin-bottom: 1em;
-  font-family: 'UNiDAYSPro-Demi';
-  font-size: 1.2em; }
-
-.box h3 {
-  margin-bottom: 1em;
-  font-family: 'UNiDAYSPro-Demi';
-  font-size: 1.2em; }
+  margin: 0 0 30px 0;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+  width: 100%; }
+  .box-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+  .box-inner-container {
+    padding: 10px; }
+  @media (min-width: 768px) {
+    .box {
+      width: 48%;
+      margin: 0.625em 0.625em 1.6em 0.625em; } }
+  .box *:last-child {
+    margin-bottom: 0; }
+  .box .wrapper {
+    padding: 1em; }
+  .box:nth-child(even) h2 {
+    background-color: #99E4F1; }
+  .box:nth-child(odd) h2 {
+    background-color: #6DD5BD; }
+  .box h2 {
+    margin-bottom: 0;
+    font-family: 'UNiDAYSPro-Heavy';
+    font-size: 1.3em;
+    padding: 0.625em; }
+    @media (min-width: 768px) {
+      .box h2 {
+        padding: 1em; } }
+  .box h3 {
+    margin-bottom: 1em;
+    font-family: 'UNiDAYSPro-Demi';
+    font-size: 1.2em; }
 
 section ul li {
   list-style-type: lower-alpha;
   margin: 0 0 1em 1.5em; }
-
-*:last-child {
-  margin-bottom: 0; }
 
 .coltainer {
   display: flex;
   flex-flow: row wrap; }
 
 .coltainer .item {
-  width: calc( (100% / 2) - 50px); }
+  width: calc((100% / 2) - 50px); }
 
 /* TABLES */
 table {
@@ -203,7 +223,8 @@ th {
   font-family: 'UNiDAYSPro-Demi';
   background: #eee; }
 
-td, th {
+td,
+th {
   border: solid 1px #ccc;
   padding: 5px;
   vertical-align: middle; }

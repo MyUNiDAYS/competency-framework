@@ -1,0 +1,63 @@
+/* RESET */
+html, body, div, span, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, address, cite,
+em, img, strong, sub, sup,
+dl, dt, dd, ol, ul, li, menu, nav,
+fieldset, form, label, legend, button,
+table, tbody, tfoot, thead, tr, th, td, dfn
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	-moz-outline: 0;
+	outline: 0;
+	vertical-align: baseline;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-text-size-adjust: none;
+	font-weight: normal;
+
+}
+h1,h2,h3,h4,h5,h6
+{
+	font-weight: normal;
+}
+ol, ul
+{
+	list-style: none;
+}
+dfn
+{
+	font-style: inherit;
+}
+
+table
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+input::-moz-focus-inner
+,button::-moz-focus-inner
+{ 
+	border: 0;
+	padding: 0;
+}
+
+input:focus
+,textarea:focus
+,select:focus
+,button:focus
+{
+	outline: 0;
+}
+input
+,textarea
+{
+	-webkit-border-radius: 0;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+article, aside, footer, header, hgroup, main, nav, section
+{
+	display: block;
+}
