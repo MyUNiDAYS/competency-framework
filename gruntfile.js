@@ -13,10 +13,20 @@ module.exports = function (grunt) {
                     'css/styles.css': 'scss/styles.scss'
                 }
             }
-        }
+        },
+        watch: {
+            options: {
+                livereload: true,
+              },
+            scripts: {
+                files: ['scss/*.scss'],
+                tasks: ['sass'],
+            },
+          },
       });
       
       grunt.loadNpmTasks('grunt-sass');
+      grunt.loadNpmTasks('grunt-contrib-watch');
 
       grunt.registerTask('default', ['sass']);
 
