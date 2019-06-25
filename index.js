@@ -120,7 +120,6 @@ window.addEventListener('load', function(){
         return;
     });
 
-    
     Handlebars.registerHelper('ifLevelLowerOrEqual', function (topic, level, expectedLevel, options) {
         var expectedIndex = topic.levels.indexOf(expectedLevel);
         var index = topic.levels.indexOf(level);
@@ -133,7 +132,6 @@ window.addEventListener('load', function(){
         
         return;
     });
-
 
     Handlebars.registerHelper('levelRequirementClass', function (topic, level, expectedLevel) {
         var expectedIndex = topic.levels.indexOf(expectedLevel);
@@ -229,8 +227,24 @@ window.addEventListener('load', function(){
             })
         });
     }
-    
+
+    // let menuToggles = document.querySelectorAll('.js-toggle');
+    // console.log(menuToggles);
+
+    // for (i = 1; i <= menuToggles.length; i++) {
+    //     console.log(menuToggles[i]);
+
+    //     menuToggles[i].addEventListener('click', function(e) {
+    //         e.preventDefault();
+    //         console.log('clicked');
+    //         document.querySelector('body').classList.toggle("has-menu");
+    //     });
+    // }
+
     // boot the page    
     handleNavigation();
 
 });
+
+
+  

@@ -5,19 +5,17 @@ function refresh(){
 			cache.add('/'),
             cache.add('/core-competencies.js'),
             cache.add('/engineering-competencies.js'),
-            cache.add('/role-mappings.js'),
-            cache.add('/index.css'),
+            cache.add('/css/styles.css'),
             cache.add('/handlebars-v4.1.2.js'),
 			cache.add('/index.js'),
 			cache.add('/logo.png'),
-			cache.add('/square.svg'),
-			cache.add('/arc.svg'),
             cache.add('/favicon.ico'),
             cache.add('/favicon-16x16.png'),
             cache.add('/favicon-32x32.png'),
             cache.add('https://fonts1.unidays.world/unidays/v1/all-book.woff2'),
             cache.add('https://fonts1.unidays.world/unidays/v1/all-demi.woff2'),
-            cache.add('https://fonts1.unidays.world/unidays/v1/all-heavy.woff2')
+			cache.add('https://fonts1.unidays.world/unidays/v1/all-heavy.woff2'),
+			cache.add('https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css')
 		]);
 	})
 }

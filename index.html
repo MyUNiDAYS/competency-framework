@@ -5,7 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
     <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -18,28 +20,35 @@
 
 <body>
     <nav>
+        <!-- <div class="trigger-btn js-toggle"><i class="material-icons">menu</i></div>
+        <div class="menu">
+            <div class="header">
+                <h2>Menu</h2><i class="material-icons js-toggle">close</i>
+            </div>
+        </div> -->
+
         <ul>
             <li><a class="logo" href="https://www.myunidays.com" target="_blank"><img src="/logo.png"
-                        alt="UNiDAYS Logo" /> UNiDAYS</a></li>
+                        alt="UNiDAYS Logo" /></a></li>
             <li><a href="/">🏡 Home</a></li>
         </ul>
         <script id="tmpl-nav-competencies" type="text/x-handlebars-template">
             <li class="title">
-                    <span>🤹 Competencies</span>
-                    <ul>
-                    {{#each this}}
-                        <li>
-                            <a href="/competencies/{{path}}" class="nav-link">{{title}}</a>
-                            <ul>
-                            {{#each topics}}
-                                <li><a href="/competencies/{{../path}}/{{path}}">{{title}}</a></li>
-                            {{/each}}
-                            </ul>
-                        </li>
-                    {{/each}}
-                    </ul>
-                </li>
-            </script>
+                <span>🤹 Competencies</span>
+                <ul>
+                {{#each this}}
+                    <li>
+                        <a href="/competencies/{{path}}" class="nav-link">{{title}}</a>
+                        <ul>
+                        {{#each topics}}
+                            <li><a href="/competencies/{{../path}}/{{path}}">{{title}}</a></li>
+                        {{/each}}
+                        </ul>
+                    </li>
+                {{/each}}
+                </ul>
+            </li>
+        </script>
         <script id="tmpl-nav-roles" type="text/x-handlebars-template">
             <li class="title">
                     <span>👔 Roles</span>
@@ -150,13 +159,17 @@
         <script id="tmpl-competencies" type="text/x-handlebars-template">
             {{#each this}}
                     <section class="competency" data-path="/competencies/{{path}}">
-                        <div class="box">
-                            <h1>{{title}}</h1>
-                            <ol>
-                            {{#each topics}}
-                                <li><a class="topic" href="/competencies/{{../path}}/{{path}}">{{title}}</a></li>
-                            {{/each}}
-                        </ol>
+                        <div class="box-container">
+                            <div class="box">
+                                <h1>{{title}}</h1>
+                                <div class="box-inner-container">
+                                    <ol>
+                                    {{#each topics}}
+                                        <li><a class="topic" href="/competencies/{{../path}}/{{path}}">{{title}}</a></li>
+                                    {{/each}}
+                                    </ol>
+                                </div>
+                            </div>
                         </div>
                     </section>
 
@@ -167,7 +180,7 @@
                             <p>{{summary}}</p>        
                         </div>
                         <h3>Levels</h3>
-                        <div class="coltainer">
+                        <div class="box-container">
                         {{#each levels}}
                             <section class="level box item">
                                 <h3>{{title}}</h3>

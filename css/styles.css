@@ -66,18 +66,6 @@ article, aside, footer, header, hgroup, main, nav, section {
   font-weight: normal;
   font-style: normal; }
 
-/* Typography */
-html {
-  height: 100%;
-  overflow-y: scroll; }
-
-body {
-  font-family: 'UNiDAYSPro-Book', sans-serif;
-  font-size: 20px;
-  height: 100%;
-  background: #f4f4f4;
-  padding-top: 80px; }
-
 body > nav {
   position: fixed;
   top: 0;
@@ -85,7 +73,6 @@ body > nav {
   width: 100%;
   background: #f4f4f4;
   box-sizing: border-box;
-  padding: 10px;
   height: 70px;
   box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px; }
 
@@ -93,7 +80,8 @@ body > nav .logo {
   font-family: 'UNiDAYSPro-Heavy';
   font-size: 24px;
   display: block;
-  margin-top: -12px; }
+  margin-top: -12px;
+  z-index: 4; }
 
 body > nav .logo img {
   width: 50px;
@@ -114,14 +102,18 @@ body > nav > ul > li {
   padding-top: 12px; }
 
 body > nav li > ul {
-  width: 300px;
   display: none;
-  position: absolute;
   left: 25px;
   background: #fff;
   padding: 15px;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px; }
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  width: 100%; }
+  @media (min-width: 768px) {
+    body > nav li > ul {
+      width: 300px;
+      left: 25px;
+      position: absolute; } }
 
 body > nav > ul > li > ul ul {
   left: 100px; }
@@ -131,6 +123,85 @@ body > nav li:hover > ul {
 
 body > nav > ul > li li {
   padding: 5px; }
+
+.has-menu body {
+  overflow: hidden;
+  position: fixed; }
+
+h2 {
+  margin: 0;
+  line-height: 1;
+  color: #444; }
+
+.wrapper {
+  padding: 2em; }
+
+.menu {
+  width: 50%;
+  position: fixed;
+  background: #fff;
+  top: 0;
+  bottom: 0;
+  max-height: 100vh;
+  max-width: 50vw;
+  border-radius: 1px;
+  font-size: 1em;
+  transform: translate(-105%, 0);
+  transition: all 300ms;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 0 6px rgba(0, 0, 0, 0.23);
+  z-index: 5; }
+
+.has-menu .menu {
+  transform: translate(0, 0); }
+
+.menu span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #444; }
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 300ms; }
+
+.has-menu .menu-overlay {
+  opacity: 1;
+  visibility: visible; }
+
+.trigger-btn {
+  color: #444;
+  cursor: pointer;
+  transition: all 200ms ease;
+  margin-bottom: 2em; }
+
+.trigger-btn i {
+  font-size: 2.5rem; }
+
+.trigger-btn:hover,
+.trigger-btn:active {
+  opacity: 0.75; }
+
+.header i:hover,
+.header i:active {
+  opacity: 0.5; }
+
+/* Typography */
+html {
+  height: 100%;
+  overflow-y: scroll; }
+
+body {
+  font-family: 'UNiDAYSPro-Book', sans-serif;
+  font-size: 20px;
+  height: 100%;
+  background: #f4f4f4;
+  padding-top: 80px; }
 
 a {
   text-decoration: none;
@@ -171,28 +242,31 @@ li {
   .box-container {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    justify-content: space-between; }
   .box-inner-container {
-    padding: 10px; }
+    padding: 0.625em; }
+    @media (min-width: 768px) {
+      .box-inner-container {
+        padding: 1em; } }
   @media (min-width: 768px) {
     .box {
-      width: 48%;
-      margin: 0.625em 0.625em 1.6em 0.625em; } }
+      width: 48%; } }
   .box *:last-child {
     margin-bottom: 0; }
   .box .wrapper {
     padding: 1em; }
-  .box:nth-child(even) h2 {
+  .box:nth-child(even) h1, .box:nth-child(even) h2, .box:nth-child(even) h3 {
     background-color: #99E4F1; }
-  .box:nth-child(odd) h2 {
+  .box:nth-child(odd) h1, .box:nth-child(odd) h2, .box:nth-child(odd) h3 {
     background-color: #6DD5BD; }
-  .box h2 {
+  .box h1, .box h2, .box h3 {
     margin-bottom: 0;
     font-family: 'UNiDAYSPro-Heavy';
     font-size: 1.3em;
     padding: 0.625em; }
     @media (min-width: 768px) {
-      .box h2 {
+      .box h1, .box h2, .box h3 {
         padding: 1em; } }
   .box h3 {
     margin-bottom: 1em;

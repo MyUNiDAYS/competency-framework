@@ -1,4 +1,4 @@
-@import 'variables', 'reset', 'fonts';
+@import 'variables', 'reset', 'fonts', 'nav', 'menu';
 
 /* Typography */
 html {
@@ -12,70 +12,6 @@ body {
     height: 100%;
     background: #f4f4f4;
     padding-top: 80px;
-}
-
-body>nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #f4f4f4;
-    box-sizing: border-box;
-    padding: 10px;
-    height: 70px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
-}
-
-body>nav .logo {
-    font-family: 'UNiDAYSPro-Heavy';
-    font-size: 24px;
-    display: block;
-    margin-top: -12px;
-}
-
-body>nav .logo img {
-    width: 50px;
-    height: 50px;
-    vertical-align: middle;
-    margin: 0 0 8px 0;
-}
-
-body>nav>ul {
-    width: 100%;
-    overflow: visible;
-}
-
-body>nav>ul>li {
-    float: left;
-    position: relative;
-    margin: 0 10px;
-}
-
-body>nav>ul>li {
-    padding-top: 12px;
-}
-
-body>nav li>ul {
-    width: 300px;
-    display: none;
-    position: absolute;
-    left: 25px;
-    background: #fff;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
-}
-
-body>nav>ul>li>ul ul {
-    left: 100px;
-}
-
-body>nav li:hover>ul {
-    display: block;
-}
-
-body>nav>ul>li li {
-    padding: 5px;
 }
 
 a {
@@ -127,15 +63,19 @@ li {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     &-inner-container {
-        padding: 10px;
+        padding: 0.625em;
+
+        @media (min-width: 768px) {
+            padding: 1em;
+        }
     }
 
     @media (min-width: 768px) {
         width: 48%;
-        margin: 0.625em 0.625em 1.6em 0.625em;
     }
 
     *:last-child {
@@ -147,18 +87,18 @@ li {
     }
 
     &:nth-child(even) {
-        h2 {
+        h1, h2, h3 {
             background-color: $color-unidays-blue;
         }
     }
 
     &:nth-child(odd) {
-        h2 {
+        h1, h2, h3 {
             background-color: $color-unidays-green;
         }
     }
 
-    h2 {
+    h1, h2, h3 {
         margin-bottom: 0;
         font-family: 'UNiDAYSPro-Heavy';
         font-size: 1.3em;
