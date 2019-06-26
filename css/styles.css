@@ -239,6 +239,9 @@ li {
   margin: 0 0 30px 0;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
   width: 100%; }
+  @media (min-width: 768px) {
+    .box {
+      width: 48%; } }
   .box-container {
     display: flex;
     flex-direction: row;
@@ -249,9 +252,9 @@ li {
     @media (min-width: 768px) {
       .box-inner-container {
         padding: 1em; } }
-  @media (min-width: 768px) {
-    .box {
-      width: 48%; } }
+  .box-table {
+    width: 100%;
+    overflow-x: scroll; }
   .box *:last-child {
     margin-bottom: 0; }
   .box .wrapper {
