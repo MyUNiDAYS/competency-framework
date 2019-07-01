@@ -20,13 +20,6 @@
 
 <body>
     <nav>
-        <!-- <div class="trigger-btn js-toggle"><i class="material-icons">menu</i></div>
-        <div class="menu">
-            <div class="header">
-                <h2>Menu</h2><i class="material-icons js-toggle">close</i>
-            </div>
-        </div> -->
-
         <ul>
             <li><a class="logo" href="https://www.myunidays.com" target="_blank"><img src="/logo.png"
                         alt="UNiDAYS Logo" /></a></li>
@@ -186,11 +179,13 @@
                         {{#each levels}}
                             <section class="level box item">
                                 <h3>{{title}}</h3>
-                                <ul>
-                                {{#each criteria}}
-                                    <li>{{this}}</li>
-                                {{/each}}
-                                </ul>
+                                <div class="box-inner-container">
+                                    <ul>
+                                    {{#each criteria}}
+                                        <li>{{this}}</li>
+                                    {{/each}}
+                                    </ul>
+                                </div>
                             </section>
                         {{/each}}
                     </div>
@@ -285,11 +280,15 @@
                         <h1>{{title}} - <a href="/roles/{{../path}}">{{../title}}</a></h1>
                         <div class="box">
                             <h3>Actions - BETA</h3>
-                            <a href="/roles/{{../path}}/{{path}}/review" class="button">Start Review</a>
+                            <div class="box-inner-container">
+                                <a href="/roles/{{../path}}/{{path}}/review" class="button">Start Review</a>
+                            </div>
                         </div>
                         <div class="box">
                             <h3>Summary</h3>
-                            <p>{{summary}}</p>
+                            <div class="box-inner-container">
+                                <p>{{summary}}</p>
+                            </div>
                         </div>
                         <h3>Criteria</h3>
                         <div class="box-container">

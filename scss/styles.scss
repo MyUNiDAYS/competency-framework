@@ -1,4 +1,4 @@
-@import 'variables', 'reset', 'fonts', 'nav', 'menu';
+@import 'variables', 'reset', 'fonts', 'nav';
 
 /* Typography */
 html {
@@ -30,6 +30,7 @@ body>nav a.active {
 #content {
     box-sizing: border-box;
     padding: 10px;
+    max-width: 1600px;
 
     @media (min-width: 768px) {
         padding: 20px;
@@ -203,13 +204,30 @@ tr.level-above th {
     background-color: #fefefe;
 }
 
-
-
 a.button {
     display: inline-block;
     background: #1dd577;
     border-radius: 3px;
     padding: 5px 8px;
+    text-decoration: none;
+    font-size: 0.875rem;
+    width: 206px;
+    padding: 16px 0;
+    margin: 0;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'UNiDAYSPro-Heavy', Arial;
+    border: 0;
+    text-align: center;
+    background-color: #1dd577;
+    color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    line-height: 1;
 }
 
 .tab-container>nav {

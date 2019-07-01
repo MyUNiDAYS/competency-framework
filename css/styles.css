@@ -124,73 +124,6 @@ body > nav li:hover > ul {
 body > nav > ul > li li {
   padding: 5px; }
 
-.has-menu body {
-  overflow: hidden;
-  position: fixed; }
-
-h2 {
-  margin: 0;
-  line-height: 1;
-  color: #444; }
-
-.wrapper {
-  padding: 2em; }
-
-.menu {
-  width: 50%;
-  position: fixed;
-  background: #fff;
-  top: 0;
-  bottom: 0;
-  max-height: 100vh;
-  max-width: 50vw;
-  border-radius: 1px;
-  font-size: 1em;
-  transform: translate(-105%, 0);
-  transition: all 300ms;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 0 6px rgba(0, 0, 0, 0.23);
-  z-index: 5; }
-
-.has-menu .menu {
-  transform: translate(0, 0); }
-
-.menu span {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #444; }
-
-.menu-overlay {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 300ms; }
-
-.has-menu .menu-overlay {
-  opacity: 1;
-  visibility: visible; }
-
-.trigger-btn {
-  color: #444;
-  cursor: pointer;
-  transition: all 200ms ease;
-  margin-bottom: 2em; }
-
-.trigger-btn i {
-  font-size: 2.5rem; }
-
-.trigger-btn:hover,
-.trigger-btn:active {
-  opacity: 0.75; }
-
-.header i:hover,
-.header i:active {
-  opacity: 0.5; }
-
 /* Typography */
 html {
   height: 100%;
@@ -215,7 +148,8 @@ body > nav a.active {
 
 #content {
   box-sizing: border-box;
-  padding: 10px; }
+  padding: 10px;
+  max-width: 1600px; }
   @media (min-width: 768px) {
     #content {
       padding: 20px; } }
@@ -343,7 +277,26 @@ a.button {
   display: inline-block;
   background: #1dd577;
   border-radius: 3px;
-  padding: 5px 8px; }
+  padding: 5px 8px;
+  text-decoration: none;
+  font-size: 0.875rem;
+  width: 206px;
+  padding: 16px 0;
+  margin: 0;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'UNiDAYSPro-Heavy', Arial;
+  border: 0;
+  text-align: center;
+  background-color: #1dd577;
+  color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  display: block;
+  line-height: 1; }
 
 .tab-container > nav {
   margin: 0 0 20px 0; }
