@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   aws-s3: circleci/aws-s3@1.0.8
 jobs:
-  build:
+  build-and-awssync:
     docker:
       - image: 'circleci/node:lts'
     working_directory: ~/project
@@ -22,3 +22,11 @@ jobs:
             --exclude ".*" \
             --exclude "node_modules/*" \
             --exclude "web.config"
+workflows:
+  version: 2.1
+  build-and-deploy:
+    jobs:
+      - build-and-awssync:
+          filters:
+            branches:
+              only: master
