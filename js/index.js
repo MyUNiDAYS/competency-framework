@@ -169,6 +169,13 @@ window.addEventListener('load', function(){
 
         if(href !== window.location.pathname){
             history.pushState(null, null, href);
+
+            console.log(menu.classList.contains('js-menu-open'));
+
+            if (menu.classList.contains('js-menu-open')) {
+                menu.classList.remove('js-menu-open');
+            }
+
             handleNavigation();
         }
     })
@@ -216,7 +223,6 @@ window.addEventListener('load', function(){
         document.querySelectorAll('[data-highlight]').forEach(a => a.classList.remove('active'));
         document.querySelectorAll(`[data-highlight="${path}"]`).forEach(a => a.classList.add('active'));
 
-        
         document.querySelectorAll('textarea').forEach(t => {
             t.addEventListener('change', e => {
                 if(this.value === '')
