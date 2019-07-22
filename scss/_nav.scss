@@ -1,74 +1,131 @@
-body {
+.navigation {
+    height: 10%;
+    width: 100%;
+    display: block;
+    flex-shrink: 0;
+    background-color: rgb(247, 247, 247);
+    display: flex;
+    align-items: center;
+
+    .burger {
+        width: 50px;
+        height: 50px;
+        margin-left: 1em;
+    }
+
     > nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background: #f4f4f4;
-        box-sizing: border-box;
-        height: 70px;
-        box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+        display: none;
+    }
 
-        .logo {
-            font-family: 'UNiDAYSPro-Heavy';
-            font-size: 24px;
+    &.js-menu-open {
+        height: 100%;
+        padding: 1em;
+        display: block;
+
+        .burger {
+            float: right;
+            margin: 0;
+        }
+
+        > nav {
             display: block;
-            margin-top: -12px;
-            z-index: 4;
-
-            img {
-                width: 50px;
-                height: 50px;
-                vertical-align: middle;
-                margin: 0 0 8px 0;
-            }
-        }
-
-        > ul {
-            width: 100%;
-            overflow: visible;
-
-            > li {
-                float: left;
-                position: relative;
-                margin: 0 10px;
-                padding-top: 12px;
-
-                li {
-                    padding: 5px;
-                }
-
-                > ul {
-                    ul {
-                        left: 100px;
-                    }
-                }
-            }
-        }
-
-        li {
-            > ul {
-    
-                display: none;
-                left: 25px;
-                background: #fff;
-                padding: 15px;
-                border-radius: 5px;
-                box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
-                width: 100%;
-            
-                @media (min-width: 768px) {
-                    width: 300px;
-                    left: 25px;
-                    position: absolute;
-                }
-            }
-
-            &:hover {
-                > ul {
-                    display: block;
-                }
-            }
         }
     }
+
+    @media (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        background-color: rgb(247, 247, 247);
+        color: black;
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 100%;
+        width: 19%;
+        min-width: 320px;
+
+        .burger {
+            display: none;
+        }
+
+        > nav {
+            display: block;
+        }
+    }
+   
 }
+
+// body {
+//     > nav {
+//         position: fixed;
+//         top: 0;
+//         left: 0;
+//         width: 100%;
+//         background: #f4f4f4;
+//         box-sizing: border-box;
+//         height: 70px;
+//         box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+
+//         .logo {
+//             font-family: 'UNiDAYSPro-Heavy';
+//             font-size: 24px;
+//             display: block;
+//             margin-top: -12px;
+//             z-index: 4;
+
+//             img {
+//                 width: 50px;
+//                 height: 50px;
+//                 vertical-align: middle;
+//                 margin: 0 0 8px 0;
+//             }
+//         }
+
+//         > ul {
+//             width: 100%;
+//             overflow: visible;
+
+//             > li {
+//                 float: left;
+//                 position: relative;
+//                 margin: 0 10px;
+//                 padding-top: 12px;
+
+//                 li {
+//                     padding: 5px;
+//                 }
+
+//                 > ul {
+//                     ul {
+//                         left: 100px;
+//                     }
+//                 }
+//             }
+//         }
+
+//         li {
+//             > ul {
+    
+//                 display: none;
+//                 left: 25px;
+//                 background: #fff;
+//                 padding: 15px;
+//                 border-radius: 5px;
+//                 box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+//                 width: 100%;
+            
+//                 @media (min-width: 768px) {
+//                     width: 300px;
+//                     left: 25px;
+//                     position: absolute;
+//                 }
+//             }
+
+//             &:hover {
+//                 > ul {
+//                     display: block;
+//                 }
+//             }
+//         }
+//     }
+// }

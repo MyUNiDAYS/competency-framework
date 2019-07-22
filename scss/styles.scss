@@ -1,45 +1,54 @@
 @import 'variables', 'reset', 'fonts', 'nav';
 
-html
-{
-    height: 100%;
-    overflow-y: scroll;
-}
-
-body
-{
-    font-family: 'UNiDAYSPro-Book', sans-serif;
-    font-size: 20px;
-    height: 100%;
+body {
     background: #f4f4f4;
-    padding-top: 80px;
+    font-family: 'unidayspro-book', arial;
+    
+    * {
+        box-sizing: border-box;
+    }
 }
 
-a
-{
+body, .container {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    margin-top: 0px !important;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+}
+
+.main {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100% !important;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 1em;
+}
+
+a {
     text-decoration: none;
     color: inherit;
 }
 
-a:hover
-{
+a:hover {
     text-decoration: underline;
 }
 
-body>nav a.active
-{
+body>nav a.active {
     font-family: 'UNiDAYSPro-Demi';
-}
-
-#content
-{
-    box-sizing: border-box;
-    padding: 10px;
-
-    @media (min-width: 768px)
-{
-        padding: 20px;
-    }
 }
 
 h1
