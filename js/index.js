@@ -151,7 +151,6 @@ window.addEventListener('load', function(){
     // Highjack all internal link clicks and use pushtate instead
     document.addEventListener('click', function(e){
         if(e.target == burger && !e.target.parentNode.classList.contains('js-menu-open')) {
-            console.log(e.target.parentNode.classList.contains('js-menu-open'));
             menu.classList.add('js-menu-open');
         } else if (e.target == burger && e.target.parentNode.classList.contains('js-menu-open')) {
             menu.classList.remove('js-menu-open');
@@ -169,8 +168,6 @@ window.addEventListener('load', function(){
 
         if(href !== window.location.pathname){
             history.pushState(null, null, href);
-
-            console.log(menu.classList.contains('js-menu-open'));
 
             if (menu.classList.contains('js-menu-open')) {
                 menu.classList.remove('js-menu-open');
