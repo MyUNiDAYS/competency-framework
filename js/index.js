@@ -145,10 +145,25 @@ window.addEventListener('load', function(){
         handleNavigation();
     });
 
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+            content.style.display = "none";
+            } else {
+            content.style.display = "block";
+            }
+        });
+    }
+
     let burger = document.querySelector('.burger');
     let menu = document.querySelector('.navigation');
 
-    // Highjack all internal link clicks and use pushtate instead
+    // Highjack all internal link clicks and use pushstate instead
     document.addEventListener('click', function(e){
         if(e.target == burger && !e.target.parentNode.classList.contains('js-menu-open')) {
             menu.classList.add('js-menu-open');
