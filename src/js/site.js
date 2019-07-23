@@ -56,8 +56,17 @@ function handleNavigation(){
 
 window.addEventListener('load', function(){
 
+    let burger = document.querySelector('.burger');
+    let menu = document.querySelector('.navigation');
+
     // Highjack all internal link clicks and use pushtate instead
     document.addEventListener('click', function(e){
+        if(e.target == burger && !e.target.parentNode.classList.contains('js-menu-open')) {
+            menu.classList.add('js-menu-open');
+        } else if (e.target == burger && e.target.parentNode.classList.contains('js-menu-open')) {
+            menu.classList.remove('js-menu-open');
+        }
+
         if(e.target.nodeName !== 'A')
             return;
 
@@ -70,6 +79,11 @@ window.addEventListener('load', function(){
 
         if(href !== window.location.pathname){
             history.pushState(null, null, href);
+
+            if (menu.classList.contains('js-menu-open')) {
+                menu.classList.remove('js-menu-open');
+            }
+
             handleNavigation();
         }
     });
@@ -84,19 +98,6 @@ window.addEventListener('load', function(){
         else
             e.target.classList.add('populated');
     });
-
-    // let menuToggles = document.querySelectorAll('.js-toggle');
-    // console.log(menuToggles);
-
-    // for (i = 1; i <= menuToggles.length; i++) {
-    //     console.log(menuToggles[i]);
-
-    //     menuToggles[i].addEventListener('click', function(e) {
-    //         e.preventDefault();
-    //         console.log('clicked');
-    //         document.querySelector('body').classList.toggle("has-menu");
-    //     });
-    // }
 
     // boot the page    
     handleNavigation();
