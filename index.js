@@ -84,17 +84,6 @@ if (('serviceWorker' in navigator))
 
 window.addEventListener('load', function(){
 
-    // compile all templates and partials
-    var templates = {};
-    document.querySelectorAll('script[type="text/x-handlebars-template"]').forEach(template => {
-        let compiled = Handlebars.compile(template.innerHTML);
-        if(template.className === "partial")
-            Handlebars.registerPartial(template.id.substr(5), compiled);
-        else 
-            templates[template.id.substr(5)] = compiled;
-        template.parentElement.removeChild(template);
-    });
-
     Handlebars.registerHelper('getRoleTopicLevel', function (role, topic) {
         var competencies = role.competencies.required.filter(c => c.topic === topic);
         
