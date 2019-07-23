@@ -1,6 +1,5 @@
 node_modules
 
-templates.js
-site.css
-site.css.map
-site.js
+build/*.css
+build/*.map
+build/*.html
