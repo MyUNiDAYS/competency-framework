@@ -11,7 +11,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    'build/site.css': 'scss/styles.scss'
+                    'build/site.css': 'src/scss/styles.scss'
                 }
             }
         },
@@ -19,10 +19,10 @@ module.exports = function (grunt) {
             dev: {
                 options: {
                     sourceMap: true,
-                    sourceMapName: 'site.js.map'
+                    sourceMapName: 'build/site.js.map'
                 },
                 files: {
-                    'build/site.js': ['js/*.js', 'templates.js']
+                    'build/site.js': ['src/js/*.js']
                 }
             }
         },
@@ -69,11 +69,11 @@ module.exports = function (grunt) {
 
         // load all handlebars helpers
         grunt.file.expand({ filter: 'isFile', cwd: 'src/handlebars' }, ['helper_*.js']).forEach(f => handlebars.registerHelper(f.substr(7, f.length - 10), require('./src/handlebars/' + f)));
-        console.log('a');
+
         var templates = loadHandlebars(grunt, 'src/handlebars', 'template_*.hbs', f => f.substr(9, f.length - 13));
-        console.log('a');
+
         var partials = loadHandlebars(grunt, 'src/handlebars', 'partial_*.hbs', f => f.substr(8, f.length - 12));
-        console.log('a');
+
         for(var p in partials)
             handlebars.registerPartial(p, partials[p]);
         
