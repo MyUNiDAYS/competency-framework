@@ -262,7 +262,6 @@
                         "Understands and recognises common coding patterns and understands their applicability",
                         "Able to disect and debug existing code",
                         "Familiar with and practices decompiling binaries and finding external sources to improve understanding",
-                        "Champions the team, focuses on tasks that contribute to team goals",
                         "Manages their own time effectively, prioritises their workload well, on time for meetings, aware when blocking others and unblocks",
                         "Competent at dividing problems into iterative steps",
                         "Fixes bugs involving a number of services and can investigate production issues",
@@ -276,7 +275,12 @@
                     path: "pr0",
                     summary: "Experienced",
                     criteria: [
-                        "Currently incomplete, please refer to lower levels in the short term"
+                        "Champions the team, focuses on tasks that contribute to team goals",
+                        "Sets and upholds QA standards",
+                        "Identifies patterns of weakness within the team, and collaborates to provide solutions",
+                        "Able to translate functional requirements into technical ones",
+                        "Ensures that everything shipped meets users needs.",
+                        "Understands and appreciates the level of fidelity needed for different iterations of a features development",
                     ]
                 },
                 {
@@ -284,7 +288,16 @@
                     path: "1337",
                     summary: "Virtuoso",
                     criteria: [
-                        "Currently incomplete, please refer to lower levels in the short term"
+                        "Delivers most value by effectively working through others",
+                        "Sets squad rhythm and routines - facilitates agreement on how they all work together to discover, define and ship features or experiments to meet their goals",
+                        "Works collaboratively to get the best out of all of the people in their squad, involving all disciplines throughout",
+                        "Takes proactive steps to build and maintain team health, e.g. resolve conflict, counter inertia",
+                        "Acts as technical point person for the squad - does whatever is needed to unblock or support the squad and their delivery",
+                        "Escalates and delegates appropriately",
+                        "Ensures the squad has the skills and resources it needs to ship autonomously",
+                        "Servant leader who empowers the squad to achieve more and be ambitious (test sooner, generate more ideas, think broadly), valuing outcome over output",
+                        "Ensures the squad are aware of what other squads are working on and how that relates to their squad’s goals",
+                        "Coaches Associate Product Managers and helps them identify and achieve personal development goals"
                     ]
                 }
             ]
