@@ -1,4 +1,4 @@
-(window.roles = window.roles || []).push({
+module.exports = {
     title: "📦 Shared Service Ops",
     path: "shared-service-ops",
     roles: [
@@ -31,4 +31,4 @@
             ]
         }
     ]
-});
+};

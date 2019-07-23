@@ -1,4 +1,4 @@
-(window.roles = window.roles || []).push({
+module.exports = {
     title: "🚀 Product",
     path: "product",
     departments: [
@@ -690,4 +690,4 @@
             ]
         }
     ]
-});
+};

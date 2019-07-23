@@ -21,6 +21,8 @@
         <ul>
             <li><a class="logo" href="https://www.myunidays.com" target="_blank"><img src="/logo.png" alt="UNiDAYS Logo" /></a></li>
             <li><a href="/">🏡 Home</a></li>
+            {{> nav-competencies competencies }}
+            {{> nav-roles roles }}
         </ul>
     </nav>
     <section id="content">
@@ -94,6 +96,8 @@
             </div>
         </section>
         <div data-path="/competencies"></div>
+        {{> competencies competencies }}
+        {{> roles roles }}
     </section>
 </body>
 </html>

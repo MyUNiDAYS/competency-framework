@@ -15,20 +15,11 @@ jobs:
             npm install
             grunt
       - aws-s3/sync:
-          from: ~/project
+          from: ~/project/build
           to: 's3://progression.myunidays.com/'
           arguments: |
             --delete \
-            --exclude ".*" \
-            --exclude "node_modules/*" \
-            --exclude "web.config" \
-            --exclude ".gitignore" \
-            --exclude "gruntfile.js" \
-            --exclude "package.json" \
-            --exclude "package.lock" \
-            --exclude "scss/*" \
-            --exclude "aspnet_client/*" \
-            --exclude "templates/*"
+            --exclude "build/web.config" \
 workflows:
   version: 2.1
   build-and-deploy:

@@ -1,4 +1,4 @@
-(window.competencies = window.competencies || []).push({
+module.exports = {
     title: "🍏 Core",
     path: "core-competencies",
     summary: "The core competences enable UNiDAYS staff to align job profiles,  creating a shared understanding of how to attain career progression. Use the documentation of the core competencies to identify your current level, and identify the areas you'd like to improve in. Get started by selecting a core competency.",
@@ -485,4 +485,4 @@
             ]
         }
     ]
-})
+};
