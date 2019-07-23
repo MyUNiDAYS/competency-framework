@@ -21,7 +21,9 @@ jobs:
             --delete \
             --exclude ".*" \
             --exclude "node_modules/*" \
-            --exclude "web.config"
+            --exclude "web.config" \
+            --exclude "scss/*" \
+            --exclude "templates/*"
 workflows:
   version: 2.1
   build-and-deploy:
