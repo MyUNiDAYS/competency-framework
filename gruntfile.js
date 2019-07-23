@@ -1,12 +1,10 @@
 'use strict';
 module.exports = function (grunt) {
     
-    const sass = require('node-sass');
-
     grunt.initConfig({
         sass: {
             options: {
-                implementation: sass,
+                implementation: require('node-sass'),
                 sourceMap: true
             },
             dist: {
@@ -22,14 +20,12 @@ module.exports = function (grunt) {
                     sourceMapName: 'build/site.js.map'
                 },
                 files: {
-                    'build/site.js': ['src/js/*.js']
+                    'build/site.js': ['src/js/*.js'],
+                    'build/service-worker.js': 'src/service-worker.js'
                 }
             }
         },
         watch: {
-            options: {
-                livereload: true,
-              },
             scripts: {
                 files: ['src/**/*', 'content/**/*.js'],
                 tasks: ['default'],
@@ -40,6 +36,8 @@ module.exports = function (grunt) {
       grunt.loadNpmTasks('grunt-sass');
       grunt.loadNpmTasks('grunt-contrib-watch');
       grunt.loadNpmTasks('grunt-contrib-uglify-es');
+
+      grunt.registerTask('default', ['sass', 'generate', 'uglify']);
 
       grunt.registerTask('generate', function(){
         
@@ -69,16 +67,14 @@ module.exports = function (grunt) {
 
         // load all handlebars helpers
         grunt.file.expand({ filter: 'isFile', cwd: 'src/handlebars' }, ['helper_*.js']).forEach(f => handlebars.registerHelper(f.substr(7, f.length - 10), require('./src/handlebars/' + f)));
-
+        // load all handlebars templates
         var templates = loadHandlebars(grunt, 'src/handlebars', 'template_*.hbs', f => f.substr(9, f.length - 13));
-
+        // load all handlebars partials
         var partials = loadHandlebars(grunt, 'src/handlebars', 'partial_*.hbs', f => f.substr(8, f.length - 12));
-
         for(var p in partials)
             handlebars.registerPartial(p, partials[p]);
         
-        console.log(templates);
-
+        // assume theres only one temaplte called site, and build it to index.html
         var generated = templates['site']({
             roles: roles,
             competencies: competencies
@@ -86,11 +82,6 @@ module.exports = function (grunt) {
         grunt.file.write('./build/index.html', generated);
 
       });
-
-      grunt.registerTask('default', ['sass', 'generate', 'uglify']);
-
-
-      
 };
 
 function loadHandlebars(grunt, path, filter, nameMap){

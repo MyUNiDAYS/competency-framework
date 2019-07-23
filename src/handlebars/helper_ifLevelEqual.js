@@ -9,4 +9,4 @@ module.exports = function (topic, level, expectedLevel, options) {
         return options.fn(this);
     
     return;
-}
+};
