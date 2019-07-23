@@ -22,7 +22,12 @@ jobs:
             --exclude ".*" \
             --exclude "node_modules/*" \
             --exclude "web.config" \
+            --exclude ".gitignore" \
+            --exclude "gruntfile.js" \
+            --exclude "package.json" \
+            --exclude "package.lock" \
             --exclude "scss/*" \
+            --exclude "aspnet_client/*" \
             --exclude "templates/*"
 workflows:
   version: 2.1
