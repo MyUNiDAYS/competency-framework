@@ -3,11 +3,8 @@ function refresh(){
 	return caches.open('offline-v2').then(function(cache){
 		return Promise.all([
 			cache.add('/'),
-            cache.add('/js/core-competencies.js'),
-            cache.add('/js/engineering-competencies.js'),
-            cache.add('/css/styles.css'),
-            cache.add('/js/handlebars-v4.1.2.js'),
-			cache.add('/js/index.js'),
+            cache.add('/index.css'),
+			cache.add('/index.js'),
 			cache.add('/logo.png'),
             cache.add('/favicon.ico'),
             cache.add('/favicon-16x16.png'),

@@ -65,13 +65,8 @@ function referenceCompetencies(map){
     };
 }
 
-// explode role mappings into object references
-window.roles.forEach(role => {
-    explodeCompetencies(role);
-});
-
 // Register service worker for offline operation
-if (('serviceWorker' in navigator))
+if (('serviceWorker' in navigator) && false)
 {
     navigator.serviceWorker.register('/service-worker.js');
 
@@ -83,6 +78,11 @@ if (('serviceWorker' in navigator))
 }
 
 window.addEventListener('load', function(){
+
+    // explode role mappings into object references
+    window.roles.forEach(role => {
+        explodeCompetencies(role);
+    });
 
     Handlebars.registerHelper('getRoleTopicLevel', function (role, topic) {
         var competencies = role.competencies.required.filter(c => c.topic === topic);

@@ -10,7 +10,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    'css/styles.css': 'scss/styles.scss'
+                    'site.css': 'scss/styles.scss'
                 }
             }
         },
@@ -33,12 +33,23 @@ module.exports = function (grunt) {
                 }
             }
         },
+        uglify: {
+            dev: {
+                options: {
+                    sourceMap: true,
+                    sourceMapName: 'index.js.map'
+                },
+                files: {
+                    'site.js': ['js/*.js', 'templates.js']
+                }
+            }
+        },
         watch: {
             options: {
                 livereload: true,
               },
             scripts: {
-                files: ['scss/*.scss', 'templates/*.hbs'],
+                files: ['scss/*.scss', 'templates/*.hbs', 'js/*.js'],
                 tasks: ['default'],
             },
           },
@@ -47,7 +58,8 @@ module.exports = function (grunt) {
       grunt.loadNpmTasks('grunt-sass');
       grunt.loadNpmTasks('grunt-contrib-watch');
       grunt.loadNpmTasks('grunt-contrib-handlebars');
+      grunt.loadNpmTasks('grunt-contrib-uglify-es');
 
-      grunt.registerTask('default', ['sass', 'handlebars']);
+      grunt.registerTask('default', ['sass', 'handlebars', 'uglify']);
 
 };
