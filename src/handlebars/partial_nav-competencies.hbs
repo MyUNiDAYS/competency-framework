@@ -1,0 +1,15 @@
+<li class="title">
+    <span>🤹 Competencies</span>
+    <ul>
+    {{#each this}}
+        <li>
+            <a href="/competencies/{{path}}" class="nav-link">{{title}}</a>
+            <ul>
+            {{#each topics}}
+                <li><a href="/competencies/{{../path}}/{{path}}">{{title}}</a></li>
+            {{/each}}
+            </ul>
+        </li>
+    {{/each}}
+    </ul>
+</li>

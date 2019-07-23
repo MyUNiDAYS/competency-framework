@@ -67,51 +67,18 @@ module.exports = function (grunt) {
             return competencies[0].level.title;
         });
 
-        handlebars.registerHelper('ifLevelEqual', function (topic, level, expectedLevel, options) {
-            var expectedIndex = topic.levels.indexOf(expectedLevel);
-            var index = topic.levels.indexOf(level);
-
-            if(expectedIndex === -1 || index === -1)
-                return;
-
-            if(index === expectedIndex)
-                return options.fn(this);
-            
-            return;
-        });
-
-        handlebars.registerHelper('ifLevelLowerOrEqual', function (topic, level, expectedLevel, options) {
-            var expectedIndex = topic.levels.indexOf(expectedLevel);
-            var index = topic.levels.indexOf(level);
-
-            if(expectedIndex === -1 || index === -1)
-                return;
-
-            if(index <= expectedIndex)
-                return options.fn(this);
-            
-            return;
-        });
-
-        handlebars.registerHelper('levelRequirementClass', function (topic, level, expectedLevel) {
-            var expectedIndex = topic.levels.indexOf(expectedLevel);
-            var index = topic.levels.indexOf(level);
-
-            if(expectedIndex === -1 || index === -1)
-                return '';
-
-            if(index < expectedIndex)
-                return 'level-lower'
-            if(index == expectedIndex)
-                return 'level-equal';
-            return 'level-above'
-        });
-
-        var templates = loadHandlebars(grunt, 'templates', 'template_*.hbs', f => f.substr(9, f.length - 13))
-        var partials = loadHandlebars(grunt, 'templates', 'partial_*.hbs', f => f.substr(8, f.length - 12))
+        // load all handlebars helpers
+        grunt.file.expand({ filter: 'isFile', cwd: 'src/handlebars' }, ['helper_*.js']).forEach(f => handlebars.registerHelper(f.substr(7, f.length - 10), require('./src/handlebars/' + f)));
+        console.log('a');
+        var templates = loadHandlebars(grunt, 'src/handlebars', 'template_*.hbs', f => f.substr(9, f.length - 13));
+        console.log('a');
+        var partials = loadHandlebars(grunt, 'src/handlebars', 'partial_*.hbs', f => f.substr(8, f.length - 12));
+        console.log('a');
         for(var p in partials)
             handlebars.registerPartial(p, partials[p]);
         
+        console.log(templates);
+
         var generated = templates['site']({
             roles: roles,
             competencies: competencies
@@ -127,16 +94,14 @@ module.exports = function (grunt) {
 };
 
 function loadHandlebars(grunt, path, filter, nameMap){
-
-    const handlebars = require('handlebars');
-
+    var handlebars = require('handlebars');
     var files = grunt.file.expand({ filter: 'isFile', cwd: path }, [filter]);
 
     return files
         .map(f => {
             return { 
                 name: nameMap(f), 
-                template: handlebars.compile(grunt.file.read('templates/' + f))
+                template: handlebars.compile(grunt.file.read(path + '/' + f))
             }
         })
         .reduce((map, obj) => {
