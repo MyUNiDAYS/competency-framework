@@ -37,7 +37,7 @@ module.exports = function (grunt) {
             dev: {
                 options: {
                     sourceMap: true,
-                    sourceMapName: 'index.js.map'
+                    sourceMapName: 'site.js.map'
                 },
                 files: {
                     'site.js': ['js/*.js', 'templates.js']
