@@ -106,7 +106,7 @@
                 <div class="box-inner-container">
                     <ul>
                     {{#each level.criteria}}
-                        <li>{{this}}</li>
+                        <li id="competency-{{../competency.path}}-{{../topic.path}}-{{@index}}"><a href="#competency-{{../competency.path}}-{{../topic.path}}-{{@index}}">{{this}}</a></li>
                     {{/each}}
                     </ul>
                 </div>

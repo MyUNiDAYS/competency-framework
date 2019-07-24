@@ -152,6 +152,11 @@ section ul li
 {
     list-style-type: lower-alpha;
     margin: 0 0 1em 1.5em;
+
+    &.active
+    {
+        background: $color-unidays-blue;
+    }
 }
 
 .coltainer

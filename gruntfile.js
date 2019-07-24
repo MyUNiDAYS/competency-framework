@@ -16,28 +16,23 @@ module.exports = function (grunt) {
             }
         },
         copy: {
-            assets: {
+            dev: {
+                files: [
+                    { expand: true, cwd: 'src/js', src: ['*'], dest: 'build/' },
+                    { expand: true, cwd: 'src/assets', src: ['*'], dest: 'build/' },
+                    { expand: true, cwd: 'src', src: ['service-worker.js'], dest: 'build/' }
+                ]
+            },
+            prod: {
                 files: [
                     { expand: true, cwd: 'src/assets', src: ['*'], dest: 'build/' }
                 ]
             }
         },
         uglify: {
-            dev: {
-                options: {
-                    sourceMap: true,
-                    sourceMapName: 'build/site.js.map'
-                },
-                files: {
-                    'build/site.js': ['src/js/*.js'],
-                    'build/service-worker.js': 'src/service-worker.js'
-                }
-            },
-            prod: {
-                files: {
-                    'build/site.js': ['src/js/*.js'],
-                    'build/service-worker.js': 'src/service-worker.js'
-                }
+            files: {
+                'build/site.js': ['src/js/site.js'],
+                'build/service-worker.js': 'src/service-worker.js'
             }
         },
         watch: {
@@ -53,8 +48,8 @@ module.exports = function (grunt) {
       grunt.loadNpmTasks('grunt-contrib-uglify-es');
       grunt.loadNpmTasks('grunt-contrib-copy');
 
-      grunt.registerTask('build:dev', ['sass', 'generate', 'uglify:dev', 'copy']);
-      grunt.registerTask('build:prod', ['sass', 'generate', 'uglify:prod', 'copy']);
+      grunt.registerTask('build:dev', ['sass', 'generate', 'copy:dev']);
+      grunt.registerTask('build:prod', ['sass', 'generate', 'uglify', 'copy:prod']);
 
       grunt.registerTask('default', ['build:prod']);
 

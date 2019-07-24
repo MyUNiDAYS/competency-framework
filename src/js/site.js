@@ -23,9 +23,13 @@ function handleNavigation(){
     var hash = window.location.hash ? window.location.hash.substr(1) : '';
     
     // Show content
-    document.querySelectorAll('[data-path], [data-hash]').forEach(section => section.style.display = 'none');
+    document.querySelectorAll('[data-path]').forEach(section => section.style.display = 'none');
     document.querySelectorAll(`[data-path="${path}"]`).forEach(s => s.style.display = 'block');
-    document.querySelectorAll(`[data-hash="${hash}"]`).forEach(s => s.style.display = 'block');
+    
+    // highlight current hash
+    document.querySelectorAll(`[id]`).forEach(s => s.classList.remove('active'));
+    if(hash)
+        document.querySelectorAll(`#${hash}`).forEach(s => s.classList.add('active'));
 
     // TODO: merge all the below code into one mechanism
 
