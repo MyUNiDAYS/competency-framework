@@ -68,7 +68,6 @@ window.addEventListener('load', function(){
             menu.classList.remove('js-menu-open');
         }
 
-        // todo: check viewport is desktop
         listTrigger.forEach(function(element) {
             if(e.target == element) {
                 element.classList.toggle('active');
@@ -89,9 +88,8 @@ window.addEventListener('load', function(){
         if(href !== window.location.pathname){
             history.pushState(null, null, href);
 
-            if (menu.classList.contains('js-menu-open')) {
+            if (menu.classList.contains('js-menu-open'))
                 menu.classList.remove('js-menu-open');
-            }
 
             handleNavigation();
         }

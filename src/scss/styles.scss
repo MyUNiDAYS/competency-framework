@@ -208,37 +208,37 @@ a.button
     line-height: 1;
 }
 
-.tab-container
-{
-    > nav
-    {
-        margin: 0 0 20px 0;
+// .tab-container
+// {
+//     > nav
+//     {
+//         margin: 0 0 20px 0;
 
-        a
-        {
-            display: inline-block;
-            margin: 0 5px;
-            border: solid 1px #ccc;
-            border-radius: 5px;
-            padding: 8px 10px;
+//         a
+//         {
+//             display: inline-block;
+//             margin: 0 5px;
+//             border: solid 1px #ccc;
+//             border-radius: 5px;
+//             padding: 8px 10px;
 
-            &.active
-            {
-                border-color: #333;
-            }
-        }
-    }
+//             &.active
+//             {
+//                 border-color: #333;
+//             }
+//         }
+//     }
 
-    > section
-    {
-        display: none;
+//     > section
+//     {
+//         display: none;
 
-        &.active
-        {
-            display: block;
-        }
-    }
-}
+//         &.active
+//         {
+//             display: block;
+//         }
+//     }
+// }
 
 /* TABLES */
 table

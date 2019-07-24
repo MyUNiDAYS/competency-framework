@@ -1,12 +1,14 @@
 <li>
-    <a href="/roles/{{path}}" class="nav-link">{{title}}</a>
-    <ul>
+    <!-- href="/roles/{{path}}" -->
+    <a class="js-list-trigger">{{title}}</a>
+    <ul class="list-2">
     {{#each departments}}
         {{> navroles}}
     {{/each}}
     {{#each roles}}
         <li>
-            <a href="/roles/{{path}}">{{title}}</a>
+            <!-- href="/roles/{{path}}" -->
+            <a>{{title}}</a>
             <ul>
             {{#each levels}}
                 <li><a href="/roles/{{../path}}/{{path}}">{{title}}</a></li>
