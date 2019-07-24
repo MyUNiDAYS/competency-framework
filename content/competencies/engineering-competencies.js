@@ -281,6 +281,7 @@ module.exports = {
                         "Able to translate functional requirements into technical ones",
                         "Ensures that everything shipped meets users needs.",
                         "Understands and appreciates the level of fidelity needed for different iterations of a features development",
+                        "Escalates and delegates appropriately",
                     ]
                 },
                 {
@@ -293,11 +294,12 @@ module.exports = {
                         "Works collaboratively to get the best out of all of the people in their squad, involving all disciplines throughout",
                         "Takes proactive steps to build and maintain team health, e.g. resolve conflict, counter inertia",
                         "Acts as technical point person for the squad - does whatever is needed to unblock or support the squad and their delivery",
-                        "Escalates and delegates appropriately",
                         "Ensures the squad has the skills and resources it needs to ship autonomously",
                         "Servant leader who empowers the squad to achieve more and be ambitious (test sooner, generate more ideas, think broadly), valuing outcome over output",
                         "Ensures the squad are aware of what other squads are working on and how that relates to their squad’s goals",
-                        "Coaches Associate Product Managers and helps them identify and achieve personal development goals"
+                        "Has an ability to craft clear and compelling technical visions",
+                        "Be responsible for the quality of technical deliverables",
+                        "Act as the interface between Product and Engineering"
                     ]
                 }
             ]

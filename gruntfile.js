@@ -5,25 +5,13 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         sass: {
-            dev: {
-                options: {
-                    implementation: require('node-sass'),
-                    sourceMap: true
-                },
-                dist: {
-                    files: {
-                        'build/site.css': 'src/scss/styles.scss'
-                    }
-                }
+            options: {
+                implementation: require('node-sass'),
+                sourceMap: true
             },
-            prod: {
-                options: {
-                    implementation: require('node-sass'),
-                },
-                dist: {
-                    files: {
-                        'build/site.css': 'src/scss/styles.scss'
-                    }
+            dist: {
+                files: {
+                    'build/site.css': 'src/scss/styles.scss'
                 }
             }
         },
@@ -65,8 +53,8 @@ module.exports = function (grunt) {
       grunt.loadNpmTasks('grunt-contrib-uglify-es');
       grunt.loadNpmTasks('grunt-contrib-copy');
 
-      grunt.registerTask('build:dev', ['sass:dev', 'generate', 'uglify:dev', 'copy']);
-      grunt.registerTask('build:prod', ['sass:prod', 'generate', 'uglify:prod', 'copy']);
+      grunt.registerTask('build:dev', ['sass', 'generate', 'uglify:dev', 'copy']);
+      grunt.registerTask('build:prod', ['sass', 'generate', 'uglify:prod', 'copy']);
 
       grunt.registerTask('default', ['build:prod']);
 

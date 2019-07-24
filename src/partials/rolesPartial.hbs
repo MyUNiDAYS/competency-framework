@@ -87,17 +87,7 @@
             <h3>Criteria</h3>
             <div class="box-container">
         {{#each competencies.required}}
-            <section class="role-competency box item">
-                <h2><a href="/competencies/{{competency.path}}/{{topic.path}}">{{topic.title}}</a> - {{level.title}}</h2>
-                <h3><a href="/competencies/{{competency.path}}">{{competency.title}}</a></h3>
-                <div class="box-inner-container">
-                    <ul>
-                    {{#each level.criteria}}
-                        <li>{{this}}</li>
-                    {{/each}}
-                    </ul>
-                </div>
-            </section>
+            {{> roleCompetencyBox this}}
         {{/each}}
         {{#each competencies.optional}}
             <section class="role-competency box item">
