@@ -71,6 +71,7 @@ window.addEventListener('load', function(){
         // todo: check viewport is desktop
         listTrigger.forEach(function(element) {
             if(e.target == element) {
+                element.classList.toggle('active');
                 element.nextElementSibling.classList.toggle('active');
             }
         });

@@ -8,10 +8,12 @@
     align-items: center;
     z-index: 5;
     justify-content: space-between;
-    padding: 1em;
+    padding: 0 1em;
     background-color: #eee;
+    font-size: 1.8em;
 
     > nav {
+        padding: 1em 0 0 0;
         display: none;
     }
 
@@ -28,6 +30,7 @@
         min-width: 320px;
         justify-content: flex-start;
         align-items: flex-start;
+        font-size: 1.25em;
 
         .burger {
             display: none;
@@ -41,6 +44,7 @@
     &.js-menu-open {
         height: 100%;
         display: block;
+        padding: 0.5em 1em;
 
         .burger {
             float: right;
@@ -58,7 +62,7 @@
     }
 
     .logo {
-        display: block;
+        display: inline-block;
         
         img {
             width: 50px;
@@ -66,12 +70,31 @@
         }
     }
 
+    .js-list-trigger {
+        cursor: pointer;
+
+        &:after {
+            content: "+";
+            height: 50px;
+            width: 50px;
+            color: #000;
+            font-size: 1.2em;
+            margin-left: 0.5em;
+        }
+        
+        &.active {
+            &:after {
+                content: "-";
+            }
+        }
+    }
+
     .list-2 {
-        margin-left: 0.25em;
+        margin-left: 0.5em;
     }
 
     .list-3 {
-        margin-left: 0.5em;
+        margin-left: 0.75em;
     }
     
     .list-1,
