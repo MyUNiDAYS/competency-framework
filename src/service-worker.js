@@ -1,18 +1,17 @@
 
 function refresh(){
-	return caches.open('offline-v2').then(function(cache){
+	return caches.open('offline-v3').then(function(cache){
 		return Promise.all([
 			cache.add('/'),
-            cache.add('/index.css'),
-			cache.add('/index.js'),
+            cache.add('/site.css'),
+			cache.add('/site.js'),
 			cache.add('/logo.png'),
             cache.add('/favicon.ico'),
             cache.add('/favicon-16x16.png'),
             cache.add('/favicon-32x32.png'),
             cache.add('https://fonts1.unidays.world/unidays/v1/all-book.woff2'),
             cache.add('https://fonts1.unidays.world/unidays/v1/all-demi.woff2'),
-			cache.add('https://fonts1.unidays.world/unidays/v1/all-heavy.woff2'),
-			cache.add('https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css')
+			cache.add('https://fonts1.unidays.world/unidays/v1/all-heavy.woff2')
 		]);
 	})
 }
@@ -20,7 +19,11 @@ function refresh(){
 self.addEventListener('install', function(event) {
 	self.skipWaiting && self.skipWaiting();
 
-	event.waitUntil(refresh());
+	event.waitUntil(Promise.all([
+		refresh(),
+		caches.delete('offline-v1'),
+		caches.delete('offline-v2'),
+	]));
 });
 
 self.addEventListener('activate', function(event) {

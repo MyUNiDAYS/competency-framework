@@ -41,29 +41,9 @@ module.exports = function (grunt) {
 
       grunt.registerTask('generate', function(){
         
-        // load all roles
-        var roles = grunt.file.expand({ filter: 'isFile', cwd: 'content/roles'}, ['*.js']).map(f => require('./content/roles/' + f));
-        // load all competencies
-        var competencies = grunt.file.expand({ filter: 'isFile', cwd: 'content/competencies'}, ['*.js']).map(f => require('./content/competencies/' + f));
-
-        // explode role mappings into object references
-        roles.forEach(role => {
-            explodeCompetencies(competencies, role);
-        });
+        var content = loadContent(grunt)
         
         const handlebars = require('handlebars');
-
-        handlebars.registerHelper('getRoleTopicLevel', function (role, topic) {
-            var competencies = role.competencies.required.filter(c => c.topic === topic);
-            
-            if(competencies.length == 0)
-                competencies = role.competencies.optional.filter(c => c.topic === topic);
-
-            if(competencies.length == 0)
-                return "N/A";
-
-            return competencies[0].level.title;
-        });
 
         // load all handlebars helpers
         grunt.file.expand({ filter: 'isFile', cwd: 'src/handlebars' }, ['helper_*.js']).forEach(f => handlebars.registerHelper(f.substr(7, f.length - 10), require('./src/handlebars/' + f)));
@@ -74,15 +54,30 @@ module.exports = function (grunt) {
         for(var p in partials)
             handlebars.registerPartial(p, partials[p]);
         
-        // assume theres only one temaplte called site, and build it to index.html
-        var generated = templates['site']({
-            roles: roles,
-            competencies: competencies
-        });
+        // assume theres only one template called site, and build it to index.html
+        var generated = templates['site'](content);
         grunt.file.write('./build/index.html', generated);
 
       });
 };
+
+function loadContent(grunt) {
+
+    // load all roles
+    var roles = grunt.file.expand({ filter: 'isFile', cwd: 'content/roles'}, ['*.js']).map(f => require('./content/roles/' + f));
+    // load all competencies
+    var competencies = grunt.file.expand({ filter: 'isFile', cwd: 'content/competencies'}, ['*.js']).map(f => require('./content/competencies/' + f));
+
+    // explode role mappings into object references
+    roles.forEach(role => {
+        explodeCompetencies(competencies, role);
+    });
+
+    return {
+        roles: roles,
+        competencies: competencies
+    };
+}
 
 function loadHandlebars(grunt, path, filter, nameMap){
     var handlebars = require('handlebars');
