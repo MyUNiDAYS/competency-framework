@@ -5,13 +5,25 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         sass: {
-            options: {
-                implementation: require('node-sass'),
-                sourceMap: true
+            dev: {
+                options: {
+                    implementation: require('node-sass'),
+                    sourceMap: true
+                },
+                dist: {
+                    files: {
+                        'build/site.css': 'src/scss/styles.scss'
+                    }
+                }
             },
-            dist: {
-                files: {
-                    'build/site.css': 'src/scss/styles.scss'
+            prod: {
+                options: {
+                    implementation: require('node-sass'),
+                },
+                dist: {
+                    files: {
+                        'build/site.css': 'src/scss/styles.scss'
+                    }
                 }
             }
         },
@@ -32,6 +44,12 @@ module.exports = function (grunt) {
                     'build/site.js': ['src/js/*.js'],
                     'build/service-worker.js': 'src/service-worker.js'
                 }
+            },
+            prod: {
+                files: {
+                    'build/site.js': ['src/js/*.js'],
+                    'build/service-worker.js': 'src/service-worker.js'
+                }
             }
         },
         watch: {
@@ -47,7 +65,10 @@ module.exports = function (grunt) {
       grunt.loadNpmTasks('grunt-contrib-uglify-es');
       grunt.loadNpmTasks('grunt-contrib-copy');
 
-      grunt.registerTask('default', ['sass', 'generate', 'uglify', 'copy']);
+      grunt.registerTask('build:dev', ['sass:dev', 'generate', 'uglify:dev', 'copy']);
+      grunt.registerTask('build:prod', ['sass:prod', 'generate', 'uglify:prod', 'copy']);
+
+      grunt.registerTask('default', ['build:prod']);
 
       grunt.registerTask('generate', function(){
         

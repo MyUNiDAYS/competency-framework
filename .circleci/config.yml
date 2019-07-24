@@ -13,7 +13,7 @@ jobs:
           command: |
             sudo npm install -g grunt
             npm install
-            grunt
+            grunt build:prod
       - aws-s3/sync:
           from: ~/project/build
           to: 's3://progression.myunidays.com/'
