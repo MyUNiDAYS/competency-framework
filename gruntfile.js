@@ -18,7 +18,7 @@ module.exports = function (grunt) {
         copy: {
             assets: {
                 files: [
-                    { expand: true, src: ['src/assets/*'], dest: 'build/' }
+                    { expand: true, cwd: 'src/assets', src: ['*'], dest: 'build/' }
                 ]
             }
         },
@@ -47,7 +47,7 @@ module.exports = function (grunt) {
       grunt.loadNpmTasks('grunt-contrib-uglify-es');
       grunt.loadNpmTasks('grunt-contrib-copy');
 
-      grunt.registerTask('default', ['sass', 'generate', 'uglify', copy]);
+      grunt.registerTask('default', ['sass', 'generate', 'uglify', 'copy']);
 
       grunt.registerTask('generate', function(){
         
