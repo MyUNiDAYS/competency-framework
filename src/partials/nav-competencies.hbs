@@ -1,10 +1,11 @@
 <li class="title">
-    <span>🤹 Competencies</span>
-    <ul>
+    <span class="js-list-trigger">🤹 Competencies</span>
+    <ul class="list-1">
     {{#each this}}
-        <li>
-            <a href="/competencies/{{path}}" class="nav-link">{{title}}</a>
-            <ul>
+        <li class="list-2">
+            <!-- href="/competencies/{{path}}" -->
+            <a class="nav-link js-list-trigger">{{title}}</a>
+            <ul class="list-3">
             {{#each topics}}
                 <li><a href="/competencies/{{../path}}/{{path}}">{{title}}</a></li>
             {{/each}}

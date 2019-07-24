@@ -58,6 +58,7 @@ window.addEventListener('load', function(){
 
     let burger = document.querySelector('.burger');
     let menu = document.querySelector('.navigation');
+    let listTrigger = document.querySelectorAll('.js-list-trigger');
 
     // Highjack all internal link clicks and use pushtate instead
     document.addEventListener('click', function(e){
@@ -66,6 +67,13 @@ window.addEventListener('load', function(){
         } else if (e.target == burger && e.target.parentNode.classList.contains('js-menu-open')) {
             menu.classList.remove('js-menu-open');
         }
+
+        // todo: check viewport is desktop
+        listTrigger.forEach(function(element) {
+            if(e.target == element) {
+                element.nextElementSibling.classList.toggle('active');
+            }
+        });
 
         if(e.target.nodeName !== 'A')
             return;

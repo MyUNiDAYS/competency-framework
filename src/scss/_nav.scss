@@ -11,21 +11,30 @@
     padding: 1em;
     background-color: #eee;
 
-    .burger {
-        width: 50px;
-        height: 50px;
-    }
-
     > nav {
         display: none;
     }
 
-    .logo {
-        display: block;
-        
-        img {
-            width: 50px;
-            height: 50px;
+    @media (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        background-color: rgb(247, 247, 247);
+        color: black;
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 100%;
+        width: 19%;
+        min-width: 320px;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .burger {
+            display: none;
+        }
+
+        > nav {
+            display: block;
         }
     }
 
@@ -43,23 +52,33 @@
         }
     }
 
-    @media (min-width: 768px) {
-        display: flex;
-        flex-direction: column;
-        flex-shrink: 0;
-        background-color: rgb(247, 247, 247);
-        color: black;
-        overflow-x: hidden;
-        overflow-y: auto;
-        height: 100%;
-        width: 19%;
-        min-width: 320px;
+    .burger {
+        width: 50px;
+        height: 50px;
+    }
 
-        .burger {
-            display: none;
+    .logo {
+        display: block;
+        
+        img {
+            width: 50px;
+            height: 50px;
         }
+    }
 
-        > nav {
+    .list-2 {
+        margin-left: 0.25em;
+    }
+
+    .list-3 {
+        margin-left: 0.5em;
+    }
+    
+    .list-1,
+    .list-3 {
+        display: none;
+
+        &.active {
             display: block;
         }
     }
