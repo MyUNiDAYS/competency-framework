@@ -15,6 +15,13 @@ module.exports = function (grunt) {
                 }
             }
         },
+        copy: {
+            assets: {
+                files: [
+                    { expand: true, src: ['src/assets/*'], dest: 'build/' }
+                ]
+            }
+        },
         uglify: {
             dev: {
                 options: {
@@ -29,7 +36,7 @@ module.exports = function (grunt) {
         },
         watch: {
             scripts: {
-                files: ['src/**/*', 'content/**/*.js'],
+                files: ['src/**/*', 'content/**/*'],
                 tasks: ['default'],
             },
           },
@@ -38,8 +45,9 @@ module.exports = function (grunt) {
       grunt.loadNpmTasks('grunt-sass');
       grunt.loadNpmTasks('grunt-contrib-watch');
       grunt.loadNpmTasks('grunt-contrib-uglify-es');
+      grunt.loadNpmTasks('grunt-contrib-copy');
 
-      grunt.registerTask('default', ['sass', 'generate', 'uglify']);
+      grunt.registerTask('default', ['sass', 'generate', 'uglify', copy]);
 
       grunt.registerTask('generate', function(){
         
