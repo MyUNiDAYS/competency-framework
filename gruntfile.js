@@ -46,17 +46,18 @@ module.exports = function (grunt) {
         const handlebars = require('handlebars');
 
         // load all handlebars helpers
-        grunt.file.expand({ filter: 'isFile', cwd: 'src/handlebars' }, ['helper_*.js']).forEach(f => handlebars.registerHelper(f.substr(7, f.length - 10), require('./src/handlebars/' + f)));
+        grunt.file.expand({ filter: 'isFile', cwd: 'src/helpers' }, ['*.js']).forEach(f => handlebars.registerHelper(f.substr(0, f.length - 3), require('./src/helpers/' + f)));
         // load all handlebars templates
-        var templates = loadHandlebars(grunt, 'src/handlebars', 'template_*.hbs', f => f.substr(9, f.length - 13));
+        var templates = loadHandlebars(grunt, 'src/templates', '*.hbs', f => f.substr(0, f.length - 4));
         // load all handlebars partials
-        var partials = loadHandlebars(grunt, 'src/handlebars', 'partial_*.hbs', f => f.substr(8, f.length - 12));
+        var partials = loadHandlebars(grunt, 'src/partials', '*.hbs', f => f.substr(0, f.length - 4));
         for(var p in partials)
             handlebars.registerPartial(p, partials[p]);
         
-        // assume theres only one template called site, and build it to index.html
-        var generated = templates['site'](content);
-        grunt.file.write('./build/index.html', generated);
+        for(var template in templates) {
+            var generated = templates[template](content);
+            grunt.file.write('./build/' + template + '.html', generated);
+        }
 
       });
 };
