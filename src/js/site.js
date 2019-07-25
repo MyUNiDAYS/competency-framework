@@ -23,31 +23,25 @@ function handleNavigation(){
     var hash = window.location.hash ? window.location.hash.substr(1) : '';
     
     // Show content
-    document.querySelectorAll('[data-path]').forEach(section => section.style.display = 'none');
-    document.querySelectorAll(`[data-path="${path}"]`).forEach(s => s.style.display = 'block');
+    var $pathElems = document.querySelectorAll('[data-path]');
+    $pathElems.forEach(section => section.style.display = 'none');
+    Array.prototype.slice.call($pathElems).filter(e => e.dataset.path == path).forEach(s => s.style.display = 'block');
     
+    document.querySelectorAll('.active').forEach(a => a.classList.remove('active'));
+
     // highlight current hash
-    document.querySelectorAll(`[id]`).forEach(s => s.classList.remove('active'));
     if(hash)
         document.querySelectorAll(`#${hash}`).forEach(s => s.classList.add('active'));
 
     // TODO: merge all the below code into one mechanism
 
     // highlight links
-    document.querySelectorAll('a.active').forEach(a => a.classList.remove('active'));
     if(hash)
         document.querySelectorAll(`a[href="${path}#${hash}"]`).forEach(a => a.classList.add('active'));
     else
         document.querySelectorAll(`a[href="${path}"]`).forEach(a => a.classList.add('active'));
         
-    //let pathSegment = path
-    //while(pathSegment !== ''){
-    //    document.querySelectorAll(`a[href="${pathSegment}"]`).forEach(a => a.classList.add('active'));
-    //    pathSegment = pathSegment.substr(0, pathSegment.lastIndexOf('/'));
-    //}
-
     // highlight nav heirarchy
-    document.querySelectorAll('nav ul.active, nav li.active').forEach(a => a.classList.remove('active'));
     var currentElem = document.querySelector(`nav a[href="${path}"]`);
     do
     {
@@ -58,19 +52,6 @@ function handleNavigation(){
         currentElem = currentElem.parentElement;
     } while(currentElem.nodeName === 'LI' || currentElem.nodeName === 'UL');
 
-    // highlight highlightables
-    document.querySelectorAll('[data-highlight]').forEach(a => a.classList.remove('active'));
-    document.querySelectorAll(`[data-highlight="${path}"]`).forEach(a => a.classList.add('active'));
-
-    
-    document.querySelectorAll('textarea').forEach(t => {
-        t.addEventListener('change', e => {
-            if(this.value === '')
-                e.target.classList.remove('populated');
-            else
-                e.target.classList.add('populated');
-        })
-    });
 }
 
 window.addEventListener('load', function(){
@@ -91,7 +72,18 @@ window.addEventListener('load', function(){
             history.pushState(null, null, href);
             handleNavigation();
         }
-    })
+    });
+
+    // style textareas
+    document.addEventListener('change', function(e){
+        if(e.target.nodeName !== 'textarea')
+            return;
+
+        if(e.target.value === '')
+            e.target.classList.remove('populated');
+        else
+            e.target.classList.add('populated');
+    });
 
     // let menuToggles = document.querySelectorAll('.js-toggle');
     // console.log(menuToggles);
