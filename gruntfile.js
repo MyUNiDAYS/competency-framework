@@ -2,8 +2,10 @@
 module.exports = function (grunt) {
     
     const handlebars = require('handlebars');
+    const md5 = require('md5');
 
     grunt.initConfig({
+        clean: ['build'],
         sass: {
             options: {
                 implementation: require('node-sass'),
@@ -20,7 +22,8 @@ module.exports = function (grunt) {
                 files: [
                     { expand: true, cwd: 'src/js', src: ['*'], dest: 'build/' },
                     { expand: true, cwd: 'src/assets', src: ['*'], dest: 'build/' },
-                    { expand: true, cwd: 'src', src: ['service-worker.js'], dest: 'build/' }
+                    { expand: true, cwd: 'src', src: ['service-worker.js'], dest: 'build/' },
+                    { expand: true, cwd: 'src', src: ['web.config'], dest: 'build/' }
                 ]
             },
             prod: {
@@ -30,9 +33,31 @@ module.exports = function (grunt) {
             }
         },
         uglify: {
-            files: {
-                'build/site.js': ['src/js/site.js'],
-                'build/service-worker.js': 'src/service-worker.js'
+            jsDev: {
+                options: {
+                    sourceMap: true
+                },
+                files: {
+                    'build/site.js': ['src/js/*.js']
+                }
+            },
+            swDev: {
+                options: {
+                    sourceMap: true
+                },
+                files: {
+                    'build/service-worker.js': ['obj/cache-list.js', 'src/service-worker/service-worker.js']
+                }
+            },
+            jsProd: {
+                files: {
+                    'build/site.js': ['src/js/*.js']
+                }
+            },
+            swProd: {
+                files: {
+                    'build/service-worker.js': ['obj/cache-list.js', 'src/service-worker/service-worker.js']
+                }
             }
         },
         watch: {
@@ -47,9 +72,10 @@ module.exports = function (grunt) {
       grunt.loadNpmTasks('grunt-contrib-watch');
       grunt.loadNpmTasks('grunt-contrib-uglify-es');
       grunt.loadNpmTasks('grunt-contrib-copy');
+      grunt.loadNpmTasks('grunt-contrib-clean');
 
-      grunt.registerTask('build:dev', ['sass', 'generate', 'copy:dev']);
-      grunt.registerTask('build:prod', ['sass', 'generate', 'uglify', 'copy:prod']);
+      grunt.registerTask('build:dev', ['clean', 'sass', 'generate', 'uglify:jsDev', 'copy:dev', 'buildServiceWorkerUrls', 'uglify:swDev']);
+      grunt.registerTask('build:prod', ['clean', 'sass', 'generate', 'uglify:jsProd', 'copy:prod', 'buildServiceWorkerUrls', 'uglify:swProd']);
 
       grunt.registerTask('default', ['build:prod']);
 
@@ -72,7 +98,21 @@ module.exports = function (grunt) {
             grunt.file.write('./build/' + template + '.html', generated);
         }
 
-      });
+    });
+
+    grunt.registerTask('buildServiceWorkerUrls', function(){
+
+        var files = grunt.file.expand({ expand: true, cwd: 'build' }, ['*.*']);
+        files = files.map(f => '/' + f);
+
+        var filesJson = JSON.stringify(files);
+        var cacheName = md5(filesJson);
+        grunt.file.write('obj/cache-list.js', 'var cacheList = ' + filesJson + ';\nvar cacheName = \'' + cacheName + '\'');
+
+        //cache.add('https://fonts1.unidays.world/unidays/v1/all-book.woff2'),
+        //cache.add('https://fonts1.unidays.world/unidays/v1/all-demi.woff2'),
+        //cache.add('https://fonts1.unidays.world/unidays/v1/all-heavy.woff2')
+    });
 
 
         
