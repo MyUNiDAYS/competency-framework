@@ -8,4 +8,4 @@ module.exports = function (role, topic) {
         return "N/A";
 
     return competencies[0].level.title;
-}
+};
