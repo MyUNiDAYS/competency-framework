@@ -12,7 +12,9 @@
 
 This project is designed to be hosted in production on Amazon S3. Below is the bucket configuration you need.
 
-TODO
+* Enable Static Website Hosting
+* Set Index document to `index.html`
+* Set Error document to `index.html`
 
 In develpoment, point a webserver at the `./build` folder.
 

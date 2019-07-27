@@ -7,11 +7,22 @@ module.exports = function (grunt) {
     grunt.initConfig({
         clean: ['build'],
         sass: {
-            options: {
-                implementation: require('node-sass'),
-                sourceMap: true
+            dev: {
+                options: {
+                    implementation: require('node-sass'),
+                    sourceMap: true,
+                    outputStyle: 'compressed'
+                },
+                files: {
+                    'build/site.css': 'src/scss/styles.scss'
+                }
             },
-            dist: {
+            prod: {
+                options: {
+                    implementation: require('node-sass'),
+                    sourceMap: false,
+                    outputStyle: 'compressed'
+                },
                 files: {
                     'build/site.css': 'src/scss/styles.scss'
                 }
