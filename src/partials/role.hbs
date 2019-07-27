@@ -1,0 +1,38 @@
+<section class="role" data-path="/roles/{{path}}">
+    <h1>{{title}}</h1>
+    <section class="box box-table">
+        <h2>Summary</h2>
+        <p>{{summary}}</p>
+        <h2>Level Overview</h2>
+        <table>
+            <thead>
+                <tr>
+                    <td></td>
+                {{#each allCompetencies}}
+                    <th colspan="{{topics.length}}"><a href="/competencies/{{competency.path}}">{{competency.title}}</a></th>
+                {{/each}}
+                </tr>
+                <tr>
+                    <td></td>
+                {{#each allCompetencies}}
+                {{#each topics}}
+                    <th><a href="/competencies/{{../competency.path}}/{{path}}">{{title}}</a></th>
+                {{/each}}
+                {{/each}}
+                </tr>
+            </thead>
+            <tbody>
+                {{#each levels}}
+                    <tr>
+                        <th><a href="/roles/{{../path}}/{{path}}">{{this.title}}</a></th>
+                    {{#each ../allCompetencies}}
+                    {{#each topics}}
+                        <td>{{getRoleTopicLevel ../../this this}}</td>
+                    {{/each}}
+                    {{/each}}
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </section>
+</section>

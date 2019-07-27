@@ -1,0 +1,24 @@
+<section class="role-level" data-path="/roles/{{role.path}}/{{level.path}}">
+    <h1>{{level.title}} - <a href="/roles/{{role.path}}">{{role.title}}</a></h1>
+    <div class="box">
+        <h3>Actions - BETA</h3>
+        <div class="box-inner-container">
+            <a href="/roles/{{role.path}}/{{level.path}}/review" class="button">Start Review</a>
+        </div>
+    </div>
+    <div class="box">
+        <h3>Summary</h3>
+        <div class="box-inner-container">
+            <p>{{level.summary}}</p>
+        </div>
+    </div>
+    <h3>Criteria</h3>
+    <div class="box-container">
+{{#each level.competencies.required}}
+    {{> roleCompetencyBox this}}
+{{/each}}
+{{#each level.competencies.optional}}
+    {{> roleCompetencyBox this}}
+{{/each}}
+    </div>
+</section>
