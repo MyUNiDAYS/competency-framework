@@ -1,0 +1,35 @@
+.accordion
+{
+    section
+    {
+        h4
+        {
+            border: solid 1px #ccc;
+            padding: 1em;
+        }
+
+        ul
+        {        
+            padding: 0.625em;
+            display: none;
+
+            @media (min-width: 768px)
+            {
+                padding: 1em;
+            }
+        }
+
+        &.current
+        {
+            h4
+            {
+                background: $color-excitement3;
+            }
+
+            ul 
+            {
+                display: block;
+            }
+        }
+    }
+}

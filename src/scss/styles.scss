@@ -1,4 +1,4 @@
-@import 'variables', 'reset', 'fonts', 'nav';
+@import 'variables', 'reset', 'fonts', 'nav', 'accordion';
 
 html
 {
@@ -9,7 +9,7 @@ html
 body
 {
     font-family: 'UNiDAYSPro-Book', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     height: 100%;
     background: #f4f4f4;
     padding-top: 80px;
