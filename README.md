@@ -56,17 +56,37 @@ A `dev` build also copies a `web.config` which enables easy serving of the proje
 
 The HTML is produced by combining the Roles and Cmpetencies JSON with Handlebars.js templates.
 
+### Context
+
+When the templates are compiled into HTML, a context object is passed (i.e. normal Handbelars.js operation). The context object looks like this:
+
+```
+{
+  competencies: [], // all competency objects from `./content/competencies
+  roles: [] // all role objects from `./content/roles`
+}
+```
+
+When defining a Role, Competencies are referenced by path. Before being passed to Handlebars, these paths are replaced with in-memory references to the referenced competencies.
+
+That means, you can traverse the object graph from a Role to the Competencies which make it up.
+
+
 ### Handlebars.js Templates
 
 Currently, there is only one template called `index.hbs`.
 This gets built into `index.html`, the only page which exists for this app.
 This lives at `./src/tempaltes/index.hbs`
 
+All the template files under `./src/tempaltes` will be automatically detected and registered as templates.
+
 ### Handlebars.js Partials
 
 All Partials which can be called from Templates or other Partials live under `./src/partials`.
 
 The name of the file (sans `.js`) is the name of the partial.
+
+All the partial files under `./src/partials` will be automatically detected and registered as partials.
 
 ### Handlebars.js Helpers
 
