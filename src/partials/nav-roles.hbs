@@ -1,8 +1,18 @@
-<li class="title">
-    <span>👔 Roles</span>
+<li>
+    <a href="/roles/{{path}}" class="nav-link">{{title}}</a>
     <ul>
-    {{#each this}}
+    {{#each departments}}
         {{> navroles}}
+    {{/each}}
+    {{#each roles}}
+        <li>
+            <a href="/roles/{{path}}">{{title}}</a>
+            <ul>
+            {{#each levels}}
+                <li><a href="/roles/{{../path}}/{{path}}">{{title}}</a></li>
+            {{/each}}
+            </ul>
+        </li>
     {{/each}}
     </ul>
 </li>

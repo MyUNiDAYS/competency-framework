@@ -21,7 +21,14 @@
             <li><a class="logo" href="https://www.myunidays.com" target="_blank"><img src="/logo.png" alt="UNiDAYS Logo" /></a></li>
             <li><a href="/">🏡 Home</a></li>
             {{> nav-competencies competencies }}
-            {{> nav-roles roles }}
+            <li class="title">
+                <span>👔 Roles</span>
+                <ul>
+                {{#each this}}
+                    {{> nav-roles roles}}
+                {{/each}}
+                </ul>
+            </li>
         </ul>
     </nav>
     <section id="content">
