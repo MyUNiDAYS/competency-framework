@@ -98,19 +98,6 @@ window.addEventListener('load', function(){
         });
     });
 
-    // let menuToggles = document.querySelectorAll('.js-toggle');
-    // console.log(menuToggles);
-
-    // for (i = 1; i <= menuToggles.length; i++) {
-    //     console.log(menuToggles[i]);
-
-    //     menuToggles[i].addEventListener('click', function(e) {
-    //         e.preventDefault();
-    //         console.log('clicked');
-    //         document.querySelector('body').classList.toggle("has-menu");
-    //     });
-    // }
-
     // boot the page    
     handleNavigation();
 
