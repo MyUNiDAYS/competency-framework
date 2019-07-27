@@ -56,6 +56,18 @@ A `dev` build also copies a `web.config` which enables easy serving of the proje
 
 The HTML is produced by combining the Roles and Cmpetencies JSON with Handlebars.js templates.
 
+### Handlebars.js Templates
+
+Currently, there is only one template called `index.hbs`.
+This gets built into `index.html`, the only page which exists for this app.
+This lives at `./src/tempaltes/index.hbs`
+
+### Handlebars.js Partials
+
+All Partials which can be called from Templates or other Partials live under `./src/partials`.
+
+The name of the file (sans `.js`) is the name of the partial.
+
 ### Handlebars.js Helpers
 
 Where in Handlebars.js you create a helper like this:
