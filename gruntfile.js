@@ -14,7 +14,7 @@ module.exports = function (grunt) {
                     outputStyle: 'compressed'
                 },
                 files: {
-                    'build/site.css': 'src/scss/styles.scss'
+                    'build/site.css': ['src/scss/styles.scss']
                 }
             },
             prod: {
@@ -24,7 +24,7 @@ module.exports = function (grunt) {
                     outputStyle: 'compressed'
                 },
                 files: {
-                    'build/site.css': 'src/scss/styles.scss'
+                    'build/site.css': ['src/scss/styles.scss']
                 }
             }
         },
@@ -85,8 +85,8 @@ module.exports = function (grunt) {
       grunt.loadNpmTasks('grunt-contrib-copy');
       grunt.loadNpmTasks('grunt-contrib-clean');
 
-      grunt.registerTask('build:dev', ['clean', 'sass', 'generate', 'uglify:jsDev', 'copy:dev', 'buildServiceWorkerUrls', 'uglify:swDev']);
-      grunt.registerTask('build:prod', ['clean', 'sass', 'generate', 'uglify:jsProd', 'copy:prod', 'buildServiceWorkerUrls', 'uglify:swProd']);
+      grunt.registerTask('build:dev', ['clean', 'sass:dev', 'generate', 'uglify:jsDev', 'copy:dev', 'buildServiceWorkerUrls', 'uglify:swDev']);
+      grunt.registerTask('build:prod', ['clean', 'sass:prod', 'generate', 'uglify:jsProd', 'copy:prod', 'buildServiceWorkerUrls', 'uglify:swProd']);
 
       grunt.registerTask('default', ['build:prod']);
 

@@ -1,5 +1,7 @@
-body {
-    > nav {
+body 
+{
+    > nav 
+    {
         position: fixed;
         top: 0;
         left: 0;
@@ -9,14 +11,16 @@ body {
         height: 70px;
         box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
 
-        .logo {
+        .logo 
+        {
             font-family: 'UNiDAYSPro-Heavy';
             font-size: 24px;
             display: block;
             margin-top: -12px;
             z-index: 4;
 
-            img {
+            img
+            {
                 width: 50px;
                 height: 50px;
                 vertical-align: middle;
@@ -24,30 +28,37 @@ body {
             }
         }
 
-        > ul {
+        > ul
+        {
             width: 100%;
             overflow: visible;
 
-            > li {
+            > li
+            {
                 float: left;
                 position: relative;
                 margin: 0 10px;
                 padding-top: 12px;
 
-                li {
+                li
+                {
                     padding: 5px;
                 }
 
-                > ul {
-                    ul {
+                > ul
+                {
+                    ul
+                    {
                         left: 100px;
                     }
                 }
             }
         }
 
-        li {
-            > ul {
+        li
+        {
+            > ul
+            {
     
                 display: none;
                 left: 25px;
@@ -57,18 +68,26 @@ body {
                 box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
                 width: 100%;
             
-                @media (min-width: 768px) {
+                @media (min-width: 768px)
+                {
                     width: 300px;
                     left: 25px;
                     position: absolute;
                 }
             }
 
-            &:hover {
-                > ul {
+            &:hover
+            {
+                > ul
+                {
                     display: block;
                 }
             }
+        }
+        
+        a.active
+        {
+            font-family: 'UNiDAYSPro-Demi';
         }
     }
 }
