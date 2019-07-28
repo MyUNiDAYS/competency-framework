@@ -2,8 +2,13 @@
     <h2><a href="/competencies/{{competency.path}}">{{competency.title}}</a> - <a href="/competencies/{{competency.path}}/{{topic.path}}">{{topic.title}}</a></h2>
     <div class="accordion">
     {{#each topic.levels}}
-        <section {{#ifLevelEqual ../topic this ../level}}class="current"{{/ifLevelEqual}}>
-            <h4>{{title}}</h4>
+        <section {{#ifLevelEqual ../topic this ../level}}class="current open"{{/ifLevelEqual}}>
+            <h4>
+                {{title}}
+                {{#ifLevelLower ../topic this ../level}}<span>Prerequisite Level</span>{{/ifLevelLower}}
+                {{#ifLevelEqual ../topic this ../level}}<span>Required Level</span>{{/ifLevelEqual}}
+                {{#ifLevelHigher ../topic this ../level}}<span>Higher Level</span>{{/ifLevelHigher}}
+            </h4>
             <ul>
             {{#each criteria}}
                 <li id="competency-{{../../competency.path}}-{{../path}}-{{@index}}"><a href="#competency-{{../../competency.path}}-{{../path}}-{{@index}}">{{this}}</a></li>

@@ -85,6 +85,19 @@ window.addEventListener('load', function(){
             e.target.classList.add('populated');
     });
 
+
+    document.querySelectorAll('.accordion section').forEach($section => {
+        $section.addEventListener('click', e => {
+            if(e.target.nodeName !== 'H4')
+                return;
+            
+            if($section.classList.contains('open'))
+                $section.classList.remove('open');
+            else
+                $section.classList.add('open');
+        });
+    });
+
     // let menuToggles = document.querySelectorAll('.js-toggle');
     // console.log(menuToggles);
 

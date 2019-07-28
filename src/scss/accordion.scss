@@ -4,8 +4,15 @@
     {
         h4
         {
-            border: solid 1px #ccc;
-            padding: 1em;
+            padding: 0.8em;
+            font-size: 0.8em;
+            background: $color-expert3;
+            cursor: pointer;
+
+            span
+            {
+                float: right;
+            }
         }
 
         ul
@@ -23,9 +30,13 @@
         {
             h4
             {
-                background: $color-excitement3;
+                background: $color-expert2;
+                font-size: 1.1em;
             }
+        }
 
+        &.open
+        {
             ul 
             {
                 display: block;

@@ -25,30 +25,11 @@
         padding: 1em;
     }
 
-    &:nth-child(even)
-    {
-        h1
-        , h2
-        , h3
-        {
-            background-color: $color-unidays-blue;
-        }
-    }
-
-    &:nth-child(odd)
-    {
-        h1
-        , h2
-        , h3
-        {
-            background-color: $color-unidays-green;
-        }
-    }
-
     h1
     , h2
     , h3
     {
+        background-color: $color-unidays-blue;
         margin-bottom: 0;
         font-family: 'UNiDAYSPro-Heavy';
         font-size: 1.3em;
