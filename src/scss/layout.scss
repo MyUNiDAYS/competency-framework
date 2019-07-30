@@ -55,3 +55,95 @@ body
         width: calc((100% / 2) - 50px);
     }
 }
+
+[data-path*="/competencies/core-competencies"]
+{
+    .box
+    {
+        h1
+        {
+            background-color: $color-human2;
+            color: #fff;
+        }
+
+        h2, h3
+        {
+            background-color: $color-human3;
+            color: #fff;
+        }
+    }
+}
+
+[data-path*="/competencies/core-values"]
+{
+    .box
+    {
+        h1
+        {
+            background-color: $color-empowered2;
+            color: #fff;
+        }
+
+        h2, h3
+        {
+            background-color: $color-empowered3;
+            color: #fff;
+        }
+    }
+}
+
+[data-path*="/competencies/engineering-competencies"]
+{
+    .box
+    {
+        h1
+        {
+            background-color: $color-excitement2;
+            color: #fff;
+        }
+
+        h2, h3
+        {
+            background-color: $color-excitement3;
+            color: #fff;
+        }
+    }
+}
+
+[data-path*="/competencies/product-competencies"]
+{
+    .box
+    {
+        h1
+        {
+            background-color: $color-expert2;
+            color: #fff;
+        }
+
+        h2, h3
+        {
+            background-color: $color-expert3;
+            color: #fff;
+        }
+    }
+}
+
+[data-path*="/roles/"]
+{
+    .box
+    {
+        &-table {
+            background-color: $color-expert2;
+        }
+
+        h2, h3
+        {
+            background-color: $color-expert1;
+            color: #fff;
+        }
+
+        h2:nth-child(3) {
+            border-radius: 0;
+        }
+    }
+}
