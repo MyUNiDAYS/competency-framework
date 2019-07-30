@@ -29,9 +29,9 @@
     , h2
     , h3
     {
+        @include unidayspro-heavy;
         background-color: $color-unidays-blue;
         margin-bottom: 0;
-        font-family: 'UNiDAYSPro-Heavy';
         font-size: 1.3em;
         padding: 0.625em;
 
@@ -43,8 +43,8 @@
 
     h3
     {
+        @include unidayspro-demi;
         margin-bottom: 1em;
-        font-family: 'UNiDAYSPro-Demi';
         font-size: 1.2em;
     }
 }

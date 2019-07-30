@@ -13,7 +13,7 @@ body
 
         .logo 
         {
-            font-family: 'UNiDAYSPro-Heavy';
+            @include unidayspro-heavy;
             font-size: 24px;
             display: block;
             margin-top: -12px;
@@ -87,7 +87,7 @@ body
         
         a.active
         {
-            font-family: 'UNiDAYSPro-Demi';
+            @include unidayspro-demi;
         }
     }
 }

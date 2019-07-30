@@ -12,7 +12,7 @@ tr.criteria-0 td
 
 th
 {
-    font-family: 'UNiDAYSPro-Demi';
+    @include unidayspro-demi;
     background: #eee;
 }
 
@@ -48,10 +48,10 @@ tbody td.input
 
 tbody td.input textarea
 {
+    @include unidayspro-book;
     display: block;
     border: 0;
     background: #f5f5f5;
-    font-family: 'UNiDAYSPro-Book';
     padding: 5px;
 }
 
