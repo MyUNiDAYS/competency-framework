@@ -1,38 +1,44 @@
-@font-face {
-    font-family: 'UNiDAYSPro-Book';
-    src: url("https://fonts1.unidays.world/unidays/v1/all-book.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+@font-face
+{
+  font-family: "UNiDAYSPro-Book";
+  src: url("https://fonts1.unidays.world/unidays/v1/all-book.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-@font-face {
-    font-family: 'UNiDAYSPro-Demi';
-    src: url("https://fonts1.unidays.world/unidays/v1/all-demi.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+@font-face
+{
+  font-family: "UNiDAYSPro-Demi";
+  src: url("https://fonts1.unidays.world/unidays/v1/all-demi.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-@font-face {
-    font-family: 'UNiDAYSPro-Heavy';
-    src: url("https://fonts1.unidays.world/unidays/v1/all-heavy.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+@font-face
+{
+  font-family: "UNiDAYSPro-Heavy";
+  src: url("https://fonts1.unidays.world/unidays/v1/all-heavy.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @mixin unidayspro-heavy
 {
-    font-family: 'UNiDAYSPro-Heavy', Arial;
+  font-family: "UNiDAYSPro-Heavy", Arial;
 }
 
 @mixin unidayspro-demi
 {
-    font-family: 'UNiDAYSPro-Demi', Arial;
+  font-family: "UNiDAYSPro-Demi", Arial;
 }
 
 @mixin unidayspro-book
 {
-    font-family: 'UNiDAYSPro-Book', Arial;
+  font-family: "UNiDAYSPro-Book", Arial;
 }
