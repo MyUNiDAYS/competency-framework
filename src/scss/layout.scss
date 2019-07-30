@@ -37,6 +37,11 @@ body
         {
             width: 49%;
         }
+
+        @media (min-width: 1200px)
+        {
+            width: 32%;
+        }
     }
 }
 
