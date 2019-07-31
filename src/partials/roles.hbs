@@ -1,4 +1,23 @@
 <div class="roles" data-path="/roles"></div>
+
 {{#each this}}
     {{> rolesPartial}}
+
+    <section class="roles" data-path="/roles/{{role.path}}">
+        <div class="box-container">
+            <div class="box">
+                <h1>{{title}}</h1>
+                <div class="box-inner-container">
+                    <ol>
+                    {{#each departments}}
+                        <li><a class="departments" href="/roles/{{role.path}}">{{title}}</a></li>
+                    {{/each}}
+                    {{#each roles}}
+                        <li><a class="roles" href="/roles/{{role.path}}">{{title}}</a></li>
+                    {{/each}}
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
 {{/each}}

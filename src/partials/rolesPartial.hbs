@@ -3,6 +3,42 @@
         {{> rolesPartial}}
     {{/each}}
 {{/if}}
+
+{{#if departments}}
+<section class="roles" data-path="/roles/{{path}}">
+    <div class="box-container">
+        <div class="box">
+            <h1>{{title}} - Departments</h1>
+            <div class="box-inner-container">
+                <ol>
+                {{#each departments}}
+                    <li><a class="departments" href="/roles/{{path}}">{{title}}</a></li>
+                {{/each}}
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+{{/if}}
+
+
+{{#if roles}}
+<section class="roles" data-path="/roles/{{path}}">
+    <div class="box-container">
+        <div class="box">
+            <h1>{{title}} - Roles</h1>
+            <div class="box-inner-container">
+                <ol>
+                {{#each roles}}
+                    <li><a class="roles" href="/roles/{{path}}">{{title}}</a></li>
+                {{/each}}
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+{{/if}}
+
 {{#if roles}}
 {{#each roles}}
     {{> role this }}
