@@ -1,17 +1,17 @@
-module.exports = {
-    title: "📦 Shared Service Ops",
-    path: "shared-service-ops",
-    roles: [
+{
+    "title": "📦 Shared Service Ops",
+    "path": "shared-service-ops",
+    "roles": [
         {
-            title: "🧙‍♀️ Project Management",
-            path: "project-management",
-            levels: [
+            "title": "🧙‍♀️ Project Management",
+            "path": "project-management",
+            "levels": [
                 {
-                    title: "🧙‍♀️ Change Project Manager",
-                    path: "change-project-manager",
-                    summary: "The Change Project Manager provides project and change expertise to the business. They ensure that the appropriate methodologies and governance are applied for all projects and changes. The Change Project Manager ensures timely communication of project progress, motivating the team, encouraging cross team collaboration. A good person in this role will call out risks and dependencies early, creating mitigation plans, ensuring the risks are not realised.",
-                    competencies: {
-                        required: [
+                    "title": "🧙‍♀️ Change Project Manager",
+                    "path": "change-project-manager",
+                    "summary": "The Change Project Manager provides project and change expertise to the business. They ensure that the appropriate methodologies and governance are applied for all projects and changes. The Change Project Manager ensures timely communication of project progress, motivating the team, encouraging cross team collaboration. A good person in this role will call out risks and dependencies early, creating mitigation plans, ensuring the risks are not realised.",
+                    "competencies": {
+                        "required": [
                             "core-competencies/delivering-value/pr0",
                             "core-competencies/client-focus/play3r",
                             "core-competencies/planning-and-organisation/1337",
@@ -31,4 +31,4 @@ module.exports = {
             ]
         }
     ]
-};
+}

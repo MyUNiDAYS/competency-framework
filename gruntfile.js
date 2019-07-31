@@ -130,9 +130,9 @@ module.exports = function (grunt) {
     function loadContent() {
 
         // load all roles
-        var roles = grunt.file.expand({ filter: 'isFile', cwd: 'content/roles'}, ['*.js']).map(f => require('./content/roles/' + f));
+        var roles = grunt.file.expand({ filter: 'isFile', cwd: 'content/roles'}, ['*.json']).map(f => require('./content/roles/' + f));
         // load all competencies
-        var competencies = grunt.file.expand({ filter: 'isFile', cwd: 'content/competencies'}, ['*.js']).map(f => require('./content/competencies/' + f));
+        var competencies = grunt.file.expand({ filter: 'isFile', cwd: 'content/competencies'}, ['*.json']).map(f => require('./content/competencies/' + f));
 
         // explode role mappings into object references
         roles.forEach(role => {

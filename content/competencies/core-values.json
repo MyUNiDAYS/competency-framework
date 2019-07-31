@@ -1,85 +1,85 @@
-module.exports = {
-    title: "☯️ Values",
-    path: "core-values",
-    summary: "Our shared mission at UNiDAYS is 'Giving students the power to make every experience more valuable and rewarding'. In order to achieve this mission, we all share a set of core values, which fuel our culture and are embedded in our every day lives. They are 'Everyone is important', 'No BS, no jerks', 'Jump into the unknown', 'Be clear on your purpose' and 'Be a builder'. Adherence to these values ensures that the correct behaviours are demonstrated, and those behaviours, are the key to our shared success.",
-    topics: [
-        {
-            title: "🙋‍♀️ Everyone is important",
-            path: "everyone-is-important",
-            summary: "Demonstrating this value means treating everybody fairly and equally. We promote a high challenge and high support environment, where we hold each other accountable but don't blame others. We're fair, everybody gets the same opportunities and we don't accept favouritism of any type.",
-            levels: [
-                {
-                    title: "Participant",
-                    path: "participant",
-                    summary: "",
-                    criteria: [
-                          "Identifies, influences, engages, and communicates well with internal and external stakeholders to make better decisions faster and with greater collaboration.",
-                          "Coaches, mentors, develops, and influences others in order to help achieve business objectives."
-                    ]
-                }
-            ]
-        },
-        {
-            title: "🙊 No BS, no jerks",
-            path: "no-bs-no-jerks",
-            summary: "It should be a given that everybody at UNiDAYS is treated with decency and respect. We have honest and well-mannered conversations, we listen, providing constructive and useful feedback.",
-            levels: [
-                {
-                    title: "Participant",
-                    path: "participant",
-                    summary: "",
-                    criteria: [
-                          "Effectively and appropriately communicates and adapts communication style in various situations to achieve a positive impact."
-                    ]
-                }
-            ]
-        },
-        {
-            title: "🎯 Be clear on your purpose",
-            path: "be-clear-on-your-purpose",
-            summary: "We all agree to fully understand the goals we're setting out to achieve before we start them. We are responsible for unnderstanding what we're doing and why we're doing it. We understand our skills and the contribution that we make to the shared goals of the business. ",
-            levels: [
-                {
-                    title: "Participant",
-                    path: "participant",
-                    summary: "",
-                    criteria: [
-                          "Focusses time and expertise to have the greatest impact on members, partners, and critical business needs."
-                    ]
-                }
-            ]
-        },
-        {
-            title: "👷 Be a builder",
-            path: "be-a-builder",
-            summary: "We are always looking for areas to improve in. We seek to find, understand and understand our gaps, for the betterment of the business. We take responsibility for our personal development and our ambition matches that of the business.",
-            levels: [
-                {
-                    title: "Participant",
-                    path: "participant",
-                    summary: "",
-                    criteria: [
-                          "Solves business problems with appropriate business solutions.",
-                          "Involves different perspectives and expertise at all levels and across departments to achieve the best results."
-                    ]
-                }
-            ]
-        },
-        {
-            title: "❓ Jump into the unknown",
-            path: "jump-into-the-unknown",
-            summary: "We understand that we must take risks at times to progress. We encourage this. The decisions that we make are based on our expertise and experience. If it doesn't work? Fine. We fail fast, learn from our mistakes and march onwards.",
-            levels: [
-                {
-                    title: "Participant",
-                    path: "participant",
-                    summary: "",
-                    criteria: [
-                          "Responds to change with a willingness to learn, so they can help achieve their individual and business objectives.",
-                          "Produces new product ideas or creative solutions that have never been imagined before."
-                    ]
-                }
-            ]
-        }
-    ]
-};
+{
+	"title": "☯️ Values",
+	"path": "core-values",
+	"summary": "Our shared mission at UNiDAYS is 'Giving students the power to make every experience more valuable and rewarding'. In order to achieve this mission, we all share a set of core values, which fuel our culture and are embedded in our every day lives. They are 'Everyone is important', 'No BS, no jerks', 'Jump into the unknown', 'Be clear on your purpose' and 'Be a builder'. Adherence to these values ensures that the correct behaviours are demonstrated, and those behaviours, are the key to our shared success.",
+	"topics": [
+		{
+			"title": "🙋‍♀️ Everyone is important",
+			"path": "everyone-is-important",
+			"summary": "Demonstrating this value means treating everybody fairly and equally. We promote a high challenge and high support environment, where we hold each other accountable but don't blame others. We're fair, everybody gets the same opportunities and we don't accept favouritism of any type.",
+			"levels": [
+				{
+					"title": "Participant",
+					"path": "participant",
+					"summary": "",
+					"criteria": [
+						"Identifies, influences, engages, and communicates well with internal and external stakeholders to make better decisions faster and with greater collaboration.",
+						"Coaches, mentors, develops, and influences others in order to help achieve business objectives."
+					]
+				}
+			]
+		},
+		{
+			"title": "🙊 No BS, no jerks",
+			"path": "no-bs-no-jerks",
+			"summary": "It should be a given that everybody at UNiDAYS is treated with decency and respect. We have honest and well-mannered conversations, we listen, providing constructive and useful feedback.",
+			"levels": [
+				{
+					"title": "Participant",
+					"path": "participant",
+					"summary": "",
+					"criteria": [
+						"Effectively and appropriately communicates and adapts communication style in various situations to achieve a positive impact."
+					]
+				}
+			]
+		},
+		{
+			"title": "🎯 Be clear on your purpose",
+			"path": "be-clear-on-your-purpose",
+			"summary": "We all agree to fully understand the goals we're setting out to achieve before we start them. We are responsible for unnderstanding what we're doing and why we're doing it. We understand our skills and the contribution that we make to the shared goals of the business. ",
+			"levels": [
+				{
+					"title": "Participant",
+					"path": "participant",
+					"summary": "",
+					"criteria": [
+						"Focusses time and expertise to have the greatest impact on members, partners, and critical business needs."
+					]
+				}
+			]
+		},
+		{
+			"title": "👷 Be a builder",
+			"path": "be-a-builder",
+			"summary": "We are always looking for areas to improve in. We seek to find, understand and understand our gaps, for the betterment of the business. We take responsibility for our personal development and our ambition matches that of the business.",
+			"levels": [
+				{
+					"title": "Participant",
+					"path": "participant",
+					"summary": "",
+					"criteria": [
+						"Solves business problems with appropriate business solutions.",
+						"Involves different perspectives and expertise at all levels and across departments to achieve the best results."
+					]
+				}
+			]
+		},
+		{
+			"title": "❓ Jump into the unknown",
+			"path": "jump-into-the-unknown",
+			"summary": "We understand that we must take risks at times to progress. We encourage this. The decisions that we make are based on our expertise and experience. If it doesn't work? Fine. We fail fast, learn from our mistakes and march onwards.",
+			"levels": [
+				{
+					"title": "Participant",
+					"path": "participant",
+					"summary": "",
+					"criteria": [
+						"Responds to change with a willingness to learn, so they can help achieve their individual and business objectives.",
+						"Produces new product ideas or creative solutions that have never been imagined before."
+					]
+				}
+			]
+		}
+	]
+}
