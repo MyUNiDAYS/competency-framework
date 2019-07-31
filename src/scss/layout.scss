@@ -10,7 +10,36 @@ body
     font-size: 16px;
     height: 100%;
     background: #f4f4f4;
-    padding-top: 80px;
+}
+
+body, .container {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    margin-top: 0px !important;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+}
+
+.main {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100% !important;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 1em;
 }
 
 #content

@@ -16,7 +16,20 @@
     <script src="/site.js" defer></script>
 </head>
 <body>
-    <nav>
+<div class="container">
+    <div class="navigation">
+        <button class="burger">Menu</button>
+        <a class="logo" href="https://www.myunidays.com" target="_blank"><img src="/logo.png" alt="UNiDAYS Logo" /></a>
+        <nav>
+            <ul>
+                <li><a href="/">🏡 Home</a></li>
+                {{> nav-competencies competencies }}
+                {{> nav-roles roles }}
+            </ul>
+        </nav>
+    </div>
+
+    {{!-- <nav>
         <ul>
             <li><a class="logo" href="https://www.myunidays.com" target="_blank"><img src="/logo.png" alt="UNiDAYS Logo" /></a></li>
             <li><a href="/">🏡 Home</a></li>
@@ -30,7 +43,8 @@
                 </ul>
             </li>
         </ul>
-    </nav>
+    </nav> --}}
+
     <section id="content">
         <section class="content" data-path="/">
             <h1>UNiDAYS Competency and Progression Framework</h1>
@@ -105,5 +119,6 @@
         {{> competencies competencies }}
         {{> roles roles }}
     </section>
+</div>
 </body>
 </html>
