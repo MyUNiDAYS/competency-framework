@@ -36,7 +36,9 @@ section ul li
 
     &.active
     {
-        background: $color-unidays-blue;
+        font-family: unidayspro-demi;
+        border-radius: 6px;
+        padding: 0.5em;
     }
 }
 

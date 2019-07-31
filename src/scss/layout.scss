@@ -72,6 +72,14 @@ body
             color: #fff;
         }
     }
+
+    section ul li
+    {
+        &.active
+        {
+            background-color: $color-human3;
+        }
+    }
 }
 
 [data-path*="/competencies/core-values"]
@@ -88,6 +96,14 @@ body
         {
             background-color: $color-empowered3;
             color: #fff;
+        }
+    }
+
+    section ul li
+    {
+        &.active
+        {
+            background-color: $color-empowered3;
         }
     }
 }
@@ -108,6 +124,14 @@ body
             color: #fff;
         }
     }
+
+    section ul li
+    {
+        &.active
+        {
+            background-color: $color-excitement3;
+        }
+    }
 }
 
 [data-path*="/competencies/product-competencies"]
@@ -124,6 +148,14 @@ body
         {
             background-color: $color-expert3;
             color: #fff;
+        }
+    }
+
+    section ul li
+    {
+        &.active
+        {
+            background-color: $color-expert3;
         }
     }
 }
