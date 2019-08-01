@@ -1,11 +1,13 @@
 {
 	"title": "🛠️ Engineering",
 	"path": "engineering-competencies",
+	"theme": "excitement",
 	"summary": "The Engineering team are responsible for building and maintaining the solutions that members and partners use. Each Engineering role also has a specific set of role competencies, unique to each area of specialisation. Utilise this information to understand current skill levels, as well as identifying areas for development.",
 	"topics": [
 		{
 			"title": "💻 IT",
 			"path": "it",
+			"theme": "excitement",
 			"summary": "An IT team member must have technical understanding and great problem solving skills. These skills should be complimented by a customer centric attitude, with an ability to communicate the status of work effectively. With seniority, comes further technical responsibility. An expectation to understand complex network design and configuration. Security should be built into everything the IT team implements. A senior IT team member will set the standard, be proactive and coach others.",
 			"levels": [
 				{
@@ -102,6 +104,7 @@
 		{
 			"title": "📋 Testing",
 			"path": "testing",
+			"theme": "excitement",
 			"summary": "Test Engineers are people with an analytical and logical mindset, who have an eye for detail and care about waste. The first step in a Test Engineers career is performing manual testing. They will build test plans, test scripts and discover bugs. Advancement is found through automation and continuous improvement. A Test Engineer will coach quality to those around them, calling out when standards are not met.",
 			"levels": [
 				{
@@ -163,6 +166,7 @@
 		{
 			"title": "🎀 Front End Engineering",
 			"path": "front-end-engineering",
+			"theme": "excitement",
 			"summary": "Front End Engineers start their career with a knowledge of how to build basic web pages. As they advance, so will their knowledge of HTML, CSS and JavaScript. As technical skill develops, understanding of quality and delivery of value will also improve. A senior Front End Engineer will take responsibility for the web estate, seeking continuous improvement and setting out best practices for the rest of the Engineering team.            ",
 			"levels": [
 				{
@@ -228,6 +232,7 @@
 		{
 			"title": "🔧 Software Engineering",
 			"path": "software-engineering",
+			"theme": "excitement",
 			"summary": "A Software Engineer starts their career with a base level of understanding of software programming. A newbie should be able to build something from scratch and know how to integrate changes into existing software. As a Software Engineer’s career progresses skills such as database knowledge, architecture and scalability will begin to be considerations, as will UX and customer experience (where appropriate). A Software Engineer should work hard to stay up to date with industry standards and emerging technologies. When a Software Engineer becomes senior, behaviours like coaching others, mentoring and architectural design will be expected. ",
 			"levels": [
 				{
@@ -307,6 +312,7 @@
 		{
 			"title": "🛃 Verification",
 			"path": "verification",
+			"theme": "excitement",
 			"summary": "A Verification Engineer, is an all round mid or senior level Engineer, who has specific expertise in identity and identity managment. The Verification Engineer takes responsibility for UNiDAYS ability to verify members. This means maintaining relationships with third parties, keeping abreast of changes to identity management systems. A Verification Engineer will also monitor verification rates, identifying issues and ensuring they are resolved promptly.",
 			"levels": [
 				{

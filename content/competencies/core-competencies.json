@@ -1,11 +1,13 @@
 {
 	"title": "🍏 Core",
 	"path": "core-competencies",
+	"theme": "human",
 	"summary": "The core competences enable UNiDAYS staff to align job profiles,  creating a shared understanding of how to attain career progression. Use the documentation of the core competencies to identify your current level, and identify the areas you'd like to improve in. Get started by selecting a core competency.",
 	"topics": [
 		{
 			"title": "😀 Attitude",
 			"path": "attitude",
+			"theme": "human",
 			"summary": "Attitude is everything. Attitude determines the success or failure of the thing we set out to do. We need to be adaptable and open to change, willing to listen to and take on new ideas. A good attitude enables and encourages cohesion and collaborative problem solving.",
 			"levels": [
 				{
@@ -67,6 +69,7 @@
 		{
 			"title": "📯 Delivering Value",
 			"path": "delivering-value",
+			"theme": "human",
 			"summary": "Delivery of value is a key component in the success of your career. Being commercially aware, understanding costs around work and the impact of those costs on the business are all important.",
 			"levels": [
 				{
@@ -128,6 +131,7 @@
 		{
 			"title": "🎯 Client Focus",
 			"path": "client-focus",
+			"theme": "human",
 			"summary": "Delivering good service to clients (members, partners and internal customers) is a baseline we should all be adhering to. These activities include understanding client requirements, remaining client focused and being a visible point of contact for a client. As you develop skills, you're expected to be more consultative, spending more time with clients, gathering requirements and proactively seeking feedback. The final level of mastery sees you proactively providing updates to clients, asking probing questions to really get to the root of the problem the client is looking to solve.",
 			"levels": [
 				{
@@ -186,6 +190,7 @@
 		{
 			"title": "📅 Planning and Organisation",
 			"path": "planning-and-organisation",
+			"theme": "human",
 			"summary": "A baseline organiser is self organised, consistently communicating and consulting with stakeholders when required. As this skill develops, the expectation is that you'll begin to create action plans, set expectation with stakeholders and meet those expectations. Once you've levelled up this skill, you'll be conducting analysis of markets, setting SMART objectives and creating KPIs/performance metrics to track implementation. You'll be making decisions based on evidence and scientific methods. It's key that as a master of this skill you set expectation for both stakeholders and the delivery teams around you.",
 			"levels": [
 				{
@@ -249,6 +254,7 @@
 		{
 			"title": "🤹 Problem Solving",
 			"path": "problem-solving",
+			"theme": "human",
 			"summary": "A solution focused approach is a good foundation to build this skill on. You should be presenting solutions to decision makers, as opposed to presenting the problem. Impediments or blockers don't exist- everybody should refuse to become blocked. You should always see that there is always a way to move things forwards, and you do. Further understanding of this skill involves you developing and actually resolving the problems, making recommendations where necessary, based on evidence and analysis. You'll be using your judgement to quickly make good decisions based on limited evidence.",
 			"levels": [
 				{
@@ -305,6 +311,7 @@
 		{
 			"title": "💬 Communication",
 			"path": "communication",
+			"theme": "human",
 			"summary": "All n00bs should be able to listen, communicate and set the expectation for communication to their clients. Advancement comes in the form of the creation of consumable technical specifications. Translation of technical jargon into understandable language for others is a critical skill as a communicator. When you've made 1337 communicator, you'll be consistently communicating. You'll build trust by autonomously communicating effectively. You'll produce business plans and use communication to gather buy-in for your solutions from teams.",
 			"levels": [
 				{
@@ -368,6 +375,7 @@
 		{
 			"title": "🥇 Striving For Success",
 			"path": "striving-for-success",
+			"theme": "human",
 			"summary": "This skill is all about attitude and reflection. As a n00b you should be generally enthusiastic and have a can do attitude when faced with problems. You should be receptive to feedback and new ideas, reflecting on your own skills and areas you may need to improve. As you develop this skill, you should be seeking continuous improvement and looking to constantly exceed expectation. You should be monitoring key business metrics and be seeking ways to help improve those. You're emotionally intelligent. You should be able to provide constructive feedback and potential improvements to solutions/business processes.",
 			"levels": [
 				{
@@ -428,6 +436,7 @@
 		{
 			"title": "👨‍👨‍👧 Team Orientation",
 			"path": "team-orientation",
+			"theme": "human",
 			"summary": "We're looking for people who are team players, who seek to foster positive relationships with the people they work with around a shared goal. Show trust by delegating tasks and defending colleagues if required. Once you've mastered this skill, you'll be a shining beacon, focused on delivery by creating a cohesive environment, where everybody shares the same values and goals. You will be a cheerleader for your team, celebrating success and instilling positivity within the team. You're a teacher, and share you experience with the team. You lead by example and identify areas the team needs to improve.",
 			"levels": [
 				{

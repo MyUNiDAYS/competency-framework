@@ -1,11 +1,13 @@
 {
 	"title": "🚀 Product",
 	"path": "product-competencies",
+	"theme": "expert",
 	"sumamry": "The product team are responsible the strategy of the business, ensuring that the right thing is being built at the right time. Product skills are broken down into various categories and areas of progression measure in levels. Use these definitions to measure where you are right now, and identify what the next steps that you need to take are.",
 	"topics": [
 		{
 			"title": "🤹 Opportunity Analysis",
 			"path": "opportunity-analysis",
+			"theme": "expert",
 			"summary": "A good Product team member should be able to analyse products on offer in the current market. In turn, identifying areas for product growth. With seniority, this analysis will be turned into a Product vision and strategy. This vision and strategy will  create cohesion, and shared goal, agreed upon by both the Product and Engineering teams.",
 			"levels": [
 				{
@@ -68,6 +70,7 @@
 		{
 			"title": "📊 Data Skills",
 			"path": "data-skills",
+			"theme": "expert",
 			"summary": "Data lies at the very centre of everything the Product team does. If data doesn't exist, the Product team are responsible for ensuring the correct data is collated. The product team will create metrics, using data, driving business decisions and experimentation. The most senior of members of the Product team will use data to make complex business decisions, whilst taking into account a multitude of external factors. ",
 			"levels": [
 				{
@@ -122,6 +125,7 @@
 		{
 			"title": "🗃️ Domain Knowledge",
 			"path": "domain-knowledge",
+			"theme": "expert",
 			"summary": "Domain knowledge is so important to the Product Team, to help teams plan, set expectation and generally understand delivery. A PM/PO will also need to understand the SDLC, which means, understanding how code is tested and deployed. A senior person in this position will have a deep market knowledge in the relevant Product area, able to challenge experts and identify market opportunities.",
 			"levels": [
 				{
@@ -175,6 +179,7 @@
 		{
 			"title": "👔 Execution",
 			"path": "execution",
+			"theme": "expert",
 			"summary": "A good Product Manager understands that execution is about getting the most value out of an idea. A mediocre idea with great execution has the potential to be valuable. A great idea with poor execution, is next to worthless. Being good at execution means understanding the concept of an MvP and getting something in front of users quickly. Understanding the priority of tasks and deliverables.",
 			"levels": [
 				{
@@ -228,6 +233,7 @@
 		{
 			"title": "👩‍🎓 User Centricity",
 			"path": "user-centricity",
+			"theme": "expert",
 			"summary": "A user centric focus is a key skill in the Product team. This starts by understanding the users of the product being built, and presenting the needs of the users to the Engineering team. The Product team will track work, ensuring that it meets the requirements of users. As this skill develops, user requirements are mapped to metrics. Quality of the solution, via close Product management, will not only meet user requirements, but exceed and delight them.",
 			"levels": [
 				{
@@ -280,6 +286,7 @@
 		{
 			"title": "🎎 Working Through Others",
 			"path": "working-through-others",
+			"theme": "expert",
 			"summary": "Working through others equates to influencing people, gathering buy-in, with the goal of delivering value to users. Collaboration and win/win scenarios are key tools a successful Product team member utilises. As this skill develops, the Product team will help squads understand the importance of their work to the 'bigger picture'. A senior Product Manager will plan work, considering dependencies, removing impediments and generally maintaining smooth delivery.",
 			"levels": [
 				{
