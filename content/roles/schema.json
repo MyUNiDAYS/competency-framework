@@ -1,0 +1,98 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"type": "object",
+	"properties": {
+		"title": {
+			"type": "string"
+		},
+		"path": {
+			"type": "string"
+		},
+		"departments": {
+            "$ref": "#/definitions/departments"
+        },
+        "roles": {
+            "type": "array",
+            "items": { "$ref": "#/definitions/role" }
+        }
+	},
+	"required": [ "title" ],
+	"additionalProperties": false,
+	"definitions": {
+		"department": {
+			"type": "array",
+			"properties": {
+				"title": {
+                    "type": "string"
+                },
+                "path": {
+                    "type": "string"
+                },
+                "departments": {
+                    "type": "array",
+                    "items": { "$ref": "#/definitions/departments" }
+                },
+                "roles": {
+                    "type": "array",
+                    "items": { "$ref": "#/definitions/roles" }
+                }
+			},
+			"required": [ "title", "path", "levels" ],
+			"additionalProperties": false
+        },
+        "role": {
+            "type": "array",
+            "items": {
+			    "properties": {
+                    "title": {
+                        "type": "string"
+                    },
+                    "path": {
+                        "type": "string"
+                    },
+                    "levels": {
+                        "type": "array",
+                        "items": { "$ref": "#/definitions/level" }
+                    }
+                }
+            },
+            "required": [ "title", "path", "levels"],
+			"additionalProperties": false
+        },
+        "level": {
+            "type": "array",
+            "items": {
+                "properties": {
+                    "title": {
+                        "type": "string"
+                    },
+                    "path": {
+                        "type": "string"
+                    },
+                    "summary": {
+                        "type": "string"
+                    },
+                    "competencies": {
+                        "type": "object",
+                        "properties": {
+                            "required": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            "optional": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+			"required": [ "title", "path", "competencies"],
+			"additionalProperties": false
+		}
+	}
+}
