@@ -3,6 +3,8 @@ module.exports = function (grunt) {
     
     const handlebars = require('handlebars');
     const md5 = require('md5');
+    const jsdom = require('jsdom');
+    const { JSDOM } = jsdom;
 
     grunt.initConfig({
         clean: ['build'],
@@ -131,9 +133,24 @@ module.exports = function (grunt) {
         for(var p in partials)
             handlebars.registerPartial(p, partials[p]);
         
+
         for(var template in templates) {
             var generated = templates[template](content);
-            grunt.file.write('./build/' + template + '.html', generated);
+            
+            const dom = new JSDOM(generated);
+            var pages = dom.window.document.querySelectorAll('section[data-path]');
+
+            pages.forEach(page => {
+
+                // dataSet doesnt work for some reason
+                var filename = page.attributes['data-path'].value;
+                filename = filename.replace(/[^a-z0-9\-_]/gi, '_');
+                page.parentNode.removeChild(page);
+
+                grunt.file.write('./build/' + filename + '.html', page.outerHTML);
+            });
+
+            grunt.file.write('./build/' + template + '.html', dom.window.document.documentElement.outerHTML);
         }
 
     });

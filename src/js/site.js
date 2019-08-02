@@ -10,23 +10,24 @@ if (('serviceWorker' in navigator) && false)
     }); 
 }
 
+
+
+
 // Handle pushstate navigation
 window.addEventListener('popstate', function(e){
     handleNavigation();
 });
 
-// Handle navigation to show content
-function handleNavigation(){
-    document.body.scrollTo({ y: 0 });
+var pageCache = {
+    store: {},
+    get: function(key) { return Promise.resolve(this.store[key]); },
+    set: function(key, value) { this.store[key] = value; }
+}
 
-    var path = window.location.pathname;
-    var hash = window.location.hash ? window.location.hash.substr(1) : '';
-    
-    // Show content
-    var $pathElems = document.querySelectorAll('[data-path]');
-    $pathElems.forEach(section => section.style.display = 'none');
-    Array.prototype.slice.call($pathElems).filter(e => e.dataset.path == path).forEach(s => s.style.display = 'block');
-    
+var $content;
+
+function updateUi(path, hash){
+
     document.querySelectorAll('.active').forEach(a => a.classList.remove('active'));
 
     // highlight current hash
@@ -42,8 +43,40 @@ function handleNavigation(){
         document.querySelectorAll(`a[href="${path}"]`).forEach(a => a.classList.add('active'));
 
 }
+// Handle navigation to show content
+function handleNavigation(){
+    document.body.scrollTo({ y: 0 });
+
+    var path = window.location.pathname;
+    var hash = window.location.hash ? window.location.hash.substr(1) : '';
+    
+    pageCache.get(path)
+        .then(html => {
+            if(html)
+                return html;
+
+            var url = '/' + path.replace(/[^a-z0-9\-_]/gi, '_') + '.html';
+            return fetch(url)
+                .then(response => response.text())
+                .then(html => {
+                    var parser = new DOMParser()
+                    var dom = parser.parseFromString(html, 'text/html');
+                    var $elem = dom.body.firstElementChild;
+                    pageCache.set(path, $elem);
+                    return $elem;
+                })
+            
+        })
+        .then($html => {
+            $content.removeChild($content.firstElementChild);
+            $content.appendChild($html);
+            updateUi(path, hash);
+        });
+}
 
 window.addEventListener('load', function(){
+
+    $content = document.getElementById('content');
 
     // Highjack all internal link clicks and use pushtate instead
     document.addEventListener('click', function(e){
