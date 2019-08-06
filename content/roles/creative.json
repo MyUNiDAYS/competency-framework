@@ -1,0 +1,30 @@
+{
+    "title": "🎨 Creative",
+    "path": "creative",
+    "roles": [
+        {
+            "title": "👩‍🎨 Creative Design",
+            "path": "creative-design",
+            "levels": [
+                {
+                    "title": "👩‍🎨 Creative Designer",
+                    "path": "creative-designer",
+                    "summary": "",
+                    "competencies": {
+                        "required": [
+                            "core-competencies/attitude/play3r",
+                            "core-competencies/delivering-value/play3r",
+                            "core-competencies/client-focus/play3r",
+                            "core-competencies/planning-and-organisation/play3r",
+                            "core-competencies/problem-solving/play3r",
+                            "core-competencies/communication/play3r",
+                            "core-competencies/striving-for-success/play3r",
+                            "core-competencies/team-orientation/play3r",
+                            "creative-competencies/creative-design/competent"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+	"title": "🎨 Creative",
+	"path": "creative-competencies",
+	"theme": "expert",
+	"summary": "",
+	"topics": [
+		{
+			"title": "🎨 Creative Design",
+			"path": "creative-design",
+			"theme": "expert",
+			"summary": "",
+			"levels": [
+				{
+					"title": "Competent",
+					"path": "competent",
+					"summary": "",
+					"criteria": [
+						"Consistently produces great quality concepts for creative campaigns and projects",
+						"Maintains consistency and quality when delivering and approving creative across the team", 
+						"Demonstrates the ability to deliver and identify creative that answers the needs of the client and the audience",
+						"Strong contributor to ideation, concept and design stages of campaigns and projects, working closely with the project team",
+						"Consistently collaborates cross functionally with relevant internal and external stakeholders and departments", 
+						"Delivers engaging and informative presentations to all internal audiences",
+						"Liaises with external 3rd parties, e.g. Photo studios, agencies, printers",
+						"Developing the skills to work under minimal supervision and with independent judgement",
+						"Demonstrates strong understanding of how your work fits into the bigger strategic picture",
+						"Understand the cause and effects of your work on the business and other departments",
+						"Good commercial awareness - you’ll generate innovative yet commercially-viable concepts and solutions.",
+						"Build relationships with other stakeholders and departments to deliver on business objectives.",
+						"Consistently lead by example to influence others and creates camaraderie as part of the team",
+						"Puts the customer at the heart of what they do",
+						"You will evaluate and measure your own performance and seek feedback for continuous improvement."
+					]
+				}
+			]
+		}
+	]
+}
