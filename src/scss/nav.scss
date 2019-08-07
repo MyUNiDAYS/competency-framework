@@ -10,7 +10,7 @@
     justify-content: space-between;
     padding: 0 1em;
     background-color: #eee;
-    font-size: 1.8em;
+    font-size: 1.5em;
     box-sizing: border-box;
 
     > nav {
@@ -30,8 +30,7 @@
         width: 19%;
         min-width: 320px;
         justify-content: flex-start;
-        align-items: flex-start;
-        font-size: 1.25em;
+        font-size: 1em;
 
         .burger {
             display: none;
@@ -88,6 +87,10 @@
                 content: "-";
             }
         }
+    }
+
+    ul ul {
+        margin-bottom: 1em;
     }
 
     .list-2 {

@@ -8,18 +8,16 @@ body
 {
     @include unidayspro-book;
     font-size: 16px;
-    height: 100%;
     background: #f4f4f4;
+    height: 100%;
 }
 
 body, .container {
-    height: 100%;
     overflow-x: hidden;
 }
 
 .container {
     position: absolute;
-    height: 100%;
     width: 100%;
     display: flex;
     margin-top: 0px !important;
@@ -46,10 +44,12 @@ body, .container {
 {
     box-sizing: border-box;
     padding: 10px;
+    width: 100%;
 
     @media (min-width: 768px)
     {
         padding: 20px;
+        width: 81%;
     }
 }
 
