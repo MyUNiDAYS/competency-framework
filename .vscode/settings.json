@@ -1,0 +1,16 @@
+{
+	"json.schemas": [
+        {
+			"fileMatch": [
+				"/content/roles/*.json"
+			],
+			"url": "./content/roles/schema.json"
+		},
+		{
+			"fileMatch": [
+				"/content/competencies/*.json"
+			],
+			"url": "./content/competencies/schema.json"
+        }
+	]
+}

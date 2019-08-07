@@ -1,15 +1,16 @@
 {
-	"$schema": "http://json-schema.org/schema#",
+	"$schema": "http://json-schema.org/draft-07/schema#",
 	"type": "object",
 	"properties": {
 		"title": {
 			"type": "string"
 		},
 		"path": {
-			"type": "string"
+            "type": "string",
+            "pattern": "^[a-z0-9_-]+$"
 		},
 		"departments": {
-            "$ref": "#/definitions/departments"
+            "$ref": "#/definitions/department"
         },
         "roles": {
             "type": "array",
@@ -26,66 +27,65 @@
                     "type": "string"
                 },
                 "path": {
-                    "type": "string"
+                    "type": "string",
+                    "pattern": "^[a-z0-9_-]+$"
                 },
                 "departments": {
                     "type": "array",
-                    "items": { "$ref": "#/definitions/departments" }
+                    "items": { "$ref": "#/definitions/department" }
                 },
                 "roles": {
                     "type": "array",
-                    "items": { "$ref": "#/definitions/roles" }
+                    "items": { "$ref": "#/definitions/role" }
                 }
 			},
 			"required": [ "title", "path", "levels" ],
 			"additionalProperties": false
         },
         "role": {
-            "type": "array",
-            "items": {
-			    "properties": {
-                    "title": {
-                        "type": "string"
-                    },
-                    "path": {
-                        "type": "string"
-                    },
-                    "levels": {
-                        "type": "array",
-                        "items": { "$ref": "#/definitions/level" }
-                    }
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "path": {
+                    "type": "string",
+                    "pattern": "^[a-z0-9_-]+$"
+                },
+                "levels": {
+                    "type": "array",
+                    "items": { "$ref": "#/definitions/level" }
                 }
             },
             "required": [ "title", "path", "levels"],
 			"additionalProperties": false
         },
         "level": {
-            "type": "array",
-            "items": {
-                "properties": {
-                    "title": {
-                        "type": "string"
-                    },
-                    "path": {
-                        "type": "string"
-                    },
-                    "summary": {
-                        "type": "string"
-                    },
-                    "competencies": {
-                        "type": "object",
-                        "properties": {
-                            "required": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "optional": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "path": {
+                    "type": "string",
+                    "pattern": "^[a-z0-9_-]+$"
+                },
+                "summary": {
+                    "type": "string"
+                },
+                "competencies": {
+                    "type": "object",
+                    "properties": {
+                        "required": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "optional": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
                             }
                         }
                     }
