@@ -7,7 +7,7 @@ if (('serviceWorker' in navigator) && false)
         registration.active.postMessage({
             type: 'refresh'
         });
-    }); 
+    });
 }
 
 // Handle pushstate navigation
@@ -21,12 +21,12 @@ function handleNavigation(){
 
     var path = window.location.pathname;
     var hash = window.location.hash ? window.location.hash.substr(1) : '';
-    
+
     // Show content
     var $pathElems = document.querySelectorAll('[data-path]');
     $pathElems.forEach(section => section.style.display = 'none');
     Array.prototype.slice.call($pathElems).filter(e => e.dataset.path == path).forEach(s => s.style.display = 'block');
-    
+
     document.querySelectorAll('.active').forEach(a => a.classList.remove('active'));
 
     // highlight current hash
@@ -40,24 +40,34 @@ function handleNavigation(){
         document.querySelectorAll(`a[href="${path}#${hash}"]`).forEach(a => a.classList.add('active'));
     else
         document.querySelectorAll(`a[href="${path}"]`).forEach(a => a.classList.add('active'));
-        
-    // highlight nav heirarchy
-    var currentElem = document.querySelector(`nav a[href="${path}"]`);
-    do
-    {
-        if(!currentElem)
-            break;
 
-        currentElem.classList.add('active');
-        currentElem = currentElem.parentElement;
-    } while(currentElem.nodeName === 'LI' || currentElem.nodeName === 'UL');
+    // // highlight nav heirarchy
+    // var currentElem = document.querySelector(`nav a[href="${path}"]`);
+    // do
+    // {
+    //     if(!currentElem)
+    //         break;
+
+    //     currentElem.classList.add('active');
+    //     currentElem = currentElem.parentElement;
+    // } while(currentElem.nodeName === 'LI' || currentElem.nodeName === 'UL');
 
 }
 
 window.addEventListener('load', function(){
 
+    let burger = document.querySelector('.burger');
+    let menu = document.querySelector('.navigation');
+    let listTrigger = document.querySelectorAll('.js-list-trigger');
+
     // Highjack all internal link clicks and use pushtate instead
     document.addEventListener('click', function(e){
+        if(e.target == burger && !menu.classList.contains('js-menu-open')) {
+            menu.classList.add('js-menu-open');
+        } else if (e.target == burger && menu.classList.contains('js-menu-open')) {
+            menu.classList.remove('js-menu-open');
+        }
+
         if(e.target.nodeName !== 'A')
             return;
 
@@ -65,7 +75,7 @@ window.addEventListener('load', function(){
 
         if(!/^\//.test(href))
             return;
-        
+
         e.preventDefault();
 
         if(href !== window.location.pathname){
@@ -86,19 +96,19 @@ window.addEventListener('load', function(){
     });
 
 
-    document.querySelectorAll('.accordion section').forEach($section => {
-        $section.addEventListener('click', e => {
-            if(e.target.nodeName !== 'H4')
-                return;
-            
-            if($section.classList.contains('open'))
-                $section.classList.remove('open');
-            else
-                $section.classList.add('open');
-        });
-    });
+    // document.querySelectorAll('.accordion section').forEach($section => {
+    //     $section.addEventListener('click', e => {
+    //         if(e.target.nodeName !== 'H4')
+    //             return;
 
-    // boot the page    
+    //         if($section.classList.contains('open'))
+    //             $section.classList.remove('open');
+    //         else
+    //             $section.classList.add('open');
+    //     });
+    // });
+
+    // boot the page
     handleNavigation();
 
 });
