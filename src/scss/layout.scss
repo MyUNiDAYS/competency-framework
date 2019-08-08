@@ -19,25 +19,29 @@ body
   }
 .container,
 .inner-container {
-display: flex;
+    display: flex;
 }
 .inner-container {
-overflow: hidden;
+    overflow: inherit;
+
+    @media (min-width: 820px) {
+        overflow: hidden;
+    }
 }
 .inner-container > div {
-overflow: auto;
+    overflow: auto;
 }
 
 .container {
 
-    // position: absolute;
-    // width: 100%;
-    // display: flex;
-    // margin-top: 0px !important;
-    // flex-direction: column;
-    // box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    margin-top: 0px !important;
+    flex-direction: column;
+    box-sizing: border-box;
 
-    // @media (min-width: 768px) {
+    // @media (min-width: 820px) {
     //     flex-direction: row;
     // }
 }
@@ -60,12 +64,13 @@ overflow: auto;
     padding: 10px;
     flex: 1;
     overflow-y: auto;
+    margin-top: 100px;
 
-    // @media (min-width: 768px)
-    // {
-    //     padding: 20px;
-    //     width: 81%;
-    // }
+    @media (min-width: 820px)
+    {
+        margin-top: 0;
+        padding: 2em;
+    }
 }
 
 .box-container

@@ -1,52 +1,51 @@
 .navigation {
-    flex: 0 0 215px;
+    height: 10%;
+    width: 100%;
+    position: absolute;
+    display: block;
+    //flex-shrink: 0;
+    background-color: rgb(247, 247, 247);
+    display: flex;
+    align-items: center;
+    z-index: 5;
+    justify-content: space-between;
+    padding: 0 1em;
+    background-color: #eee;
+    font-size: 1.5em;
+    box-sizing: border-box;
 
-    // height: 10%;
-    // width: 100%;
-    // display: block;
-    // flex-shrink: 0;
-    // background-color: rgb(247, 247, 247);
-    // display: flex;
-    // align-items: center;
-    // z-index: 5;
-    // justify-content: space-between;
-    // padding: 0 1em;
-    // background-color: #eee;
-    // font-size: 1.5em;
-    // box-sizing: border-box;
+    > nav {
+        padding: 1em 0 0 0;
+        display: none;
+    }
 
-    // > nav {
-    //     padding: 1em 0 0 0;
-    //     display: none;
-    // }
+    @media (min-width: 820px) {
+        flex: 0 0 260px;
+        background-color: rgb(247, 247, 247);
+        color: black;
+        font-size: 1em;
+        height: 100%;
+        flex-direction: column;
+        position: inherit;
 
-    // @media (min-width: 768px) {
-    //     display: flex;
-    //     flex-direction: column;
-    //     flex-shrink: 0;
-    //     background-color: rgb(247, 247, 247);
-    //     color: black;
-    //     overflow-x: hidden;
-    //     overflow-y: auto;
-    //     height: 100%;
-    //     width: 19%;
-    //     min-width: 320px;
-    //     justify-content: flex-start;
-    //     font-size: 1em;
+        .burger {
+            display: none;
+        }
 
-    //     .burger {
-    //         display: none;
-    //     }
-
-    //     > nav {
-    //         display: block;
-    //     }
-    // }
+        > nav {
+            display: block;
+        }
+    }
 
     &.js-menu-open {
-        height: 100%;
-        display: block;
         padding: 0.5em 1em;
+        flex: 0;
+        position: absolute;
+        justify-content: center;
+        background-color: cyan;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
 
         .burger {
             float: right;
