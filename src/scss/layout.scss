@@ -12,6 +12,11 @@ body
     font-size: 16px;
     background: #f4f4f4;
     margin: 0;
+
+    &.js-no-scroll {
+        overflow: hidden;
+        position: fixed;
+    }
 }
 
 .container,
@@ -30,34 +35,15 @@ body
 }
 
 .container {
-
-    position: absolute;
     width: 100%;
     display: flex;
     margin-top: 0px !important;
     flex-direction: column;
     box-sizing: border-box;
-
-    // @media (min-width: 820px) {
-    //     flex-direction: row;
-    // }
 }
-
-// .main {
-//     margin-top: 0px;
-//     display: flex;
-//     flex-direction: column;
-//     width: 100%;
-//     height: 100% !important;
-//     overflow-y: auto;
-//     box-sizing: border-box;
-//     padding: 1em;
-// }
 
 #content
 {
-    // box-sizing: border-box;
-    // width: 100%;
     padding: 10px;
     flex: 1;
     overflow-y: auto;

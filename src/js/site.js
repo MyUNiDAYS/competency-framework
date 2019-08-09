@@ -41,16 +41,16 @@ function handleNavigation(){
     else
         document.querySelectorAll(`a[href="${path}"]`).forEach(a => a.classList.add('active'));
 
-    // // highlight nav heirarchy
-    // var currentElem = document.querySelector(`nav a[href="${path}"]`);
-    // do
-    // {
-    //     if(!currentElem)
-    //         break;
+    // highlight nav heirarchy
+    var currentElem = document.querySelector(`nav a[href="${path}"]`);
+    do
+    {
+        if(!currentElem)
+            break;
 
-    //     currentElem.classList.add('active');
-    //     currentElem = currentElem.parentElement;
-    // } while(currentElem.nodeName === 'LI' || currentElem.nodeName === 'UL');
+        currentElem.classList.add('active');
+        currentElem = currentElem.parentElement;
+    } while(currentElem.nodeName === 'LI' || currentElem.nodeName === 'UL');
 
 }
 
@@ -64,8 +64,10 @@ window.addEventListener('load', function(){
     document.addEventListener('click', function(e){
         if(e.target == burger && !menu.classList.contains('js-menu-open')) {
             menu.classList.add('js-menu-open');
+            document.querySelector('body').classList.toggle('js-no-scroll');
         } else if (e.target == burger && menu.classList.contains('js-menu-open')) {
             menu.classList.remove('js-menu-open');
+            document.querySelector('body').classList.toggle('js-no-scroll');
         }
 
         if(e.target.nodeName !== 'A')
@@ -80,6 +82,10 @@ window.addEventListener('load', function(){
 
         if(href !== window.location.pathname){
             history.pushState(null, null, href);
+            if (menu.classList.contains('js-menu-open')) {
+                menu.classList.remove('js-menu-open');
+                document.querySelector('body').classList.remove('js-no-scroll');
+            }
             handleNavigation();
         }
     });
@@ -96,17 +102,17 @@ window.addEventListener('load', function(){
     });
 
 
-    // document.querySelectorAll('.accordion section').forEach($section => {
-    //     $section.addEventListener('click', e => {
-    //         if(e.target.nodeName !== 'H4')
-    //             return;
+    document.querySelectorAll('.accordion section').forEach($section => {
+        $section.addEventListener('click', e => {
+            if(e.target.nodeName !== 'H4')
+                return;
 
-    //         if($section.classList.contains('open'))
-    //             $section.classList.remove('open');
-    //         else
-    //             $section.classList.add('open');
-    //     });
-    // });
+            if($section.classList.contains('open'))
+                $section.classList.remove('open');
+            else
+                $section.classList.add('open');
+        });
+    });
 
     // boot the page
     handleNavigation();
