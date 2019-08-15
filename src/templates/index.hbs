@@ -25,9 +25,16 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="/">🏡 Home</a></li>
+                    <li><a class="home" href="/">🏡 Home</a></li>
                     {{> nav-competencies competencies }}
-                    {{> nav-roles roles }}
+                    <li class="title">
+                        <span>👔 Roles</span>
+                        <ul>
+                        {{#each roles}}
+                            {{> nav-roles this}}
+                        {{/each}}
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </div>

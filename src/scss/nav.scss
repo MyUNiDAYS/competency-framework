@@ -21,7 +21,7 @@
     }
 
     @media (min-width: 820px) {
-        flex: 0 0 260px;
+        flex: 0 0 280px;
         background-color: #eee;
         color: black;
         font-size: 1em;
@@ -104,24 +104,21 @@
         }
     }
 
+    .title > span,
+    .home
+    {
+        @include unidayspro-heavy;
+    }
+
+    ul ul:first-child {
+        color: red;
+    }
+
     ul ul {
+        margin-left: 1em;
+    }
+
+    nav > ul > li {
         margin-bottom: 1em;
-    }
-
-    .list-2 {
-        margin-left: 0.5em;
-    }
-
-    .list-3 {
-        margin-left: 0.75em;
-    }
-
-    .list-1,
-    .list-3 {
-        display: none;
-
-        &.active {
-            display: block;
-        }
     }
 }
