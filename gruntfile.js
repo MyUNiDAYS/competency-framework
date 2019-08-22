@@ -48,7 +48,10 @@ module.exports = function (grunt) {
         uglify: {
             jsDev: {
                 options: {
-                    sourceMap: true
+                    sourceMap: true,
+                    compress: {
+                        drop_debugger: false
+                    }
                 },
                 files: {
                     'build/site.js': ['src/js/*.js']

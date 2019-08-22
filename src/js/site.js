@@ -11,13 +11,6 @@ if (('serviceWorker' in navigator) && false)
 }
 
 
-
-
-// Handle pushstate navigation
-window.addEventListener('popstate', function(e){
-    handleNavigation();
-});
-
 var pageCache = {
     store: {},
     get: function(key) { return Promise.resolve(this.store[key]); },
@@ -34,8 +27,6 @@ function updateUi(path, hash){
     if(hash)
         document.querySelectorAll(`#${hash}`).forEach(s => s.classList.add('active'));
 
-    // TODO: merge all the below code into one mechanism
-
     // highlight links
     if(hash)
         document.querySelectorAll(`a[href="${path}#${hash}"]`).forEach(a => a.classList.add('active'));
@@ -50,29 +41,57 @@ function handleNavigation(){
     var path = window.location.pathname;
     var hash = window.location.hash ? window.location.hash.substr(1) : '';
     
-    pageCache.get(path)
-        .then(html => {
-            if(html)
-                return html;
+    getPage(path).then($html => {
+        // remove old content
+        while ($content.firstChild)
+            $content.removeChild($content.firstChild);
+        
+        // add new content
+        $content.appendChild($html);
 
-            var url = '/' + path.replace(/[^a-z0-9\-_]/gi, '_') + '.html';
-            return fetch(url)
-                .then(response => response.text())
-                .then(html => {
-                    var parser = new DOMParser()
-                    var dom = parser.parseFromString(html, 'text/html');
-                    var $elem = dom.body.firstElementChild;
-                    pageCache.set(path, $elem);
-                    return $elem;
-                })
-            
-        })
-        .then($html => {
-            $content.removeChild($content.firstElementChild);
-            $content.appendChild($html);
-            updateUi(path, hash);
-        });
+        // update UI
+        updateUi(path, hash);
+    });
 }
+
+// Gets a page from the in memory cache or the network
+// Returns a promise resolving a DOM tree
+function getPage(path){
+    return pageCache
+            .get(path)
+            .then($html => {
+                if($html)
+                    return $html;
+                
+                return loadPage(path).then($html => {
+                    pageCache.set(path, $html);
+                    return $html;
+                });
+            });
+}
+
+
+// Loads a given page from the network.
+// Returns a promise resolving a DOM tree
+function loadPage(path){
+    return fetchPath(path).then(parseHtml)
+}
+
+// Fetches the HTML for a given path
+// Returns a promise resolving an HTML string
+function fetchPath(path){
+    var url = '/' + path.replace(/[^a-z0-9\-_]/gi, '_') + '.html';
+    return fetch(url).then(response => response.text());
+}
+
+// Parses an HTML string into a DOM tree
+function parseHtml(html){
+    var parser = new DOMParser()
+    var dom = parser.parseFromString(html, 'text/html');
+    var $elem = dom.body.firstElementChild;
+    return $elem;
+}
+
 
 window.addEventListener('load', function(){
 
@@ -97,27 +116,15 @@ window.addEventListener('load', function(){
         }
     });
 
-    this.document.querySelector('body > nav').addEventListener('click', function(e){
+    this.document.querySelector('body > nav').addEventListener('click', function(e) {
         if(e.target.nodeName !== 'A')
             return;
-
-        this.classList.add('force-collapse');
+        var $nav = this;
+        $nav.classList.add('force-collapse');
         window.setTimeout(function() {
-            this.classList.remove('force-collapse');
+            $nav.classList.remove('force-collapse');
         }, 150);
     })
-
-    // style textareas
-    document.addEventListener('change', function(e){
-        if(e.target.nodeName !== 'textarea')
-            return;
-
-        if(e.target.value === '')
-            e.target.classList.remove('populated');
-        else
-            e.target.classList.add('populated');
-    });
-
 
     document.querySelectorAll('.accordion section').forEach($section => {
         $section.addEventListener('click', e => {
@@ -133,5 +140,9 @@ window.addEventListener('load', function(){
 
     // boot the page    
     handleNavigation();
+});
 
+// Handle pushstate navigation
+window.addEventListener('popstate', function(e){
+    handleNavigation();
 });
