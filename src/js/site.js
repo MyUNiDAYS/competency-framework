@@ -40,17 +40,6 @@ function handleNavigation(){
         document.querySelectorAll(`a[href="${path}#${hash}"]`).forEach(a => a.classList.add('active'));
     else
         document.querySelectorAll(`a[href="${path}"]`).forEach(a => a.classList.add('active'));
-        
-    // highlight nav heirarchy
-    var currentElem = document.querySelector(`nav a[href="${path}"]`);
-    do
-    {
-        if(!currentElem)
-            break;
-
-        currentElem.classList.add('active');
-        currentElem = currentElem.parentElement;
-    } while(currentElem.nodeName === 'LI' || currentElem.nodeName === 'UL');
 
 }
 
@@ -58,6 +47,7 @@ window.addEventListener('load', function(){
 
     // Highjack all internal link clicks and use pushtate instead
     document.addEventListener('click', function(e){
+        debugger;
         if(e.target.nodeName !== 'A')
             return;
 
@@ -73,6 +63,16 @@ window.addEventListener('load', function(){
             handleNavigation();
         }
     });
+
+    this.document.querySelector('body > nav').addEventListener('click', function(e){
+        if(e.target.nodeName !== 'A')
+            return;
+
+        this.classList.add('force-collapse');
+        window.setTimeout(function() {
+            this.classList.remove('force-collapse');
+        }, 150);
+    })
 
     // style textareas
     document.addEventListener('change', function(e){

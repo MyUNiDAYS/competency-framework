@@ -38,7 +38,7 @@ body
                 float: left;
                 position: relative;
                 margin: 0 10px;
-                padding-top: 12px;
+                padding-top: 22px;
 
                 li
                 {
@@ -88,6 +88,14 @@ body
         a.active
         {
             @include unidayspro-demi;
+        }
+
+        &.force-collapse
+        {
+            > ul ul
+            {
+                display: none !important;
+            }
         }
     }
 }

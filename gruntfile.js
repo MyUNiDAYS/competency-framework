@@ -31,7 +31,7 @@ module.exports = function (grunt) {
         copy: {
             dev: {
                 files: [
-                    { expand: true, cwd: 'src/js', src: ['*'], dest: 'build/' },
+                    //{ expand: true, cwd: 'src/js', src: ['*'], dest: 'build/' },
                     { expand: true, cwd: 'src/assets', src: ['*'], dest: 'build/' },
                     { expand: true, cwd: 'src', src: ['service-worker.js'], dest: 'build/' },
                     { expand: true, cwd: 'src', src: ['web.config'], dest: 'build/' }
@@ -72,11 +72,35 @@ module.exports = function (grunt) {
             }
         },
         watch: {
-            scripts: {
-                files: ['src/**/*', 'content/**/*'],
-                tasks: ['build:dev'],
+            scss: {
+                files: ['src/scss/*'],
+                tasks: ['sass:dev']
             },
+            js: {
+                files: ['src/js/*.js'],
+                tasks: ['uglify:jsDev']
+            },
+            serviceWorker: {
+                files: ['src/service-worker/*'],
+                tasks: ['buildServiceWorkerUrls', 'uglify:swDev']
+            },
+            assets: {
+                files: ['src/assets/*', 'src/web.config'],
+                tasks: ['copy:dev']
+            },
+            content: {
+                files: ['content/**/*', 'src/helpers/*', 'src/partials/*', 'src/templates/*'],
+                tasks: ['generate']
+            }
           },
+          concurrent: {
+            options: {
+                logConcurrentOutput: true
+              },
+              dev: {
+                tasks: ['watch:scss', 'watch:js', 'watch:serviceWorker', 'watch:assets', 'watch:assets', 'watch:content']
+              }
+          }
       });
       
       grunt.loadNpmTasks('grunt-sass');
@@ -84,6 +108,9 @@ module.exports = function (grunt) {
       grunt.loadNpmTasks('grunt-contrib-uglify-es');
       grunt.loadNpmTasks('grunt-contrib-copy');
       grunt.loadNpmTasks('grunt-contrib-clean');
+      grunt.loadNpmTasks('grunt-concurrent');
+
+      grunt.registerTask('dev', ['concurrent:dev'])
 
       grunt.registerTask('build:dev', ['clean', 'sass:dev', 'generate', 'uglify:jsDev', 'copy:dev', 'buildServiceWorkerUrls', 'uglify:swDev']);
       grunt.registerTask('build:prod', ['clean', 'sass:prod', 'generate', 'uglify:jsProd', 'copy:prod', 'buildServiceWorkerUrls', 'uglify:swProd']);
