@@ -1,0 +1,74 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"properties": {
+		"title": {
+			"type": "string"
+		},
+		"path": {
+			"type": "string",
+			"pattern": "^[a-z0-9_-]+$"
+		},
+		"theme": {
+			"type": "string"
+        },
+        "summary": {
+			"type": "string"
+		},
+		"topics": {
+            "type": "array",
+            "items": { "$ref": "#/definitions/topic" }
+        }
+	},
+	"required": [ "title" ],
+	"additionalProperties": false,
+	"definitions": {
+		"topic": {
+			"type": "object",
+			"properties": {
+				"title": {
+                    "type": "string"
+                },
+                "path": {
+					"type": "string",
+					"pattern": "^[a-z0-9_-]+$"
+                },
+                "theme": {
+                    "type": "string"
+                },
+                "summary": {
+                    "type": "string"
+                },
+                "levels": {
+                    "type": "array",
+                    "items": { "$ref": "#/definitions/level" }
+                }
+			},
+			"required": [ "title", "path", "levels" ],
+			"additionalProperties": false
+        },
+        "level": {
+			"type": "object",
+			"properties": {
+                "title": {
+                    "type": "string"
+                },
+                "path": {
+					"type": "string",
+					"pattern": "^[a-z0-9_-]+$"
+                },
+                "summary": {
+                    "type": "string"
+                },
+				"criteria": {
+					"type": "array",
+					"items": {
+                        "type": "string"
+					}
+				}
+			},
+			"required": [ "title", "path", "criteria" ],
+			"additionalProperties": false
+		}
+	}
+}
