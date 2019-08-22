@@ -26,22 +26,19 @@ body
 
 .box-container
 {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    columns: 1;
+
+    @media (min-width: 1200px)
+    {
+        columns: 2;
+    }
 
     .box
     {
-        @media (min-width: 768px)
-        {
-            width: 49%;
-        }
-
-        @media (min-width: 1200px)
-        {
-            width: 32%;
-        }
+        -webkit-column-break-inside: avoid; /* Chrome, Safari */
+        page-break-inside: avoid;           /* Theoretically FF 20+ */
+        break-inside: avoid-column;         /* IE 11 */
+        display:table;                      /* Actually FF 20+ */
     }
 }
 
