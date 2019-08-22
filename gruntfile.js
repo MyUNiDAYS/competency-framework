@@ -221,7 +221,8 @@ module.exports = function (grunt) {
             role.allCompetencies = [];
 
             // replace string addresses with actual references
-            for(var l = 0; l < role.levels.length; l++) {
+            for(var l = 0; l < role.levels.length; l++)
+            {
                 for(var i = 0; i < role.levels[l].competencies.required.length; i++)
                 {
                     role.levels[l].competencies.required[i] = referenceCompetencies(competencies, role.levels[l].competencies.required[i]);

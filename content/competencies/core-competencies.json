@@ -12,7 +12,7 @@
 			"levels": [
 				{
 					"title": "👩‍🎓 n00b",
-					"path": "n00b",
+					"path": "1",
 					"summary": "",
 					"criteria": [
 						"Enthusiasm for subject and has a willingness to learn",
@@ -27,7 +27,7 @@
 				},
 				{
 					"title": "👨‍🔧 Play3r",
-					"path": "play3r",
+					"path": "2",
 					"summary": "",
 					"criteria": [
 						"Fosters an appropriate sense of urgency to deliver results at pace",
@@ -46,7 +46,7 @@
 				},
 				{
 					"title": "👩‍🏫 Pr0",
-					"path": "pr0",
+					"path": "3",
 					"summary": "",
 					"criteria": [
 						"Take responsibility for decisions, ensuring plans are followed and regularly reviewed and non-standard approaches are approved by leadership",
@@ -57,7 +57,7 @@
 				},
 				{
 					"title": "🧙 1337",
-					"path": "1337",
+					"path": "4",
 					"summary": "",
 					"criteria": [
 						"Actively monitors and review employee engagement",
@@ -74,7 +74,7 @@
 			"levels": [
 				{
 					"title": "👩‍🎓 n00b",
-					"path": "n00b",
+					"path": "1",
 					"summary": "Commercially Aware",
 					"criteria": [
 						"Actively contributes to the design of products and solutions",
@@ -87,7 +87,7 @@
 				},
 				{
 					"title": "👨‍🔧 Play3r",
-					"path": "play3r",
+					"path": "2",
 					"summary": "Improved Profitability",
 					"criteria": [
 						"Bases recommendations on citable, sound analysis of risks, benefits and value",
@@ -102,7 +102,7 @@
 				},
 				{
 					"title": "👩‍🏫 Pr0",
-					"path": "pr0",
+					"path": "3",
 					"summary": "Delivers ROI",
 					"criteria": [
 						"Tracks and proactively reports team/project feature/value deliverance",
@@ -116,7 +116,7 @@
 				},
 				{
 					"title": "🧙 1337",
-					"path": "1337",
+					"path": "4",
 					"summary": "Optimises Corporate Value",
 					"criteria": [
 						"Tracks team / department / company KPIs and maintains robust forecasts",
@@ -136,7 +136,7 @@
 			"levels": [
 				{
 					"title": "👩‍🎓 n00b",
-					"path": "n00b",
+					"path": "1",
 					"summary": "Good Client Service",
 					"criteria": [
 						"Work activities are directed by, or focused on client needs; client remains primary focus",
@@ -150,7 +150,7 @@
 				},
 				{
 					"title": "👨‍🔧 Play3r",
-					"path": "play3r",
+					"path": "2",
 					"summary": "Meets Clients Needs",
 					"criteria": [
 						"Actively listens to clients to identify and understand their needs and objectives; asks questions to identify client interests, views & motivations",
@@ -164,7 +164,7 @@
 				},
 				{
 					"title": "👩‍🏫 Pr0",
-					"path": "pr0",
+					"path": "3",
 					"summary": "Adds Value For the Client",
 					"criteria": [
 						"Utilises broad domain knowledge to recommend improved solutions",
@@ -176,7 +176,7 @@
 				},
 				{
 					"title": "🧙 1337",
-					"path": "1337",
+					"path": "4",
 					"summary": "Works in Partnership with the Client",
 					"criteria": [
 						"Conceives and drives the development of solutions that anticipate impending client needs",
@@ -195,7 +195,7 @@
 			"levels": [
 				{
 					"title": "👩‍🎓 n00b",
-					"path": "n00b",
+					"path": "1",
 					"summary": "Organised",
 					"criteria": [
 						"Actively listens to identify and understand needs and objectives; asks questions to identify interests, views & motivations",
@@ -210,7 +210,7 @@
 				},
 				{
 					"title": "👨‍🔧 Play3r",
-					"path": "play3r",
+					"path": "2",
 					"summary": "Forward Thinking",
 					"criteria": [
 						"Develops clear, documented action plans, with realistic expectations & objectives",
@@ -224,7 +224,7 @@
 				},
 				{
 					"title": "👩‍🏫 Pr0",
-					"path": "pr0",
+					"path": "3",
 					"summary": "Project Planning",
 					"criteria": [
 						"Manages multiple complex projects using established project management methodologies",
@@ -238,7 +238,7 @@
 				},
 				{
 					"title": "🧙 1337",
-					"path": "1337",
+					"path": "4",
 					"summary": "Strategic Planning",
 					"criteria": [
 						"Conducts a robust situational analysis – market/technology attractiveness & competitive position",
@@ -259,7 +259,7 @@
 			"levels": [
 				{
 					"title": "👩‍🎓 n00b",
-					"path": "n00b",
+					"path": "1",
 					"summary": "Solution Focused",
 					"criteria": [
 						"Takes immediate action or initiative to resolve issues preventing satisfactory work completion; including seeking help from others",
@@ -274,7 +274,7 @@
 				},
 				{
 					"title": "👨‍🔧 Play3r",
-					"path": "play3r",
+					"path": "2",
 					"summary": "Structured Problem Solving",
 					"criteria": [
 						"Uses research to better understand an issue and come to reasoned decisions about how to resolve a problem",
@@ -286,7 +286,7 @@
 				},
 				{
 					"title": "👩‍🏫 Pr0",
-					"path": "pr0",
+					"path": "3",
 					"summary": "Looks for Optimum Solutions",
 					"criteria": [
 						"Ensures recommendations are evidence based. Bases decisions on robust analysis of the situation",
@@ -297,7 +297,7 @@
 				},
 				{
 					"title": "🧙 1337",
-					"path": "1337",
+					"path": "4",
 					"summary": "Exercises Sound Judgement",
 					"criteria": [
 						"Makes sound judgement even when making complex or difficult decisions or when under time pressures.",
@@ -316,7 +316,7 @@
 			"levels": [
 				{
 					"title": "👩‍🎓 n00b",
-					"path": "n00b",
+					"path": "1",
 					"summary": "Communicated Clearly",
 					"criteria": [
 						"Actively listens to project briefs and asks questions where necessary to clarify understanding of own role and the project as a whole",
@@ -331,7 +331,7 @@
 				},
 				{
 					"title": "👨‍🔧 Play3r",
-					"path": "play3r",
+					"path": "2",
 					"summary": "Excellent Technical Communication",
 					"criteria": [
 						"Maintains a constant dialogue with all project stakeholders to ensure a clear and joint understanding of project direction and progress",
@@ -344,7 +344,7 @@
 				},
 				{
 					"title": "👩‍🏫 Pr0",
-					"path": "pr0",
+					"path": "3",
 					"summary": "Establishes Shared Understanding",
 					"criteria": [
 						"Provides clear and easily understood briefs to others, making clear expected outcomes and which tasks are to be completed by whom",
@@ -359,7 +359,7 @@
 				},
 				{
 					"title": "🧙 1337",
-					"path": "1337",
+					"path": "4",
 					"summary": "Inspires",
 					"criteria": [
 						"Ensures the team has strong relationships with stakeholders, fully recognises their constraints and concerns and creates mutual recognition and trust.",
@@ -380,7 +380,7 @@
 			"levels": [
 				{
 					"title": "👩‍🎓 n00b",
-					"path": "n00b",
+					"path": "1",
 					"summary": "Committed",
 					"criteria": [
 						"Tackles work with enthusiasm, and takes a positive outlook when things are difficult",
@@ -393,7 +393,7 @@
 				},
 				{
 					"title": "👨‍🔧 Play3r",
-					"path": "play3r",
+					"path": "2",
 					"summary": "Self Motivated",
 					"criteria": [
 						"Perseveres to overcome obstacles / resistance until objectives are fully met and tasks completed",
@@ -406,7 +406,7 @@
 				},
 				{
 					"title": "👩‍🏫 Pr0",
-					"path": "pr0",
+					"path": "3",
 					"summary": "Raising The Bar",
 					"criteria": [
 						"Consistently reflects on own performance & seeks continuous improvement",
@@ -419,7 +419,7 @@
 				},
 				{
 					"title": "🧙 1337",
-					"path": "1337",
+					"path": "4",
 					"summary": "Seeks Perfection",
 					"criteria": [
 						"Consistently strives to achieve targets or goals at a team/departmental/company level",
@@ -441,7 +441,7 @@
 			"levels": [
 				{
 					"title": "👩‍🎓 n00b",
-					"path": "n00b",
+					"path": "1",
 					"summary": "Team Player",
 					"criteria": [
 						"Shows genuine commitment to the team and company",
@@ -454,7 +454,7 @@
 				},
 				{
 					"title": "👨‍🔧 Play3r",
-					"path": "play3r",
+					"path": "2",
 					"summary": "Proactive Colleague",
 					"criteria": [
 						"Makes self available to others; proactively offers to assist others with activities to meet deadlines or manage short-term work pressures",
@@ -465,7 +465,7 @@
 				},
 				{
 					"title": "👩‍🏫 Pr0",
-					"path": "pr0",
+					"path": "3",
 					"summary": "Maximising The Team",
 					"criteria": [
 						"Demonstrates awareness of different perspectives, working styles and preferences in team",
@@ -479,7 +479,7 @@
 				},
 				{
 					"title": "🧙 1337",
-					"path": "1337",
+					"path": "4",
 					"summary": "Creates Team Culture",
 					"criteria": [
 						"Seeks to understand team needs, motivations, strengths, dynamics to inform and optimise working arrangements and team performance",

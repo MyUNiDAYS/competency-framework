@@ -99,7 +99,6 @@ window.addEventListener('load', function(){
 
     // Highjack all internal link clicks and use pushtate instead
     document.addEventListener('click', function(e){
-        debugger;
         if(e.target.nodeName !== 'A')
             return;
 
@@ -116,8 +115,8 @@ window.addEventListener('load', function(){
         }
     });
 
-    this.document.querySelector('body > nav').addEventListener('click', function(e) {
-        if(e.target.nodeName !== 'A')
+    document.querySelector('body > nav').addEventListener('click', function(e) {
+        if(!e.target.matches('a'))
             return;
         var $nav = this;
         $nav.classList.add('force-collapse');
@@ -126,16 +125,16 @@ window.addEventListener('load', function(){
         }, 150);
     })
 
-    document.querySelectorAll('.accordion section').forEach($section => {
-        $section.addEventListener('click', e => {
-            if(e.target.nodeName !== 'H4')
-                return;
-            
-            if($section.classList.contains('open'))
-                $section.classList.remove('open');
-            else
-                $section.classList.add('open');
-        });
+    document.addEventListener('click', e => {
+        if(!e.target.matches('.accordion section h4'))
+            return;
+
+        var $section = e.target.closest('section')
+
+        if($section.classList.contains('open'))
+            $section.classList.remove('open');
+        else
+            $section.classList.add('open');
     });
 
     // boot the page    

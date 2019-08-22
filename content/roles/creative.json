@@ -12,14 +12,14 @@
                     "summary": "",
                     "competencies": {
                         "required": [
-                            "core-competencies/attitude/play3r",
-                            "core-competencies/delivering-value/play3r",
-                            "core-competencies/client-focus/play3r",
-                            "core-competencies/planning-and-organisation/play3r",
-                            "core-competencies/problem-solving/play3r",
-                            "core-competencies/communication/play3r",
-                            "core-competencies/striving-for-success/play3r",
-                            "core-competencies/team-orientation/play3r",
+                            "core-competencies/attitude/2",
+                            "core-competencies/delivering-value/2",
+                            "core-competencies/client-focus/2",
+                            "core-competencies/planning-and-organisation/2",
+                            "core-competencies/problem-solving/2",
+                            "core-competencies/communication/2",
+                            "core-competencies/striving-for-success/2",
+                            "core-competencies/team-orientation/2",
                             "creative-competencies/creative-design/competent"
                         ]
                     }
