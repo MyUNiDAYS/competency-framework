@@ -6,7 +6,7 @@
 
 `grunt build:prod` will produce a production build.
 
-`grunt watch` will run `build:dev` whenever it notices any changes to any content or source files. Alternatively you can run `grunt build:dev` manually.
+`grunt dev` will run the component parts of `build:dev` whenever it notices any changes to any content or source files. Alternatively you can run `grunt build:dev` manually.
 
 ## Hosting
 
