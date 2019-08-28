@@ -1,6 +1,10 @@
 # competency-framework
 
-## Building
+## Development
+
+This project is built using node.js and Grunt. After cloning the repository ensure you have node.js and grunt-cli installed.
+
+`npm install` will install all the necessary build dependencies
 
 `grunt build:dev` will produce a development build, where the JS and CSS contain source maps to aid debugging.
 
