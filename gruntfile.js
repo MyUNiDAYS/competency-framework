@@ -148,6 +148,9 @@ module.exports = function (grunt) {
                 // dataSet doesnt work for some reason
                 var filename = page.attributes['data-path'].value;
                 filename = filename.replace(/[^a-z0-9\-_]/gi, '_');
+
+                // tidy up
+                page.removeAttribute('data-path');
                 page.parentNode.removeChild(page);
 
                 grunt.file.write('./build/' + filename + '.html', page.outerHTML);

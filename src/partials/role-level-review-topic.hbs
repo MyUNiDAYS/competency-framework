@@ -1,0 +1,47 @@
+<section class="role-competency box">
+    <h2><a href="/competencies/{{competency.path}}">{{competency.title}}</a> - <a href="/competencies/{{competency.path}}/{{topic.path}}">{{topic.title}}</a></h2>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2" rowspan="2">Criteria</th>
+                <th colspan="5">Rating</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+            </tr>
+        </thead>
+        <tbody>
+        {{#each topic.levels}}
+        {{#ifLevelLowerOrEqual ../topic this ../level}}
+        {{#each criteria}}
+            <tr class="criteria-{{@index}} {{levelRequirementClass ../../topic ../this ../../level}}">
+            {{#unless @index}}
+                <td rowspan="{{../criteria.length}}">{{../title}}</th>
+            {{/unless}}
+                <td>{{this}}</th>
+                <td class="input rating-1">
+                    <input type="radio" class="rating" name="{{../../competency.path}}/{{../../topic.path}}/{{../path}}/{{@index}}" value="1">
+                </td>
+                <td class="input rating-2">
+                    <input type="radio" class="rating" name="{{../../competency.path}}/{{../../topic.path}}/{{../path}}/{{@index}}" value="2">
+                </td>
+                <td class="input rating-3">
+                    <input type="radio" class="rating" name="{{../../competency.path}}/{{../../topic.path}}/{{../path}}/{{@index}}" value="3">
+                </td>
+                <td class="input rating-4">
+                    <input type="radio" class="rating" name="{{../../competency.path}}/{{../../topic.path}}/{{../path}}/{{@index}}" value="4">
+                </td>
+                <td class="input rating-5">
+                    <input type="radio" class="rating" name="{{../../competency.path}}/{{../../topic.path}}/{{../path}}/{{@index}}" value="5">
+                </td>
+            </tr>
+        {{/each}}
+        {{/ifLevelLowerOrEqual}}
+        {{/each}}
+        </tbody>
+    </table>
+</section>

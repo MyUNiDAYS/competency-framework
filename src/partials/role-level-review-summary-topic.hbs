@@ -1,0 +1,22 @@
+<section class="role-competency box">
+    <h2><a href="/competencies/{{competency.path}}">{{competency.title}}</a> - <a href="/competencies/{{competency.path}}/{{topic.path}}">{{topic.title}}</a></h2>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2" rowspan="2">Criteria</th>
+            </tr>
+        </thead>
+        <tbody>
+        {{#each topic.levels}}
+        {{#ifLevelLowerOrEqual ../topic this ../level}}
+        {{#each criteria}}
+            <tr class="criteria-{{@index}} {{levelRequirementClass ../../topic ../this ../../level}}">
+                <td>{{../title}}</th>
+                <td>{{this}}</th>
+            </tr>
+        {{/each}}
+        {{/ifLevelLowerOrEqual}}
+        {{/each}}
+        </tbody>
+    </table>
+</section>

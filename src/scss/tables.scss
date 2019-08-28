@@ -74,3 +74,28 @@ tr.level-above th
 {
     background-color: #fefefe;
 }
+
+td.rating-1
+{
+    background: $color-empowered3;
+}
+
+td.rating-2
+{
+    background: $color-excitement3;
+}
+
+td.rating-3
+{
+    background: $color-optimism3;
+}
+
+td.rating-4
+{
+    background: $color-expert3;
+}
+
+td.rating-5
+{
+    background: $color-human3;
+}

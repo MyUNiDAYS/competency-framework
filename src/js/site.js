@@ -11,6 +11,60 @@ if (('serviceWorker' in navigator) && false)
 }
 
 
+function serializeReview(){
+
+    var $review = document.querySelector('.role-level-review');
+    var $answers = $review.querySelectorAll('input:checked');
+    var values = [...$answers].map($input => { return { 
+        name: $input.name, 
+        value: parseInt($input.value, 10),
+        $tr: $input.closest('tr')
+    }});
+
+    var numericalValues = values.map(v => v.value);
+    var mean = average(numericalValues);
+    var stdev = standardDeviation(numericalValues);
+
+    // get lowest 10th percentile
+    var targets = values
+        .filter(v => (v.value - mean) / stdev > -1.282)
+
+    return values;
+
+}
+
+function mapReviewResults(results){
+
+    results.forEach(result => {
+        result.$tr.parentElement.removeChild(result.$tr);
+    });
+}
+
+function standardDeviation(values){
+    var avg = average(values);
+
+    var squareDiffs = values.map(function(value){
+        var diff = value - avg;
+        var sqrDiff = diff * diff;
+        return sqrDiff;
+    });
+
+    var avgSquareDiff = average(squareDiffs);
+
+    var stdDev = Math.sqrt(avgSquareDiff);
+    return stdDev;
+}
+
+function average(data){
+    var sum = data.reduce(function(sum, value){
+        return sum + value;
+    }, 0);
+
+    var avg = sum / data.length;
+    return avg;
+}
+
+
 var pageCache = {
     store: {},
     get: function(key) { return Promise.resolve(this.store[key]); },
@@ -92,6 +146,10 @@ function parseHtml(html){
     return $elem;
 }
 
+function navigate(url){
+    history.pushState(null, null, url);
+    handleNavigation();
+}
 
 window.addEventListener('load', function(){
 
@@ -110,8 +168,7 @@ window.addEventListener('load', function(){
         e.preventDefault();
 
         if(href !== window.location.pathname){
-            history.pushState(null, null, href);
-            handleNavigation();
+            navigate(href);
         }
     });
 
@@ -136,6 +193,22 @@ window.addEventListener('load', function(){
         else
             $section.classList.add('open');
     });
+
+    this.document.addEventListener('submit', e => {
+        if(!e.target.matches('.review'))
+            return;
+        
+        var $form = e.target;
+        var action = $form.action;
+
+        var $inputs = $form.querySelectorAll('input:checked');
+        var queryString = [...$inputs].map($input => { return { 
+            name: $input.name, 
+            value: parseInt($input.value, 10)
+        }}).reduce((acc, curr) => acc + encodeURIComponent(curr.name) + '=' + encodeURIComponent(curr.value), '?');
+        
+        navigate(action + queryString);
+    })
 
     // boot the page    
     handleNavigation();

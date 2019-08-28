@@ -1,71 +1,13 @@
 <section class="role-level-review" data-path="/roles/{{role.path}}/{{level.path}}/review">
     <h1>{{level.title}} - {{role.title}}</h1>
-    <section class="tab-container box">
-        <nav>
-        {{#each level.competencies.required}}
-            <a href="/roles/{{../role.path}}/{{../role.path}}/review#{{topic.path}}">{{topic.title}}</a>
-        {{/each}}
-        </nav>
+
+    <form action="/roles/{{role.path}}/{{level.path}}/review/summary" class="review" method="GET">
     {{#each competencies.required}}
-        <section class="role-competency" data-hash="{{topic.path}}">
-            <h2><a href="/competencies/{{competency.path}}">{{competency.title}}</a> - <a href="/competencies/{{competency.path}}/{{topic.path}}">{{topic.title}}</a></h2>
-            <p>Your expected level is {{level.title}}</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th colspan="2" rowspan="2">Criteria</th>
-                        <th colspan="5">Rating</th>
-                    </tr>
-                    <tr>
-                        <th>1</th>
-                        <th>2</th>
-                        <th>3</th>
-                        <th>4</th>
-                        <th>5</th>
-                    </tr>
-                </thead>
-                <tbody>
-                {{#each topic.levels}}
-                {{#ifLevelLowerOrEqual ../topic this ../level}}
-                {{#each criteria}}
-                    <tr class="criteria-{{@index}} {{levelRequirementClass ../../topic ../this ../../level}}">
-                    {{#unless @index}}
-                        <td rowspan="{{../criteria.length}}">{{../title}}</th>
-                    {{/unless}}
-                        <td>{{this}}</th>
-                        <td class="input">
-                            <input type="radio" name="{{../../competency.path}}/{{../../topic.path}}/{{../path}}/{{@index}}" value="1">
-                        </td>
-                        <td class="input">
-                            <input type="radio" name="{{../../competency.path}}/{{../../topic.path}}/{{../path}}/{{@index}}" value="2">
-                        </td>
-                        <td class="input">
-                            <input type="radio" name="{{../../competency.path}}/{{../../topic.path}}/{{../path}}/{{@index}}" value="3">
-                        </td>
-                        <td class="input">
-                            <input type="radio" name="{{../../competency.path}}/{{../../topic.path}}/{{../path}}/{{@index}}" value="4">
-                        </td>
-                        <td class="input">
-                            <input type="radio" name="{{../../competency.path}}/{{../../topic.path}}/{{../path}}/{{@index}}" value="5">
-                        </td>
-                    </tr>
-                {{/each}}
-                {{/ifLevelLowerOrEqual}}
-                {{/each}}
-                </tbody>
-            </table>
-        </section>
+        {{> role-level-review-topic this}}
     {{/each}}
     {{#each competencies.optional}}
-        <section class="role-competency box">
-            <h2><a href="/competencies/{{competency.path}}/{{topic.path}}">{{topic.title}}</a> - {{level.title}}</h2>
-            <h3><a href="/competencies/{{competency.path}}">{{competency.title}}</a></h3>
-            <ul>
-            {{#each level.criteria}}
-                <li>{{this}}</li>
-            {{/each}}
-            </ul>
-        </section>
+        {{> role-level-review-topic this}}
     {{/each}}
-    </section>
+        <button type="submit">Save</button>
+    </form>
 </section>

@@ -1,0 +1,10 @@
+<section class="role-level-review" data-path="/roles/{{role.path}}/{{level.path}}/review/summary">
+    <h1>{{level.title}} - {{role.title}}</h1>
+
+    {{#each competencies.required}}
+        {{> role-level-review-summary-topic this}}
+    {{/each}}
+    {{#each competencies.optional}}
+        {{> role-level-review-summary-topic this}}
+    {{/each}}
+</section>
