@@ -1,4 +1,15 @@
 <section class="role-level-review" data-path="/roles/{{role.path}}/{{level.path}}/review/summary">
+    <script>
+        (function ($section) {
+            
+            let params = (new URL(document.location)).searchParams;
+            [...$section.querySelectorAll('[data-row-id]')].forEach($row => {
+                if(!params.has($row.dataset.rowId))
+                    $row.parentElement.removeChild($row);
+            })
+
+        })(document.currentScript.parentElement);
+    </script>
     <h1>{{level.title}} - {{role.title}}</h1>
 
     {{#each competencies.required}}

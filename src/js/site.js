@@ -10,61 +10,6 @@ if (('serviceWorker' in navigator) && false)
     }); 
 }
 
-
-function serializeReview(){
-
-    var $review = document.querySelector('.role-level-review');
-    var $answers = $review.querySelectorAll('input:checked');
-    var values = [...$answers].map($input => { return { 
-        name: $input.name, 
-        value: parseInt($input.value, 10),
-        $tr: $input.closest('tr')
-    }});
-
-    var numericalValues = values.map(v => v.value);
-    var mean = average(numericalValues);
-    var stdev = standardDeviation(numericalValues);
-
-    // get lowest 10th percentile
-    var targets = values
-        .filter(v => (v.value - mean) / stdev > -1.282)
-
-    return values;
-
-}
-
-function mapReviewResults(results){
-
-    results.forEach(result => {
-        result.$tr.parentElement.removeChild(result.$tr);
-    });
-}
-
-function standardDeviation(values){
-    var avg = average(values);
-
-    var squareDiffs = values.map(function(value){
-        var diff = value - avg;
-        var sqrDiff = diff * diff;
-        return sqrDiff;
-    });
-
-    var avgSquareDiff = average(squareDiffs);
-
-    var stdDev = Math.sqrt(avgSquareDiff);
-    return stdDev;
-}
-
-function average(data){
-    var sum = data.reduce(function(sum, value){
-        return sum + value;
-    }, 0);
-
-    var avg = sum / data.length;
-    return avg;
-}
-
-
 var pageCache = {
     store: {},
     get: function(key) { return Promise.resolve(this.store[key]); },
@@ -88,6 +33,7 @@ function updateUi(path, hash){
         document.querySelectorAll(`a[href="${path}"]`).forEach(a => a.classList.add('active'));
 
 }
+
 // Handle navigation to show content
 function handleNavigation(){
     document.body.scrollTo({ y: 0 });
@@ -142,10 +88,24 @@ function fetchPath(path){
 function parseHtml(html){
     var parser = new DOMParser()
     var dom = parser.parseFromString(html, 'text/html');
-    var $elem = dom.body.firstElementChild;
-    return $elem;
+
+    // Replace scripts with new scripts, because https://stackoverflow.com/questions/28112807/why-script-elements-created-through-domparser-do-not-execute
+    var $fragment = document.createDocumentFragment();
+    var childNodes = dom.body.childNodes;
+
+    while (childNodes.length)
+        $fragment.appendChild(childNodes[0]);
+
+    [...$fragment.querySelectorAll('script')].forEach(script => {
+        var newScript = document.createElement('script');
+        newScript.innerHTML = script.innerHTML;
+        script.parentElement.replaceChild(newScript, script);
+    });
+
+    return $fragment;
 }
 
+// Entry point to cause a page navigation
 function navigate(url){
     history.pushState(null, null, url);
     handleNavigation();
@@ -193,22 +153,6 @@ window.addEventListener('load', function(){
         else
             $section.classList.add('open');
     });
-
-    this.document.addEventListener('submit', e => {
-        if(!e.target.matches('.review'))
-            return;
-        
-        var $form = e.target;
-        var action = $form.action;
-
-        var $inputs = $form.querySelectorAll('input:checked');
-        var queryString = [...$inputs].map($input => { return { 
-            name: $input.name, 
-            value: parseInt($input.value, 10)
-        }}).reduce((acc, curr) => acc + encodeURIComponent(curr.name) + '=' + encodeURIComponent(curr.value), '?');
-        
-        navigate(action + queryString);
-    })
 
     // boot the page    
     handleNavigation();

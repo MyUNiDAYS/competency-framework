@@ -10,7 +10,7 @@
         {{#each topic.levels}}
         {{#ifLevelLowerOrEqual ../topic this ../level}}
         {{#each criteria}}
-            <tr class="criteria-{{@index}} {{levelRequirementClass ../../topic ../this ../../level}}">
+            <tr class="criteria-{{@index}} {{levelRequirementClass ../../topic ../this ../../level}}" data-row-id="{{../../competency.path}}/{{../../topic.path}}/{{../path}}/{{@index}}">
                 <td>{{../title}}</th>
                 <td>{{this}}</th>
             </tr>

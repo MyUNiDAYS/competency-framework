@@ -145,7 +145,7 @@ module.exports = function (grunt) {
 
             pages.forEach(page => {
 
-                // dataSet doesnt work for some reason
+                // dataset doesnt work for some reason
                 var filename = page.attributes['data-path'].value;
                 filename = filename.replace(/[^a-z0-9\-_]/gi, '_');
 
