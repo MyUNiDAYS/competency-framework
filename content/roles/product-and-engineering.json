@@ -578,6 +578,29 @@
 					"path": "product-manager",
 					"levels": [
 						{
+							"title": "👨‍💼 Technical Product Manager",
+							"path": "technical-product-manager",
+							"summary": "The Technical Product Manager translates our product vision into strategic goals for the Product and Engineering teams, but with a stronger focus on the technical implementation. Product Managers are responsible, end-to-end, for improving our product within the team’s mission. Working cross-functionally, with Researchers, Designers and Engineers to improve user experience and develop new features for millions of daily users.",
+							"competencies": {
+								"required": [
+									"core-competencies/delivering-value/4",
+									"core-competencies/client-focus/4",
+									"core-competencies/planning-and-organisation/4",
+									"core-competencies/problem-solving/4",
+									"core-competencies/communication/4",
+									"core-competencies/striving-for-success/4",
+									"core-competencies/team-orientation/4",
+									"product-competencies/opportunity-analysis/4",
+									"product-competencies/user-centricity/4",
+									"product-competencies/domain-knowledge/4",
+									"product-competencies/data-skills/4",
+									"product-competencies/working-through-others/4",
+									"product-competencies/execution/3",
+									"engineering-competencies/software-engineering/pr0"
+								]
+							}
+						},
+						{
 							"title": "👨‍💼 Senior Product Manager",
 							"path": "senior-product-manager",
 							"summary": "The Senior Product Manager translates our product vision into strategic goals for the Product and Engineering teams. Product Managers are responsible, end-to-end, for improving our product within the team’s mission. Working cross-functionally, with Researchers, Designers and Engineers to improve user experience and develop new features for millions of daily users.",
