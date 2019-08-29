@@ -37,7 +37,6 @@ function updateUi(path, hash){
 // Handle navigation to show content
 function handleNavigation(){
     document.body.scrollTo({ y: 0 });
-
     var path = window.location.pathname;
     var hash = window.location.hash ? window.location.hash.substr(1) : '';
     
@@ -91,10 +90,7 @@ function parseHtml(html){
 
     // Replace scripts with new scripts, because https://stackoverflow.com/questions/28112807/why-script-elements-created-through-domparser-do-not-execute
     var $fragment = document.createDocumentFragment();
-    var childNodes = dom.body.childNodes;
-
-    while (childNodes.length)
-        $fragment.appendChild(childNodes[0]);
+    $fragment.appendChild(dom.body.firstElementChild);
 
     [...$fragment.querySelectorAll('script')].forEach(script => {
         var newScript = document.createElement('script');
@@ -102,7 +98,7 @@ function parseHtml(html){
         script.parentElement.replaceChild(newScript, script);
     });
 
-    return $fragment;
+    return $fragment.firstElementChild;
 }
 
 // Entry point to cause a page navigation
