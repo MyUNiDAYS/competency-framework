@@ -11,11 +11,50 @@
         })(document.currentScript.parentElement);
     </script>
     <h1>{{level.title}} - {{role.title}}</h1>
+    
+    <section class="box">
+        <h2>Review Summary</h2>
+        <p>The below criteria are the things you should work on next.</p>
+    </section>
 
-    {{#each competencies.required}}
-        {{> role-level-review-summary-topic this}}
-    {{/each}}
-    {{#each competencies.optional}}
-        {{> role-level-review-summary-topic this}}
-    {{/each}}
+    <section class="box">
+        <h2>Review Summary</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Competency</th>
+                    <th>Level</th>
+                    <th>Criteria</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each competencies.required}}
+                {{#each topic.levels}}
+                {{#ifLevelLowerOrEqual ../topic this ../level}}
+                {{#each criteria}}
+                    <tr class="criteria-{{@index}} {{levelRequirementClass ../../topic ../this ../../level}}" data-row-id="{{../../competency.path}}/{{../../topic.path}}/{{../path}}/{{@index}}">
+                        <td>{{../../competency.title}}</th>
+                        <td>{{../title}}</th>
+                        <td>{{this}}</th>
+                    </tr>
+                {{/each}}
+                {{/ifLevelLowerOrEqual}}
+                {{/each}}
+            {{/each}}
+            {{#each competencies.optional}}
+                {{#each topic.levels}}
+                {{#ifLevelLowerOrEqual ../topic this ../level}}
+                {{#each criteria}}
+                    <tr class="criteria-{{@index}} {{levelRequirementClass ../../topic ../this ../../level}}" data-row-id="{{../../competency.path}}/{{../../topic.path}}/{{../path}}/{{@index}}">
+                        <td>{{../../title}}</th>
+                        <td>{{../title}}</th>
+                        <td>{{this}}</th>
+                    </tr>
+                {{/each}}
+                {{/ifLevelLowerOrEqual}}
+                {{/each}}
+            {{/each}}
+            </tbody>
+        </table>
+    </section>
 </section>

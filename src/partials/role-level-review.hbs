@@ -46,7 +46,7 @@
                 var queryString = [...$inputs].map($input => { return { 
                     name: $input.name, 
                     value: parseInt($input.value, 10)
-                }}).reduce((acc, curr) => acc + encodeURIComponent(curr.name) + '=' + encodeURIComponent(curr.value), '?');
+                }}).reduce((acc, curr) => acc + encodeURIComponent(curr.name) + '=' + encodeURIComponent(curr.value) + '&', '?');
 
                 navigate(action + queryString);
             });

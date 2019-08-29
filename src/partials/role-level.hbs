@@ -12,6 +12,14 @@
             <p>{{level.summary}}</p>
         </div>
     </div>
+    
+    <section class="box">
+        <h2>Actions</h2>
+        <div class="box-inner-container">
+            <a href="/roles/{{role.path}}/{{level.path}}/review" class="button">Start a Review</a>
+        </div>
+    </section>
+
     <h3>Criteria</h3>
     <div class="box-container">
 {{#each level.competencies.required}}
