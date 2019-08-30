@@ -92,8 +92,33 @@
             }
             
             [...$section.querySelectorAll('.actions tr[data-row-id]')].forEach($row => {
-                if(!review[$row.dataset.rowId])
+                if(!review[$row.dataset.rowId]) {
                     $row.parentElement.removeChild($row);
+                    return;
+                }
+
+                var $td = $row.querySelector('td.level');
+
+                if(review[$row.dataset.rowId] == 5) {
+                    $td.classList.add('rating-5');
+                    $td.innerText = "Excellent";
+                }
+                else if(review[$row.dataset.rowId] == 4){
+                    $td.classList.add('rating-4');
+                    $td.innerText = "Great";
+                }
+                else if(review[$row.dataset.rowId] == 3){
+                    $td.classList.add('rating-3');
+                    $td.innerText = "Good";
+                }
+                else if(review[$row.dataset.rowId] == 2){
+                    $td.classList.add('rating-2');
+                    $td.innerText = "Needs Work";
+                }
+                else {
+                    $td.classList.add('rating-1');
+                    $td.innerText = "Poor";
+                }
             })
 
         })(document.currentScript.parentElement);
@@ -143,6 +168,7 @@
                     <th>Topic</th>
                     <th>Level</th>
                     <th>Criteria</th>
+                    <th>Rating</th>
                 </tr>
             </thead>
             <tbody>
@@ -155,6 +181,7 @@
                         <td>{{../../topic.title}}</th>
                         <td>{{../title}}</th>
                         <td>{{this}}</th>
+                        <td class="level"></td>
                     </tr>
                 {{/each}}
                 {{/ifLevelLowerOrEqual}}
@@ -165,9 +192,11 @@
                 {{#ifLevelLowerOrEqual ../topic this ../level}}
                 {{#each criteria}}
                     <tr class="criteria-{{@index}} {{levelRequirementClass ../../topic ../this ../../level}}" data-row-id="{{../../competency.path}}/{{../../topic.path}}/{{../path}}/{{@index}}">
-                        <td>{{../../title}}</th>
-                        <td>{{../title}}</th>
-                        <td>{{this}}</th>
+                        <td>{{../../competency.title}}</td>
+                        <td>{{../../title}}</td>
+                        <td>{{../title}}</td>
+                        <td>{{this}}</td>
+                        <td class="level"></td>
                     </tr>
                 {{/each}}
                 {{/ifLevelLowerOrEqual}}
