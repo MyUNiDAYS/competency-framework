@@ -137,7 +137,7 @@
                 <tr>
                     <th>Competency</th>
                     <th>Topic</th>
-                    <th>Level</th>
+                    <th>Rating</th>
                 </tr>
             </thead>
             <tbody>
@@ -193,7 +193,7 @@
                 {{#each criteria}}
                     <tr class="criteria-{{@index}} {{levelRequirementClass ../../topic ../this ../../level}}" data-row-id="{{../../competency.path}}/{{../../topic.path}}/{{../path}}/{{@index}}">
                         <td>{{../../competency.title}}</td>
-                        <td>{{../../title}}</td>
+                        <td>{{../../topic.title}}</td>
                         <td>{{../title}}</td>
                         <td>{{this}}</td>
                         <td class="level"></td>
