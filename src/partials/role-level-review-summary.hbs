@@ -1,10 +1,98 @@
 <section class="role-level-review" data-path="/roles/{{role.path}}/{{level.path}}/review/summary">
     <script>
         (function ($section) {
+            function serializeReview(){
+
+                var numericalValues = values.map(v => v.value);
+                var mean = average(numericalValues);
+                var stdev = standardDeviation(numericalValues);
+
+                // get lowest 10th percentile
+                var targets = values
+                    .filter(v => (v.value - mean) / stdev > -1.282)
+
+                return values;
+            }
+
+            function standardDeviation(values){
+                var avg = average(values);
+
+                var squareDiffs = values.map(function(value){
+                    var diff = value - avg;
+                    var sqrDiff = diff * diff;
+                    return sqrDiff;
+                });
+
+                var avgSquareDiff = average(squareDiffs);
+
+                var stdDev = Math.sqrt(avgSquareDiff);
+                return stdDev;
+            }
+
+            function average(data){
+                var sum = data.reduce(function(sum, value){
+                    return sum + value;
+                }, 0);
+
+                var avg = sum / data.length;
+                return avg;
+            }
+
+            var compressedReview = (new URL(document.location)).searchParams.get('review');
+            var review = window.compressor.decompress(compressedReview);
             
-            let params = (new URL(document.location)).searchParams;
-            [...$section.querySelectorAll('[data-row-id]')].forEach($row => {
-                if(!params.has($row.dataset.rowId))
+
+            var summary = Object.keys(review).reduce((agg, key) => {
+                var value = review[key];
+
+                var keyParts = key.split('/');
+
+                var aggKey = keyParts[0] + '/' + keyParts[1];
+                
+                if(!agg[aggKey])
+                    agg[aggKey] = {data: []};
+
+                agg[aggKey].data.push(parseInt(value, 10));
+                return agg;
+            }, {});
+
+            for(var key in summary){
+                if(!summary.hasOwnProperty(key))
+                    continue;
+
+                summary[key].mean = average(summary[key].data);
+
+                var $td = $section.querySelector('.summary tr[data-row-id="' + key + '"] td.level');
+
+                if(summary[key].mean > 4.5)
+                {
+                    $td.classList.add('rating-5');
+                    $td.innerText = "Excellent";
+                }
+                else if(summary[key].mean > 3.5)
+                {
+                    $td.classList.add('rating-4');
+                    $td.innerText = "Great";
+                }
+                else if(summary[key].mean > 2.5)
+                {
+                    $td.classList.add('rating-3');
+                    $td.innerText = "Good";
+                }
+                else if(summary[key].mean > 1.5)
+                {
+                    $td.classList.add('rating-2');
+                    $td.innerText = "Needs Work";
+                }
+                else
+                {
+                    $td.classList.add('rating-1');
+                    $td.innerText = "Poor";
+                }
+            }
+            
+            [...$section.querySelectorAll('.actions tr[data-row-id]')].forEach($row => {
+                if(!review[$row.dataset.rowId])
                     $row.parentElement.removeChild($row);
             })
 
@@ -18,11 +106,41 @@
     </section>
 
     <section class="box">
-        <h2>Review Summary</h2>
-        <table>
+        <h2>Competency Summary</h2>
+        <table class="summary">
             <thead>
                 <tr>
                     <th>Competency</th>
+                    <th>Topic</th>
+                    <th>Level</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each competencies.required}}
+                <tr data-row-id="{{competency.path}}/{{topic.path}}">
+                    <td>{{competency.title}}</td>
+                    <td>{{topic.title}}</td>
+                    <td class="level">??</td>
+                </tr>
+            {{/each}}
+            {{#each competencies.optional}}
+                <tr data-row-id="{{competency.path}}/{{topic.path}}">
+                    <td>{{competency.title}}</td>
+                    <td>{{topic.title}}</td>
+                    <td class="level">??</td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </section>
+
+    <section class="box">
+        <h2>Actions</h2>
+        <table class="actions">
+            <thead>
+                <tr>
+                    <th>Competency</th>
+                    <th>Topic</th>
                     <th>Level</th>
                     <th>Criteria</th>
                 </tr>
@@ -34,6 +152,7 @@
                 {{#each criteria}}
                     <tr class="criteria-{{@index}} {{levelRequirementClass ../../topic ../this ../../level}}" data-row-id="{{../../competency.path}}/{{../../topic.path}}/{{../path}}/{{@index}}">
                         <td>{{../../competency.title}}</th>
+                        <td>{{../../topic.title}}</th>
                         <td>{{../title}}</th>
                         <td>{{this}}</th>
                     </tr>

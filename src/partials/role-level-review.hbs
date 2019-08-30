@@ -1,54 +1,21 @@
 <section class="role-level-review" data-path="/roles/{{role.path}}/{{level.path}}/review">
     <script>
         (function ($section) {
-            function serializeReview(){
-
-                var numericalValues = values.map(v => v.value);
-                var mean = average(numericalValues);
-                var stdev = standardDeviation(numericalValues);
-
-                // get lowest 10th percentile
-                var targets = values
-                    .filter(v => (v.value - mean) / stdev > -1.282)
-
-                return values;
-            }
-
-            function standardDeviation(values){
-                var avg = average(values);
-
-                var squareDiffs = values.map(function(value){
-                    var diff = value - avg;
-                    var sqrDiff = diff * diff;
-                    return sqrDiff;
-                });
-
-                var avgSquareDiff = average(squareDiffs);
-
-                var stdDev = Math.sqrt(avgSquareDiff);
-                return stdDev;
-            }
-
-            function average(data){
-                var sum = data.reduce(function(sum, value){
-                    return sum + value;
-                }, 0);
-
-                var avg = sum / data.length;
-                return avg;
-            }
-            
+                        
             let $form = $section.querySelector('form');
             $form.addEventListener('submit', e => {
                 var action = $form.action;
 
                 var $inputs = $form.querySelectorAll('input:checked');
-                var queryString = [...$inputs].map($input => { return { 
-                    name: $input.name, 
-                    value: parseInt($input.value, 10)
-                }}).reduce((acc, curr) => acc + encodeURIComponent(curr.name) + '=' + encodeURIComponent(curr.value) + '&', '?');
 
-                navigate(action + queryString);
+                var data = [...$inputs].reduce((agg, $input) => {
+                    agg[$input.name] = $input.value;
+                    return agg;
+                }, {});
+
+                var compressed = window.compressor.compress(data);
+                debugger;
+                navigate(action + '?review=' + compressed);
             });
         })(document.currentScript.parentElement);
     </script>
