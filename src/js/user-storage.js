@@ -1,10 +1,23 @@
-window.ReviewStorage = (function(firebase){
+window.UserStorage = (function(){
     var db = firebase.firestore();
+
+    function setUser(user){
+        return db.collection("users").doc(user.uid).set({
+            email: "ada@lovelace.com"
+        })
+        .then(function(docRef) {
+            console.log("Document written with ID: ", docRef.id);
+        })
+        .catch(function(error) {
+            console.error("Error adding document: ", error);
+        });
+
+    }
 
     function getUser(uid){
         return db
             .collection("users")
-            .doc(user.uid)
+            .doc(uid)
             .get()
             .then(doc => doc.data());
     }
@@ -12,7 +25,7 @@ window.ReviewStorage = (function(firebase){
     function getUserReviews(uid){
         return db  
             .collection("users")
-            .doc(user.uid)
+            .doc(uid)
             .collection('reviews')
             .get()
             .then(result => result.docs.map(d => d.data()));
@@ -20,7 +33,7 @@ window.ReviewStorage = (function(firebase){
     
     return {
         getUser: getUser,
+        setUser: setUser,
         getUserReviews: getUserReviews
     }
-
 });
