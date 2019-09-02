@@ -158,3 +158,58 @@ window.addEventListener('load', function(){
 window.addEventListener('popstate', function(e){
     handleNavigation();
 });
+
+
+var provider = new firebase.auth.GoogleAuthProvider();
+provider.setCustomParameters({
+    'login_hint': 'user@myunidays.com'
+});
+
+
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+        db.collection("users").doc(user.uid).get().then(doc => {
+            console.log(doc.data());
+
+        });
+        
+        db.collection("users").doc(user.uid).collection('reviews').get().then(result => {
+            console.log(result.docs.map(d => d.data()));
+            
+        });
+    }
+});
+
+//   firebase.auth().signInWithPopup(provider).then(function(result) {
+//     // This gives you a Google Access Token. You can use it to access the Google API.
+//     var token = result.credential.accessToken;
+//     // The signed-in user info.
+//     var user = result.user;
+//     console.log(user);
+//     // ...
+//   }).catch(function(error) {
+//     // Handle Errors here.
+//     var errorCode = error.code;
+//     var errorMessage = error.message;
+//     // The email of the user's account used.
+//     var email = error.email;
+//     // The firebase.auth.AuthCredential type that was used.
+//     var credential = error.credential;
+//     console.log(error);
+//     // ...
+//   });
+
+
+var db = firebase.firestore();
+
+var x = db.collection("users").add({
+    email: "ada@lovelace.com"
+})
+.then(function(docRef) {
+    console.log("Document written with ID: ", docRef.id);
+}, function(error) {
+    console.error("Error adding document: ", error);
+})
+.catch(function(error) {
+    console.error("Error adding document: ", error);
+});
