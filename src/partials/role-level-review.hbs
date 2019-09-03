@@ -10,15 +10,13 @@
                 var $inputs = $form.querySelectorAll('input:checked');
 
                 var data = [...$inputs].reduce((agg, $input) => {
-                    agg[$input.name] = $input.value;
+                    agg[$input.name] = parseInt($input.value, 10);
                     return agg;
                 }, {});
 
                 window.authService.ensureAuth()
                     .then(user => window.userStorage.setUserReview(user.uid, data))
                     .then(id => navigate(action + '?reviewId=' + id));
-                });
-
             });
         })(document.currentScript.parentElement);
     </script>

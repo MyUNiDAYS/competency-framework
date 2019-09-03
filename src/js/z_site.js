@@ -160,13 +160,4 @@ window.addEventListener('popstate', function(e){
 });
 
 var userStorage = new window.UserStorage();
-
 var authService = new window.AuthService()
-
-authService.onAuthStateChanged(user => {
-    if (user) {
-        userStorage.getUser(user.uid).then(s => {
-            console.log(s);
-        });
-    }
-})

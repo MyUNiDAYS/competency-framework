@@ -41,11 +41,9 @@ window.AuthService = (function(){
     }
 
     function ensureAuth(){
-        return authReadyPromise.then(_ =>{
-            if(!currentUser)
-                return requestAuth();
-            return currentUser;
-        });
+        if(!currentUser)
+            return requestAuth();
+        return Promise.resolve(currentUser);
     }
 
     return {
