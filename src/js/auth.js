@@ -6,6 +6,17 @@ window.AuthService = (function(){
         'hd': 'myunidays.com'
     });
 
+    var currentUser;
+    firebase.auth().onAuthStateChanged(u => currentUser = u);
+
+    let authReadyPromiseResolver;
+    const authReadyPromise = new Promise(resolve => {
+        authReadyPromiseResolver = resolve
+    });
+    const unsubscribe = firebase.auth().onAuthStateChanged(() => {
+        authReadyPromiseResolver();
+        unsubscribe();
+    });
 
     function requestAuth(){
         return firebase.auth().signInWithPopup(provider).then(function(result) {
@@ -14,7 +25,7 @@ window.AuthService = (function(){
             
             return result.user;
             
-            }).catch(function(error) {
+        }).catch(function(error) {
             
             var errorCode = error.code;
             var errorMessage = error.message;
@@ -29,9 +40,20 @@ window.AuthService = (function(){
         });
     }
 
+    function ensureAuth(){
+        return authReadyPromise.then(_ =>{
+            if(!currentUser)
+                return requestAuth();
+            return currentUser;
+        });
+    }
+
     return {
         requestAuth: requestAuth,
-
+        ensureAuth: ensureAuth,
+        get currentUser() {
+            return currentUser;
+        },
         onAuthStateChanged: function(callback){
             return firebase.auth().onAuthStateChanged(callback);
         }

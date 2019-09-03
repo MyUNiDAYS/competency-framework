@@ -38,89 +38,91 @@
                 return avg;
             }
 
-            var compressedReview = (new URL(document.location)).searchParams.get('review');
-            var review = window.compressor.decompress(compressedReview);
+            var reviewId = (new URL(document.location)).searchParams.get('reviewId');
             
+            window.authService.ensureAuth().then(user => {
+                window.userStorage.getUserReview(user.uid, reviewId).then(review => {
 
-            var summary = Object.keys(review).reduce((agg, key) => {
-                var value = review[key];
+                    var summary = Object.keys(review.answers).reduce((agg, key) => {
+                        var value = review.answers[key];
 
-                var keyParts = key.split('/');
+                        var keyParts = key.split('/');
 
-                var aggKey = keyParts[0] + '/' + keyParts[1];
-                
-                if(!agg[aggKey])
-                    agg[aggKey] = {data: []};
+                        var aggKey = keyParts[0] + '/' + keyParts[1];
+                        
+                        if(!agg[aggKey])
+                            agg[aggKey] = {data: []};
 
-                agg[aggKey].data.push(parseInt(value, 10));
-                return agg;
-            }, {});
+                        agg[aggKey].data.push(parseInt(value, 10));
+                        return agg;
+                    }, {});
 
-            for(var key in summary){
-                if(!summary.hasOwnProperty(key))
-                    continue;
+                    for(var key in summary){
+                        if(!summary.hasOwnProperty(key))
+                            continue;
 
-                summary[key].mean = average(summary[key].data);
+                        summary[key].mean = average(summary[key].data);
 
-                var $td = $section.querySelector('.summary tr[data-row-id="' + key + '"] td.level');
+                        var $td = $section.querySelector('.summary tr[data-row-id="' + key + '"] td.level');
 
-                if(summary[key].mean > 4.5)
-                {
-                    $td.classList.add('rating-5');
-                    $td.innerText = "Excellent";
-                }
-                else if(summary[key].mean > 3.5)
-                {
-                    $td.classList.add('rating-4');
-                    $td.innerText = "Great";
-                }
-                else if(summary[key].mean > 2.5)
-                {
-                    $td.classList.add('rating-3');
-                    $td.innerText = "Good";
-                }
-                else if(summary[key].mean > 1.5)
-                {
-                    $td.classList.add('rating-2');
-                    $td.innerText = "Needs Work";
-                }
-                else
-                {
-                    $td.classList.add('rating-1');
-                    $td.innerText = "Poor";
-                }
-            }
-            
-            [...$section.querySelectorAll('.actions tr[data-row-id]')].forEach($row => {
-                if(!review[$row.dataset.rowId]) {
-                    $row.parentElement.removeChild($row);
-                    return;
-                }
+                        if(summary[key].mean > 4.5)
+                        {
+                            $td.classList.add('rating-5');
+                            $td.innerText = "Excellent";
+                        }
+                        else if(summary[key].mean > 3.5)
+                        {
+                            $td.classList.add('rating-4');
+                            $td.innerText = "Great";
+                        }
+                        else if(summary[key].mean > 2.5)
+                        {
+                            $td.classList.add('rating-3');
+                            $td.innerText = "Good";
+                        }
+                        else if(summary[key].mean > 1.5)
+                        {
+                            $td.classList.add('rating-2');
+                            $td.innerText = "Needs Work";
+                        }
+                        else
+                        {
+                            $td.classList.add('rating-1');
+                            $td.innerText = "Poor";
+                        }
+                    }
+                    
+                    [...$section.querySelectorAll('.actions tr[data-row-id]')].forEach($row => {
+                        if(!review.answers[$row.dataset.rowId]) {
+                            $row.parentElement.removeChild($row);
+                            return;
+                        }
 
-                var $td = $row.querySelector('td.level');
+                        var $td = $row.querySelector('td.level');
 
-                if(review[$row.dataset.rowId] == 5) {
-                    $td.classList.add('rating-5');
-                    $td.innerText = "Excellent";
-                }
-                else if(review[$row.dataset.rowId] == 4){
-                    $td.classList.add('rating-4');
-                    $td.innerText = "Great";
-                }
-                else if(review[$row.dataset.rowId] == 3){
-                    $td.classList.add('rating-3');
-                    $td.innerText = "Good";
-                }
-                else if(review[$row.dataset.rowId] == 2){
-                    $td.classList.add('rating-2');
-                    $td.innerText = "Needs Work";
-                }
-                else {
-                    $td.classList.add('rating-1');
-                    $td.innerText = "Poor";
-                }
-            })
-
+                        if(review.answers[$row.dataset.rowId] == 5) {
+                            $td.classList.add('rating-5');
+                            $td.innerText = "Excellent";
+                        }
+                        else if(review.answers[$row.dataset.rowId] == 4){
+                            $td.classList.add('rating-4');
+                            $td.innerText = "Great";
+                        }
+                        else if(review.answers[$row.dataset.rowId] == 3){
+                            $td.classList.add('rating-3');
+                            $td.innerText = "Good";
+                        }
+                        else if(review.answers[$row.dataset.rowId] == 2){
+                            $td.classList.add('rating-2');
+                            $td.innerText = "Needs Work";
+                        }
+                        else {
+                            $td.classList.add('rating-1');
+                            $td.innerText = "Poor";
+                        }
+                    });
+                });
+            });
         })(document.currentScript.parentElement);
     </script>
     <h1>{{level.title}} - {{role.title}}</h1>

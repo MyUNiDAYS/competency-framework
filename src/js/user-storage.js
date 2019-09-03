@@ -14,6 +14,24 @@ window.UserStorage = (function(){
 
     }
 
+    function setUserReview(uid, review){
+        return db
+            .collection("users")
+            .doc(uid)
+            .collection('reviews')
+            .add({
+                answers: review
+            })
+            .then(function(docRef) {
+                console.log("Document written with ID: ", docRef.id);
+                return docRef.id;
+            })
+            .catch(function(error) {
+                console.error("Error adding document: ", error);
+                return null;
+            });
+    }
+
     function getUser(uid){
         return db
             .collection("users")
@@ -30,10 +48,22 @@ window.UserStorage = (function(){
             .get()
             .then(result => result.docs.map(d => d.data()));
     }
+
+    function getUserReview(uid, reviewId){
+        return db  
+            .collection("users")
+            .doc(uid)
+            .collection('reviews')
+            .doc(reviewId)
+            .get()
+            .then(doc => doc.data());
+    }
     
     return {
         getUser: getUser,
         setUser: setUser,
-        getUserReviews: getUserReviews
+        getUserReviews: getUserReviews,
+        getUserReview: getUserReview,
+        setUserReview: setUserReview
     }
 });

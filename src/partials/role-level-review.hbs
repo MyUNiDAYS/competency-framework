@@ -14,9 +14,11 @@
                     return agg;
                 }, {});
 
-                var compressed = window.compressor.compress(data);
-                
-                navigate(action + '?review=' + compressed);
+                window.authService.ensureAuth()
+                    .then(user => window.userStorage.setUserReview(user.uid, data))
+                    .then(id => navigate(action + '?reviewId=' + id));
+                });
+
             });
         })(document.currentScript.parentElement);
     </script>
