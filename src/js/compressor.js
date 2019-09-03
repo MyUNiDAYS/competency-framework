@@ -16,7 +16,7 @@ window.compressor = {
 
         return kvps.reduce((agg, x) => {
             var parts = x.split('=');
-            agg[parts[0]] = parts[1];
+            agg[parts[0]] = parseInt(parts[1], 10);
             return agg;
         }, {});
     }

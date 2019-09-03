@@ -1,19 +1,6 @@
 <section class="role-level-review" data-path="/roles/{{role.path}}/{{level.path}}/review/summary">
     <script>
         (function ($section) {
-            function serializeReview(){
-
-                var numericalValues = values.map(v => v.value);
-                var mean = average(numericalValues);
-                var stdev = standardDeviation(numericalValues);
-
-                // get lowest 10th percentile
-                var targets = values
-                    .filter(v => (v.value - mean) / stdev > -1.282)
-
-                return values;
-            }
-
             function standardDeviation(values){
                 var avg = average(values);
 
@@ -100,8 +87,18 @@
                     }
                 }
                 
+
+	            var numericalValues = Object.keys(review).map(k => review[k]);
+	            var mean = average(numericalValues);
+	            var stdev = standardDeviation(numericalValues);
+
                 [...$section.querySelectorAll('.actions tr[data-row-id]')].forEach($row => {
                     if(!review.answers[$row.dataset.rowId]) {
+	                    $row.parentElement.removeChild($row);
+	                    return;
+	                }
+			debugger;
+                	if((review[$row.dataset.rowId] - mean) / stdev > -0.675) {
                         $row.parentElement.removeChild($row);
                         return;
                     }
