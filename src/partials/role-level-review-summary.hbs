@@ -41,13 +41,13 @@
 
             var params = (new URL(document.location)).searchParams;
 
-            Promise.resolve(_ => {
+            new Promise(resolve => {
                 if(params.get('review')){
                     var compressedReview = params.get('review');
-                    return window.compressor.decompress(compressedReview);
+                    resolve({ answers: window.compressor.decompress(compressedReview) });
                 } else if(params.get('reviewId')){
                     var reviewId = params.get('reviewId');
-                    return window.authService.ensureAuth().then(user => window.userStorage.getUserReview(user.uid, reviewId))
+                    resolve(window.authService.ensureAuth().then(user => window.userStorage.getUserReview(user.uid, reviewId)));
                 }
             }).then(review => {
 

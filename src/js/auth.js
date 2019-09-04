@@ -36,7 +36,7 @@ window.AuthService = (function(){
             var credential = error.credential;
             console.log(error);
             // ...
-            return error;
+            throw error;
         });
     }
 
