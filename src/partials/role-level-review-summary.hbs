@@ -38,89 +38,96 @@
                 return avg;
             }
 
-            var reviewId = (new URL(document.location)).searchParams.get('reviewId');
-            
-            window.authService.ensureAuth().then(user => {
-                window.userStorage.getUserReview(user.uid, reviewId).then(review => {
 
-                    var summary = Object.keys(review.answers).reduce((agg, key) => {
-                        var value = review.answers[key];
+            var params = (new URL(document.location)).searchParams;
 
-                        var keyParts = key.split('/');
+            Promise.resolve(_ => {
+                if(params.get('review')){
+                    var compressedReview = params.get('review');
+                    return window.compressor.decompress(compressedReview);
+                } else if(params.get('reviewId')){
+                    var reviewId = params.get('reviewId');
+                    return window.authService.ensureAuth().then(user => window.userStorage.getUserReview(user.uid, reviewId))
+                }
+            }).then(review => {
 
-                        var aggKey = keyParts[0] + '/' + keyParts[1];
-                        
-                        if(!agg[aggKey])
-                            agg[aggKey] = {data: []};
+                var summary = Object.keys(review.answers).reduce((agg, key) => {
+                    var value = review.answers[key];
 
-                        agg[aggKey].data.push(parseInt(value, 10));
-                        return agg;
-                    }, {});
+                    var keyParts = key.split('/');
 
-                    for(var key in summary){
-                        if(!summary.hasOwnProperty(key))
-                            continue;
-
-                        summary[key].mean = average(summary[key].data);
-
-                        var $td = $section.querySelector('.summary tr[data-row-id="' + key + '"] td.level');
-
-                        if(summary[key].mean > 4.5)
-                        {
-                            $td.classList.add('rating-5');
-                            $td.innerText = "Excellent";
-                        }
-                        else if(summary[key].mean > 3.5)
-                        {
-                            $td.classList.add('rating-4');
-                            $td.innerText = "Great";
-                        }
-                        else if(summary[key].mean > 2.5)
-                        {
-                            $td.classList.add('rating-3');
-                            $td.innerText = "Good";
-                        }
-                        else if(summary[key].mean > 1.5)
-                        {
-                            $td.classList.add('rating-2');
-                            $td.innerText = "Needs Work";
-                        }
-                        else
-                        {
-                            $td.classList.add('rating-1');
-                            $td.innerText = "Poor";
-                        }
-                    }
+                    var aggKey = keyParts[0] + '/' + keyParts[1];
                     
-                    [...$section.querySelectorAll('.actions tr[data-row-id]')].forEach($row => {
-                        if(!review.answers[$row.dataset.rowId]) {
-                            $row.parentElement.removeChild($row);
-                            return;
-                        }
+                    if(!agg[aggKey])
+                        agg[aggKey] = {data: []};
 
-                        var $td = $row.querySelector('td.level');
+                    agg[aggKey].data.push(parseInt(value, 10));
+                    return agg;
+                }, {});
 
-                        if(review.answers[$row.dataset.rowId] == 5) {
-                            $td.classList.add('rating-5');
-                            $td.innerText = "Excellent";
-                        }
-                        else if(review.answers[$row.dataset.rowId] == 4){
-                            $td.classList.add('rating-4');
-                            $td.innerText = "Great";
-                        }
-                        else if(review.answers[$row.dataset.rowId] == 3){
-                            $td.classList.add('rating-3');
-                            $td.innerText = "Good";
-                        }
-                        else if(review.answers[$row.dataset.rowId] == 2){
-                            $td.classList.add('rating-2');
-                            $td.innerText = "Needs Work";
-                        }
-                        else {
-                            $td.classList.add('rating-1');
-                            $td.innerText = "Poor";
-                        }
-                    });
+                for(var key in summary){
+                    if(!summary.hasOwnProperty(key))
+                        continue;
+
+                    summary[key].mean = average(summary[key].data);
+
+                    var $td = $section.querySelector('.summary tr[data-row-id="' + key + '"] td.level');
+
+                    if(summary[key].mean > 4.5)
+                    {
+                        $td.classList.add('rating-5');
+                        $td.innerText = "Excellent";
+                    }
+                    else if(summary[key].mean > 3.5)
+                    {
+                        $td.classList.add('rating-4');
+                        $td.innerText = "Great";
+                    }
+                    else if(summary[key].mean > 2.5)
+                    {
+                        $td.classList.add('rating-3');
+                        $td.innerText = "Good";
+                    }
+                    else if(summary[key].mean > 1.5)
+                    {
+                        $td.classList.add('rating-2');
+                        $td.innerText = "Needs Work";
+                    }
+                    else
+                    {
+                        $td.classList.add('rating-1');
+                        $td.innerText = "Poor";
+                    }
+                }
+                
+                [...$section.querySelectorAll('.actions tr[data-row-id]')].forEach($row => {
+                    if(!review.answers[$row.dataset.rowId]) {
+                        $row.parentElement.removeChild($row);
+                        return;
+                    }
+
+                    var $td = $row.querySelector('td.level');
+
+                    if(review.answers[$row.dataset.rowId] == 5) {
+                        $td.classList.add('rating-5');
+                        $td.innerText = "Excellent";
+                    }
+                    else if(review.answers[$row.dataset.rowId] == 4){
+                        $td.classList.add('rating-4');
+                        $td.innerText = "Great";
+                    }
+                    else if(review.answers[$row.dataset.rowId] == 3){
+                        $td.classList.add('rating-3');
+                        $td.innerText = "Good";
+                    }
+                    else if(review.answers[$row.dataset.rowId] == 2){
+                        $td.classList.add('rating-2');
+                        $td.innerText = "Needs Work";
+                    }
+                    else {
+                        $td.classList.add('rating-1');
+                        $td.innerText = "Poor";
+                    }
                 });
             });
         })(document.currentScript.parentElement);
