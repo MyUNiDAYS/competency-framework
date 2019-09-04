@@ -9,13 +9,19 @@
 
                 var $inputs = $form.querySelectorAll('input:checked');
 
+
                 var data = [...$inputs].reduce((agg, $input) => {
                     agg[$input.name] = parseInt($input.value, 10);
                     return agg;
                 }, {});
 
+                var review = {
+                    answers: data,
+                    role: '/roles/{{role.path}}/{{level.path}}/review'
+                }
+
                 window.authService.ensureAuth()
-                    .then(user => window.userStorage.setUserReview(user.uid, data))
+                    .then(user => window.userStorage.setUserReview(user.uid, review))
                     .then(id => navigate(action + '?reviewId=' + id));
             });
         })(document.currentScript.parentElement);
