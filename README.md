@@ -10,7 +10,8 @@ This project is built using node.js and Grunt. After cloning the repository ensu
 
 `grunt build:prod` will produce a production build.
 
-`grunt dev` will run the component parts of `build:dev` whenever it notices any changes to any content or source files. Alternatively you can run `grunt build:dev` manually.
+`grunt dev` will run the component parts of `build:dev` whenever it notices any changes to any content or source files in a `grunt-watch` style. 
+It also starts an `express` web server on `localhost:3000` (default, consult console when running for port collisions)
 
 ## Hosting
 
@@ -19,10 +20,6 @@ This project is designed to be hosted in production on Amazon S3. Below is the b
 * Enable Static Website Hosting
 * Set Index document to `index.html`
 * Set Error document to `index.html`
-
-In develpoment, point a webserver at the `./build` folder.
-
-All extensionless paths must be rewritten to `/`
 
 ## Content
 

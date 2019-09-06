@@ -76,6 +76,13 @@ module.exports = function (grunt) {
                 }
             }
         },
+        express: {
+           custom: {
+                options: {
+                    server: 'server.js'
+                }
+           }
+        },
         watch: {
             scss: {
                 files: ['src/scss/*'],
@@ -103,7 +110,7 @@ module.exports = function (grunt) {
                 logConcurrentOutput: true
               },
               dev: {
-                tasks: ['watch:scss', 'watch:js', 'watch:serviceWorker', 'watch:assets', 'watch:assets', 'watch:content']
+                tasks: ['server', 'watch:scss', 'watch:js', 'watch:serviceWorker', 'watch:assets', 'watch:assets', 'watch:content']
               }
           }
       });
@@ -114,8 +121,11 @@ module.exports = function (grunt) {
       grunt.loadNpmTasks('grunt-contrib-copy');
       grunt.loadNpmTasks('grunt-contrib-clean');
       grunt.loadNpmTasks('grunt-concurrent');
+      grunt.loadNpmTasks('grunt-express');
+      
+      grunt.registerTask('server', ['express', 'express-keepalive']);
 
-      grunt.registerTask('dev', ['concurrent:dev'])
+      grunt.registerTask('dev', ['concurrent:dev']);
 
       grunt.registerTask('build:dev', ['clean', 'sass:dev', 'generate', 'uglify:jsDev', 'copy:dev', 'buildServiceWorkerUrls', 'uglify:swDev']);
       grunt.registerTask('build:prod', ['clean', 'sass:prod', 'generate', 'uglify:jsProd', 'copy:prod', 'buildServiceWorkerUrls', 'uglify:swProd']);
