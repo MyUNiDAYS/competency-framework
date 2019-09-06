@@ -42,6 +42,7 @@ window.AuthService = (function(){
 
     function ensureAuth(){
         if(!currentUser)
+            // launches a popup so must be called synchronously
             return requestAuth();
         return Promise.resolve(currentUser);
     }

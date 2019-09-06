@@ -19,9 +19,7 @@ window.UserStorage = (function(){
             .collection("users")
             .doc(uid)
             .collection('reviews')
-            .add({
-                answers: review
-            })
+            .add(review)
             .then(function(docRef) {
                 console.log("Document written with ID: ", docRef.id);
                 return docRef.id;
