@@ -4,6 +4,10 @@
 
 This project is built using node.js and Grunt. After cloning the repository ensure you have node.js and grunt-cli installed.
 
+Get node.js from here -> https://nodejs.org/en/
+
+After installing node, install grunt-cli by running `npm install -g grunt-cli` in the terminal.
+
 `npm install` will install all the necessary build dependencies
 
 `grunt build:dev` will produce a development build, where the JS and CSS contain source maps to aid debugging.
