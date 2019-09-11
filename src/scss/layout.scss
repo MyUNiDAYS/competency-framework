@@ -39,6 +39,7 @@ body
         page-break-inside: avoid;           /* Theoretically FF 20+ */
         break-inside: avoid-column;         /* IE 11 */
         display:table;                      /* Actually FF 20+ */
+        transform: translateZ(0);           /* Seems a bit of a hack, but fixes the issue with clipped shadows in columns in Chromium browsers - @rdunn418 */
     }
 }
 
