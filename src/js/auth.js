@@ -18,8 +18,15 @@ window.AuthService = (function(){
         unsubscribe();
     });
 
-    function requestAuth(){
-        return firebase.auth().signInWithPopup(provider).then(function(result) {
+    function requestAuth(redirect){
+
+        var signIn;
+        if(redirect)
+            signIn = firebase.auth().signInWithRedirect(provider)
+        else
+            signIn = firebase.auth().signInWithPopup(provider)
+
+        return signIn.then(function(result) {
             
             var token = result.credential.accessToken;
             
