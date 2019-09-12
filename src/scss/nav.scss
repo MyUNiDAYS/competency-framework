@@ -10,6 +10,7 @@ body
         box-sizing: border-box;
         height: 70px;
         box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+        z-index: 1; /* Ensure navbar stuff appears on top of other elements when using the drop shadow bug fix - @rdunn418 */
 
         .logo 
         {
