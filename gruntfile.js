@@ -105,6 +105,14 @@ module.exports = function (grunt) {
                 tasks: ['generate']
             }
           },
+            sass_globbing: {
+                     target: {
+                      files: {
+                          'src/scss/styles.scss' : 'src/scss/*'
+                      },
+                }
+            },
+
           concurrent: {
             options: {
                 logConcurrentOutput: true
@@ -122,6 +130,7 @@ module.exports = function (grunt) {
       grunt.loadNpmTasks('grunt-contrib-clean');
       grunt.loadNpmTasks('grunt-concurrent');
       grunt.loadNpmTasks('grunt-express');
+      grunt.loadNpmTasks('grunt-sass-globbing')
       
       grunt.registerTask('server', ['express', 'express-keepalive']);
 
