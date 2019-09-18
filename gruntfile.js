@@ -105,13 +105,6 @@ module.exports = function (grunt) {
                 tasks: ['generate']
             }
           },
-            sass_globbing: {
-                     target: {
-                      files: {
-                          'src/scss/styles.scss' : 'src/scss/*'
-                      },
-                }
-            },
 
           concurrent: {
             options: {
