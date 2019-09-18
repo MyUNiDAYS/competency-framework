@@ -125,7 +125,7 @@ module.exports = function (grunt) {
       
       grunt.registerTask('server', ['express', 'express-keepalive']);
 
-      grunt.registerTask('dev', ['concurrent:dev']);
+      grunt.registerTask('dev', ['build:dev', 'concurrent:dev']);
 
       grunt.registerTask('build:dev', ['clean', 'sass:dev', 'generate', 'uglify:jsDev', 'copy:dev', 'buildServiceWorkerUrls', 'uglify:swDev']);
       grunt.registerTask('build:prod', ['clean', 'sass:prod', 'generate', 'uglify:jsProd', 'copy:prod', 'buildServiceWorkerUrls', 'uglify:swProd']);
