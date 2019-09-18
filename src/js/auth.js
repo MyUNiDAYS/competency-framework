@@ -13,8 +13,8 @@ window.AuthService = (function(){
     const authReadyPromise = new Promise(resolve => {
         authReadyPromiseResolver = resolve
     });
-    const unsubscribe = firebase.auth().onAuthStateChanged(() => {
-        authReadyPromiseResolver();
+    const unsubscribe = firebase.auth().onAuthStateChanged(user => {
+        authReadyPromiseResolver(user);
         unsubscribe();
     });
 
@@ -56,11 +56,15 @@ window.AuthService = (function(){
     return {
         requestAuth: requestAuth,
         ensureAuth: ensureAuth,
+        ready: authReadyPromise,
         get currentUser() {
             return currentUser;
         },
         onAuthStateChanged: function(callback){
             return firebase.auth().onAuthStateChanged(callback);
+        },
+        signOut: function(){
+            return firebase.auth().signOut();
         }
     }
 

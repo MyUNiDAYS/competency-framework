@@ -34,7 +34,13 @@
                     resolve({ answers: window.compressor.decompress(compressedReview) });
                 } else if(params.get('reviewId')){
                     var reviewId = params.get('reviewId');
-                    resolve(window.authService.ensureAuth().then(user => window.userStorage.getUserReview(user.uid, reviewId)));
+                    var review = window.authService.ready
+                        .then(user => {
+                            //debugger; 
+                            return window.authService.ensureAuth();
+                        })
+                        .then(user => window.userStorage.getUserReview(user.uid, reviewId))
+                        .then(review => resolve(review));
                 }
             }).then(review => {
 
@@ -97,7 +103,7 @@
 	                    $row.parentElement.removeChild($row);
 	                    return;
 	                }
-			debugger;
+                    
                 	if((review[$row.dataset.rowId] - mean) / stdev > -0.675) {
                         $row.parentElement.removeChild($row);
                         return;

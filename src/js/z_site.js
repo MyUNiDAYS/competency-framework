@@ -150,6 +150,25 @@ window.addEventListener('load', function(){
             $section.classList.add('open');
     });
 
+    window.authService.onAuthStateChanged(user => {
+        var $authedElements = document.querySelectorAll('.authed');
+
+        if(user){
+            $authedElements.forEach($e => {
+                $e.classList.remove('hidden');
+            });
+        } else {
+            $authedElements.forEach($e => {
+                $e.classList.add('hidden');
+            });
+        }
+    });
+
+    this.document.querySelector('nav .logOut').addEventListener('click', e => {
+        e.preventDefault();
+        window.authService.signOut();
+    })
+
     // boot the page    
     handleNavigation();
 });
