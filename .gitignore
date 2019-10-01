@@ -1,4 +1,7 @@
-node_modules
 
-obj/*
-build/*
+.vscode/*
+###
+###node_modules
+
+##obj/*
+##build/*
