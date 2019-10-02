@@ -8,7 +8,7 @@
 			"title": "💻 IT",
 			"path": "it",
 			"theme": "excitement",
-			"summary": "An IT team member must have technical understanding and great problem solving skills. These skills should be complimented by a customer centric attitude, with an ability to communicate the status of work effectively. With seniority, comes further technical responsibility. An expectation to understand complex network design and configuration. Security should be built into everything the IT team implements. A senior IT team member will set the standard, be proactive and coach others.",
+			"summary": "An IT team member must have technical understanding and great problem solving skills. These skills should be complemented by a customer centric attitude, with an ability to communicate the status of work effectively. With seniority, comes further technical responsibility. An expectation to understand complex network design and configuration. Security should be built into everything the IT team implements. A senior IT team member will set the standard, be proactive and coach others.",
 			"levels": [
 				{
 					"title": "👩‍🎓 n00b",
@@ -244,7 +244,7 @@
 						"Actively participates in and welcomes critical code review",
 						"Self motivated and able to identify knowledge gaps",
 						"Abides by coding standards",
-						"Has a good working knoweldge of relevant programming languages",
+						"Has a good working knowledge of relevant programming languages",
 						"Learns to write correct code, following guidance and training materials",
 						"Adheres to delivery/deployment practices",
 						"Helps the team, does what needs doing",
@@ -265,13 +265,13 @@
 						"Has a good working knowledge of relevant areas of codebase and its dependencies",
 						"Submits PRs to OSS/internal dependency projects to improve functionality/fix bugs",
 						"Understands and recognises common coding patterns and understands their applicability",
-						"Able to disect and debug existing code",
+						"Able to dissect and debug existing code",
 						"Familiar with and practices decompiling binaries and finding external sources to improve understanding",
 						"Manages their own time effectively, prioritises their workload well, on time for meetings, aware when blocking others and unblocks",
 						"Competent at dividing problems into iterative steps",
 						"Fixes bugs involving a number of services and can investigate production issues",
 						"Uses appropriate algorithms and data structures to solve problems",
-						"Aware of revelant Computer Science topics such as concurrency, efficient CPU usage, caching and naming",
+						"Aware of relevant Computer Science topics such as concurrency, efficient CPU usage, caching and naming",
 						"Writes automated unit and acceptance tests"
 					]
 				},
@@ -313,7 +313,7 @@
 			"title": "🛃 Verification",
 			"path": "verification",
 			"theme": "excitement",
-			"summary": "A Verification Engineer, is an all round mid or senior level Engineer, who has specific expertise in identity and identity managment. The Verification Engineer takes responsibility for UNiDAYS ability to verify members. This means maintaining relationships with third parties, keeping abreast of changes to identity management systems. A Verification Engineer will also monitor verification rates, identifying issues and ensuring they are resolved promptly.",
+			"summary": "A Verification Engineer, is an all round mid or senior level Engineer, who has specific expertise in identity and identity management. The Verification Engineer takes responsibility for UNiDAYS ability to verify members. This means maintaining relationships with third parties, keeping abreast of changes to identity management systems. A Verification Engineer will also monitor verification rates, identifying issues and ensuring they are resolved promptly.",
 			"levels": [
 				{
 					"title": "👩‍🏫 Pr0",

@@ -2,7 +2,7 @@
 	"title": "🚀 Product",
 	"path": "product-competencies",
 	"theme": "expert",
-	"summary": "The product team are responsible the strategy of the business, ensuring that the right thing is being built at the right time. Product skills are broken down into various categories and areas of progression measure in levels. Use these definitions to measure where you are right now, and identify what the next steps that you need to take are.",
+	"summary": "The product team are responsible for the strategy of the business, ensuring that the right thing is being built at the right time. Product skills are broken down into various categories and areas of progression measure in levels. Use these definitions to measure where you are right now, and identify what the next steps that you need to take are.",
 	"topics": [
 		{
 			"title": "🤹 Opportunity Analysis",
@@ -26,10 +26,10 @@
 					"summary": "",
 					"criteria": [
 						"Able to clarify the boundaries of a problem and how it applies to the work at hand",
-						"Is able to break a problem down into manageable solveable chunks",
+						"Is able to break a problem down into manageable solvable chunks",
 						"Able to incrementally apply solutions, learning and adjusting through measurement and insight",
 						"Uses or fosters creativity and experimentation to find and solve problems.",
-						"Uses visualisation tools (SWOT, brainstorming, cause-effect diagrams) to gain fuller understanding of issues",
+						"Uses visualisation tools (SWOT, brainstorming, cause-effect diagrams) to gain a fuller understanding of issues",
 						"Where relevant develops tools or models to further analyse data sources e.g. to test assumptions or develop scenarios",
 						"Analytical; deduces meaning from numerical & verbal data sources & uses such data to generate solutions to current problems or future changes",
 						"Considers which features to remove, as well as maintain.",
@@ -89,7 +89,7 @@
 					"summary": "",
 					"criteria": [
 						"Collaborates with product analyst to set up the right things to track. Understand what a metric actually measures and how reliable/direct it is.",
-						"Closely tracks performance of their squad, and how to influence it. Draws reliable conclusions from qualitative and quantitative data."
+						"Closely tracks the performance of their squad, and how to influence it. Draws reliable conclusions from qualitative and quantitative data."
 					]
 				},
 				{
@@ -126,7 +126,7 @@
 			"title": "🗃️ Domain Knowledge",
 			"path": "domain-knowledge",
 			"theme": "expert",
-			"summary": "Domain knowledge is so important to the Product Team, to help teams plan, set expectation and generally understand delivery. A PM/PO will also need to understand the SDLC, which means, understanding how code is tested and deployed. A senior person in this position will have a deep market knowledge in the relevant Product area, able to challenge experts and identify market opportunities.",
+			"summary": "Domain knowledge is so important to the Product Team, to help teams plan, set expectations and generally understand delivery. A PM/PO will also need to understand the SDLC, which means understanding how code is tested and deployed. A senior person in this position will have a deep market knowledge in the relevant Product area, able to challenge experts and identify market opportunities.",
 			"levels": [
 				{
 					"title": "Level 1",
@@ -196,7 +196,7 @@
 					"path": "2",
 					"summary": "",
 					"criteria": [
-						"Tends to action - narrowing in on a MVP to help learn. Comfortable with releasing uncomfortable first versions (done is better than perfect).",
+						"Tends to action - narrowing in on an MVP to help learn. Comfortable with releasing uncomfortable first versions (done is better than perfect).",
 						"Leads squad in prioritising work with some ambiguity or competing demands.",
 						"Makes sure the team have everything they need to be productive.",
 						"Maintains sensible work in progress limits and knows when and how to say no."
@@ -270,7 +270,7 @@
 					"summary": "",
 					"criteria": [
 						"Is a champion for user experience and starting with user needs - helps senior stakeholders and team members to understand the value of this approach.",
-						"Can balance trade offs (or think creatively to increase the pie) between user need and business need."
+						"Can balance trade offs (or think creatively to increase the pie) between user needs and business needs."
 					]
 				},
 				{
