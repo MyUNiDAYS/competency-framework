@@ -77,7 +77,8 @@ body
             }
 
             &:hover
-            {
+            {   @include breakpoint(tablet);
+                @include breakpoint(mobile);
                 > ul
                 {
                     display: block;

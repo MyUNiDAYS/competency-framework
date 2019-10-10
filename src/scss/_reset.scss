@@ -60,3 +60,12 @@ article, aside, footer, header, hgroup, main, nav, section
 {
 	display: block;
 }
+
+@mixin breakpoint($size) {
+@if $size == tablet {
+	@media (max-width: 80em) { @content; }
+}
+@else if $size == mobile {
+	@media (max-width: 30em)	{ @content;}
+}
+}
