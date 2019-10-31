@@ -510,6 +510,85 @@
 							}
 						}
 					]
+				},
+				{
+					"title": "👩‍🎨 UI/UX Designer",
+					"path": "ui-ux-designer",
+					"levels": [
+						{
+							"title": "👩‍🎨 Junior UI/UX Designer",
+							"path": "junior-ui-ux-designer",
+							"summary": "",
+							"competencies": {
+								"required": [
+									"core-competencies/delivering-value/1",
+									"core-competencies/client-focus/1",
+									"core-competencies/planning-and-organisation/1",
+									"core-competencies/problem-solving/1",
+									"core-competencies/communication/1",
+									"core-competencies/striving-for-success/2",
+									"core-competencies/team-orientation/2"
+								],
+								"optional": [
+									
+								]
+							}
+						},
+						{
+							"title": "👩‍🎨 Mid-Level UI/UX Designer",
+							"path": "mid-level-ui-ux-designer",
+							"summary": "",
+							"competencies": {
+								"required": [
+									"core-competencies/delivering-value/2",
+									"core-competencies/client-focus/2",
+									"core-competencies/planning-and-organisation/2",
+									"core-competencies/problem-solving/2",
+									"core-competencies/communication/3",
+									"core-competencies/striving-for-success/3",
+									"core-competencies/team-orientation/3"
+								],
+								"optional": [
+								]
+							}
+						},
+						{
+							"title": "👩‍🎨 Senior UI/UX Designer",
+							"path": "senior-ui-ux-designer",
+							"summary": "",
+							"competencies": {
+								"required": [
+									"core-competencies/delivering-value/3",
+									"core-competencies/client-focus/3",
+									"core-competencies/planning-and-organisation/3",
+									"core-competencies/problem-solving/3",
+									"core-competencies/communication/3",
+									"core-competencies/striving-for-success/3",
+									"core-competencies/team-orientation/4"
+								],
+								"optional": [
+								]
+							}
+						},
+						{
+							"title": "👩‍🎨 Lead UI/UX Designer",
+							"path": "lead-ui-ux-designer",
+							"summary": "",
+							"competencies": {
+								"required": [
+									"core-competencies/delivering-value/4",
+									"core-competencies/client-focus/4",
+									"core-competencies/planning-and-organisation/4",
+									"core-competencies/problem-solving/4",
+									"core-competencies/communication/4",
+									"core-competencies/striving-for-success/4",
+									"core-competencies/team-orientation/4"
+								],
+								"optional": [
+								]
+							}
+						}
+					]
 				}
 			]
 		},

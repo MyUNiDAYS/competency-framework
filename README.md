@@ -15,7 +15,7 @@ After installing node, install grunt-cli by running `npm install -g grunt-cli` i
 `grunt build:prod` will produce a production build.
 
 `grunt dev` will run the component parts of `build:dev` whenever it notices any changes to any content or source files in a `grunt-watch` style. 
-It also starts an `express` web server on `localhost:3000` (default, consult console when running for port collisions)
+It also starts an `express` web server on `localhost:1324` (default, consult console when running for port collisions)
 
 ## Hosting
 
