@@ -1,5 +1,9 @@
 # competency-framework
 
+## Production Version
+
+This repository is published to https://progression.myunidays.com
+
 ## Development
 
 This project is built using node.js and Grunt. After cloning the repository ensure you have node.js and grunt-cli installed.
