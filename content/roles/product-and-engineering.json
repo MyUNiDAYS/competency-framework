@@ -590,6 +590,51 @@
 							}
 						}
 					]
+				},
+				{
+					"title": "Senior Manager",
+					"path": "senior-manager",
+					"summary": "Senior Managers are responsible for the smooth running of the Engineering Team. A great communicator, you'll help to remove impediments and keep the gears moving within the squads so that solutions are delivered effectively. You'll pro-actively identify process issues, suggest and implement improvements to those. You'll need to be a leader and coach team leads and engineers on what good looks like.",
+					"levels": [
+						{
+							"title": "👷 Head of Engineering",
+							"path": "head-of-engineering",
+							"summary": "",
+							"competencies": {
+								"required": [
+									"core-competencies/delivering-value/4",
+									"core-competencies/client-focus/4",
+									"core-competencies/planning-and-organisation/4",
+									"core-competencies/problem-solving/4",
+									"core-competencies/communication/4",
+									"core-competencies/striving-for-success/4",
+									"core-competencies/team-orientation/4"
+								],
+								"optional": [
+									"engineering-competencies/software-engineering/1337"
+								]
+							}
+						},
+						{
+							"title": "👷 Chief Technology Officer",
+							"path": "chief-technology-officer",
+							"summary": "",
+							"competencies": {
+								"required": [
+									"core-competencies/delivering-value/4",
+									"core-competencies/client-focus/4",
+									"core-competencies/planning-and-organisation/4",
+									"core-competencies/problem-solving/4",
+									"core-competencies/communication/4",
+									"core-competencies/striving-for-success/4",
+									"core-competencies/team-orientation/4"
+								],
+								"optional": [
+									"engineering-competencies/software-engineering/1337"
+								]
+							}
+						}
+					]
 				}
 			]
 		},
