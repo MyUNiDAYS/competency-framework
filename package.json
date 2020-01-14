@@ -12,7 +12,7 @@
         "grunt-express": "^1.4.1",
         "grunt-parallel": "^0.5.1",
         "grunt-sass": "^3.1.0",
-        "handlebars": "^4.5.1",
+        "handlebars": "^4.7.2",
         "jsdom": "^15.2.1",
         "md5": "^2.2.1",
         "node-sass": "^4.13.0",
