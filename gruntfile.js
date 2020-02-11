@@ -75,15 +75,12 @@ module.exports = function (grunt) {
                     'build/service-worker.js': ['obj/cache-list.js', 'src/service-worker/service-worker.js']
                 }
             }
-        },
-        express: {
-           custom: {
-                options: {
-                    server: 'server.js',
-                    port: 1234
-                }
-           }
-        },
+        },      
+        shell: {
+            connect: {
+                command: 'node server.js'
+            }
+        },  
         watch: {
             scss: {
                 files: ['src/scss/*'],
@@ -123,8 +120,9 @@ module.exports = function (grunt) {
       grunt.loadNpmTasks('grunt-contrib-clean');
       grunt.loadNpmTasks('grunt-concurrent');
       grunt.loadNpmTasks('grunt-express');
+      grunt.loadNpmTasks('grunt-shell')
       
-      grunt.registerTask('server', ['express', 'express-keepalive']);
+      grunt.registerTask('server', ['shell:connect']);
 
       grunt.registerTask('dev', ['build:dev', 'concurrent:dev']);
 
@@ -132,7 +130,7 @@ module.exports = function (grunt) {
       grunt.registerTask('build:prod', ['clean', 'sass:prod', 'generate', 'uglify:jsProd', 'copy:prod', 'buildServiceWorkerUrls', 'uglify:swProd']);
 
       grunt.registerTask('default', ['build:prod']);
-
+      
       grunt.registerTask('generate', function(){
         
         var content = loadContent()
