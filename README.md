@@ -1,5 +1,7 @@
 # competency-framework
 
+[![MyUNiDAYS](https://circleci.com/gh/MyUNiDAYS/competency-framework.svg?style=shield&circle-token=438755b0f50df777cf19c298638299e9785eb8e9)](https://app.circleci.com/pipelines/github/MyUNiDAYS/competency-framework)
+
 ## Production Version
 
 This repository is published to https://progression.myunidays.com
