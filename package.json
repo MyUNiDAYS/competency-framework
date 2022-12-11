@@ -2,7 +2,7 @@
     "name": "competency-framework",
     "version": "1.0.1",
     "devDependencies": {
-        "express": "^4.17.1",
+        "express": "^4.17.3",
         "grunt": "~1.0.4",
         "grunt-concurrent": "^3.0.0",
         "grunt-contrib-clean": "^2.0.0",
